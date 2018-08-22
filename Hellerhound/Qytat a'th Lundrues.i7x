@@ -30,7 +30,6 @@ Section 2 - Entry Points
 
 Red Apartment is a room. "     This tall, red building has a fire escape on this side. This four story apartment building looks much like many others in the city. [redflight]". It is fasttravel.
 The earea of Red Apartment is "Outside".
-Red Apt Exit is a door. Red Apt Exit is dangerous. The marea of Red Apt Exit is "Outside". Red Apt Exit is undescribed. Red Apt Exit is south of Red Apartment. South of Red Apt Exit is Outside Exploration.
 
 to say redflight:
 	if staircaselocation is 1:
@@ -118,7 +117,7 @@ the scent of Spiral Pattern is "There is a strange, otherworldly scent here.".
 
 Up from Stairs is Qytat Plaza.
 
-Spiral Pattern is a thing. "     The pattern is shifting, and it looks like a great circle, so large you cannot see the other side, with images of DNA and small spheres with arms, odd spherical bubbles with rotating balls around them, the only obvious things that change place, and what looks like a circuit diagram below all of that. It feels soft and warm, yet it doesn't give when you step. You feel creeped out.".
+Spiral Pattern is a thing. "     The pattern is shifting, and it looks like a great circle, so large you cannot see the other side, with images of helixes and small spheres with arms, odd spherical bubbles with rotating balls around them, the only obvious things that change place, and what looks like a circuit diagram below all of that. It feels soft and warm, yet it doesn't give when you step. You feel creeped out.".
 
 Spiral Pattern is in Qytat Plaza.
 

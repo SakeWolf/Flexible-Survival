@@ -10,7 +10,7 @@ when play begins:
 
 to say losetoblackwolf:
 	say "     You were beaten by the creature.";
-	if cocks of player > 0:
+	if player is male:
 		say "     Additional paragraph for a male/herm player.";
 	else:
 		say "     Additional paragraph for a female player.";
@@ -19,9 +19,9 @@ to say beattheblackwolf:
 	say "     You were victorious over the creature.";
 	if libido of player > 40:
 		say "     Additional paragraph for a player with a libido greater than 40. Do they want sex?";
-		if the player consents:
+		if player consents:
 			say "     The player agreed to sex. Fun times begin.";
-			if cunts of player > 0:
+			if player is female:
 				say "     The player is female/herm, so sex goes like this for her.";
 			else:
 				say "     The player must be male, so sex goes like this for him.";
@@ -37,15 +37,18 @@ to say blackwolfdesc:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Black Wolf"; [The creature's name as displayed and used in naming descriptions]
-	now attack entry is "Andrew's a lover, not a fighter."; [Text used when the monster succeeds on an attack]
-	now defeated entry is "[beattheblackwolf]"; [ Text when monster loses. Change 'template' as above. ]
-	now victory entry is "[losetoblackwolf]"; [ Text when monster wins. Change 'template' as above. ]
+	now name entry is "Black Wolf"; [ Infection/Creature name. Capitalized. ]
+	now enemy title entry is "";
+	now enemy name entry is "Andrew";
+	now enemy type entry is 0; [non-unique enemy]
+	now attack entry is "Andrew's a lover, not a fighter."; [ Successful attack message ]
+	now defeated entry is "[beattheblackwolf]"; [ Text when monster loses. ]
+	now victory entry is "[losetoblackwolf]"; [ Text when monster wins. ]
 	now desc entry is "[blackwolfdesc]"; [ Description of the creature when you encounter it. ]
 	now face entry is "rather lupine in form, with an elongated muzzle, pointed ears and a wolfish face. Your features are rather soft and friendly though, even somewhat sexy. You have rather pretty, violet eyes";
 	now body entry is "altered to have paw-like hands and digitigrade feet to go along with its otherwise rather normal build. It does possess a rather attractive, even sexy quality to it that's hard to pin down to anything specific though";
@@ -99,7 +102,7 @@ when play ends:
 			say "     You succumb to your template infection.";
 		else:
 			say "     You survive, but were infected by the template.";
-			if cocks of player > 0:							[MALE/HERM]
+			if player is male:							[MALE/HERM]
 				say "     Additional text for a male/herm survivor.";
 			else if "Sterile" is not listed in feats of player:	[F-BREEDABLE]
 				say "     Additional text for a female survivor who can become preggers.";

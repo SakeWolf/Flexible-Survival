@@ -109,12 +109,12 @@ carry out EgyptMuralExamine:
 		say "     The northern mural, most likely being the first in the set, is your first target. Looking over it, the left of the massive painting is taken up by a large man sitting on a throne, staring regally ahead. You immediately recognize the seated man as Osiris, the Egyptian god of the dead; both the husband of Isis and the father of Horus. Dressed in exquisite, regal garb and wearing a magnificent crown, he is portrayed as the pharaoh of Egypt and the benefactor of the Egyptian people. Strangely enough, instead of illustrated with green skin, signifying his death, Osiris is instead depicted as a living man, not yet having met his fate.";
 		say "     On the other side of this mural, under the watchful gaze of Osiris, the people of Egypt bow before their rightful pharaoh. Men, women, and children kneel down in front of his throne, giving themselves over to the rule of Osiris. This mural is obviously depicting the time when Osiris was the ruling pharaoh of Egypt, bringing forward an age of prosperity for the empire of the Nile.";
 		WaitLineBreak;
-		say "     Walking over to the eastern mural, you find this one much less jovial. Two men are displayed on the left side of the mural, one of them Osiris, pharaoh of Egypt. The other man, standing behind Osiris, can only be Set, the god of violence and chaos. Tricking Osiris into getting into a wooden box, Set seals Osiris within it, filling the box with lead and throwing it into the Nile. Set brutally ends the reigh of Osiris, Set's jealousy having proven the victor.";
-		say "     Searching throughout Egypt, Isis, the husband of Osiris, hunted for his corpse; she finally founds it embedded within a wooden pillar within a palace along the Phoenician coast. Removing the coffin of her husband, she finds Osiris dead, Set's violent methods having killed the king of Egypt. Reciting a spell of revival, Isis brings Osiris' body to life, with the subsequent intimate relations resulting in Isis' insemination. Her spell soon wears off, and Osiris once again dies.";
-		say "     Continuing the story on the right side of this mural, you see Isis hiding Osiris' body somewhere in Egypt, away from the wrathful vengeance of Set. Retreating herself into the desert, she soon births a son; Horus, lord of the sky. Set, having found out what Isis had done, hunts throughout Egypt for her and her son. Stumbling upon the body of Osiris, Set flies into a vengeful rage and tears his body into pieces, scattering them across Egypt.";
+		say "     Walking over to the eastern mural, you find this one much less jovial. Two men are displayed on the left side of the mural, one of them Osiris, pharaoh of Egypt. The other man, standing behind Osiris, can only be Set, the god of violence and chaos. Tricking Osiris into getting into a wooden box, Set seals Osiris within it, filling the box with lead and throwing it into the Nile. Set brutally ends the reign of Osiris, Set's jealousy having proven the victor.";
+		say "     Searching throughout Egypt, Isis, the husband of Osiris, hunted for his corpse; she finally founds it embedded within a wooden pillar within a palace along the Phoenician coast. Removing the coffin of her husband, she finds Osiris dead, Set's violent methods having killed the king of Egypt. Reciting a spell of revival, Isis brings Osiris's body to life, with the subsequent intimate relations resulting in Isis's insemination. Her spell soon wears off, and Osiris once again dies.";
+		say "     Continuing the story on the right side of this mural, you see Isis hiding Osiris's body somewhere in Egypt, away from the wrathful vengeance of Set. Retreating herself into the desert, she soon births a son; Horus, lord of the sky. Set, having found out what Isis had done, hunts throughout Egypt for her and her son. Stumbling upon the body of Osiris, Set flies into a vengeful rage and tears his body into pieces, scattering them across Egypt.";
 		WaitLineBreak;
-		say "     Wandering over to the final mural, you can tell that the finale is still before you. Already having raised Horus to adulthood, Isis once again travels through Egypt, collecting the dismembered parts of her husband. Reconstructing Osiris' body and mummifying him, Isis prepares Osiris for the traditional burial of the Egyptian people. Watching her dedication to Osiris, the rest of the Egyptian pantheon admires her love of Osiris; together, the pantheon resurrects Osiris, who thusly becomes the undead god of the underworld.";
-		say "     The end of the mural illustrates the conclusion of the conflict between Osiris' family and Set. Horus, having grown to manhood, goes forward to fight Set. The two of them fight, their blades crossing rapidly and violently. Eventually, Horus gains the upper hand, and soon overtakes Set, besting him in combat. Having beaten his enemy in combat, Horus avenges his father and takes over rulership of Egypt.";
+		say "     Wandering over to the final mural, you can tell that the finale is still before you. Already having raised Horus to adulthood, Isis once again travels through Egypt, collecting the dismembered parts of her husband. Reconstructing Osiris's body and mummifying him, Isis prepares Osiris for the traditional burial of the Egyptian people. Watching her dedication to Osiris, the rest of the Egyptian pantheon admires her love of Osiris; together, the pantheon resurrects Osiris, who thusly becomes the undead god of the underworld.";
+		say "     The end of the mural illustrates the conclusion of the conflict between Osiris's family and Set. Horus, having grown to manhood, goes forward to fight Set. The two of them fight, their blades crossing rapidly and violently. Eventually, Horus gains the upper hand, and soon overtakes Set, besting him in combat. Having beaten his enemy in combat, Horus avenges his father and takes over rulership of Egypt.";
 		say "     You come out of your thoughtful stupor, having finished deciphering the giant scrolls hanging from the walls. Your mind occupied in contemplation of the story you just read, you stand there a few more moments, your thoughts wandering through the knowledge of Egypt you possess. Soon enough, you figure that you should continue your exploration; there may be more things to learn of that residing within these halls.";
 	else:
 		say "     Putting your mind to the task of deciphering these paintings, you use all of your knowledge to try and figure out what these walls say. However, despite all of your thought, you are unable to make any progress on finding what these murals say. Sighing to yourself, you decide that it may be best to come back later, when you've learned more.";
@@ -128,7 +128,7 @@ calcnumber is a number that varies.
 LastRiddle is a number that varies.
 
 to say GoldenDoorsDesc:
-	say "     The most striking thing about this room is the enormous set of doors in front of you. [if EgyptianRiddle is 2]These doors used to be closed, but using your intellect, you were able to best the riddle and open the doors[else]Made out of what appears to be solid gold, these grandiose doors bar the way into the room ahead, whatever that may be. Quickly surmising that this was probably not built with the museum structure, your mind flies as you contemplate what could be hidden behind them[end if]. Less promenent is a path westward, leading into a shadowy room, lit only by torchlight.";
+	say "     The most striking thing about this room is the enormous set of doors in front of you. [if EgyptianRiddle is 2]These doors used to be closed, but using your intellect, you were able to best the riddle and open the doors[else]Made out of what appears to be solid gold, these grandiose doors bar the way into the room ahead, whatever that may be. Quickly surmising that this was probably not built with the museum structure, your mind flies as you contemplate what could be hidden behind them[end if]. Less prominent is a path westward, leading into a shadowy room, lit only by torchlight.";
 instead of sniffing Golden Doors:
 	say "     This room smells quite similar to the rest of the Egyptian Wing, albeit with a tinge of metal to it.";
 
@@ -323,7 +323,7 @@ understand "remove cover" as RevealAmuran.
 
 carry out RevealAmuran:
 	say "     Looking at the sarcophagus across the water, do you want to try and open the golden casket?";
-	if the player consents: [Smut, more interactions and quest to come soon]
+	if player consents: [Smut, more interactions and quest to come soon]
 		say "     In the end, you decide to go against your better judgment, wanting to reveal whatever it is that lies inside the sarcophagus. Walking around the pool of water and up to the shining coffin, the sarcophagus is even more glorious up close. While it looked made of plain gold from afar, the sarcophagus is actually inlaid with multitudes of precious gemstones, many of which you're unable to name. Alongside the gemstones, you're able to tell that the sarcophagus is not made of just gold; strings of different-colored metals run beautifully across the coffin's surface; it looks as if the metals are actually flowing. You can't begin to comprehend how much money this thing is worth to the right person; selling it would make you exceedingly rich.";
 		say "     Unfortunately for you, there probably isn't a buyer in the city right now, considering the condition it's in. You still let yourself make a mental reminder to pick this up when everything blows over; if it blows over, that is. Checking delicately along the seal of the sarcophagus, it seems that the lid is latched on at a few points around the coffin; it would be a (somewhat) simple matter to unseal this sarcophagus. You're soon able to pop out a latch, releasing with a loud, grating screech. Soon enough, the cover of the sarcophagus is unlatched; all you have to do is push the lid aside.";
 		say "     Once again pushing with all your might, the lid of the sarcophagus falls before you, screeching aside and falling to the ground with a massive [']THUMP[']. Taking a deep breath, you step in front of the open coffin, waiting for the worst to happen. It takes a moment for light to filter into the dark sarcophagus, but once you see what's in there, you're unable to hold back a gasp of surprise.";
@@ -353,9 +353,9 @@ instead of conversing Amuran:
 		say "     The creature's answers seem to have just confused you more; its talk of divinity and gods is strange, even for this city. A few moments pass as you mull over its answer, doing your best to figure out what was just said. You ultimately decide to question it about all the talk of deities, curious as to what it's talking about. Mortals, divinity; surely this thing isn't a god?";
 		say "     A deep, reverberating sound echoes throughout the chamber at your inquiries; it takes a moment for you to register that the thing known as Amuran is laughing. 'No, young one. I am no celestial; merely a servant of one. Under the benevolent light of the lord Horus do I serve, the right hand of the Sun God. Nor would I choose not to; it is honor incarnate to serve Him.' Your question answered, albeit cryptically, you subsequently inquire as to why Amuran is here? Surely (if what he claims to be true is true) a godly servant has more important things to do than sit around in a nanite-infected city?";
 		WaitLineBreak;
-		say "     A deep, sorrowful sigh meets your questioning. 'My duty within this plagued city, ordained by my lord Horus, is to... locate an object that was... misplaced. An object that, luckily, was revealed by the chaos caused the scourge now rampaging throughout your homestead. That, in and of itself, would not be a difficult task; but the complexity of my order has deepened considerably. We divine servants, along with our natural abilities, are afforded conduits of energy, through which we channel our deities' will; the same conduits which I falsely accused you of plundering. Mine, however, were displaced in my expedition to this place.' Amuran once again sighs deeply, visibly distressed at the situation. 'Without them, I am not within my full powers; I cannot leave this mystic sanctuary, either. The doors you so easily crossed keep me locked within, and without divine interference, I am trapped here.'";
+		say "     A deep, sorrowful sigh meets your questioning. 'My duty within this plagued city, ordained by my lord Horus, is to... locate an object that was... misplaced. An object that, luckily, was revealed by the chaos caused the scourge now rampaging throughout your homestead. That, in and of itself, would not be a difficult task; but the complexity of my order has deepened considerably. We divine servants, along with our natural abilities, are afforded conduits of energy, through which we channel our deities['] will; the same conduits which I falsely accused you of plundering. Mine, however, were displaced in my expedition to this place.' Amuran once again sighs deeply, visibly distressed at the situation. 'Without them, I am not within my full powers; I cannot leave this mystic sanctuary, either. The doors you so easily crossed keep me locked within, and without divine interference, I am trapped here.'";
 		say "     'And that, young one, is both who I am and what my task is. How long my undertaking shall last, I do not know. Intervention from my lord is needed for me to continue, but' Amuran pauses for a moment 'the gods are... flighty. Beseeching my lord will take time, but so do all things.' Taking a more postured and regal stance, Amuran crosses his arms across his chest and bows to you, apparently thanking you. 'I am grateful to you for the conversation, young one. As simple and self-pitying as it was, millennia have elapsed since I last spoke to a mortal. It has been invigorating.' Seemingly done speaking for now, Amuran ambles over to a spot in front of the glimmering pool, subsequently sitting down and assuming a meditative stance; if you had to guess, he's trying to talk to someone high up. Mulling the entire situation over in your head, you consider offering your help to the divine servant. Do you?";
-		if the player consents:
+		if player consents:
 			say "[AmuranQuestAccept]";
 			now AmuranAwoken is 2;
 			now Finding Winged Orb is unresolved;
@@ -364,7 +364,7 @@ instead of conversing Amuran:
 			now AmuranAwoken is 3;
 	else if AmuranAwoken is 3:
 		say "     Finding Amuran once again deep in meditation, it seems that he has not done anything but meditate since you've last seen him. Thinking back to your last conversation, the offer to help him in his quest once again comes to the forefront of your thoughts. Do you bring up the offer to the divine insect-man?";
-		if the player consents:
+		if player consents:
 			say "[AmuranQuestAccept]";
 		else:
 			say "[AmuranQuestReject]";
@@ -394,7 +394,7 @@ instead of conversing Amuran:
 		say "     'Simply locate it and return it to my lord Horus, mortal. It will still take some time, unfortunately; while my gifts of seering have strengthened with the return of Horus's seals, the prevalence of untamed magic amongst this city has blocked much of my sight. I only know that it is located in a place of fire and smoke; a rampaging inferno amongst the ruins of civilization. I must find my way through this maze of stone and metal you call a city, in order to find this burning conflagration and complete my task.'";
 		WaitLineBreak;
 		say "     Having explored parts of the city, you could say that you are somewhat proficient in navigating the 'maze of stone and metal'. The opportunity to one again assist Amuran presents itself; do you want to help him complete his charge, or let him finish his task alone?";
-		if the player consents:
+		if player consents:
 			if Approaching the Capitol Building is known:
 				say "     As Amuran prepares to head out into the city, you once again grab his attention; you inform him that you (probably) know right where the relic is. In all of your explorations, there's only one place that you've found that matches what he described; the area around the Capitol building. Telling Amuran that it would be no problem to show him where it is, he stops and stares at you unwaveringly.";
 				say "     After a few seconds of Amuran glaring holes into your head, it seems that you may have offended him somehow. As you begin to apologize for your apparent slight, he rears his head back and starts laughing. After a few (more) seconds, he calms down, looking at you with the insectoid equivalent of a smile.";
@@ -541,7 +541,7 @@ to say AmuranSexMenu:
 	while XP of Amuran is 0:
 		LineBreak;
 		say "(0) [link]Nevermind[as]0[end link][line break]";
-		if cunts of player > 0:
+		if player is female:
 			say "(1) [link]Get Fucked[as]1[end link][line break]";
 			say "(2) [link]Get Stuffed - Anal[as]2[end link][line break]";
 			say "(3) [link]Jerk Him[as]3[end link][line break]";
@@ -615,9 +615,9 @@ to say AmuranAnal:
 	say "     Knowing right where you want the bug, you tantalizingly remove all of your clothes, making sure every movement arouses him even more. Throwing your clothes to the side after your sensual show, Amuran watches you intently as you lay yourself back on the warm, sun-lit pool rim, displaying your ";
 	if player is herm:
 		say "[if cocks of player > 1]slick cocks[else]hardening cock[end if] and [if cunts of player > 1]dripping womanhoods[else]dripping cunt[end if]";
-	else if cocks of player > 0:
+	else if player is male:
 		say "[if cocks of player > 1]already-hard cocks[else]rock-solid cock[end if]";
-	else if cunts of player > 0:
+	else if player is female:
 		say "[if cunts of player > 1]feminine slits[else]cunt[end if]";
 	else:
 		say "[bodydesc of player] thighs and ass";
@@ -625,9 +625,9 @@ to say AmuranAnal:
 	say "     With a suddenness you're not used to seeing from the cautious, deliberate bug, you abruptly feel your rear filled with the first few inches of insect cock; you're unable to do anything but moan in pleasure at the sudden intrusion. Amuran churrs lowly as he enters you, your rear clenching down on his cock, gripping it ever so pleasurably. Stopping his advance into your back end, his solid cock throbbing sensually as he breathes; you're able to feel every one, all of them sending blasts of pleasure through your [bodydesc of player] self. You stay like that for a few moments, locked to the bug by the ridged dick spearing your rear";
 	if player is herm:
 		say ". [if cocks of player > 1]Your cocks standing rigid[else]Your cock rock-hard[end if] and [if cunts of player > 1]cunts already dripping[else]your slit already waiting to be filled[end if]";
-	else if cocks of player > 0:
+	else if player is male:
 		say ". [if cocks of player > 1]Your cocks solid in the warm air[else]Your dick rigid from all the pleasure you're feeling[end if]";
-	else if cunts of player > 0:
+	else if player is female:
 		say ". [if cunts of player > 1]Your pussies dripping and neglected[else]Your feminine gash wishing to be filled[end if]";
 	else:
 		say ". Blasts of pleasure overwhelming your mind";
@@ -635,10 +635,10 @@ to say AmuranAnal:
 	WaitLineBreak;
 	say "     Your world goes blank, you being entirely unable to process [']anything['] that's happening. Storms of pleasure wrack your head as your ass is crammed full of bug-cock, the ridged dick utterly filling your rear. Your pleasured moans combine with Amuran's low churrs, combining into a cacophony of noise echoing throughout the sanctum. Within seconds, he begins slowly thrusting into you, withdrawing more and more of his ridged cock with each thrust. Within mere moments, he's pistoning rapidly into your rear, every drive making explosions go off in your head as gasps of joy escape your lips. Soon enough, the ability for logical thought leaves you, the only thing you can think about are the consecutive feelings of emptiness and fullness coming from your backside. You finally give up trying to follow what's happening; laying back down, you let your eyes roll into your head as Amuran thrusts swiftly into you, basking in the white-hot glow of pleasure. After a few more minutes of this, the dam finally bursts; with a wordless yell of pleasure, you hit your climax, ";
 	if player is herm:
-		say "[if cocks of player > 1]cocks spraying your seed all across your stomach[else]blasting your load into the air[end if] while [if cunts of player > 1]your cunts gush femcum down onto the ground[else]your cunt sprays liquid onto the stone below[end if]";
-	else if cocks of player > 0:
+		say "[if cocks of player > 1]your cocks spraying your seed all across your stomach[else]blasting your load into the air[end if] while [if cunts of player > 1]your cunts gush femcum down onto the ground[else]your cunt sprays liquid onto the stone below[end if]";
+	else if player is male:
 		say "[if cocks of player > 1]your cocks shooting your seed everywhere[else]cock firing cum into the warm air[end if]";
-	else if cunts of player > 0:
+	else if player is female:
 		say "[if cunts of player > 1]your pussies spraying femcum onto the cock below them[else]cunt spasming wildly as it looks for something to grasp[end if]";
 	else:
 		say "ass spasming wildly around the dick spearing it";

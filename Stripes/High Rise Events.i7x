@@ -15,7 +15,6 @@ when play begins:
 Instead of resolving a Rabid Lawyers:
 	say "     While searching the city, you encounter a large pack of wolves in front of a law firm. They are partially dressed in suits, mainly the jackets and ties, though some have the torn-open remains of pants. They are growling and slavering as they snap at each other or swinging their briefcases around. Mixed among the pack are several smaller wolves in skirts or shirts, clutching reports, pouring coffee or helping the larger ones. Much of the helping seems to take the form of the interns sucking them off or getting pounded good and hard by one of the bigger males. Unwilling to face the legal teeth of a pack of rabid lawyers, you slink off as quietly and as quickly as you can.";
 	increase score by 1;
-	mallrecall;
 	Now Rabid Lawyers is resolved;
 
 
@@ -38,10 +37,10 @@ Instead of resolving a Pigging Out:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
-		if the player consents:
+		if player consents:
 			say "     When you first step in, the pig is somewhat startled by your presence. Her heavy bulk struggles to get up, but she soon relaxes and smiles as she sees your piggish features and eager attitude. With a grin, she picks up a handful of food from the floor with her left hand, the one she'd had in her pussy. As you reach for it, you can see her wet juices running over the sugary dessert, making your mouth water for it all the more. You stuff the food into your mouth, chewing noisily as you enjoy its added seasoning.";
 			say "     As you eat, she helps you out of your clothes, tossing them onto a knocked over table. With you now naked, she runs her messy hands over your body as she pulls you into her arms. She grabs another of the scattered pastries from the floor and stuffs it into her mouth before sloppily kissing you, smearing the creamy filling into your mouth with her tongue.";
-			if cocks of player > 0:
+			if player is male:
 				say "     You place your hands on her sow tits, making her squeal in pleasure. She lays herself back on the floor, squishing some of the expensive food beneath her bulk. You bury your face in her teats, licking and suckling at them playfully. She oinks and moans in pleasure between mouthfuls. You work your way down her chest, tending to each of her six breasts until that brings you between her legs and that wet, cavernous slit beckons to you.";
 				say "     You grab a nearby bottle of maple syrup and tear off the top, pouring it right onto those wet lips before you bury your face between her large thighs. You lick all over her messy pussy, the maple sweetness tasting wonderful with her porcine juices. You stuff your tongue into her, delving deeper for more of her sweet honey until she finally orgasms and soaks your face with it.";
 				say "     You smile up at her, licking your chops as she motions for you to climb atop her. You do so eagerly, bringing your hard cock into position at her pussy before burying it in her ample folds. With your face pressed to her piggish snout, she snuffles at your face and licks away the sticky syrup and her own juices with squeals of pleasure as you fuck her.";
@@ -68,7 +67,7 @@ Instead of resolving a Pigging Out:
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Yes.";
 			say "     ([link]N[as]n[end link]) - No.";
-			if the player consents:
+			if player consents:
 				challenge "Messy Pig";
 				if lost is 1:
 					say "     After you wipe your face and catch your breath, you see her return from the food locker with another armload of food. She tosses it in a heap on the floor beside you. With an oink, she drops down onto the floor next to the food and grabs you by the neck. She buries your face between her legs, giving you a noseful of her strong scent and wet pussy. As she smears your face across her pussy lips, you find yourself licking at them with increasing lustful hunger. Once she's satisfied that you're properly set to work, she starts stuffing handfuls of food into her piggish snout with oinks of pleasure. With you to tend to her pussy, she can stuff food into her hungry maw with both hands. After numerous squealing orgasms, she seems satisfied and shoves you out of the restaurant, sending you off on your way.";
@@ -90,7 +89,7 @@ Instead of resolving a Pigging Out:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
-		if the player consents:
+		if player consents:
 			challenge "Messy Pig";
 			if lost is 1:
 				say "     After you wipe your face and catch your breath, you see her return from the food locker with another armload of food. She tosses it in a heap on the floor beside you. With an oink, she drops down onto the floor next to the food and grabs you by the neck. She buries your face between her legs, giving you a noseful of her strong scent and wet pussy. As she smears your face across her pussy lips, you find yourself licking at them with increasing lustful hunger. Once she's satisfied that you're properly set to work, she starts stuffing handfuls of food into her piggish snout with oinks of pleasure. With you to tend to her pussy, she can stuff food into her hungry maw with both hands. After numerous squealing orgasms, she seems satisfied and shoves you out of the restaurant, sending you off on your way.";
@@ -226,7 +225,7 @@ to say doggyinfect:
 	else if tempnum is 4:
 		infect "Pit bull";
 	else if tempnum is 5:
-		infect "Ashen Breeder";
+		infect "Ember Breeder";
 	else if tempnum is 6:
 		infect "Chocolate Lab";
 	else if tempnum is 7:
@@ -252,7 +251,6 @@ when play begins:
 Instead of resolving a Corporate Fat Cats:
 	say "     You come across a pair of hefty felines on the steps of one of the many high-rise buildings. Their business suits have mostly been removed and scattered around them. One is a male black cat with white paws and a splash of white on his wide belly. The other is a chubby Maine Coon tom with the thick, fluffy fur of the breed. They are rolling around against one another, groping each other. While stroking the black cat's cock, the other cat goes on about looking forward to some asset growth. The black cat nibbles at the portly Maine Coon's ear, telling him how he wants to set up this merger and come out on top. They continue to go on like this, bantering in corporate lingo while the black cat mounts the other while you walk off, leaving the fat cats to their [']merger['].";
 	increase score by 1;
-	mallrecall;
 	Now Corporate Fat Cats is resolved;
 
 
@@ -270,8 +268,8 @@ when play begins:
 
 Instead of resolving a Veterinary Hospital:
 	if lust of Medea is 1:
-		say "     You come across a veterinary hospital at the ground level of one of the high rises. Recalling your discussion with Dr. Medea about the supplies she needs to affect your [if cunts of player > 0]infected[else]male[end if] womb's heat cycle, you take a moment to listen for monsters inside. You don't hear any, but it is an animal hospital, so it still seems somewhat risky. Deciding to take the risk, you venture inside.";
-		attempttowait;
+		say "     You come across a veterinary hospital at the ground level of one of the high rises. Recalling your discussion with Dr. Medea about the supplies she needs to affect your [if player is female]infected[else]male[end if] womb's heat cycle, you take a moment to listen for monsters inside. You don't hear any, but it is an animal hospital, so it still seems somewhat risky. Deciding to take the risk, you venture inside.";
+		WaitLineBreak;
 		say "     You cautiously enter the veterinary hospital and look around. As you suspected, it was rather hard hit by the outbreak. You can see the tattered remains of the secretary and the vets['] clothes scattered about, as well as many dried pools of cum. The scent of feline and canine arousal is strong in the air, making the infection inside you tingle. Feeling you shouldn't stay long, you do your best to remain focused by repeatedly looking at the list you were given as a reminder of what you need to find. As you're nearing the end, it is becoming quite difficult, all those intense, sexual, animal scents have you panting with lust. A large part of you just wants to give up on humanity, find some beast and let it have its way with you as long and as often as it likes. Knowing you can't tarry any longer, you pack up what you've found and make for the exit";
 		if furry is not banned and hermaphrodite is not banned:
 			say ".";
@@ -411,7 +409,7 @@ to say randomvetfight:				[more suitable pets can be added]
 	if tempnum is 5:
 		challenge "German Shepherd";
 	if tempnum is 6:
-		challenge "rabbit pack";
+		challenge "Rabbit";
 	if tempnum is 7:
 		challenge "Feline";
 	if tempnum is 7:
@@ -461,7 +459,6 @@ Instead of resolving a Electronics Store:
 	say "     As you watch, the darker one twitches and shudders for a moment while trying to swallow down a big mouthful. His eyes blink, then turn a solid blue. He smacks his chest a few times to reboot himself. Once that is settled, he opens his jacket, accesses a panel on himself and pulls out a video card, swapping it for a newer model from one of the shelves.";
 	say "     With this impromptu upgrade completed, they get back to squabbling over the various electronic phones, mp3 players and doodads, babbling marketing buzzwords all the while.";
 	increase score by 1;
-	mallrecall;
 	Now Electronics Store is resolved;
 
 
@@ -524,11 +521,11 @@ Instead of resolving a Cameo:
 		say "     Managing to outmaneuver the chocolate dogs, you push your way out of the store and into the courtyard around the shops. Looking back, you spot the dogs pressed up against the glass, leaving chocolate streaks on windows before they hop down and return to their lustful consumption of the chocolates. You are quite certain there will be nothing left in the store except for the white chocolate stains from their sexual play as they celebrate their victory at defending their delicious prize.";
 	else if choclabfight is 2:
 		say "     When the victorious Labrador moves back, you look up to find yourself surrounded by the trio who look at you lustfully. The other two flow atop you and start humping at your body. You are buried in flowing chocolate as they cover you completely[if cunts of player > 1]. You can feel their creamy tendrils flow into your every orifice, fucking your mouth, pussies and asshole with a hard chocolate cock for each[else if cunts of player is 1]. You can feel their creamy tendrils flow into your every orifice, fucking your mouth, pussy and asshole with a hard chocolate cock for each[else]. You can feel their creamy tendrils flow into your mouth and asshole, fucking you at both ends with a hard chocolate cock[end if][if cocks of player > 1]. Their flowing bodies form warm, wet cunts around your cocks, sucking and squeezing at them as they pound into you[else if cocks of player is 1]. Their flowing bodies form a warm, wet cunt around your cock, sucking and squeezing at them as they pound into you[end if].";
-		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
-		say "     As this goes on, you can feel them flowing over your whole body, sliding off your clothes and backpack. Completely naked, you can feel their flowing, rippling chocolate flesh sliding all over you, stimulating you so fully you sink further and further into a haze. You barely notice the added weight of the third Labrador joining in, but you are somehow keenly aware that he's finished off the last of those chocolates as more and more of that creamy, white chocolate seed is pumped into you[if cocks of player > 0] while you pump your own cum out for them to enjoy[end if]";
+		WaitLineBreak;
+		say "     As this goes on, you can feel them flowing over your whole body, sliding off your clothes and backpack. Completely naked, you can feel their flowing, rippling chocolate flesh sliding all over you, stimulating you so fully you sink further and further into a haze. You barely notice the added weight of the third Labrador joining in, but you are somehow keenly aware that he's finished off the last of those chocolates as more and more of that creamy, white chocolate seed is pumped into you[if player is male] while you pump your own cum out for them to enjoy[end if]";
 		if bodyname of player is "Chocolate Lab" or facename of player is "Chocolate Lab":
 			say ".";
-			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+			WaitLineBreak;
 			say "     During this rampant, fluidic sex with the dogs, you can feel much of your chocolate being intermingling with that of the other Labradors. It feels like you are simultaneously filled and drained over and over again as your lovers mate you. You seem to flow into them as they flow into you in an orgasmic melding of pleasure. You feel yourself becoming much more canine and craving more and more chocolate, causing you to suck, squeeze and gulp down all you can get from them until finally much of you is gone.";
 			decrease humanity of player by a random number between 25 and 35;
 			increase hunger of player by 12;
@@ -560,7 +557,7 @@ Instead of resolving a Cameo:
 		if hellHoundLevel is 0:
 			follow the sex change rule;
 			follow the sex change rule;
-		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+		WaitLineBreak;
 		if libido of player < 70, now libido of player is 70;
 		say "     When they are finally sated, they flow away from you, leaving you in a pool of creamy chocolate. You struggle to sit up as they flow over the last of the scattered chocolates before heading out the door. One of them, which you somehow sense to be the one who defeated you, turns back and looks at you, as if to see if you will follow before flowing after the others.";
 		say "     Trying again to pull yourself up, you discover that you've fully become flowing, animate chocolate like your assailants. You try to pull yourself together, taking stock that you've changed and fully become a chocolate Labrador like those sexy, tasty hounds";

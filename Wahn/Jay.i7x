@@ -139,7 +139,7 @@ to say JayTalkMenu:
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]100 - Nevermind[as]100[end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
 	while Sextablerun is 0:
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
@@ -161,16 +161,16 @@ to say JayTalkMenu:
 				if (nam is "Ask him about Krampus"):
 					say "[JayTalk5]";
 				wait for any key;
-		else if calcnumber is 100:
+		else if calcnumber is 0:
 			say "Break off the conversation?";
-			if the player consents:
+			if player consents:
 				now Sextablerun is 1;
 				say "     You step back from the diminutive elf, shaking your head slightly as he gives a questioning look.";
 				wait for any key;
 			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
 
 to say JayTalk1: [talk about him]
@@ -250,7 +250,7 @@ Section 5 - Fucking
 [***********************************************************]
 
 instead of fucking the Jay:
-	if cocks of player is 0:
+	if player is not male:
 		say "     Looking you up and down, Jay gives you a friendly smile, but at the same time shakes his head. 'Thanks for the offer, but I'm as gay as a three dollar bill. Got a husband to prove it, too. I'm flattered, but you're at the wrong address here I'm afraid...'";
 	else:
 		if thirst of Jay < 9:
@@ -272,7 +272,7 @@ to say JaySexMenu:
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
-	if cocks of player > 0: [only males and herms can get a blowjob]
+	if player is male: [only males and herms can get a blowjob]
 		choose a blank row in table of fucking options;
 		now title entry is "Get a blowjob";
 		now sortorder entry is 1;
@@ -287,7 +287,7 @@ to say JaySexMenu:
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]100 - Nevermind[as]100[end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
 	while sextablerun is 0:
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
@@ -303,16 +303,16 @@ to say JaySexMenu:
 				if (nam is "Suck Jay off"):
 					say "[JaySex2]";
 				wait for any key;
-		else if calcnumber is 100:
+		else if calcnumber is 0:
 			say "Break off the conversation?";
-			if the player consents:
+			if player consents:
 				now sextablerun is 1;
 				say "     You step back from the slender elf, shaking your head slightly as he gives a questioning look.";
 				wait for any key;
 			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
 
 to say JaySex1: [oral on the player]

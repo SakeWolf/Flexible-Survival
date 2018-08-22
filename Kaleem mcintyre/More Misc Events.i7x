@@ -1,7 +1,7 @@
 Version 2 of More Misc Events by Kaleem mcintyre begins here.
-[ Version 1 - Events by Kaleem]
-[ Version 1.5 - Several events transferred to CEO1 document in Stripes's folder.]
-[ Version 2 - Rework by Draegon]
+[ Version 1.0 - Events by Kaleem ]
+[ Version 1.5 - Several events transferred to Consolidated Outside Events in Song's folder ]
+[ Version 2.0 - Rework by Draegon ]
 
 "Adds a series of random events to Flexible Survival."
 
@@ -16,7 +16,7 @@ when play begins:
 	add Unorthodox Sight to badspots of guy;
 
 Instead of resolving a Unorthodox Sight:
-	say "     Suddenly overcome by the sensation that something is wrong, you quickly whip your head around, looking this way and that in an attempt to figure out what is amiss. Due to having managed to brave a great deal of dangers already, you know it is wise to listen to your instincts when they tell you that something is off. For now the street seems empty, with nothing but the burned-out husks of buildings on the side opposite you and a row of uninteresting shops along your side of the street. They seem to be the kind of places that virtually nobody would ever actually bother going into. You assume they only managed to survive at all because the rent was cheap here right at the edge of the Red Light District. Focusing on your other senses, you then hear movement somewhere down the street and around a corner. Whoever it is doesn't appear to be in a rush, but even so, they'll be here soon enough.";
+	say "     Suddenly overcome by the sensation that something is wrong, you quickly whip your head around, looking this way and that in an attempt to figure out what is amiss. Due to having managed to brave a great deal of dangers already, you know it is wise to listen to your instincts when they tell you that something is off. For now the street seems empty, with nothing but the burned-out husks of buildings on the side opposite you and a row of uninteresting shops along your side of the street. They seem to be the kind of places that virtually nobody would ever actually bother going into. You assume they only managed to survive at all because the rent was cheap here right at the edge of the red light district. Focusing on your other senses, you then hear movement somewhere down the street and around a corner. Whoever it is doesn't appear to be in a rush, but even so, they'll be here soon enough.";
 	say "     [bold type]What to do you want to do now?[roman type][line break]";
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Hide and observe who or what it could be.";
@@ -36,7 +36,7 @@ Instead of resolving a Unorthodox Sight:
 
 Section 2 - Desperation
 
-[Moved to CEO1 file.]
+[Moved to Consolidated Outside Events]
 
 
 Section 3 - Family Fun

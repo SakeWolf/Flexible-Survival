@@ -9,6 +9,8 @@ when play begins:
 Section 1 - Monster Responses
 
 to say Hunter wins:
+	if inasituation is true:
+		stop the action; [text taken care of at the source]
 	if HP of player > 0:
 		say "     'Pathetic,' he sneers and shoves you to the ground. 'We had hoped this world would have finally brought forth something worthy of The Hunt again. A true warrior never surrenders.' He leaves you lying there, saying, 'You're not even worth sullying my blade. Do something useful with yourself - like serving as food for more worthy creatures.' He then silently vanishes into the shadows between the trees.";
 	else:
@@ -28,6 +30,8 @@ to say Hunter wins:
 		say "     'Not bad. With creatures like you here, we'll at least have something to keep ourselves busy with between the hunts,' he says, then vanishes into the foliage.";
 
 To say Hunter loses:
+	if inasituation is true:
+		stop the action; [text taken care of at the source]
 	if bodyname of player is "Incubus" or bodyname of player is "Succubus" or bodyname of player is "Demon Brute" or bodyname of player is "Hellhound":
 		say "     Stepping back, the elf gives you a hateful stare. Even after all your blows, he still looks more than ready to continue the fight, with only a light sheen of sweat on his brow. 'You're stronger than expected, demon. Did you find some way to taint this world's essence with your infernal power?' Wrinkling his nose, he spits at your feet and continues 'I'll allow you to live - for now, so you can spread the word to leave this world. Flee while you can - once our king is informed of your presence, I've no doubt all hunting parties will have orders to exterminate any of you filthy beasts they encounter.' With that, the elf silently vanishes into the forest.";
 	else:
@@ -58,13 +62,13 @@ to say ElvenHunterSex:
 	if player is herm: [herms may choose]
 		say "     Smiling at the prospect of claiming your reward from this handsome creature, you nod to him. Without further delay, he slips out of his vest and pushes the leather pants off his bubble butt and his legs. For a second, you are spell-struck at seeing his pale, perfect body in all its naked glory, your cock instantly springing to attention.";
 		say "     He smiles at you, then says 'I sense this realm's tiny machines have blessed you with both genders. Which would you prefer to claim me with?' (Y for cock, N for pussy)[line break]";
-		if the player consents:
+		if player consents:
 			say "     You move the willing elf over to the next tree and have him bend over, leaning against its bark. Eagerly stepping up behind him, you rub your [cock size desc of player] cock between the silky smooth cheeks of his ass, then align its head with his pucker and start to push in. The elf moans lustfully as you slowly sink yourself into him, expertly keeping his muscles tight and gripping around your shaft while still allowing easy entry. As you bottom out inside him with your hips meeting the smooth buns of his ass, he grips the tree tightly and groans 'Take me hard and deep.'";
 			WaitLineBreak;
 			say "     Following his lustful request, you pull out until only the very tip of your cock remains, then slide deep into him in one sharp thrust until your hips slap against his firm ass. Holding on to his shoulders with both hands you pound into him, reveling in the vice-like grip he manages to keep your manhood in. The elf makes the most delightful grunts and moans to accompany each new thrust and the things he can do with the muscles in his ass are just indescribable.";
 			say "     Not wanting this to be over too soon, you make yourself slow down a bit. As you let yourself rest for a moment with your [cock of player] cock deep inside its tight prison, your hands move over your partner's body, stroking over the smooth skin and feeling his hard muscles. You rest your [bodydesc of player] body lightly over his as your searching hands move to find his cock. Stroking along its length and softly squeezing his balls, you delight in the idealized form. You almost want to stay this way forever, deep inside and wrapped around this beautiful otherworldly visitor.";
 			WaitLineBreak;
-			say "     Feeling that you've recovered enough, the elf starts moving his hips, sliding himself forward and backward on your hard shaft and making both of you moan in pleasure. You join in, thrusting forward each time he pushes back, creating slapping noises each time his buns meet your hips. Soon, the arousal from you sliding in and out of the elf becomes too strong to be contained. You feel his perfect elven cock pulse in your hand as he splatters his seed all over the bark of the tree. His muscles around your cock convulse with each blast, driving you over the edge soon after. As you hold to him tightly, spurt after spurt of a massive load of cum blast through your [cock of player] cock and paint his insides. At the same time, your pussy gets drippingly wet with femcum, which starts to run down the inside of your leg.";
+			say "     Feeling that you've recovered enough, the elf starts moving his hips, sliding himself forward and backward on your hard shaft and making both of you moan in pleasure. You join in, thrusting forward each time he pushes back, creating slapping noises each time his buns meet your hips. Soon, the arousal from you sliding in and out of the elf becomes too strong to be contained. You feel his perfect elven cock pulse in your hand as he splatters his seed all over the bark of the tree. His muscles around your cock convulse with each blast, driving you over the edge soon after. As you hold to him tightly, spurt after spurt of a massive load of cum blast through your [cock of player] cock and paint his insides. At the same time, your pussy gets dripping wet with femcum, which starts to run down the inside of your leg.";
 			LineBreak;
 			say "     You stay like that for a moment, just holding him until your cock shrinks and plops out of the elf's ass, bringing with it a thin line of cum slowly leaking out of him. He then turns around and gives you a long and deep kiss. He whispers, 'I hope to hunt you again later,' then vanishes behind a tree.";
 		else:
@@ -75,7 +79,7 @@ to say ElvenHunterSex:
 			say "     The skillful attentions of your otherworldly lover make you forget almost everything else around you, spreading bliss into every fiber of your being. You wish it'd last forever, but even your hunter's self discipline has limits. With a deep moan, he holds tight to your body as the first jet of his cum shoots deep into your body, painting your womb with his fertile seed. After several more spurts, he exhaustedly sinks to the ground beside you and leans in for a kiss. You stay like that for a while, holding on to your elven partner and stroking his silky smooth skin.[impregchance]";
 			LineBreak;
 			say "     Some time later, the elf gives you a last soft kiss on the lips, then rises up and grabs his bow. With a whispered, 'I hope to hunt you again later', he turns from you and walks off. You have a very nice view of his pale naked body and impressive buns until he vanishes into the forest.";
-	else if cocks of player > 0: [male]
+	else if player is male: [male]
 		say "     Smiling at the prospect of claiming your reward from this handsome creature, you nod to him. Without further delay, he slips out of his vest and pushes the leather pants off his bubble butt and his legs. For a second, you are spell-struck at seeing his pale, perfect body in all its naked glory, your cock instantly springing to attention.";
 		say "     You move the willing elf over to the next tree and have him bend over, leaning against its bark. Eagerly stepping up behind him, you rub your [cock size desc of player] cock between the silky smooth cheeks of his ass, then align its head with his pucker and start to push in. The elf moans lustfully as you slowly sink yourself into him, expertly keeping his muscles tight and gripping around your shaft while still allowing easy entry. As you bottom out inside him with your hips meeting the smooth buns of his ass, he grips the tree tightly and groans 'Take me hard and deep.'";
 		WaitLineBreak;
@@ -85,7 +89,7 @@ to say ElvenHunterSex:
 		say "     Feeling that you've recovered enough, the elf starts moving his hips, sliding himself forward and backward on your hard shaft and making both of you moan in pleasure. You join in, thrusting forward each time he pushes back, creating slapping noises each time his buns meet your hips. Soon, the arousal from you sliding in and out of the elf becomes too strong to be contained. You feel his perfect elven cock pulse in your hand as he splatters his seed all over the bark of the tree. His muscles around your cock convulse with each blast, driving you over the edge soon after. As you hold to him tightly, spurt after spurt of a massive load of cum blast through your [cock of player] cock and paint his insides.";
 		LineBreak;
 		say "     You stay like that for a moment, just holding him until your cock shrinks and plops out of the elf's ass, bringing with it a thin line of cum slowly leaking out of him. He then turns around and gives you a long and deep kiss. He whispers, 'I hope to hunt you again later', then vanishes behind a tree.";
-	else if cunts of player > 0: [female]
+	else if player is female: [female]
 		say "     Smiling at the prospect of claiming your reward from this handsome creature, you nod to him. Without further delay, he slips out of his vest and pushes the leather pants off his bubble butt and his legs. For a second, you are spell-struck at seeing his pale, perfect body in all its naked glory.";
 		say "     Stepping towards you, the elf frees you from any clothing you might be wearing, revealing your naked [bodytype of player] form. He guides you down to lie on the discarded clothes and kneels between your legs, kissing you softly on your nether lips area, then puts a line of soft kisses up your stomach and abs. He stops for a moment as he reaches your chest, playfully circling your nipples and licking them. Then he moves up, putting pleasant little kisses on your shoulder and neck until he finally arrives at your lips and goes in for a long and deep kiss.";
 		WaitLineBreak;
@@ -122,22 +126,25 @@ to say elfdesc:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Elven Hunter";
+	now enemy title entry is "";
+	now enemy name entry is "";
+	now enemy type entry is 0; [non-unique enemy]
 	now attack entry is "[one of]A finely fletched arrow buries itself in your lower leg.[or]Moving with an almost magical swiftness, the elf suddenly appears behind you and gives you a good kick.[or]You manage to get in close, just to be swatted on the head with the bow itself.[or]With his hunting knife in hand, the elf gives you a shallow, but bleeding cut.[at random]"; [Text used when the monster makes an Attack]
 	now defeated entry is "[Hunter loses]";
 	now victory entry is "[Hunter wins]";
-	now desc entry is "[elfdesc]";[ Description of the creature when you encounter it. ]
+	now desc entry is "[elfdesc]"; [ Description of the creature when you encounter it. ]
 	now face entry is "supernaturally beautiful, with sharp but handsome features, full lips and a seductive smile. Your eyes are slightly larger than a human's, showing jade green slitted irises and two pointed ears poke out from under your long black hair";
 	now body entry is "that of a lithe and slender human being, toned and strong. It is garbed in tight, dark green leather pants and a fur-trimmed vest, allowing for unhindered, graceful movement";
 	now skin entry is "[one of]pale, flawless[or]pristine[or]perfect[at random]";
-	now tail entry is "You have a round, firm bubble butt, just waiting to be grabbed.";  [ Tail desc., written as a full sentence or left blank for none. ]
+	now tail entry is "You have a round, firm bubble butt, just waiting to be grabbed.";  [ Ass/Tail. Write as a full sentence (with period) or leave blank for none. ]
 	now cock entry is "[one of]amazing[or]perfect[or]human-like[at random]";
-	now face change entry is "your facial muscles seem to ripple under the skin, rearranging themselves into sharp, but handsome features. Your ears lengthen and taper to narrow points. Finally from one blink to the next your eyes change in some way, allowing for much sharper vision"; [ format as "Your face feels funny as (your text)" ]
+	now face change entry is "your facial muscles seem to ripple under the skin, rearranging themselves into sharp, but handsome features. Your ears lengthen and taper to narrow points. Finally from one blink to the next your eyes change in some way, allowing for much sharper vision"; [ format as "Your face feels funny as (your text)." ]
 	now body change entry is "it is reshaped into a more attractive form, ending up in a tall and slender, nicely muscled shape. You hear a flutter like fairies wings behind you and when you turn around, there's a small pile of clothing sitting on the ground. Slipping into the soft boots, tight leather pants and fur-trimmed vest, you just feel right";
 	now skin change entry is "it seems to soften and smooth out, creating the impression of timeless youth. Any blemishes and unwanted hair are wiped away with a wonderfully pleasant sensation that leaves you with perfect skin";
 	now ass change entry is "it tightens up into a firm, round bubble butt";
@@ -156,9 +163,9 @@ When Play begins:
 	now cocks entry is 1;               [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now cock length entry is 9;         [ Length infection will make cock grow to if cocks. ]
 	now cock width entry is 4;          [ Cock width, more commonly used for ball size. ]
-	now breasts entry is 2;             [ Number of breasts the infection will give a player. ]
+	now breasts entry is 2;             [ Number of nipples the infection will give a player. ]
 	now breast size entry is 0;         [ Size of breasts the infection will try to attain. ]
-	now male breast size entry is 0;    [ Breast size for if Sex="Male", usually zero. ]
+	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 0;               [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
 	now cunt length entry is 0;         [ Depth of female sex the infection will attempt to give a player. ]
 	now cunt width entry is 0;          [ Width of female sex the infection will try to give a player. ]
@@ -166,7 +173,7 @@ When Play begins:
 	now loot entry is "lembas bread";   [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 50;         [ Percentage chance of dropping loot, from 0-100. ]
 	now scale entry is 3;               [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
-	now body descriptor entry is "[one of]alluring[or]sexy[or][if cocks of player > 0]handsome[else]sultry[end if][at random]";
+	now body descriptor entry is "[one of]alluring[or]sexy[or][if player is male]handsome[else]sultry[end if][at random]";
 	now type entry is "[one of]elven[or]fae[at random]";
 	now magic entry is true;
 	now resbypass entry is false;

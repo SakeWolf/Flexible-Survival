@@ -31,7 +31,7 @@ instead of conversing the Bronze Crab:
 	say "     You try to strike up a conversation with the giant crustacean, drawing the gaze of its eye-stalks. After listening to what you say for a few moments, its mandibles unfold from their normally relaxed position and you hear a series of clicks that have a metallic ring to them. After a few seconds of that, it finishes up with a sharper click and taps the street next to you with one front leg before turning its attention back towards the city approach. Feels like you just were lectured and then dismissed.";
 
 instead of fucking the Bronze Crab:
-	say "     Amorous thoughts fill your mind and you step closer to one of the giant crab's legs, to... rub ub against it? Climb on it? Whatever it was, you are stopped cold by a huge pincer, closing around your midsection to hold you firm. With carefully meted-out force (to not accidentally snap you in half), the crab picks you up and sets you down outside the plaza, releasing its grasp there. You hear some clicking noises and see it gesture towards the city, although it doesn't seem to mind that you walk back to the plaza - without trying to have sex with it this time.";
+	say "     Amorous thoughts fill your mind, and you step closer to one of the giant crab's legs to... rub up against it? Climb on it? Whatever it was, you are stopped cold by a huge pincer, closing around your midsection to hold you firm. With carefully meted-out force (to not accidentally snap you in half), the crab picks you up and sets you down outside the plaza, releasing its grasp there. You hear some clicking noises and see it gesture towards the city, although it doesn't seem to mind that you walk back to the plaza - without trying to have sex with it this time.";
 
 
 [Boardwalk]
@@ -43,7 +43,7 @@ earea of Boardwalk2 is "Outside".
 
 to say BoardwalkDesc:
 	say "     The broad boardwalk you are standing on extends for a fair bit, starting at the beach plaza to east of your position and leading to the edge of the beachside cliffs just west of here. A wooden railing makes sure no one falls over the edge while they enjoy the view of the open ocean and the beach and coastline at the foot of the cliff. A set of broad stairs lead down to the beach, twisting back and forth as they descend the rock wall. Meanwhile, small stores flank the boardwalk up here, although from what you can see they are almost uniformly closed. Apparently most now house people who are living in them, no doubt fled from the city to this halfway peaceful area.";
-	say "     There is a decent amount of people of all sorts of species here, either chit-chatting or simply just hanging out by themselves, sitting at one of the many tables of a cafe that is actually still open. Sadly, the long line coming out of the door tells you that you won't be getting an ice-cream cone or other treat anytime soon. Overall, this area is a nice difference from the insanity of the city as everyone here appears to just want to relax.";
+	say "     There is a decent amount of people of all sorts of species here, either chit-chatting or simply just hanging out by themselves, sitting at one of the many tables of a café that is actually still open. Sadly, the long line coming out of the door tells you that you won't be getting an ice-cream cone or other treat anytime soon. Overall, this area is a nice difference from the insanity of the city as everyone here appears to just want to relax.";
 
 instead of sniffing the Boardwalk2:
 	say "     The air smells fresh and salty.";
@@ -54,10 +54,10 @@ Restaurant is a Room.
 The description of Restaurant is "[RestaurantDesc]".
 
 to say RestaurantDesc:
-	say "     The restaraunt is an interesting combination of high class and casual that seems to work, at least in your opinion. There are tables scattered throughout the building with some up against the wall and under windows that are open at the moment. In the back end of the food establishment is a bar with stools lined up to allow people to order their alcohol whenever they want it. Overall it's a very nice place.";
+	say "     The restaurant is an interesting combination of high class and casual that seems to work, at least in your opinion. There are tables scattered throughout the building with some up against the wall and under windows that are open at the moment. In the back end of the food establishment is a bar with stools lined up to allow people to order their alcohol whenever they want it. Overall it's a very nice place.";
 
 instead of sniffing the Restaurant:
-	say "     The restaurant smells of hamburgers, french fries, and many other kinds of foods, something that makes your stomach rumble.";
+	say "     The restaurant smells of hamburgers, French fries, and many other kinds of foods, something that makes your stomach rumble.";
 
 Rat Twins Stash is a container. It is closed. The description of Rat Twins Stash is "[RatTwinsTapeGet]".
 
@@ -210,7 +210,7 @@ understand "Shipwreck" as Sunken Ship.
 understand "Wreck" as Sunken Ship.
 The description of Sunken Ship is "A large ship lays sunken and rotting here. From the breaks in the old hull, it seems the ship ran afoul of the rocky waters and went down long ago. It is now an attraction for divers and sea creatures alike. Maybe going here was a bad idea. There is a cloudy mess of thick seed hanging in the water and stuck to part of the ship, tribute to some huge beast. You'd best be careful. Although in the distance to your west you can see a sparkling sight in the distance. From here, you can barely make out the lighter spot in the rocks that is the [bold type]Rock Arch[roman type] you passed through to get here. You could surface and swim to it if you want to get back to the beach.".
 
-The invent of Sunken Ship is { "sea dragon cum" , "sea dragon cum" }.
+The invent of Sunken Ship is { "sea dragon cum", "sea dragon cum" }.
 
 the scent of Sunken Ship is "You can't smell anything while underwater.".
 
@@ -253,7 +253,7 @@ Instead of examining the Church Notice Board:
 lastconfession is a number that varies. lastconfession is 248.
 
 instead of examining the confession booth:
-	Say "     It's quiet and nondescript, perhaps you should try to [bold type][link]enter[as]enter confession[end link][roman type] it and confess, or just talk to whomever is inside?";
+	say "     It's quiet and nondescript, perhaps you should try to [bold type][link]enter[as]enter confession[end link][roman type] it and confess, or just talk to whomever is inside?";
 
 instead of sniffing the confession booth:
 	say "It smells faintly of incense and arousal from the various creatures who have been within it.";
@@ -284,7 +284,7 @@ instead of entering the Confession Booth:
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]100 - Nevermind[as]100[end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
 	while sextablerun is 0:
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
@@ -303,16 +303,16 @@ instead of entering the Confession Booth:
 					say "[ChurchDemonCleanse]";
 				now lastfuck of Brennan is turns;
 				wait for any key;
-		else if calcnumber is 100:
+		else if calcnumber is 0:
 			say "     Leave the confessional?";
-			if the player consents:
+			if player consents:
 				now sextablerun is 1;
 				say "     You mumble a soft goodbye and thank-you, then leave the confessional, stepping back out into the church.";
 				wait for any key;
 			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
 
 to say ChurchQuestion:

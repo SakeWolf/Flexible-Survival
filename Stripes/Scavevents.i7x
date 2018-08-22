@@ -23,7 +23,7 @@ Instead of resolving a Tight Fit:
 	if x is 5:
 		if "Survivalist" is listed in feats of player and a random chance of 1 in 3 succeeds:
 			now y is "medkit";
-		else if "Three Bags Full" is listed in feats of the player and a random chance of 1 in 5 succeeds:
+		else if "Three Bags Full" is listed in feats of player and a random chance of 1 in 5 succeeds:
 			now y is "medkit";
 		else:
 			now y is "dirty water";
@@ -77,7 +77,7 @@ Instead of resolving a Tight Fit:
 		say " [if scalevalue of player is 3]to squirm in and out of[else if scalevalue of player is 2] for a normal person to squirm in and out of. Being smaller, you've got a better shot at making it[end if].";
 		let bonus be ( the dexterity of the player minus 10 ) divided by 2;
 		if hardmode is true and bonus > 10, now bonus is 10;
-		if "Three Bags Full" is listed in feats of the player, increase bonus by 1;
+		if "Three Bags Full" is listed in feats of player, increase bonus by 1;
 		if scalevalue of player is 2, increase bonus by 5;
 		let dice be a random number from 1 to 20;
 		say "You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs [difficulty]: ";
@@ -108,7 +108,7 @@ Instead of resolving a Protected Supplies:
 	if x is 5:
 		if "Survivalist" is listed in feats of player and a random chance of 1 in 3 succeeds:
 			now y is "medkit";
-		else if "Three Bags Full" is listed in feats of the player and a random chance of 1 in 5 succeeds:
+		else if "Three Bags Full" is listed in feats of player and a random chance of 1 in 5 succeeds:
 			now y is "medkit";
 		else:
 			now y is "dirty water";
@@ -146,13 +146,13 @@ Instead of resolving a Protected Supplies:
 				if (nocturnal entry is true and daytimer is day) or (nocturnal entry is false and daytimer is night):
 					next; [skips if day/night doesn't match]
 			add tt to q;
-			if "Like Attracts Like" is listed in the feats of the player and skinname of player is name entry and a random chance of 1 in 2 succeeds:
+			if "Like Attracts Like" is listed in the feats of player and skinname of player is name entry and a random chance of 1 in 2 succeeds:
 				add tt to q;
-			if "Like Attracts Like" is listed in the feats of the player and bodyname of player is name entry and a random chance of 1 in 2 succeeds:
+			if "Like Attracts Like" is listed in the feats of player and bodyname of player is name entry and a random chance of 1 in 2 succeeds:
 				add tt to q;
-			if "Like Attracts Like" is listed in the feats of the player and cockname of player is name entry and a random chance of 1 in 2 succeeds:
+			if "Like Attracts Like" is listed in the feats of player and cockname of player is name entry and a random chance of 1 in 2 succeeds:
 				add tt to q;
-			if "Like Attracts Like" is listed in the feats of the player and facename of player is name entry and a random chance of 1 in 2 succeeds:
+			if "Like Attracts Like" is listed in the feats of player and facename of player is name entry and a random chance of 1 in 2 succeeds:
 				add tt to q;
 	if the number of entries in q is not 0:
 		sort Q in random order;
@@ -176,7 +176,7 @@ Instead of resolving a Protected Supplies:
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Attack.";
 			say "     ([link]N[as]n[end link]) - Leave.";
-			if the player consents:
+			if player consents:
 				LineBreak;
 				let scavfight be 1;
 		if scavfight is 1:
@@ -196,7 +196,6 @@ Instead of resolving a Protected Supplies:
 			decrease morale of player by 1;
 	else:
 		say "You come across the scenes of a scuffle between two creatures. There are tufts of fur, feathers and blood scattered about, as well as other bodily fluids. In the middle of this mess [one of]are the few crumbs left from whatever food they appear to have been fighting over[or]the empty soda can they appear to have been fighting over[or]the empty and crushed water bottle they appear to have been fighting over[at random]. Unsure if you're disappointed that you got here too late or pleased that you didn't need to fight one or both of these vicious creatures to get it, you move on.";
-	if ( battleground is "Outside" or battleground is "High" ) and a random chance of 1 in 3 succeeds, mallrecall;
 
 
 Section 3 - Dropped Handbag
@@ -210,7 +209,7 @@ Instead of resolving a Dropped Handbag:
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
-	if the player consents:
+	if player consents:
 		LineBreak;
 		let T be a random number between 1 and 100;
 		if T < 41:
@@ -239,7 +238,6 @@ Instead of resolving a Dropped Handbag:
 	else:
 		LineBreak;
 		say "     Deciding not to bother, you continue on your way.";
-	if ( battleground is "Outside" or battleground is "High" ) and a random chance of 1 in 2 succeeds, mallrecall;
 	now Dropped Handbag is resolved;
 
 
@@ -254,7 +252,7 @@ Instead of resolving a Dented Bike:
 	let difficulty be a random number from 8 to 16;
 	if hardmode is true, increase difficulty by a random number between 0 and 2;
 	let bonus be ( perception of player + level of player minus 10 ) divided by 2;
-	if "Three Bags Full" is listed in feats of the player, increase bonus by 1;
+	if "Three Bags Full" is listed in feats of player, increase bonus by 1;
 	let dice be a random number from 1 to 20;
 	say "You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs [difficulty]: ";
 	if bonus + dice > difficulty:
@@ -271,7 +269,6 @@ Instead of resolving a Dented Bike:
 	say "Looking around, you find a few more tufts of fur and some messy splatters of cum leading away, but that's it.";
 	increase dentedbikecount by 1;
 	if dentedbikecount is 3, now Dented Bike is resolved;
-	if ( battleground is "Outside" or battleground is "High" ) and a random chance of 1 in 3 succeeds, mallrecall;
 
 
 Section 5 - Looted Supermarket (by Wahn)
@@ -287,7 +284,7 @@ Instead of resolving a Looted Supermarket:
 		let difficulty be a random number from 6 to 16;
 		if hardmode is true, increase difficulty by a random number between 0 and 2;
 		let bonus be ( perception of player + level of player minus 10 ) divided by 2;
-		if "Three Bags Full" is listed in feats of the player, increase bonus by 1;
+		if "Three Bags Full" is listed in feats of player, increase bonus by 1;
 		let dice be a random number from 1 to 20;
 		say "You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs [difficulty]: ";
 		if bonus + dice > difficulty:
@@ -298,7 +295,7 @@ Instead of resolving a Looted Supermarket:
 		let difficulty be 12;
 		if hardmode is true, increase difficulty by a random number between 0 and 2;
 		let bonus be ( intelligence of player + level of player minus 10 ) divided by 2;
-		if "Three Bags Full" is listed in feats of the player, increase bonus by 1;
+		if "Three Bags Full" is listed in feats of player, increase bonus by 1;
 		let dice be a random number from 1 to 20;
 		say "You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs [difficulty]: ";
 		if bonus + dice > difficulty:
@@ -310,7 +307,7 @@ Instead of resolving a Looted Supermarket:
 		let difficulty be 12;
 		if hardmode is true, increase difficulty by a random number between 0 and 2;
 		let bonus be ( intelligence of player + level of player minus 10 ) divided by 2;
-		if "Three Bags Full" is listed in feats of the player, increase bonus by 1;
+		if "Three Bags Full" is listed in feats of player, increase bonus by 1;
 		let dice be a random number from 1 to 20;
 		say "You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs [difficulty]: ";
 		if bonus + dice > difficulty:
@@ -323,7 +320,7 @@ Instead of resolving a Looted Supermarket:
 		let difficulty be a random number from 10 to 18;
 		if hardmode is true, increase difficulty by a random number between 0 and 2;
 		let bonus be ( strength of player + level of player minus 10 ) divided by 2;
-		if "Three Bags Full" is listed in feats of the player, increase bonus by 1;
+		if "Three Bags Full" is listed in feats of player, increase bonus by 1;
 		if crowbar is owned:
 			increase bonus by 3;
 			let x be 1;
@@ -336,7 +333,6 @@ Instead of resolving a Looted Supermarket:
 			say "You wander elsewhere to look for supplies, but aren't able to find any on this trip.";
 	increase supermarketcount by 1;
 	if supermarketcount is 3, now Looted Supermarket is resolved;
-	if ( battleground is "Outside" or battleground is "High" ) and a random chance of 1 in 4 succeeds, mallrecall;
 
 
 Section 6 - Abandoned Cars (by Wahn)
@@ -350,7 +346,7 @@ Instead of resolving a Abandoned Cars:
 	let difficulty be a random number from 8 to 15;
 	if hardmode is true, increase difficulty by a random number between 0 and 2;
 	let bonus be ( strength of player minus 10 ) divided by 2;
-	if "Three Bags Full" is listed in feats of the player, increase bonus by 1;
+	if "Three Bags Full" is listed in feats of player, increase bonus by 1;
 	if crowbar is owned:
 		increase bonus by 3;
 		let x be 1;
@@ -363,7 +359,6 @@ Instead of resolving a Abandoned Cars:
 	else:
 		say "Try as you might, the trunk of this car is too damaged for you to break into it. You'll have to try looking elsewhere.";
 	now Abandoned Cars is resolved;
-	if ( battleground is "Outside" or battleground is "High" ) and a random chance of 1 in 3 succeeds, mallrecall;
 
 
 Section 7 - Gryphon Milkman (by Wahn)
@@ -402,7 +397,7 @@ Instead of resolving a Plains Scavenging:
 	if x is 5:
 		if "Survivalist" is listed in feats of player and a random chance of 1 in 3 succeeds:
 			now y is "medkit";
-		else if "Three Bags Full" is listed in feats of the player and a random chance of 1 in 5 succeeds:
+		else if "Three Bags Full" is listed in feats of player and a random chance of 1 in 5 succeeds:
 			now y is "medkit";
 		else:
 			now y is "dirty water";
@@ -458,7 +453,7 @@ Instead of resolving a Plains Scavenging:
 			increase bonus by 2;
 			now petbonus is true;
 		if hardmode is true and bonus > 10, now bonus is 10;
-		if "Three Bags Full" is listed in feats of the player, increase bonus by 1;
+		if "Three Bags Full" is listed in feats of player, increase bonus by 1;
 		let dice be a random number from 1 to 20;
 		say "You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs [difficulty]: ";
 		increase dice by bonus;
@@ -495,7 +490,7 @@ Instead of resolving a Plains Scavenging:
 		else:
 			let bonus be ( the dexterity of the player plus level of the player minus 10 ) divided by 2;
 			if hardmode is true and bonus > 10, now bonus is 10;
-			if "Three Bags Full" is listed in feats of the player, increase bonus by 1;
+			if "Three Bags Full" is listed in feats of player, increase bonus by 1;
 			let dice be a random number from 1 to 20;
 			say "You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs [difficulty]: ";
 			increase dice by bonus;
@@ -522,7 +517,6 @@ Instead of resolving a Garden Veggies:
 	if girl is banned and guy is banned:
 		say "     During your search for more supplies, you find a small backyard garden, but the plants are shriveled and dying in the parched soil. Between the heat wave and the dry weather, the plants are withering away. You gather up what feeble veggies you can, having to strip the garden bare to get even get enough for a single meal.";
 		increase carried of food by 1;
-		if a random chance of 1 in 3 succeeds, mallrecall;
 		now Garden Veggies is resolved;
 	else if lastgardenveg - turns < 8:
 		say "     Finding yourself back in the neighborhood where you found the small garden, you decide to check on it again, but none of the produce has ripened yet. They seem to be growing rather quickly, but you'll have to wait a little longer.";
@@ -530,17 +524,14 @@ Instead of resolving a Garden Veggies:
 		say "     As you're searching around the area for supplies, you find a small garden in the back yard of a home. It's only got a dozen or so plants, but they're surprisingly still alive despite the heat wave and dry weather. And even better than that, they're fruiting. Only a little of the produce is ripe, but you snag what's ready to be picked. You try to remember to return here again once the rest of the veggies have had time to mature. Between the tomatoes, beans and peas, you should have enough for a meal. It'll certainly be more nutritious than some of your meals lately.";
 		increase carried of food by 1;
 		now lastgardenveg is turns;
-		if a random chance of 1 in 4 succeeds, mallrecall;
 	else if gardenveg is 1:
 		say "     Finding yourself back in the neighborhood where you found that small garden, you decide to check on it again. You are very pleased to see that more of the vegetables are ready to be picked. They seem to be growing unusually quickly, but certainly look normal and safe enough to eat. You pick some more of the produce, tomatoes and beans mostly this time. It's enough for another vegetarian meal to keep you fed for another day.";
 		increase carried of food by 1;
 		now lastgardenveg is turns;
-		if a random chance of 1 in 4 succeeds, mallrecall;
 	else if gardenveg is 2:
 		say "     Finding yourself back in the neighborhood where you found that small garden, you decide to check on it again. Since your last visit, more vegetables have ripened and are ready to be picked. Very thankful for having found these plants, you gather up another batch of veggies, taking even more this time. You dig up several of the carrots, having become large enough to pick, another couple of tomatoes and more beans and peas. With so much of the produce mature and ready, you get enough for two meals this time.";
 		increase carried of food by 2;
 		now lastgardenveg is turns;
-		if a random chance of 1 in 4 succeeds, mallrecall;
 	else if gardenveg is 3:
 		say "     Finding yourself back in the neighborhood where you found that small garden, you decide to make a quick detour to go check on it. Finding more ripe veggies, you prepare to pick more supplies, but are interrupted by a loud bleat as the back door of the home behind you opens and an angry sheep bursts forth. 'So you're the thief who's been stealing from my garden! Oh, you are so fucked now,' the sheep says, launching itself at you.";
 		now veggiegardenfight is 1;
@@ -572,7 +563,7 @@ Instead of resolving a Free Drink:
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
-	if the player consents:
+	if player consents:
 		LineBreak;
 		decrease thirst of player by 10;
 		if thirst of player < 0, now thirst of player is 0;
@@ -582,7 +573,7 @@ Instead of resolving a Free Drink:
 		if winefound is 1:
 			say "     You do manage to save some of the wine in a vial to give to Nermine.";
 			now winefound is 2;
-		if bodyname of player is "Satyr" and player is pure and cocks of player > 0:
+		if bodyname of player is "Satyr" and player is pure and player is male:
 			say "     Taking the drink, you swallow down the rich, flavorful wine. It quenches some of your thirst and gets you in a rather nice mood, waking the need to party and enjoy yourself in you. And that's not the only thing it wakes - your cock starts to fill out a bit as you imagine drunken revels with some very shapely partners. Laughing at your obvious arousal, one of the satyrs slaps you on the back and asks 'Hey brother, wanna come with us to the Phi Alpha Nu frat-house? We're the surprise guests and it'll be... legendary!' He gives you a salacious look as he does so, eyes wandering down to your crotch, then winks meaningfully.";
 			LineBreak;
 			say "     Do you go with the satyrs?";
@@ -591,7 +582,7 @@ Instead of resolving a Free Drink:
 				say "     [Satyr Frat Party]"; [Further content in Wahn/Satyr Frat.i7x]
 			else:
 				LineBreak;
-				say "     You shake your head and tell the two of them that you can't come with em right now. The satyr who invited you looks a bit deflated at you declining his offer and tries to come up with a convincing reason to join them anyways - until he's interrupted by his friend. 'Let's get going Kerr, he doesn't want to come. I wanna go on and party with some hunky fratboys...' With a sigh, Kerr the satyr gives you a little wave, then gets back to rolling the cask along with his partner. Before they get too far away to understand it over the rumbling noise of the wooden barrel on the stone floor, you can hear him wonder 'Why would anyone not go to a party? Some people are strange...'";
+				say "     You shake your head and tell the two of them that you can't come with [']em right now. The satyr who invited you looks a bit deflated at you declining his offer and tries to come up with a convincing reason to join them anyways - until he's interrupted by his friend. 'Let's get going Kerr, he doesn't want to come. I wanna go on and party with some hunky fratboys...' With a sigh, Kerr the satyr gives you a little wave, then gets back to rolling the cask along with his partner. Before they get too far away to understand it over the rumbling noise of the wooden barrel on the stone floor, you can hear him wonder 'Why would anyone not go to a party? Some people are strange...'";
 		else:
 			say "     Taking the drink, you swallow down the rich, flavorful wine. It quenches some of your thirst, but leaves you feeling a little strange as well. They laugh and slap you on the back after taking big drinks of their own. Their break done, one of the satyrs wipes his mouth with the back of his hand and says, 'Let's get going Kerr, we got a frat party to get to!' Corking the large cask back up, the second satyr gives you a friendly wave and they resume rolling it down the sidewalk.";
 			LineBreak;
@@ -647,7 +638,7 @@ Instead of resolving a Patient Rooms:
 	if x is 5:
 		if "Survivalist" is listed in feats of player and a random chance of 1 in 3 succeeds:
 			now y is "medkit";
-		else if "Three Bags Full" is listed in feats of the player and a random chance of 1 in 5 succeeds:
+		else if "Three Bags Full" is listed in feats of player and a random chance of 1 in 5 succeeds:
 			now y is "medkit";
 		else:
 			now y is "dirty water";
@@ -689,7 +680,7 @@ Instead of resolving a Patient Rooms:
 		say "     Deciding to search through some of the hospital rooms for items left behind during the outbreak, you go through several rooms and find nothing before reaching one that's been barricaded from the inside. Checking carefully, it doesn't appear that anyone is inside there now. A little puzzled, you risk asking if anyone's there, but get no response. But peering through the window, you also see a bottle of water sitting out on the small dresser inside.";
 		let bonus be ( the strength of the player plus level of the player minus 10 ) divided by 2;
 		if hardmode is true and bonus > 10, now bonus is 10;
-		if "Three Bags Full" is listed in feats of the player, increase bonus by 1;
+		if "Three Bags Full" is listed in feats of player, increase bonus by 1;
 		let dice be a random number from 1 to 20;
 		say "You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs 14: ";
 		increase dice by bonus;
@@ -724,7 +715,7 @@ Instead of resolving a Shattered House:
 		say ".";
 		let bonus be ( the strength of the player plus level of the player minus 10 ) divided by 2;
 		if hardmode is true and bonus > 10, now bonus is 10;
-		if "Three Bags Full" is listed in feats of the player, increase bonus by 1;
+		if "Three Bags Full" is listed in feats of player, increase bonus by 1;
 		let dice be a random number from 1 to 20;
 		say "You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs 14:[line break]";
 		increase dice by bonus;
@@ -737,7 +728,7 @@ Instead of resolving a Shattered House:
 		say ".";
 		let bonus be ( the dexterity of the player plus level of the player minus 10 ) divided by 2;
 		if hardmode is true and bonus > 10, now bonus is 10;
-		if "Three Bags Full" is listed in feats of the player, increase bonus by 1;
+		if "Three Bags Full" is listed in feats of player, increase bonus by 1;
 		let dice be a random number from 1 to 20;
 		say "You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs 16:[line break]";
 		increase dice by bonus;
@@ -752,7 +743,7 @@ Instead of resolving a Shattered House:
 		say ".";
 		let bonus be ( the perception of the player plus level of the player minus 10 ) divided by 2;
 		if hardmode is true and bonus > 10, now bonus is 10;
-		if "Three Bags Full" is listed in feats of the player, increase bonus by 1;
+		if "Three Bags Full" is listed in feats of player, increase bonus by 1;
 		let dice be a random number from 1 to 20;
 		say "You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs 14:[line break]";
 		increase dice by bonus;
@@ -765,7 +756,6 @@ Instead of resolving a Shattered House:
 			if a random chance of 2 in 3 succeeds:
 				say "     As you're pulling yourself out, you see that the collapse has also attracted one of the local creatures, eager to take advantage of the situation.";
 				fight;
-	if battleground is "Outside", mallrecall;
 	now Shattered House is resolved;
 
 Section 16 - Abandoned Milk (by cmacleod42)

@@ -11,6 +11,21 @@ Version 1 of Julian by Prometheus begins here.
 [   7:                                                       ]
 [ 100: Refused his conversation                              ]
 
+[QUEST LOG]
+to JulianQuestLog:
+	if hp of Julian is:
+		-- 1:
+			say "[bold type]Julian Quest: [roman type]Having helped Sylvia get over her heat, I should get to know Julian more if I want to spend more time with them.";
+		-- 2:
+			say "[bold type]Julian Quest: [roman type]While he didn't stay for long, Julian gave me his room number. I should go and see him at some point.";
+		-- 3:
+			say "[bold type]Julian Quest: [roman type]Once again, Julian was too busy to spend much time with me. He was bery apologetic and invited me to join the group at the beach.";
+		-- 4:
+			say "[bold type]Julian Quest: [roman type]I met the Julian and his friends at the beach and they made me feel like part of the group. Hopefully he'll give me more chances to help them.";
+		-- 5:
+			say "[bold type]Julian Quest: [roman type]I helped Julian gather libido suppressants from the hospital. While it didn't go smoothly, a mercenary, Cynthia, intervened on out behalf and we succeeded in getting the drugs.";
+
+
 An everyturn rule:
 	if a random chance of 1 in 2 succeeds: [present]
 		move Julian to Julian's Room;
@@ -70,7 +85,7 @@ to say JulianTalkMenu:
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]100 - Nevermind[as]100[end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
 	while sextablerun is 0:
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
@@ -89,16 +104,16 @@ to say JulianTalkMenu:
 					say "[JulianTalk3]";
 				say "     Julian watches you patiently, waiting to see whether you wish to continue the conversation";
 				WaitLineBreak;
-		else if calcnumber is 100:
+		else if calcnumber is 0:
 			say "Break off the conversation?";
-			if the player consents:
+			if player consents:
 				now sextablerun is 1;
 				say "     You stand up, indicating an end to the conversation. Julian bids you farewell, before looking out the window.";
 				WaitLineBreak;
 			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
 
 to say JulianTalk1: [Talk about him]
@@ -130,13 +145,13 @@ to say JulianSexMenu:
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
-	if cocks of player > 0: [only males and herms can get a blowjob]
+	if player is male: [only males and herms can get a blowjob]
 		choose a blank row in table of fucking options;
 		now title entry is "Receive Fellatio";
 		now sortorder entry is 1;
 		now description entry is "Ask Julian to give you a blowjob";
 	[]
-	if cunts of player > 0: [only females and herms can be eaten out.]
+	if player is female: [only females and herms can be eaten out.]
 		choose a blank row in table of fucking options;
 		now title entry is "Receive Cunnilingus";
 		now sortorder entry is 2;
@@ -151,7 +166,7 @@ to say JulianSexMenu:
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]100 - Nevermind[as]100[end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
 	while sextablerun is 0:
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
@@ -169,16 +184,16 @@ to say JulianSexMenu:
 				if (nam is "Give Fellatio"):
 					say "[JulianSex3]";
 				WaitLineBreak;
-		else if calcnumber is 100:
+		else if calcnumber is 0:
 			say "Break off the conversation?";
-			if the player consents:
+			if player consents:
 				now sextablerun is 1;
 				say "     You step back from the wolf, shaking your head slightly as he gives a questioning look.";
 				WaitLineBreak;
 			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
 
 to say JulianSex1: [Receive a blowjob]
@@ -190,7 +205,7 @@ to say JulianSex2: [Be eaten out]
 	say "     Withdrawing his fingers from your cunt, Julian licks the juices off of them, noisily smacking his lips. 'Time for this wolf to eat the kitty,' he jokes before diving between your legs, showing more enthusiasm than skill in lapping at the folds of your slit. Gripping his ears, you grind against his snout, his cool nose pressed against your clitoris, heightening the pleasure of the action. Eager to see what you really taste like, the wolf spears your pussy with his tongue, juices running over his muzzle. You press him even tighter against you, making him focus on moving his tongue rather than his whole head. He adapts quickly, using the flat, pink organ like a penis, thrusting it in and out instead of running it up and down. Shuddering, your orgasm breaks, fem-cum spraying into his maw and across his snout. As you relax, he eases his head out of your hands and looks at you, wet patches speckled across his face. 'Tart,' he says standing up and wiping his face. 'Definitely worth repeating.'";
 
 to say JulianSex3: [Give him a blowjob]
-	say "     Noticing your glances at his tip peeping from the sheath, Julian surmises your desire and walks across to you. 'If you could kneel on all fours please,' he requests, cradling his hardening shaft in his hand. You comply, stripping, before looking up at him, waiting. His carmine cock hangs in front of your face, twitching with a bead of fluid on the tip. He presses it against your lips, crouching slightly to improve the angle. [if player is submissive]The wolf's display of dominance sends tingles down your spine, his confidence heightening the thrill. [else if player is dominant]While part of you resents being in such a submissive position, you concede that some variety could be beneficial too. [end if]You gaze up at him, catching his eye as you push your mouth forward, his shaft disappearing into your cosy maw. He aids you, shuffling forward until his furry scrotum is against your chin, and your nose is pressed into his groin, smelling his pleasant canine scent.";
+	say "     Noticing your glances at his tip peeping from the sheath, Julian surmises your desire and walks across to you. 'If you could kneel on all fours please,' he requests, cradling his hardening shaft in his hand. You comply, stripping, before looking up at him, waiting. His carmine cock hangs in front of your face, twitching with a bead of fluid on the tip. He presses it against your lips, crouching slightly to improve the angle. [if player is submissive]The wolf's display of dominance sends tingles down your spine, his confidence heightening the thrill. [else if player is dominant]While part of you resents being in such a submissive position, you concede that some variety could be beneficial too. [end if]You gaze up at him, catching his eye as you push your mouth forward, his shaft disappearing into your cozy maw. He aids you, shuffling forward until his furry scrotum is against your chin, and your nose is pressed into his groin, smelling his pleasant canine scent.";
 	say "     Julian begins thrusting, holding your shoulders for support. Wet squelching and slapping noises fill the room to such an extent that you wonder how many other people in the dorm can hear you. A low growl rumbles in the wolf's throat, though it sounds more like a groan of pleasure than hostility. A knot begins to develop at the base of his penis as the wet warmth of your mouth excites him. The developing bulge squeezes past your lips, luckily avoiding any contact with your teeth. Deciding that knotting your mouth isn't a good idea, Julian reduces the depth of his thrusts but increases the tempo to compensate. As he nears climax, your lupine lover firmly grips the side of your head, hilting up to his knot, which brushes your nose, saliva still smeared on it. Fighting back a howl, Julian releases a torrent of cum into your mouth, the copious fluid dribbling out of the corners as you fail to swallow quickly enough. Once he is content that you have swallowed his load, the wolf pulls out, his cock hanging down stiffly between his legs still twitching.";
 
 
@@ -199,10 +214,11 @@ Section 5 - Events
 [See Sylvia for start]
 
 A Wolf's Invitation is a situation.
+A Wolf's Invitation is resolved.
 The level of A Wolf's Invitation is 0.
 The sarea of A Wolf's Invitation is "Campus".
 
-instead of going to College Walkway East while (A Wolf's Invitation is not resolved and hp of Sylvia > 3 and a random chance of 1 in 2 succeeds and LastCampusWalkin - turns > 2):
+instead of going to College Walkway East while (A Wolf's Invitation is not resolved and (hp of Sylvia > 3 or hpM of Sylvia > 2 or hpF of Sylvia > 2) and a random chance of 1 in 2 succeeds and LastCampusWalkin - turns > 2):
 	move player to College Walkway East;
 	AWolfsInvitationEvent;
 
@@ -219,6 +235,7 @@ to AWolfsInvitationEvent: [Room invitation from Julian]
 		LineBreak;
 		say "     He turns to you, nervously scratching a wrist. 'What you did to help Sylvia was really kind,' he mumbles, conversing with people he barely knows apparently not his strong point. 'She seems to trust you, and I trust her judgement, so... would you like to talk some more at some point? I'd like to get to know you more, especially if you're going to be one of Sylvia's friends.' He looks at you earnestly, his deep brown eyes meeting your own. 'I'll let you think about it more,' he says, standing up, 'Come and see me if you feel like it.' After giving you his room number, he walks away, his social anxiety overcoming his desire to continue talking to you. You stand up and return to the path, trying to decide whether, and if so when, you want to visit his room.";
 		now hp of Julian is 2; [Got room number]
+		add "Julian Quest" to OpenQuests of player;
 		change the northeast exit of Tenvale College Male Dorms to Julian's Room; [connecting the location to the travel room]
 		change the southwest exit of Julian's Room to Tenvale College Male Dorms; [connecting the location to the travel room]
 	else: [Go]
@@ -231,8 +248,9 @@ instead of going northeast from Tenvale College Male Dorms while (hp of Julian i
 
 to JulianRoomEvent: [First Time to Julian's Room]
 	say "     As you walk down the corridor, the merriment of the students reverberates off the walls. You reach Julian's room and knock on his door, his voice from within telling you to enter. You close the door behind you as you step into a disorderly room, clutter on the table that the wolf is sitting at, who is seemingly copying passages from a textbook. He turns to face you, a smile breaking across his face at your decision to come and see him despite his nervous invitation. 'I'm glad that you came. Would you like a seat?' He offers the desk chair that he was just sitting in as he perches on the edge of the fur-covered bed. You do so, swiveling so that you are facing him, and wait for him to begin a conversation.";
-	say "     'Considering so far every time that you've seen me, it has been in some connection with Sylvia to put it lightly. I thought that I should probably tell you a bit more about myself. As you know, my name is Julian, and I am from Canada. I'm studying biophysics, though being part of Sylvia's research team means that I do other things too as she is more focused on biology,' the wolf explains, scratching his arm nervously. You quickly introduce yourself, shaking his hand to show that you don't mind his social ineptitude. He beams at you and continues, 'I don't have many friends, Sylvia and the twins being the only people I really socialise with, though I'm hoping that you would be willing to spend time with us too. Who knows, you might be able to help our research progress, but you'd have to talk to Sylvia about it. We're going to the beach at some point. Perhaps you could join us and meet the whole group? But unfortunately, you've caught me at a bad moment. I have an assignment due tomorrow, and I've barely started. You seem nice, so please come back again. I really do want to get to know you better,' he says suggestively, glancing at your form.";
+	say "     'Considering so far every time that you've seen me, it has been in some connection with Sylvia to put it lightly. I thought that I should probably tell you a bit more about myself. As you know, my name is Julian, and I am from Canada. I'm studying biophysics, though being part of Sylvia's research team means that I do other things too as she is more focused on biology,' the wolf explains, scratching his arm nervously. You quickly introduce yourself, shaking his hand to show that you don't mind his social ineptitude. He beams at you and continues, 'I don't have many friends, Sylvia and the twins being the only people I really socialize with, though I'm hoping that you would be willing to spend time with us too. Who knows, you might be able to help our research progress, but you'd have to talk to Sylvia about it. We're going to the beach at some point. Perhaps you could join us and meet the whole group? But unfortunately, you've caught me at a bad moment. I have an assignment due tomorrow, and I've barely started. You seem nice, so please come back again. I really do want to get to know you better,' he says suggestively, glancing at your form.";
 	now hp of Julian is 3; [Met him in his room]
+	now Beach Field Research is not resolved;
 
 instead of going northeast from Tenvale College Male Dorms while (hp of Julian is 4 and a random chance of 1 in 2 succeeds):
 	JulianSupplyRunEvent;
@@ -244,14 +262,14 @@ to JulianSupplyRunEvent: [Trip to Hospital for Libido Suppressants. Meet Cynthia
 	say "     ([link]Y[as]y[end link]) - Yes. It shouldn't be too difficult to steal a few more syringes.";
 	say "     ([link]N[as]n[end link]) - No. Now isn't the time. Perhaps later.";
 	if player consents: [Steal]
-		say "     He seems visibly pleased by your response, his fluffy black tail wagging vigorously. 'Just let me get a few things,' the wolf calls, stuffing a few oddments into a backpack. If it weren't for the clothes in the way, you might consider admiring his body while he isn't watching, but as they are not form fitting, you have to rely on your memory from previous occasions to feed your saucy whim. 'Okay, let's go. Try not to attract the attention of too many creatures as we go through the city. You don't need to impress me by showing off,' Julian cautions, tapping you on the nose at the end to emphasise the point. He shepherds you out the door before locking it behind him and pocketing the key. With that, you leave the dormitory building and briskly walk through the college and out into the city.";
-		say "     As you trudge through the city together, Julian chats with you about the college, his friends, and previous excursions looking for supplies. 'We usually rely on the twins to source whatever we need, but with you helping us, and you being as capable as you are, the twins can spend more time locating items that may need their mischievous talents to acquire.' Your previous encounters with the feline duo support such a claim. You can imagine how their light fingers and impressive athleticism could make stealing or looting desirable supplies much easier. The ease with which they socialise maybe even more useful. You are surprised that none of the city's many denizens have been attracted by the noise of the conversation, attributing it to luck and hoping that this luck will hold inside the Hospital as well.";
+		say "     He seems visibly pleased by your response, his fluffy black tail wagging vigorously. 'Just let me get a few things,' the wolf calls, stuffing a few oddments into a backpack. If it weren't for the clothes in the way, you might consider admiring his body while he isn't watching, but as they are not form fitting, you have to rely on your memory from previous occasions to feed your saucy whim. 'Okay, let's go. Try not to attract the attention of too many creatures as we go through the city. You don't need to impress me by showing off,' Julian cautions, tapping you on the nose at the end to emphasize the point. He shepherds you out the door before locking it behind him and pocketing the key. With that, you leave the dormitory building and briskly walk through the college and out into the city.";
+		say "     As you trudge through the city together, Julian chats with you about the college, his friends, and previous excursions looking for supplies. 'We usually rely on the twins to source whatever we need, but with you helping us, and you being as capable as you are, the twins can spend more time locating items that may need their mischievous talents to acquire.' Your previous encounters with the feline duo support such a claim. You can imagine how their light fingers and impressive athleticism could make stealing or looting desirable supplies much easier. The ease with which they socialize maybe even more useful. You are surprised that none of the city's many denizens have been attracted by the noise of the conversation, attributing it to luck and hoping that this luck will hold inside the Hospital as well.";
 		WaitLineBreak;
-		say "     At the Hospital, the foyer has several infected waiting in chairs while the vixen nurse at the front desk sits, filing her nails while looking over an official looking clipboard. She doesn't seem to notice you as Julian drags you through a door to the bathrooms, too engrossed in making sure that her claws are nicely rounded. Your companion pulls two uniforms like those the orderlies wear from his bag. To your surprise, he strips without thought, carefully folding his shirt and trousers into the space that previously had the light blue-green clothes. As you dress yourself in the disguise, you glance quickly at the naked wolf as he pulls the trousers up, just catching a glimpse of crimson from between his legs. Feeling slightly embarrassed with how secretive you're being about appreciating his form, you quickly pull the top over your head and pass the waiting wolf your clothes to store in his bag.";
+		say "     At the Hospital, the foyer has several infected waiting in chairs while the vixen nurse at the front desk sits, filing her nails while looking over an official looking clipboard. She doesn't seem to notice you as Julian drags you through a door to the bathrooms, too engrossed in making sure that her claws are nicely rounded. Your companion pulls two uniforms like those the orderlies wear from his bag. To your surprise, he strips without thought, carefully folding his shirt and trousers into the space that previously had the light blue-green clothes. [if hpF of Sylvia > 1]As you dress yourself in the disguise, you glance quickly at the naked wolf as he pulls the trousers up, just catching a glimpse of crimson from between his legs. Feeling slightly embarrassed with how secretive you're being about appreciating his form, you quickly pull the top over your head and pass the waiting wolf your clothes to store in his bag. [else]As you dress yourself in the disguise, you make sure to avoid looking at him, not wanting to embarrass yourself or him. You quickly pull the top over your head and pass the waiting wolf your clothes to store in his bag. ";
 		say "     Lightly grasping the strap of the bag, Julian pushes the door open and steps out confidently, with you following just behind him, trying to imitate the body language of the orderlies that you have seen before. The thought of how the college student is going to explain the difference in appearance nags at the back of your mind, but before you can ask him about it, the nurse looks up from her desk and calls you both over. You silently curse for not fully discussing the plan before coming here and wait for the wolf's response as you both stride over. 'I would say that I don't recognize either of you, but as all of the orderlies are jaguars, I think that might be an understatement,' the gray-furred vixen says severely, a paw hovering over a buzzer on the front desk. You consider your chances of tackling her before she can reach it, but the thought that this would likely cause the entire lobby to intervene makes you wait long enough for Julian to reply.";
 		WaitLineBreak;
 		say "     'I wouldn't expect you to recognize us,' your lupine companion quietly murmurs to the fox. 'We were doing some work for the doctor, and it didn't work out as well as we had planned. We'd found an infection that may have been useful to him, but before we could leave the person that lived there, if you could call them that, came back and caught us.' The lies seem to be convincing enough that the nurse withdraws her hand from the desk, instead clasping her hands as she listens to the tale. Some of the waiting patients look over curiously, but the conversation is hushed enough that they would be unlikely to hear much, even those with improved hearing. Julian continues the fabricated story, mentioning tests, imprisonment, and how much effort it took to concoct an escape.";
-		say "     '... so I grabbed his balls as he was about to inject me and squeezed as hard as I could. As he bent over, I brought my knee to his head knocking him out cold. I pulled my companion with me and we ran, barely stopping to grab the bag.' By this conclusion, the nurse has one hand beneath her skirt, fantasising over some of the sordid details. 'So now we're back. I think that I'd like a quick rest and a wash before writing a full report. If you'll please excuse us,' he says, turning away and guiding you away from the [']busy vixen['] and through a door deeper into the hospital. You are completely shocked at how easily he seemed to invent the events to excuse your presence to the nurse. You curiously enquire how Julian came up with the story so quickly, to which he gives a small chuckle. 'Practice. When I went on camping trips into the forests with my family, we would take turns making up an adventure and have to flesh it out as others asked questions. Though not nearly as sexually explicit as that one I suppose,' he mumbles sheepishly, and you can imagine him blushing as he remembers some of the details he put in.";
+		say "     '... so I grabbed his balls as he was about to inject me and squeezed as hard as I could. As he bent over, I brought my knee to his head knocking him out cold. I pulled my companion with me and we ran, barely stopping to grab the bag.' By this conclusion, the nurse has one hand beneath her skirt, fantasizing over some of the sordid details. 'So now we're back. I think that I'd like a quick rest and a wash before writing a full report. If you'll please excuse us,' he says, turning away and guiding you away from the [']busy vixen['] and through a door deeper into the hospital. You are completely shocked at how easily he seemed to invent the events to excuse your presence to the nurse. You curiously enquire how Julian came up with the story so quickly, to which he gives a small chuckle. 'Practice. When I went on camping trips into the forests with my family, we would take turns making up an adventure and have to flesh it out as others asked questions. Though not nearly as sexually explicit as that one I suppose,' he mumbles sheepishly, and you can imagine him blushing as he remembers some of the details he put in.";
 		WaitLineBreak;
 		say "     You reach the end of the corridor together and push open the doors into the dispensary. Unfortunately, though probably not unsurprisingly, the room has several occupants in it already. Two of the proper orderlies are talking against one of the walls, probably on break, while one of the doctors is chatting up the lamia staffing the desk. All four look at you, first with a look of curiosity, then more like that of a predator. It would seem that they know that you are masquerading as staff and that you aren't supposed to be here. Julian adapts well to the change in the situation, only hesitating for a moment before bringing his arms up ready for the fight that is about to start. 'Do you want to take the tigers or the two at the desk?' he says quietly, not taking his eyes off the threat.";
 		say "     [bold type]Do you want to fight the two orderlies, or the lamia and canine doctors?[roman type][line break]";
@@ -303,13 +321,15 @@ to JulianSupplyRunEvent: [Trip to Hospital for Libido Suppressants. Meet Cynthia
 		say "     'You took a wrong turn. We need to get off of this road. Now,' Beardy reprimands his partner. 'It's too late.' A tall wolf on his hind legs steps out from the alley that you had just left. His fur is so dark that it seems to absorb some of the light around him, which might explain how you all missed seeing him if he was there when you passed. Several more wolves appear from behind cars and from other dark nooks and crannies. The bearded merc swears loudly and draws a large pistol, leveling it at the lead wolf. 'I wouldn't suggest doing that,' the alpha says calmly. 'Your captain can see you, and she's rather upset with how your last meeting went.' A door across the street opens, and a female soldier in a gray uniform walks out, a rifle held in her hands at ease. 'Hello Donald. Keith. It's been quite some time. You look like your kidnapping people, which isn't very nice. But then I suppose that you aren't known for your kindness. You wanted to kill that doctor, and you tried to kill me.'";
 		WaitLineBreak;
 		say "     'But in the memory of camaraderie, I'm going to let you live. Run back to the Major, and let him know that I'm hunting him. But leave the prisoners and their bag here. I know that it isn't yours.' The wolves part, giving the black-clad mercenaries an escape route. They give the woman a look of loathing before sprinting down the street. Once they are about a hundred meters away, Beardy stops for a moment and shouts back at her, 'Just you wait, bitch. The Major will hunt you down and make you regret your conscience.' She sighs and brings the rifle up, steadying it on the roof of a car and aiming down the sights. This seems to cause the mercenaries to renew the vigor with which they flee, but it would seem that the woman is a good enough shot. With a muffled bang, you watch as a burst of blood appears from Beardy's leg. He stumbles, but continues to flee, barely even limping.";
-		say "     With a tired smile, the markswoman turns back to you, slinging the rifle over her back. 'Where are my manners? I should have cut you loose first. Argos, if you would be so kind,' she addresses the lead wolf, who comes forward with a knife and severs the zip ties. 'We had been tracking them since just before they reached the hospital, but I'm curious as to what you two were doing there. You obviously aren't orderlies despite your clothes. You aren't jaguars for one, and you smell wrong. Too earthy as though you are often moving about the city.' A second wolf inquires, 'Have you met them before, Cynthia?' The woman replies, 'I haven't met them per se, Orthos, but I have seen them traveling through. May I know your names? I'm Cynthia, and these two handsome beasts are Argos and Orthos,' she says gesturing at the large black wolf and a similar size gray and brown pack mate. 'They are the Alpha and Beta of the wolf pack that just saved your lives.'";
+		say "     With a tired smile, the markswoman turns back to you, slinging the rifle over her back. 'Where are my manners? I should have cut you loose first. Argos, if you would be so kind,' she addresses the lead wolf, who comes forward with a knife and severs the zip ties. 'We had been tracking them since just before they reached the hospital, but I'm curious as to what you two were doing there. You obviously aren't orderlies despite your clothes. You aren't jaguars for one, and you smell wrong. Too earthy as though you are often moving about the city.' A second wolf inquires, 'Have you met them before, Cynthia?' The woman replies, 'I haven't met them per se, Orthos, but I have seen them traveling through. May I know your names? I'm Cynthia, and these two handsome beasts are Argos and Orthos,' she says gesturing at the large black wolf and a similar size gray and brown pack mate. 'They are senior pack members for the Pack Alpha and Den Mother.'";
 		WaitLineBreak;
-		say "     You and Julian introduce yourselves and thank them for the rescue. '[if player is not defaultnamed][name of player], [end if]I've seen moving around the city before,' Cynthia says to Argos. 'They seem to have a base in the library.' You are slightly concerned that someone else knows where you have been living without you telling them. 'And Julian is one of the students at the College. He seems to be friends with the collie and the two cats.' Julian confirms this, looking almost reverentially at the wolves. 'We were searching for libido suppressants,' he replies in answer to why you were in the hospital. 'We use them as insurance against inopportune arousal, but those two soldiers interrupted us and we have now lost the chance.' In response, Cynthia quickly re-enters the building in which she had previously been observing your predicament, and returns with a small satchel. 'I have a few left in here from earlier in the outbreak, but I don't use them any more so you can have them. I hope that helps.'";
-		say "     Your companion thanks her profusely, sliding the satchel into a pocket of his bag before slinging it over his shoulder. Cynthia addresses you both, 'Here isn't a safe place to explain, but should Donald and Keith threaten you again, or anyone else, you can find us near that [bold type]Bright Alley[roman type], you know the one. I'll explain there should you decide to come. I suppose that you could go there at some point anyway. There may be some people who may be interested in meeting you. But for now, we must go. We wish you well.' She and the lead wolves nod at you before leaving the street with the rest of the pack via alleyways and ruined buildings. Working out your bearings, you and Julian begin working your way back to the college, mission complete, albeit not as smoothly as you had hoped. After a thankfully uneventful return trip, you enter Julian's room, where he collapses on the bed with a sigh. 'That could have ended badly. Help yourself to a syringe before I take them to the twins. Thank you so very much for the help. I wouldn't have managed it without you. I'm really exhausted, so I think I'll take a nap. See you soon.'";
+		say "     You and Julian introduce yourselves and thank them for the rescue. '[if player is not defaultnamed][name of player], [else]That one, [end if]I've seen moving around the city before,' Cynthia says to Argos. 'They seem to have a base in the library.' You are slightly concerned that someone else knows where you have been living without you telling them. 'And Julian is one of the students at the College. He seems to be friends with the collie and the two cats.' Julian confirms this, looking almost reverentially at the wolves. 'We were searching for libido suppressants,' he replies in answer to why you were in the hospital. 'We use them as insurance against inopportune arousal, but those two soldiers interrupted us and we have now lost the chance.' In response, Cynthia quickly re-enters the building in which she had previously been observing your predicament, and returns with a small satchel. 'I have a few left in here from earlier in the outbreak, but I don't use them any more so you can have them. I hope that helps.'";
+		say "     Your companion thanks her profusely, sliding the satchel into a pocket of his bag before slinging it over his shoulder. Cynthia addresses you both, 'Here isn't a safe place to explain, but should Donald and Keith threaten you again, or anyone else, you can find us near that [bold type]Bright Alley[roman type], you know the one. I'll explain there should you decide to come. I suppose that you could go there at some point anyway. There may be some people who may be interested in meeting you. But for now, we must go. We wish you well.' She and the lead wolves nod at you before leaving the street with the rest of the pack via alleyways and ruined buildings. Working out your bearings, you and Julian begin working your way back to the college, mission complete, albeit not as smoothly as you had hoped. After a thankfully uneventful return trip, you enter Julian's room, where he collapses on the bed with a sigh. 'That could have ended badly. Help yourself to a syringe before I take them to the twins. Thank you so very much for your aid. I wouldn't have managed it without you. I'm really exhausted, so I think I'll take a nap. See you soon.'";
 		say "[bold type]You gain one libido suppressant![roman type][line break]";
 		increase carried of libido suppressant by 1;
 		now hp of Julian is 5;
+		[now hp of Cynthia is 1;
+		now Den of the Pack is not resolved;]
 	else: [Wait]
 		say "     You apologize, saying that now isn't a good time and that you'll probably be able to help him at another point. 'Fair enough. As I said, we have enough to manage for a bit, and we can scrounge off of others if necessary.' Relieved that he isn't upset, you sit down on the corner of his bed and try and remember what it is you came here for.";
 	move player to Julian's Room;

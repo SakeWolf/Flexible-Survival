@@ -25,6 +25,7 @@ Sarah by Wahn begins here.
 [  0: never talked to the player about it                                            ]
 [  1: Sarah thanked the player for the showers                                       ]
 
+[ SarahPups - number of offspring                                                    ]
 
 SarahTalk is a number that varies.
 SarahSlut is a number that varies.
@@ -64,12 +65,12 @@ instead of resolving a Husky Pack:
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Apologize and leave as quickly as you can.";
 	say "     ([link]N[as]n[end link]) - Demand an explanation what he's doing with the human woman.";
-	if the player consents: [apologize]
+	if player consents: [apologize]
 		say "     You bow low and apologize for bothering them, saying that you will do your best to avoid their territory from now on. Then you turn and start to walk away, hearing one of the huskies call after you, 'You better run, you dumb [if player is female]bitch[else]jackass[end if].' The sound of ripping fabric and a frightened gasp follows and you can't help but look over your shoulder to see what is going on. Looks like the alpha husky decided that he wants to break in his newest pet right here and now - the woman is pressed against the wall of a building now, with him leaning over her and just having ripped her top half off. The red canine shaft standing proudly erect between his legs leaves little to the imagination of what will happen next.";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Attempt to rescue the woman from her fate.";
 		say "     ([link]N[as]n[end link]) - Accept the situation for what it is and just walk away.";
-		if the player consents: [rescue Sarah]
+		if player consents: [rescue Sarah]
 			LineBreak;
 			say "[SarahRescue]";
 		else: [leave her to them]
@@ -98,7 +99,7 @@ instead of resolving a Husky Pack:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Attempt to rescue the woman from her fate.";
 		say "     ([link]N[as]n[end link]) - Accept the situation for what it is and just walk away.";
-		if the player consents: [rescue Sarah]
+		if player consents: [rescue Sarah]
 			LineBreak;
 			say "[SarahRescue]";
 		else: [leave her to them]
@@ -110,11 +111,11 @@ instead of resolving a Husky Pack:
 	now Husky Pack is resolved;
 
 to say SarahLeftSubmissive:
-	say "     The lead husky's eyes catch on yours, and a predatory gleam shines in those canid irises. The flame of avarice flares bright, and something inside of you quakes, a shudder of something hot, tugging at your to submit towards that greater will. His lips peel back into a wolfish smile, 'And, that one, too,' nodding his head towards you. So much for leaving the situation be.";
+	say "     The lead husky's eyes catch on yours, and a predatory gleam shines in those canid irises. The flame of avarice flares bright, and something inside of you quakes, a shudder of something hot, tugging at you to submit towards that greater will. His lips peel back into a wolfish smile, 'And, that one, too,' nodding his head towards you. So much for leaving the situation be.";
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Fight to keep both you and Sarah from this fate.";
 	say "     ([link]N[as]n[end link]) - Submit to the desires of the Alpha Husky.";
-	if the player consents: [Rescue Sarah]
+	if player consents: [Rescue Sarah]
 		LineBreak;
 		say "[SarahRescue]";
 	else: [Total Submission]
@@ -127,6 +128,7 @@ to say SarahRescue:
 	increase morale of the player by 10;
 	say "     You are about to jump forward to challenge the husky, but a member of his pack acts first and pounces on you.";
 	let GroupFightCounter be 0;
+	now fightoutcome is 0; [reset]
 	while fightoutcome < 20 and GroupFightCounter < 4: [runs for 4 times (for example) or until the player loses or flees]
 		now inasituation is true;
 		if GroupFightCounter < 3:
@@ -138,7 +140,7 @@ to say SarahRescue:
 		increase GroupFightCounter by 1;
 	if fightoutcome < 20: [player won]
 		say "     Standing victorious over a pile of groaning huskies as they gingerly touch their bruises and try to get up again, you quickly step over a sprawled out bitch and grab Sarah, lifting her up in your arms and running away from the scene of the fight as quickly as you can. You do stop once or twice to look back and see if you are being followed by the huskies - or attracted any other creature's attention - but thankfully, it looks like you're in the clear. Carrying the wounded woman back to the library, you gently lay her on the reception desk and ";
-		if "Expert Medic" is listed in feats of the player:
+		if "Expert Medic" is listed in feats of player:
 			say "expertly bandage her wound, using the remains of her ripped t-shirt to tie around her torso. ";
 		else:
 			say "do your best to treat her wound, tying her ripped t-shirt around her torso in an improvised bandage. ";
@@ -169,16 +171,16 @@ to say HuskyGangbang:
 	say "     The swell pillows of voluptuous husky breasts nestle the back of your neck into their cleft while slender digits caress from the center of your sternum upwards, gliding over your collar and up to your jawline in soothing pets. One of your wrists is captured between another of the bitch's thighs, and damp lips drag over your palm and fingers, achingly hot and seeking your touch. Sarah's plaintive gasps riddle the air, melting into high-pitched whines and groans, and you can see the woman's folds being spread over the wedge of a canine muzzle. Each moist lap draws a fresh squeal from her as the husky bitch licks her out. Sarah's eyes land on you, and her mouth spreads in a panting O, her taut nipples collected into tight, lick-dampened nubs while her hips roll, riding the face of the cunnilinguist.";
 	WaitLineBreak;
 	if player is female:
-		say "     Distracted by the tableau of feminine pleasure, a teasing finger sliding up from beneath to drag over your own cleft gives you a start. Your hot, perfumed lips are spread, and the blunt-clawed finger probes, working its way into your nethers to explore. Looking down, you can see one of the bitchs knelt between your thighs, her curled tail wagging happily behind her while she ogles your spreading pussy and how it grips her finger. She looks up briefly, bright blue eyes flashing with mischief before her face descends, and her muzzle noses in, huffing in your perfume before exhaling passionate warmth. The silken lash of her flat tongue grooms over your split slit, and her finger works to the knuckle, curling inside to stroke behind the curve of your pelvis and drag over your folds.";
+		say "     Distracted by the tableau of feminine pleasure, a teasing finger sliding up from beneath to drag over your own cleft gives you a start. Your hot, perfumed lips are spread, and the blunt-clawed finger probes, working its way into your nethers to explore. Looking down, you can see one of the bitches has knelt between your thighs, her curled tail wagging happily behind her while she ogles your spreading pussy and how it grips her finger. She looks up briefly, bright blue eyes flashing with mischief before her face descends, and her muzzle noses in, huffing in your perfume before exhaling passionate warmth. The silken lash of her flat tongue grooms over your split slit, and her finger works to the knuckle, curling inside to stroke behind the curve of your pelvis and drag over your folds.";
 		if player is male:
-			say "     One of her sisters leans over, and their noses brush when the other snuffles against your nuts, inhaling your mingled aromas and begins to lap up over the orbs. One husky sister nosing your cunny and the other slathering your balls with damp tongue kisses. You cock twitches, veins throbbing with the beat of your heart, and the pink flat of the husky's tongue sloooowly glides up your length, cleaning the belly to leave it glistening wet. With her finger still inside of you, the other sister lifts her muzzle, and she slides her dark lips over one of the hanging nuts, sealing around it to give it a gentle nursing tug. Both girls work at polishing your balls with wet, slippery suckles, each pulling the opposite direction to spread your sac even as that finger weedles and toys with your folds. Almost at the same time, your balls pop form their lips, damply bouncing, and the sisters kiss, sharing the succulent flavor of your sac between them.";
+			say "     One of her sisters leans over, and their noses brush when the other snuffles against your nuts, inhaling your mingled aromas and begins to lap up over the orbs. One husky sister nosing your cunny and the other slathering your balls with damp tongue kisses. You cock twitches, veins throbbing with the beat of your heart, and the pink flat of the husky's tongue sloooowly glides up your length, cleaning the belly to leave it glistening wet. With her finger still inside of you, the other sister lifts her muzzle, and she slides her dark lips over one of the hanging nuts, sealing around it to give it a gentle nursing tug. Both girls work at polishing your balls with wet, slippery suckles, each pulling the opposite direction to spread your sac even as that finger tweedles and toys with your folds. Almost at the same time, your balls pop form their lips, damply bouncing, and the sisters kiss, sharing the succulent flavor of your sac between them.";
 		WaitLineBreak;
-		say "     The single finger is joined by another, and the two spread, stretching at your folds, and the husky nudges her nose into the spread, breathing in your perfume before her tongue laps at your nectar-glistened pink. Burrowing with her muzzle, the husky bitch wedges her nose in more, spreading your petals the moreso while she laps within. The husky who'd been stroking your jawline and supporting the back of your neck with her cushy breasts turns a little, arm sliding to support your head as she drags the swell warmth of her tits across your face. The firm prod of her nipple drags across your cheek and over your lips, teasing until you give it a kiss. A keening cry erupts from Sarah, and you can spy her amongst the other bitches, nails clutching against a scalp as her sweet nectar floods over an eager muzzle. As if in sympathy, your folds shudder, and the seeping dampness of your own juices grows the more copious, flooding over the insistent lapping and snuffling.";
-		say "     [if anal is not banned]The fingers, still damp with your own juices, slide down and pet over your puffy star and begin to push, spreading the muscle with soft insistence, sinking a single finger up into your ass to stroke the wall shared by both sexual pockets. [end if]Needy whines ride through the husky's muzzle while she nibbles and licks, and her tail wags incessantly with delight. A pair of the bitch sisters grinds their ample breasts across your bicep and face, stroking oyu with their naughty pillows while panting headily. The air is hot with pheromones and dank, rich female musk. Nails comb over your sides, and probing fingers work faster, playing to your quivering nethers, following each reaction with more stimulation until your back arches, and your walls constrict, locking over the invaders. A flood of your juices spills out, gushing over the teasing muzzle and coating the husky's face in your nectar, your cries joining Sarah's own.";
+		say "     The single finger is joined by another, and the two spread, stretching at your folds, and the husky nudges her nose into the spread, breathing in your perfume before her tongue laps at your nectar-glistened pink. Burrowing with her muzzle, the husky bitch wedges her nose in more, spreading your petals even moreso while she laps within. The husky who'd been stroking your jawline and supporting the back of your neck with her cushy breasts turns a little, arm sliding to support your head as she drags the swell warmth of her tits across your face. The firm prod of her nipple drags across your cheek and over your lips, teasing until you give it a kiss. A keening cry erupts from Sarah, and you can spy her amongst the other bitches, nails clutching against a scalp as her sweet nectar floods over an eager muzzle. As if in sympathy, your folds shudder, and the seeping dampness of your own juices grows the more copious, flooding over the insistent lapping and snuffling.";
+		say "     [if anal is not banned and anallevel > 1]The fingers, still damp with your own juices, slide down and pet over your puffy star and begin to push, spreading the muscle with soft insistence, sinking a single finger up into your ass to stroke the wall shared by both sexual pockets. [end if]Needy whines ride through the husky's muzzle while she nibbles and licks, and her tail wags incessantly with delight. A pair of the bitch sisters grinds their ample breasts across your bicep and face, stroking you with their naughty pillows while panting headily. The air is hot with pheromones and dank, rich female musk. Nails comb over your sides, and probing fingers work faster, playing to your quivering nethers, following each reaction with more stimulation until your back arches, and your walls constrict, locking over the invaders. A flood of your juices spills out, gushing over the teasing muzzle and coating the husky's face in your nectar, your cries joining Sarah's own.";
 		WaitLineBreak;
 	if player is male:
-		say "     Eager paws capture the girth of your member, sister bitches sharing the grip as several muzzles lean in to lap over your tip and sac, shaft and base. The joint efforts readily slather you in hot husky drool, polishing over your pole and nuts until they fairly gleam. [if anal is not banned]A moist finger slides between your ass cheeks with the pad of it pressing and massaging into your snug bud, rolling it in little circles. With careful but firm pressure, that damp digit sinks in, spreading your star. [end if]Panting breathes wash across your polished cock, and more lapping still moistens your belly and thighs, too. One of the husky girls seals her dark lips over the crown of your prick, and she audibly nurses, slurping noisily while the silky stroke of her tongue drags against your cum slit and shines your tip. Several soft-padded hands grip and begin to paw up your length in rapid strokes.";
-		say "     The girl's pack sister pushes down on her head, forcing her to take you deeper suddenly and roughly. With a snort and glurk, she sputters around your girth, eyes crossing briefly. [if anal is not banned]The exploring finger burrows within your anal depths, curling past the snug cuff and petting in against the meaty lining to find your sweet lily and massage it, milking that prostate. [end if]The husky girl's nostrils flare as she pants nasally, head bobbing, lips tugging and nursing from your prick, despite her sister's mean push. The same sister shimmies down and slides one of your nuts into her mouth, rubbing her nose against her pack sister's chin and your cock's belly. Within the warm, wet confines of her mouth, her tongue slathers and bathes, suckling the salts that cling to your sac. When your nuts tug up tight, you can feel the heat welling up your length. The girls pull off as you start to cum, and your jizz spatters against your own belly messily.";
+		say "     Eager paws capture the girth of your member, sister bitches sharing the grip as several muzzles lean in to lap over your tip and sac, shaft and base. The joint efforts readily slather you in hot husky drool, polishing over your pole and nuts until they fairly gleam. [if anal is not banned and anallevel > 1]A moist finger slides between your ass cheeks with the pad of it pressing and massaging into your snug bud, rolling it in little circles. With careful but firm pressure, that damp digit sinks in, spreading your star. [end if]Panting breathes wash across your polished cock, and more lapping still moistens your belly and thighs, too. One of the husky girls seals her dark lips over the crown of your prick, and she audibly nurses, slurping noisily while the silky stroke of her tongue drags against your cum slit and shines your tip. Several soft-padded hands grip and begin to paw up your length in rapid strokes.";
+		say "     The girl's pack sister pushes down on her head, forcing her to take you deeper suddenly and roughly. With a snort and glurk, she sputters around your girth, eyes crossing briefly. [if anal is not banned and anallevel > 1]The exploring finger burrows within your anal depths, curling past the snug cuff and petting in against the meaty lining to find your sweet lily and massage it, milking that prostate. [end if]The husky girl's nostrils flare as she pants nasally, head bobbing, lips tugging and nursing from your prick, despite her sister's mean push. The same sister shimmies down and slides one of your nuts into her mouth, rubbing her nose against her pack sister's chin and your cock's belly. Within the warm, wet confines of her mouth, her tongue slathers and bathes, suckling the salts that cling to your sac. When your nuts tug up tight, you can feel the heat welling up your length. The girls pull off as you start to cum, and your jizz spatters against your own belly messily.";
 		WaitLineBreak;
 	if guy is banned:
 		say "     Even in the afterglow of your passions, Sarah crawls through the tumult of gorgeous female bodies. Panting headily, she croons, 'Thank you. For trying to help,' a bit breathlessly. The other woman's face draws close, and it's glistened with the fragrance of husky nectar while she steals a kiss, pressing her breasts to you in the shared moment. Those molten petals linger only briefly before sliding free. She stands, sliding a leg over your shoulder to mash her perfumed lower lips up against your nose, grinding in to paint you with her juices, 'Mmmn, here, you earned it.' Her fingers clutch against the back of your scalp, and she holds you in against the radiant heat, lithely grinding her pussy against you.";
@@ -262,7 +264,7 @@ to say HuskyThreesome:
 	else if noncon is not banned:
 		LineBreak;
 		say "     It seems like no is not an answer the Alpha wants as he brusquely closes the distance between himself and you. The dog's grip clamps down on your scalp, drawing you in close. Beneath the heavy tone of his abdomen, the gleaming pillar of the alpha husky's tapered prick is laced with throbbing veins, livid with his ire. Its pungent scent spreads, rich with the male's virile musk and the salts of exertion, and that cock's heat is radiant, bathing your backside with its intensity. Stooping over your forcefully knelt figure, the alpha husky's breath steals across your neck, and his whisper is ragged with anger, 'This will be for my pleasure, not for yours. I will take each ill you've done unto mine out on your hide,' before his jaws close, gripping on your shoulder like a vice.";
-		say "     The hot slather of the canine's erect fuckflesh drags across your taint, smearing its perspirations into your valley and dribbling mercurial heat over your puckered bud. The hot drizzle of pre spills beneath, rivulets of slick, hot juice parting over your [if player is female]lips[else]sac[end if] and glistening down over your thighs. The searing taper of that angry spear buts against your star, spreading it insistently before an angry thrust spits your quivering ring, force-fitting around the throbbing girth. Pain shoots in scintillating waves, piercing your groin and pearmeating into your bowels as the fresh, burning ache of your anal cuff being stretched is joined by the insistent pulse of the invader. The husky's blunt, canid claws rake down your sides, pulling back on your hips, meeting his thrust so that his muscled thighs clap against your ass, and his full sac slaps against you heftily.";
+		say "     The hot slather of the canine's erect fuckflesh drags across your taint, smearing its perspirations into your valley and dribbling mercurial heat over your puckered bud. The hot drizzle of pre spills beneath, rivulets of slick, hot juice parting over your [if player is female]lips[else]sac[end if] and glistening down over your thighs. The searing taper of that angry spear buts against your star, spreading it insistently before an angry thrust spits your quivering ring, force-fitting around the throbbing girth. Pain shoots in scintillating waves, piercing your groin and permeating into your bowels as the fresh, burning ache of your anal cuff being stretched is joined by the insistent pulse of the invader. The husky's blunt, canid claws rake down your sides, pulling back on your hips, meeting his thrust so that his muscled thighs clap against your ass, and his full sac slaps against you heftily.";
 		WaitLineBreak;
 		say "     The bestial potency of his ferocious mounting has you helplessly skewered on his spearing meat, and the husky's powerful body moves atop your own, keeping you knelt in place, bottom to his pervasive top. The musk-gloved prickmeat tugs and pistons, pulling through your painfully stretched channel, bucking into your anal passage roughly as he takes of your flesh. The quivering grip of your resisting anus milks around the dog's girth, and every inch of veined, turgid dogdick can be felt while it possesses your depths.";
 		if player is male:
@@ -277,9 +279,9 @@ to say HuskyThreesome:
 
 to say HuskyAlphaWin:
 	if noncon is not banned:
-		if anal is not banned:
+		if anal is not banned and anallevel > 1:
 			say "     The powerful physique of the male husky ripples as he seethes forwards towards you. A snarl peels back his lips, and he barks out, 'You hurt my pack, my mates, and for that, you're going to get it.' Lashing out, he grips your scalp and pulls you down onto your knee roughly, the brusque motion slamming your knees against the ground harshly. The husky's muscles are firm, and his movements are adamant as he [StripCrotch]. Beneath the heavy tone of his abdomen, the gleaming pillar of the alpha husky's tapered prick is laced with throbbing veins, livid with his ire. Its pungent scent spreads, rich with the male's virile musk and the salts of exertion, and that cock's heat is radiant, bathing your backside with its intensity. Stooping over your forcefully knelt figure, the alpha husky's breath steals across your neck, and his whisper is ragged with anger, 'This will be for my pleasure, not for yours. I will take each ill you've done unto mine out on your hide,' before his jaws close, gripping on your shoulder like a vice.";
-			say "     The hot slather of the canine's erect fuckflesh drags across your taint, smearing its perspirations into your valley and dribbling mercurial heat over your puckered bud. The hot drizzle of pre spills beneath, rivulets of slick, hot juice parting over your [if player is female]lips[else]sac[end if] and glistening down over your thighs. The searing taper of that angry spear buts against your star, spreading it insistently before an angry thrust spits your quivering ring, force-fitting around the throbbing girth. Pain shoots in scintillating waves, piercing your groin and pearmeating into your bowels as the fresh, burning ache of your anal cuff being stretched is joined by the insistent pulse of the invader. The husky's blunt, canid claws rake down your sides, pulling back on your hips, meeting his thrust so that his muscled thighs clap against your ass, and his full sac slaps against you heftily.";
+			say "     The hot slather of the canine's erect fuckflesh drags across your taint, smearing its perspirations into your valley and dribbling mercurial heat over your puckered bud. The hot drizzle of pre spills beneath, rivulets of slick, hot juice parting over your [if player is female]lips[else]sac[end if] and glistening down over your thighs. The searing taper of that angry spear buts against your star, spreading it insistently before an angry thrust spits your quivering ring, force-fitting around the throbbing girth. Pain shoots in scintillating waves, piercing your groin and permeating into your bowels as the fresh, burning ache of your anal cuff being stretched is joined by the insistent pulse of the invader. The husky's blunt, canid claws rake down your sides, pulling back on your hips, meeting his thrust so that his muscled thighs clap against your ass, and his full sac slaps against you heftily.";
 			WaitLineBreak;
 			say "     The bestial potency of his ferocious mounting has you helplessly skewered on his spearing meat, and the husky's powerful body moves atop your own, keeping you knelt in place, bottom to his pervasive top. The musk-gloved prickmeat tugs and pistons, pulling through your painfully stretched channel, bucking into your anal passage roughly as he takes of your flesh. The quivering grip of your resisting anus milks around the dog's girth, and every inch of veined, turgid dogdick can be felt while it possesses your depths.";
 			if player is male:
@@ -290,7 +292,7 @@ to say HuskyAlphaWin:
 			say "     The male husky's knot starts to swell, its bloated presence punching into your ass and popping free with each drive and each pull, plucking at your abused ring. Pulling out abruptly, he snarls against your shoulder, 'Not yet. You still have more to pay for,' as his gleaming scepter ticks, juicy with musk. Gripping against your scalp again, he tugs your around, mashing your nose into his nutsack while that polished pole throbs, aromatic with the scents of recent conquest. 'Lick, and maybe I'll go easy on your throat,' the alpha growls huskily.";
 		else:
 			LineBreak;
-			say "     The male husky sinks his grip close to your scalp, and he roughly tugs your face in close to his crotch. The swollen orbs of his fur-clad nuts bulge, rich and virile, and the dog's sheath is split with the towering monolith of his angry erection. Livid veins throb against the bloated swell of cockmeat, and the canid taper's narrow point dribbles beads of fresh pre. 'Lick, and maybe I'll go easy on your throat, bitch,' comes the husky's acidic words, hie ire up from the treatment to his pack.";
+			say "     The male husky sinks his grip close to your scalp, and he roughly tugs your face in close to his crotch. The swollen orbs of his fur-clad nuts bulge, rich and virile, and the dog's sheath is split with the towering monolith of his angry erection. Livid veins throb against the bloated swell of cockmeat, and the canid taper's narrow point dribbles beads of fresh pre. 'Lick, and maybe I'll go easy on your throat, bitch,' comes the husky's acidic words, his ire up from the treatment to his pack.";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Lick that flavorful cock.";
 		say "     ([link]N[as]n[end link]) - No, you will not lick it.";
@@ -359,7 +361,7 @@ to say SarahSlutState:
 
 instead of conversing the Sarah:
 	if SarahSlut > 0 and SarahSlut < 4: [Slut Path]
-		say "[one of]'Please fuck me, I need - Oh sorry. Lost control of myself there.'[or]'Mmmm huskies.'[or]'I guess you are the alpha here.'[or]'I can make some medkits if you had parts.'[or]'Have you seen any spare medkit parts out there?'[or]'This place is wonderful. Why didn't I come here?'[or]'Thanks for saving me!'[or]Sarah moans, rubbing her dripping slit.[at random]";	[todo]
+		say "[one of]'Please fuck me, I need - Oh sorry. Lost control of myself there.'[or]'Mmmm huskies.'[or]'I guess you are the alpha here.'[or]'I can make some medkits if you had parts.'[or]'Have you seen any spare medkit parts out there?'[or]'This place is wonderful. Why didn't I come here?'[or]'Thanks for saving me!'[or]Sarah moans, rubbing her dripping slit.[at random]"; [todo]
 	else if SarahSlut > 3: [End of Slut Path]
 		say "[one of]'Fuck me again master!'[or]'Please take me now!'[or]Sarah moans, rubbing her slit and dripping everywhere.[or]'Fill me!'[or]'Use me like the bitch I am.'[or]'Master, please use your slut!'[or]'I just love being your bitch.'[at random]";
 	else if SarahTalk is 0: [Sane]
@@ -403,7 +405,7 @@ to say SarahTalkMenu:
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]100 - Nevermind[as]100[end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
 	while sextablerun is 0:
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
@@ -423,14 +425,15 @@ to say SarahTalkMenu:
 				if (nam is "Theories on the outbreak"):
 					say "[SarahTalk4]";
 				wait for any key;
-		else if calcnumber is 100:
+				say "[SarahTalkMenu]";
+		else if calcnumber is 0:
 			say "Break off the conversation?";
-			if the player consents:
+			if player consents:
 				now sextablerun is 1;
 				say "     You step back from the young woman, shaking your head slightly as she gives a questioning look.";
 				wait for any key;
 			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
@@ -621,7 +624,7 @@ to say SarahFucking:
 			WaitLineBreak;
 			now lastfuck of Sarah is turns;
 			increase SarahSlut by 1;
-			if cocks of player > 0:
+			if player is male:
 				say "     Moving even closer with a broad grin on your face, you enjoy her moans of submission as your hands continue to roam across her body. You decide to rub her new position in even more as you slowly push her down onto all fours. Sarah moans as she realizes your intent, looking back at you over her shoulder as you stroke your cock several times before running its tip over her soaked entry, grinning at how wet your new pet is for you already. Deciding not to waste any time enforcing the new status quo, you grip her thighs with your hands, lifting her up slightly until she is perfectly positioned. Pressing your cock-tip to the lips of her vagina, you swiftly bury yourself inside her with one sure thrust, your throbbing meat filling her up to the brim and causing her to cry out in pleasure.";
 				say "     Sarah's depths are warm and welcoming, and you can't help but enjoy the glorious sensation of being buried to the hilt in her soft body. Gripping her hips, you begin to thrust forward into the lovely bitch. Your every stroke makes her yip and pant in pleasure, her body rocking forward in time to your thrusts. You can feel your peak growing ever closer as you thrust into her eager form, but you still need to do one more thing before you fill her body with your seed, one last bit of icing on top of the cake. Leaning down, you nibble softly on her ear. 'Moan for me,' you whisper, knowing she will hear you easily. 'Beg me to fill you up and make you my pet. You know you want it. Just say yes and I'll make sure you get what you need,' you tease, slowing down your thrusts leaving her right at the peak of orgasm.";
 				WaitLineBreak;
@@ -640,8 +643,8 @@ to say SarahFucking:
 		say "     Grinning at how easily her mind begins to slip back into the proper submissive role of a slutty pet, you slowly stroke Sarah's soft fur as you move right in front of her. As you pull her muzzle close for a deep kiss, her tongue twines with yours as you enjoy the feel of her body pressing up against your own. Breaking the kiss, you slowly place your hands on her shoulders and begin to push her down slightly. Sarah looks at you in puzzlement as you slowly guide her down on her knees in front of you, only to have her eyes go wide as she realizes she is now staring right up into your crotch.";
 		WaitLineBreak;
 		now lastfuck of Sarah is turns;
-		if cocks of player > 0:
-			if cunts of player > 0:
+		if player is male:
+			if player is female:
 				say "     You grin as you reach down to stroke your erect member a few times, Sarah's eyes locked on your stiff rod only inches from her face. Deciding to tease her even further, you lean forward slightly and slowly rub the tip of your cock over her nose, filling her husky senses with the scent of a strong erect male. Sarah moans, her eyes half closing as your musky scent works its way through her body, and you grin as the sight of her on her knees before you in such a submissive manner makes your own pussy clench eagerly in response. You continue to slowly stroke your member, teasing her with its nearness even as you enjoy her response, her bodies desires quickly overcoming any possible mental objections as she slowly moves forward and stretches her tongue out to taste your shaft.";
 				say "     The husky girl's wonderfully soft tongue makes you groan as it licks over the tip of your member several times, before she leans forward to take your shaft into her eager muzzle. The feel of her mouth wrapping around your member is heavenly, made all the sweeter by having your pet submit and worship your cock with hardly any encouragement from you at all. You reward the sexy little husky by beginning to stroke her soft head-fur with your hands, rubbing and scratching her head in encouragement even as she focuses on licking and sucking at your cock. You can't help but groan in pleasure as she brings her front paws up, one of her hand-like paws slowly fondling your full sac, teasing your balls with her soft touches.";
 				WaitLineBreak;
@@ -666,14 +669,14 @@ to say SarahFucking:
 		say "     Simply letting the old collar tumble down to the ground, you glimpse her name stamped on the nameplate for a second, then look back up to your own present for the needy bitch - bearing a far more fitting title for your fuckpet. With a grin on your face, you slip the collar around her neck with ease and latch your pet's new fashion accessory around her neck tightly aligning the band so the stamped metal tag reading 'SLUT' hangs right above her bare breasts - displayed there for all to see. 'There now,' you say proudly as you rub her head-fur lightly, 'That's a good little pet, and now I think you have earned a little reward...' The praise and promise of a treat make Sarah's eyes light up with rising lust.";
 		increase SarahSlut by 1;
 		now lastfuck of Sarah is turns;
-		if cocks of player > 0:
-			if cunts of player > 0:
+		if player is male:
+			if player is female:
 				say "     Deciding to make sure your pet's complete surrender is a memorable occasion, you slowly push her down to the ground, her eyes flashing eagerly as she moves to obey her new master. You grin as you move your body around, her head positioned directly underneath you as she stares up at you curiously. Your pet quickly gets the idea as you begin to lower yourself down towards her muzzle, soon straddling the young woman's face. She moans and licks at your pussy and cock eagerly as they come down within range of her muzzle, making you shudder in pleasure. Just enjoying the eager bitch's efforts for a minute, you then start to lean forward, getting on top of her stretched out form in a typical 69 fashion. You and your new pet both moan in pleasure as your [skin of player] skin brushes up against her soft chest fur, your breasts rubbing up against her stomach softly even as you lower your mouth down to her swollen pussy.";
-				say "     Your nose filled with her strong heat filled scent, you slowly trace your tongue over her sensitive lips, making her cry out underneath you. The newly collared slut swiftly reapplies herself to your own sensitive parts, alternatively licking your damp pussy, then sucking and licking your stiff member. The feel of both your sexes being pleasured makes you moan in joy, experiencing the pleasure only a truly dominant herm can feel as you begin to lick and nibble on your furry pet's own female sex. You both moan in pleasure as your bodies writhe together in pleasure, each of you attempting to make the other one orgasm. Sarah has the slight advantage in that she has twice as many sensitive regions to play with, but you prove your dominance and experience as you wring a powerful orgasm out of your new pet.";
+				say "     Your nose filled with her strong, heat-filled scent, you slowly trace your tongue over her sensitive lips, making her cry out underneath you. The newly collared slut swiftly reapplies herself to your own sensitive parts, alternatively licking your damp pussy, then sucking and licking your stiff member. The feel of both your sexes being pleasured makes you moan in joy, experiencing the pleasure only a truly dominant herm can feel as you begin to lick and nibble on your furry pet's own female sex. You both moan in pleasure as your bodies writhe together in pleasure, each of you attempting to make the other one orgasm. Sarah has the slight advantage in that she has twice as many sensitive regions to play with, but you prove your dominance and experience as you wring a powerful orgasm out of your new pet.";
 				WaitLineBreak;
 				say "     The feel of her body spasming underneath you as proof of her complete submission to your dominance sets off your own orgasm as well, your cock and your pussy both spilling their liquid all over your new pets face. Spent and still shuddering from the aftershocks of your orgasm, you pull yourself off your new slut and take a look down at her prone form. Sarah just lies there, happily spent on the bunker floor, her face and chest covered in your sticky fluids, and her eyes nearly vacant from pleasure. Looking her over you feel a bit of pride to see that she seems to have finally completely accepted her role as a pet and your own private slut.";
 			else:
-				say "     Deciding to make sure your pet's complete surrender is a memorable occasion, you slowly push her down onto her back, eager to introduce her to her new position as a proper pet by filling her womb with your strong fertile seed. You grin as she spreads herself before you, her new collar shining brightly around her neck as she finally gives into her animalistic need to be owned and used by a strong alpha. Your new pet eagerly spreads her legs for you without any prompting, seeming to fully embrace her new role instead of fighting it now that she is properly collared. You spare a moment to admire her fine husky body, soft and sweet and so very heat filled, before you move up between her legs, your stiff [cock of player] cock rubbing up against her heat filled passage and making her whine softly with need. Not one to leave a horny bitch unattended, you pull her hips towards you even as you nudge apart those sexy folds and push into her waiting pussy.";
+				say "     Deciding to make sure your pet's complete surrender is a memorable occasion, you slowly push her down onto her back, eager to introduce her to her new position as a proper pet by filling her womb with your strong fertile seed. You grin as she spreads herself before you, her new collar shining brightly around her neck as she finally gives into her animalistic need to be owned and used by a strong alpha. Your new pet eagerly spreads her legs for you without any prompting, seeming to fully embrace her new role instead of fighting it now that she is properly collared. You spare a moment to admire her fine husky body, soft and sweet and so very sexy, before you move up between her legs, your stiff [cock of player] cock rubbing up against her heat-filled passage and making her whine softly with need. Not one to leave a horny bitch unattended, you pull her hips towards you even as you nudge apart those sexy folds and push into her waiting pussy.";
 				say "     Your new pet gasps and inner muscles clutch your shaft tightly as you fill her up in one sure stroke. Lowering your head to her shoulder you begin to rock your hips against hers, your cock moving within her soft body and making her pant and gasp with every rough movement. Her soft fur rubbing up against you is sheer pleasure, even as her every pleading noise begs for you to fill her body up with your fertile cum. Her arms wrap around your shoulders as she holds onto you tightly, completely giving herself up to the carnal pleasure of the act of mating, your orgasm drawing ever closer as you prepare to give her body the life giving seed it so desires. Finally unable to hold back any longer, you shout out your pleasure to the stone walls of the bunker as you fill your new pet's needy womb with your sperm, triggering her own powerful orgasm. And thus Sarah's fate is forever sealed to be nothing more than a happily fucked little husky pet, her only purpose now to bring you pleasure and bear your pups...";
 				increase SarahPregnant by 24;
 		else:
@@ -684,8 +687,8 @@ to say SarahFucking:
 	else if SarahSlut > 3: [completed her transformation before, repeat scenes]
 		now lastfuck of Sarah is turns;
 		if SarahPregnant > 0: [pregnant bitch]
-			if cocks of player > 0: [male/herm player]
-				if cunts of player > 0: [herm player]
+			if player is male: [male/herm player]
+				if player is female: [herm player]
 					say "     Approaching your pet, you smile as you see her rubbing her belly, its visibly swelling bulge proof of your earlier prowess and mastery of her body. Sarah seems happy and eager to please - leaning back as she props herself up on her elbows, presenting her rather full body for your inspection. Your eyes resting on her protruding belly full of your pups, you smile and stroke its soft-furred curve for a minute or two, making her moan and lean into your touch. After a little while, you switch your attention to her very nice and shapely breasts, even larger now as they fill with milk for the pups.";
 					say "     Deciding you like what you see, you slowly move yourself over her soft body, until you are situated just above the swell of her belly, your erect [cock of player] cock nestled perfectly between the swell of her breasts and your pussy rubbing up deliciously against the soft fur of your pet's chest. You moan in pleasure and anticipation as you begin to slowly rub your [cock of player] member up against the furry crevice between Sarah's breasts. The feel of her chest fur against your pussy as well as your cock is amazing, and your pet moves eagerly underneath you, rubbing herself against her master. The way she stretches her neck to lick the very tip of your cock fills you with pride at what a good little pet she has become.";
 					WaitLineBreak;
@@ -702,8 +705,8 @@ to say SarahFucking:
 				WaitLineBreak;
 				say "     You find yourself growing excited as you play with your pet, happy at the thought of your seed growing deep in her body, and wondering if you will end up siring any more pups on her after this batch. Shouldn't be too hard to grow a cock again, not in this place and time - though maybe you will end up making her carry someone else's pups in her womb instead. The erotic thought makes you moan into her muzzle as she shudders underneath you in orgasm, your own orgasm not far behind as you rub yourself up against her soft fur. Panting you carefully lift yourself off your pet, her thighs soaked with her juices even as she lies there on the floor, the very picture of a happily bred husky slut.";
 		else: [non-preg Sarah]
-			if cocks of player > 0: [male + herm player]
-				if cunts of player > 0: [herm player]
+			if player is male: [male + herm player]
+				if player is female: [herm player]
 					say "     Your pet looks up in anticipation as you approach, her pussy leaking wetly onto the floor even as she lies back to give you a better view of her eager body. The sight of this once intelligent young woman now reduced to such a needy canine bitch causes your cock to stiffen even as your own pussy grows damp as well. Deciding to enjoy this time with your eager little pet to its fullest, you slowly begin stroking and petting her as you work your way up her body, starting out with soft stroking of her feet-paws and moving up as your hands massage and stroke the soft fur of her inner thighs. Sarah throws her head back and lets loose a desperate moan as you ever so slowly work your way up to her needy pussy.";
 					say "     Sarah groans as you tease her sensitive folds with your fingers for a minute, rubbing and stroking before continuing to brush against her curvy form on the way up her chest and sides. She quickly becomes quite excited and lost in the pleasure of your touch - so much so that she bucks in a sudden orgasm almost as soon as you begin to massage her soft breasts. The husky girl's antics make you chuckle slightly as she pants and shudders underneath your touch while you continue to rub and caress her breasts. Once Sarah's orgasm has faded somewhat, you slowly allow the tip of your cock to begin to trace the edges of her swollen lips, making the husky bitch gasp and look up at you, her eyes widening as she realizes you haven't even begun to truly play with her body yet.";
 					WaitLineBreak;
@@ -718,7 +721,7 @@ to say SarahFucking:
 					say "     Sarah's collar seems to gleam around her soft throat as she does her best to live up to her new title of slut, presenting herself to you and whining softly in need. Her quickly wagging tail brushes up against your chest in swish after swish as you position yourself behind your well-trained bitch, her body responding with pleasure to your touch and at the first brush of your shaft against her nether region. You don't waste any time with foreplay since you know that your pet is more than ready to be used like the submissive animal you have trained her to be. Taking a tight grip of the panting bitch's furry hips, you thrust your erect rod deep into her wet cunt.";
 					WaitLineBreak;
 					say "     The feel of Sarah's well-trained walls gripping your cock is indescribable and you groan in pleasure, stroking her back as you tell her what a good pet she is to you. Her inner muscles practically massage your member as you begin to pound into her, your hands clenching in her fur to keep a hold through even the most vigorous thrusts. Switching up the action after a little while, you decide to slow down for a more gentle grind against her crotch again, stroking and touching Sarah's naked body as you take the eager little bitch. While you massage and fuck your pet, she moans and rubs her cheek against the floor. This formerly bright and intelligent medical student really has taken well to her new role in life - as servant to your lusts and receptacle of the hard shaft balls-deep inside her right now!";
-					say "     You thrust into Sarah faster and faster, grunting lustfully as this bestial mating with your bitch turns hotter and hotter. Taking a husky bitch in doggy style - no other position could be better to enjoy breeding such a fine piece of ass! And that is exactly what you do, hammering into her dripping snatch and getting ready to spill your seed deep into her eager and willing body. Sarah's vagina clutches at your rod as you increase your pace, her walls teasing your cock and trying to hold you within her body even as the pleasure builds up to a fevered pitch inside you. Unable to contain yourself any longer, you find yourself growling instinctively as you pump your load into the soft folds of the bitch underneath you, clutching her tightly to you as she shudders in pleasure at the feel of your hot sperm finding its way into her heat filled womb.";
+					say "     You thrust into Sarah faster and faster, grunting lustfully as this bestial mating with your bitch turns hotter and hotter. Taking a husky bitch in doggy style - no other position could be better to enjoy breeding such a fine piece of ass! And that is exactly what you do, hammering into her dripping snatch and getting ready to spill your seed deep into her eager and willing body. Sarah's vagina clutches at your rod as you increase your pace, her walls teasing your cock and trying to hold you within her body even as the pleasure builds up to a fevered pitch inside you. Unable to contain yourself any longer, you find yourself growling instinctively as you pump your load into the soft folds of the bitch underneath you, clutching her tightly to you as she shudders with pleasure at the feeling of your hot sperm finding its way into her heat-filled womb.";
 					WaitLineBreak;
 					say "     As your orgasm fades, you find yourself panting in victory as your submissive little bitch moans underneath you. She lets out happy whining as you pet her a few times, then slowly pull out of the eager little slut, letting her collapse into a puddle of her own juices. You grin at the dreamy look on Sarah's face as she revels in the joy of being just another pet and animal for you to use, a slave to her own needs and your desires. You leave her there in the bunker like that, rubbing her pussy and stroking her now slightly swollen belly with her soft husky paws. Well fucked and well seeded with your virile sperm, you can't wait to see how the puppies turn out...";
 					increase SarahPregnant by 24; [knocked her up]
@@ -735,9 +738,9 @@ to say SarahFirstSlutFuck:
 	now SarahSlut is 1;
 	now SarahCured is 0;
 	now lastfuck of Sarah is turns;
-	if cocks of player > 0:
+	if player is male:
 		say "     Reveling in the newfound power over this young woman, you slowly push her down onto her back, stroking your cock several times so she can watch. You enjoy the way her eyes stay fixed on your [cock of player] member even as you slowly move over her prone form. Your hands and tongue trace over her body as you tease her until she begs for you to fill her up with your wonderful rod. Taking your time to enjoy the situation to the fullest, you continue to tease her with your hands and mouth for several seconds. Your cock rubs up against the inside of her softly furred thighs and only lightly touches her crotch as you play with your hot little bitch. Soon, she is panting and whining like an animal in heat, unable to even form proper words anymore, and you find that somehow this excites you even more as you reduce her to little more than a submissive slut underneath you.";
-		say "     Finally, you decide to give her the lovely dog treat she has been begging for, and groan in pleasure as you sink your cock into her damp folds. She moans and yips in pleasure as your cock fills her, and you grip her tightly as you begin to thrust into her roughly, unable to hold out much longer after the long foreplay. Your mind is fogged with need and lust as you pump your cock into her, finally crying out as you spill your seed into her all-too-willing womb, leaving your mark of ownership deep inside her body. Panting you slowly gather your wits about you and you grin to realize that Sarah is practically delirious underneath you, her tongue lolling out of her open mouth as her eyes stare up dreamily at the ceiling. You feel somewhat smug as you pull yourself off the well fucked husky bitch, somehow sure this will change her outlook on being a lovely little husky dog for good.";
+		say "     Finally, you decide to give her the lovely dog treat she has been begging for, and groan in pleasure as you sink your cock into her damp folds. She moans and yips in pleasure as your cock fills her, and you grip her tightly as you begin to thrust into her roughly, unable to hold out much longer after the long foreplay. Your mind is fogged with need and lust as you pump your cock into her, finally crying out as you spill your seed into her all-too-willing womb, leaving your mark of ownership deep inside her body. Panting you slowly gather your wits about you and you grin to realize that Sarah is practically delirious underneath you, her tongue lolling out of her open mouth as her eyes stare up dreamily at the ceiling. You feel somewhat smug as you pull yourself off the well-fucked husky bitch, somehow sure this will change her outlook on being a lovely little husky dog for good.";
 	else:
 		say "     Enjoying the look of her soft pussy, you decide to give her new husky passage the proper attention it deserves. You slowly push her down so she is lying on her back on the ground, looking up at you apprehensively. You grin at the new bitch's uncertain look and decide to teach her how to properly enjoy her pussy, since she has obviously been neglecting her needs since her change. Grinning, you lower your head down between her legs, rubbing your cheeks along the soft fur of her thighs and making her pant as you tease her even further. Your tongue darts out and you slowly trace it along the outside of her lips, making her shudder as her delicious needy flavor fills your mouth. You enjoy her reactions as you slowly begin to lick her soft pussy, your tongue probing further and further inside her with every slow sensual stroke. Sarah begins to moan and whine in need, obviously unable to form proper speech anymore as you tease and excite her body.";
 		say "     The thought of reducing her to the role of a proper animal excites you almost as much as her lusty scent and delicious taste, and you find yourself licking even faster, occasionally teasing her clit with your teeth as she shudders in pleasure. Soon enough, the new bitch gives in as you help her embrace the slutty animal she has become, and she cries out in orgasm, her fluids rushing across your tongue in a burst of pleasure as she spasms underneath you. Sarah then collapses limply on the ground, her tongue lolling out of her open mouth as her eyes stare up dreamily at the ceiling. You feel somewhat smug as you pull yourself away from the exhausted husky bitch, somehow sure this will change her outlook on being a lovely little husky dog, and glad you were able to help her get in touch with the slutty little bitch she really is now.";
@@ -759,55 +762,55 @@ to say SarahSexMenu:
 	now sortorder entry is 2;
 	now description entry is "Lie back and let the husky please you";
 	[]
-	if SarahCured is 5 and cocks of player > 0: [only had Sarah-centered oral with her before]
+	if SarahCured is 5 and player is male: [only had Sarah-centered oral with her before]
 		choose a blank row in table of fucking options;
 		now title entry is "Suggest a tit-fuck";
 		now sortorder entry is 3;
 		now description entry is "Ask your husky friend to let you grind your cock between her breasts";
 	[]
-	if SarahCured > 5 and cocks of player > 0: [player-dominant oral is okay]
+	if SarahCured > 5 and player is male: [player-dominant oral is okay]
 		choose a blank row in table of fucking options;
 		now title entry is "Tit-fuck the sexy husky";
 		now sortorder entry is 4;
 		now description entry is "Grind your cock between her breasts";
 	[]
-	if SarahCured is 5 and cocks of player > 0: [only had Sarah-centered oral with her before]
+	if SarahCured is 5 and player is male: [only had Sarah-centered oral with her before]
 		choose a blank row in table of fucking options;
 		now title entry is "Suggest face-fucking her";
 		now sortorder entry is 5;
 		now description entry is "Ask your husky friend to let you fuck her muzzle";
 	[]
-	if SarahCured > 5 and cocks of player > 0: [player-dominant oral is okay]
+	if SarahCured > 5 and player is male: [player-dominant oral is okay]
 		choose a blank row in table of fucking options;
 		now title entry is "Face-fuck Sarah";
 		now sortorder entry is 6;
 		now description entry is "Grind your cock against that talented tongue in her muzzle";
 	[]
-	if SarahCured is 5 and cunts of player > 0: [only had Sarah-centered oral with her before]
+	if SarahCured is 5 and player is female: [only had Sarah-centered oral with her before]
 		choose a blank row in table of fucking options;
 		now title entry is "Suggest grinding your pussy against her muzzle";
 		now sortorder entry is 7;
 		now description entry is "Ask your husky friend to let you use her muzzle";
 	[]
-	if SarahCured > 5 and cunts of player > 0: [player-dominant oral is okay]
+	if SarahCured > 5 and player is female: [player-dominant oral is okay]
 		choose a blank row in table of fucking options;
 		now title entry is "Pussy-grind Sarah's muzzle";
 		now sortorder entry is 8;
 		now description entry is "Grind your pussy against Sarah's muzzle";
 	[]
-	if SarahCured is 6 and cocks of player > 0: [never talked about sex before]
+	if SarahCured is 6 and player is male: [never talked about sex before]
 		choose a blank row in table of fucking options;
 		now title entry is "Ask to fuck her";
 		now sortorder entry is 9;
 		now description entry is "Try to get into Sarah's pussy (for her first time as a husky)";
 	[]
-	if SarahCured > 7 and cocks of player > 0: [at least had the "I want to fuck you" talk with Sarah]
+	if SarahCured > 7 and player is male: [at least had the "I want to fuck you" talk with Sarah]
 		choose a blank row in table of fucking options;
 		now title entry is "Let Sarah ride your dick (anal)";
 		now sortorder entry is 10;
 		now description entry is "Allow the husky to ride you - with your dick in her ass";
 	[]
-	if SarahCured > 7 and cocks of player > 0: [Sarah is okay with doggy style (anal)]
+	if SarahCured > 7 and player is male: [Sarah is okay with doggy style (anal)]
 		choose a blank row in table of fucking options;
 		now title entry is "Pound Sarah doggy style (anal)";
 		now sortorder entry is 11;
@@ -817,7 +820,7 @@ to say SarahSexMenu:
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]100 - Nevermind[as]100[end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
 	while sextablerun is 0:
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
@@ -851,14 +854,14 @@ to say SarahSexMenu:
 				if (nam is "Pound Sarah doggy style (anal)"):
 					say "[SarahSex11]";
 				wait for any key;
-		else if calcnumber is 100:
+		else if calcnumber is 0:
 			say "Break off the conversation?";
-			if the player consents:
+			if player consents:
 				now sextablerun is 1;
 				say "     You step back from the young woman, shaking your head slightly as she gives a questioning look.";
 				wait for any key;
 			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
@@ -884,7 +887,7 @@ to say SarahSex1: [go down on her]
 
 to say SarahSex2: [let her go down on you]
 	say "     Sliding an arm around the female husky, you pull Sarah closer to you and soon meet her lips with yours. The two of you share an eager kiss, tongues intermingling and breathing the same air while your hands wander over her shapely form, holding and touching the pretty and smart young woman. Eventually pulling back to allow both of you to catch your breaths, you smile at Sarah and then lean in to whisper in her pointy ear just what you want to do. Eager to show what she can do, the anthro canine's tail starts wagging wildly and Sarah gives you a very happy smile before replying with a giggle, 'Come on then, [if player is female]girlfriend[else]stud[end if].' Sliding her hand-paw into yours, your husky friend guides you over to the next bed, then gestures for you to lay down.";
-	if cocks of player > 0:
+	if player is male:
 		say "     After quickly slipping out of your clothes, you climb on the mattress and stretch out on it, waiting for Sarah to join. A moment or two later, you feel her next to you, kneeling on the bed and reaching out for your crotch. Slender fingers take hold of your manhood, stroking and touching you to tease it to full hardness. Then the pretty canine leans over and runs her floppy tongue up the shaft of your cock, making you grunt in arousal and lightly buck up your hips. 'Easy there tiger, I'm calling the shots right now,' Sarah tells you, licking over your cockhead with exquisite slowness and making you groan. The young woman laughs merrily at your antics, then proceeds to stroke your shaft with a little more energy, pumping her paw up and down on the stiff rod.";
 		WaitLineBreak;
 		say "     Enjoying for a little while how easily she can control you with your 'joy-stick', Sarah eventually moves on to lowering her muzzle to your crotch again and taking a good long huff of your scent. 'This husky nose of mine is something else... you wouldn't believe how wet it makes me to just smell a horny male,' your canine companion tells you in a teasing tone, then envelops your shaft with her open maw and starts giving you a blowjob. Bobbing up and down on the erect pole, she wraps her long and broad tongue around your manhood in a warm and wet caress. And not only that feels great - the top of her mouth gives a quite pleasurable sensation as it rubs against your erection, thanks to its ribbed surface.";
@@ -1231,7 +1234,7 @@ to say SarahCarlOral2F:
 		LineBreak;
 		project the Figure of Carl_knot_icon;
 		say "     Getting closer, it soon becomes obvious to you that Carl is on all fours on the sofa, his tail raised high and wagging as he has his muzzle between Sarah's legs. Lapping away at the young woman's folds, he teases her clit with great enthusiasm while pumping two fingers in and out of her vagina. 'Yeaahh! Just like that,' the medical student groans in lust and wraps her slender legs around Carl's torso, pulling him even closer against her crotch. You don't know how long they've been at it already, but one thing is clear - the soldier really knows what he's doing as he makes Sarah yip and moan in lust. Before much longer, her sounds of arousal build to an almost shouted crescendo, accompanying a breathtaking orgasm for the young woman.";
-		say "     Carl just keeps his muzzle buried between Sarah's legs, never wavering in his licking as she trembles in lust. The female husky moans and pants loudly as she rides out her climax, clearly the sounds of a very well satisfied woman. When Sarah calms down a bit, Carl shows off his muscles by doing an effortless push-up and then crawls on top of the other canine to give her an intimate kiss. After a long moment of sharing each other's breath and exploring their mouths with floppy tongues, Sarah says, 'You're good with that tongue of yours, soldier boy. Now that is what I call letting off some steam! But speaking of which... better watch out where you're poking that thing. A litter of puppies isn't part of my plans for the foreseeable future.'";
+		say "     Carl just keeps his muzzle buried between Sarah's legs, never wavering in his licking as she trembles in lust. The female husky moans and pants loudly as she rides out her climax, clearly the sounds of a very well-satisfied woman. When Sarah calms down a bit, Carl shows off his muscles by doing an effortless push-up and then crawls on top of the other canine to give her an intimate kiss. After a long moment of sharing each other's breath and exploring their mouths with floppy tongues, Sarah says, 'You're good with that tongue of yours, soldier boy. Now that is what I call letting off some steam! But speaking of which... better watch out where you're poking that thing. A litter of puppies isn't part of my plans for the foreseeable future.'";
 		WaitLineBreak;
 		say "     Stiffening a little in his position on top of Sarah, Carl clears his throat and reaches down to adjust his erect manhood away from where it was rubbing her crotch. 'Oh, err - sorry,' the man adds in a genuine tone, a little bit shameful about his instinctive move to mount her. 'It's alright. Actually felt pretty nice... too nice, and that's the rub of it. I - I'm pretty freaked out by the effects of this infection on a pregnancy.' Starting to pull away from Sarah to give her room, Carl is stopped by her paw-hand on his arm a heartbeat later. 'Wait. I didn't mean to push you away. Just... turn around and sit the other way, okay?' Sarah says to the other husky, and he complies, followed by her sliding up behind him, wrapping her arms around his midriff and burying her muzzle in the fur on his broad back.";
 		say "     Sarah's paw-hands search out the hard and erect cock between Carl's legs, then start to fondle it, sliding up and down the hot shaft and feeling for every little bump and vein on its nonhuman shape. Soon, the young woman is jerking the other husky off in earnest, squeezing and stroking his manhood and wrapping the fingers of her other hand around the quickly swelling knot at the base of it. As wound up as Carl is, it doesn't take all that long for her efforts to push him over the edge. Accompanied by a lusty grunt from the handsome husky, his shaft spurts out a first long string of cum that lands on the library floor, followed by another, and another. It is actually quite a sight to see just how much of a load the soldier pumps out - he definitively is a virile male...";
@@ -1279,9 +1282,9 @@ after going down from Grey Abbey Library while (Sarah is in Bunker and Alexandra
 		say "     DEBUG -> Alexandra & SARAH MEET - AlexandraSarahInteraction: [AlexandraSarahInteraction] <- DEBUG[line break]";
 	project the Figure of Alexandra_clothed_icon;
 	say "     Walking down the stairwell to the bunker, you notice the sound of the lower bunker door falling shut. Someone must just have passed this way before you. You don't think much of it and just continue on your way in a normal tempo, which means you're almost at the door yourself when you hear someone call out, 'Hey! Ow! What are you doing?!' Alarmed, you take the last few steps down in a jump and burst through the door into the bunker.";
-	say "     The scene that awaits you is interesting, to say the least - it was Alexandra who came down here, and the former cop is standing just a short distance from the entrance, holding Sarah pinned against the concrete bunker wall with a paw-hand to her chest. 'I knew I smelled some bitch down here,' the doberwoman says in a belligerent tone and sniffs at the anthro husky's body. 'Lady, let go of-' Sarah starts, only to be interrupted by a low growl from Alexandra, who draws her lips back from sharp canine teeth. 'Listen, you stupid mutt! I wanna make one thing clear to you - I'm Alexandra and this pack's alpha bitch! You'd better remember that, or we'll have a problem with each other.'";
+	say "     The scene that awaits you is interesting, to say the least - it was Alexandra who came down here, and the former cop is standing just a short distance from the entrance, holding Sarah pinned against the concrete bunker wall with a paw-hand to her chest. 'Thought I'd properly introduce myself, and find out what's what with you,' the doberwoman says in a belligerent tone and sniffs at the anthro husky's body. 'Lady, let go of-' Sarah starts, only to be interrupted by a low growl from Alexandra, who draws her lips back from sharp canine teeth. 'Listen, you stupid mutt! I wanna make one thing clear to you - I'm Alexandra and this pack's alpha bitch! You'd better remember that, or we'll have a problem with each other.'";
 	WaitLineBreak;
-	say "     In a move that speaks of her having taken some self-defense classes in the past, Sarah suddenly gives a sideways shove to the doberwoman's elbow and ducks under Alexandra's followup grab, bringing at least a little distance between them. The medical student raises her paw-hands in a passable fighting pose, although the tremble in her voice as she speaks makes it clear that Sarah is far from used to physical confrontations. 'I don't know what you're on about, lady! We're not animals, fighting for dominance, and I'm in no pack! Least of all with a crazy bitch like you!'";
+	say "     In a move that speaks of her having taken some self-defense classes in the past, Sarah suddenly gives a sideways shove to the doberwoman's elbow and ducks under Alexandra's follow-up grab, bringing at least a little distance between them. The medical student raises her paw-hands in a passable fighting pose, although the tremble in her voice as she speaks makes it clear that Sarah is far from used to physical confrontations. 'I don't know what you're on about, lady! We're not animals, fighting for dominance, and I'm in no pack! Least of all with a crazy bitch like you!'";
 	if SarahCured > 4: [Sarah had sex with the player]
 		say "     Alexandra lets out a mocking bark and replies, 'I can smell the boss all over you, whore! But maybe you're right - [if player is female]she[else]he[end if] might just have brought you in as a stray to fuck around for a bit and discard. Fine, you're not in the pack then, and with that attitude I'd only let you join and become even omega if you begged and lapped my pussy!' ";
 	else: [no sex with the player]
@@ -1352,7 +1355,7 @@ to say SarahCboyEricScene0:
 	say "     'Oh,' Eric lets out a little sigh, then lowers himself on the ground and sits with his back against the end of a long bookshelf. 'I'm not, actually. A trans-guy. Just a regular one... and shortly after all this started, one of my college friends bit me. He was a huge furry thing by that time,' the young man recounts, rubbing the bandage on his arm. Sarah sits down right next to him, keeping a supportive hand on her friend's shoulder and nodding for him to go on. 'Other than just about anyone out there, I didn't become something else. It is just... this,' Eric gives a little wave at his crotch.";
 	WaitLineBreak;
 	say "     'Wow, that is... I didn't even know that was possible!' the medical student says in a suddenly excited tone, with Eric answering glumly, 'What? That I'm a freak? Great!' He starts to tear up and look away, but Sarah puts a paw-hand on his cheek and turns his head to look him right in the eyes. 'No silly,' she says with a smile and a wag of her tail, 'You're at least partially immune. This could be big! There might be a cure somewhere in that. We really need to get you out of the city and to a doctor!' Gaping a little at the revelation, Eric opens his mouth a few times but nothing comes out, at least until he manages to say, 'You - you really mean that?'";
-	say "     This earns Eric a friendly lick from the anthro husky, with her leaning in to hold him tight. 'It'll be alright, Eric. You might just be the saviour of all of us in this city.' Sarah holds on to her friend and keeps talking to him in a soft tone, quelling his fears and doubts about himself. After a minute or two, you decide that it'd be best not to disturb such an intimate conversation - or indeed let them know that you listened in until now - and quietly turn around, walking away without being seen by either of the two.";
+	say "     This earns Eric a friendly lick from the anthro husky, with her leaning in to hold him tight. 'It'll be alright, Eric. You might just be the savior of all of us in this city.' Sarah holds on to her friend and keeps talking to him in a soft tone, quelling his fears and doubts about himself. After a minute or two, you decide that it'd be best not to disturb such an intimate conversation - or indeed let them know that you listened in until now - and quietly turn around, walking away without being seen by either of the two.";
 	now cboyEricSarahInteraction is 1; [Sarah knows about Eric and has talked with him about it]
 	now lastEricSarahInteraction is turns;
 
@@ -1503,7 +1506,7 @@ when play ends:
 		if SarahSlut is 4: [collared slut Sarah]
 			if humanity of player < 10: [player succumbed]
 				say "     Returning to the bunker, you waste no time in pouncing on your little slut husky, her happy moans and begging are music to your ears as you indulge yourself with your slut. You find yourself grinning as you enjoy some private time with her, instinctively knowing how best to dominate and control the submissive bitch. Soon though, she becomes less and less a husky bitch, perhaps due to your dominance as she begins to take on a form more like your own. The changes are small at first, though they grow more and more prominent as your strong dominant infection overwhelms her own, making her into a more suitable breeder for your needs.";
-				If cocks of player > 0: [male/herm]
+				if player is male: [male/herm]
 					say "     You grin as her body becomes an even better match for your own. Its form better able to take your powerful [cock of player] cock again and again, so she can breed you lots of little babies. And you waste no time testing this as you sink yourself into her warm wetness over and over, enjoying your dominance over your little pet. Eventually though, it is time to leave the small little bunker, a whole city waiting for you out there for you and your little slut, and you lead your newly changed submissive mate out into the world, you to find your destiny, and her to service your every whim and bear your offspring...";
 					if SarahPups > 0: [Player bred Sarah]
 						say "     Her pups succumb to the changes even faster than their mother, her newly changed milk running through their vulnerable bodies and altering them as well. Soon her offspring are properly representative of your new forms, and looking at them you are proud to see them as proof of your own virility and the start of the many many young you plan to sire with your lovely little breeding slut.";

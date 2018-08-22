@@ -66,7 +66,7 @@ Instead of resolving a Missing Cow:
 	say "     ([link]N[as]n[end link]) - Attack the gryphon.";
 	if player consents:
 		LineBreak;
-		say "     You decide to just wait the gryphon out, keeping your distance - at first - and finding a good spot from which you can observe them. Lustful moos and gryphon shrieks sound out across the plains as the cow is fucked by the winged lion, both of them oblivious to anything around them. As you watch the unequal partners' coupling, you find yourself walking slowly towards them, eager to get a better view. Soon you're pretty close - close enough to hear the squelching noises as the gryphon thrusts in and see the wetness of the cow's fur on her backside and hind legs. This obviously has been going on for quite a while, with more than one load of the mythical beast leaking out around his shaft as he pounds into Wendy.";
+		say "     You decide to just wait the gryphon out, keeping your distance - at first - and finding a good spot from which you can observe them. Lustful moos and gryphon shrieks sound out across the plains as the cow is fucked by the winged lion, both of them oblivious to anything around them. As you watch the unequal partners['] coupling, you find yourself walking slowly towards them, eager to get a better view. Soon you're pretty close - close enough to hear the squelching noises as the gryphon thrusts in and see the wetness of the cow's fur on her backside and hind legs. This obviously has been going on for quite a while, with more than one load of the mythical beast leaking out around his shaft as he pounds into Wendy.";
 		say "     The sex continues with unabated wildness for some more time, until you notice the feral gryphon getting louder in his shrieks and faster with his thrusts. Finally he pushes all of his hard cock into her a final time, knotting the bovine as he blasts another large load of his seed into her. Staying bound to Wendy for some more time after that, her pussy and womb flooded with his seed held in by the knot, the gryphon rubs the side of his beak and head against her back affectionately, taking care not to hurt her with the sharp tip of his beak.";
 		WaitLineBreak;
 		say "     Some time later, he dismounts, pulling his knotted shaft free with a pop and a gush of milky white cum. The gryphon's cock dangles down between his legs, wet and dripping, quickly softening. Now done with his bovine mate, the large creature looks around, giving a surprised squawk as he notices you for the first time. Putting a somewhat possessive as well as protective paw on the cow's back, he gives you a distrustful look. Not quite sure if this feral creature can even understand you, you raise your hands in a pacifying gesture and concentrate on keeping a calming tone of voice as you explain to him that you just want to bring Wendy back home where she'll be taken care of.";
@@ -84,11 +84,11 @@ Instead of resolving a Missing Cow:
 		else if fightoutcome >= 10 and fightoutcome <= 19: [won]
 			say "     Having driven the gryphon off, you have a look at Wendy the cow, now calmly munching on a mouthful of grass. She doesn't seem to be bothered at all from having been fucked by a gryphon - multiple times at least, before you arrived, judging from the amount of cum oozing out of her pussy and making the fur on her back end wet and sticky.";
 			say "     [WendyGryphonAftermath]";
-	now battleground is "Void";[avoids random fights after]
+	now battleground is "Void"; [avoids random fights after]
 
 to say WendyGryphonAftermath:
 	WaitLineBreak;
-	if cocks of player > 0:
+	if player is male:
 		say "     Seeing the thoroughly bred cunt of this large and docile creature right in front of you, the thought comes into your mind that you could just... try her out yourself. It's not like one more load would make much of a difference now, would it?";
 		LineBreak;
 		say "     [bold type]What now?[roman type][line break]";
@@ -132,7 +132,7 @@ to say WendyDesc:
 	say "     Wendy is a cow - but not just any cow. She's had quite a bit of excitement out in the dry plains lately, getting lost and having an... interesting time with a large feral gryphon. As you walk up to her stall, she gives a greeting 'Mooh', seemingly recognizing you. Then she turns, moving her hindquarters in your direction and looking back at you. Might just be your imagination, but it's a bit as if she was presenting herself to you, wanting a little more interspecies attention.";
 
 instead of fucking the Wendy:
-	if cocks of player is 0:
+	if player is not male:
 		say "     Sadly, you won't get very far with Wendy in your current gender state. She might be horny for another fuck by an exotic partner, but just isn't intelligent enough to take an active role and do anything but get fucked by someone's cock.";
 	else if lastfuck of Wendy - turns < 4:
 		say "     Wendy still seems a little worn from your earlier fun with her. It might be better to give her a bit more of a break. Besides, what if you got caught?";

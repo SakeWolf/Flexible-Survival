@@ -33,13 +33,13 @@ to say TomeSexMenu:
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
-	if cocks of player > 0 and cunts of player is 0 and TentacleInteractions > 0:
+	if player is puremale and TentacleInteractions > 0:
 		choose a blank row from table of fucking options;
 		now title entry is "Summon a tentacle monster";
 		now sortorder entry is 1;
 		now description entry is "Perhaps you could get the tentacle monster to have its way with you";
 	[]
-	if cocks of player > 0 and cunts of player is 0 and DemonFoxInteractions > 0:
+	if player is puremale and DemonFoxInteractions > 0:
 		choose a blank row from table of fucking options;
 		now title entry is "Summon a demon fox";
 		now sortorder entry is 2;
@@ -64,7 +64,7 @@ to say TomeSexMenu:
 					-- "Summon a tentacle monster":
 						say "[TentacleSex]";
 					-- "Summon a demon fox":
-						say "[DemonFoxMenu]";
+						say "[DemonFoxSummon]";
 				WaitLineBreak;
 		else if calcnumber is 0:
 			say "     Change your mind and do something else?";

@@ -275,12 +275,12 @@ to say losetofpony:
 	else:
 		say "     Unable to continue resisting the pony's demands for friendship, you drop to your knees as she approaches you";
 	say ". The [if rfponytype is 1]cute equine[else if rfponytype is 2]pegasus[else]unicorn[end if] giggles happily as she bounds up to you putting her forelegs around you and cuddling so tightly it feels like your eyes are going to pop out of your head. After this crushing hug, she fall back on the ground when she releases you.";
-	if cocks of player > 0:
+	if player is male:
 		say "     Spotting your cock, quite hard after that hug left nowhere else for your blood to go, she giggles all the more and licks her lips. 'Oh, we are going to be such great friends. I can tell,' the [rfponycolor1] pony says[if rfponytype is 2 and cock length of player > 10] as her wings stiffen outwards at the sight of it[end if], hopping atop you. She grinds her wet mare's pussy down atop your throbbing rod, stiffening it right back up before it has a chance to get soft. After a little playful grinding between friends, she shifts her hips and pushes herself down onto your shaft, moaning as she takes your [cock of player] penis into her juicy folds[if cock length of player > 20]. Despite your considerable size, she's able to stretch to take you, her plasticky booty stretching wider as your cock plows into her[end if]. Her flanks, marked as they are with [rfponybm], rise and fall over your pulsing member.";
 		say "     She rides you eagerly, her hooves rubbing over your [bodytype of player] body[if rfponytype is 2], her wings aflutter with excitement[else if rfponytype is 3] while glowing magic from her horn lets her grope your balls[end if]. You can feel her hot juices running down your shaft and across your balls as she rides your rod faster and faster. As the happy [if rfponytype is 1]pony[else if rfponytype is 2]pegasus[else]unicorn[end if] squeezes and grinds down hard onto your cock, she smiles and swishes her flowing [rfponycolor2] hair. With your excitement and lust growing, your confused mind is happy to have met such a pretty, lovely and oh so friendly pony. Giggling merrily along with her, you cum hard, pumping your hot load into the pleased pony as a fresh rush of hot juices from her soaks your crotch. Once you're drained, she nuzzles your cheek and pulls off[if cock length of player > 20] with a groan[end if].";
 	else:
 		say "     Grinning down at you, she giggles all the more as she looks over your prone form. 'Oh, we are going to be such great friends. I can tell,' the [rfponycolor1] pony says, hopping atop you. She raises her [rfponycolor2] tail and grinds her wet mare's pussy down into your face, the scent and sweetness of her juices overpowering your senses. You lick your lips, getting your first sample of her juices before diving your tongue into her juicy, mare's pussy. She moans and nickers happily[if rfponytype is 2] as her wings flutter[end if], giggling about what a good friend you are and to lick her faster.";
-		say "     Grabbing onto her ass right on those designs of [rfponybm] on each flank, you squeeze tightly and pull her delicious pussy to your face. You lap away eagerly, finding the [if rfponytype is 1]pony[else if rfponytype is 2]pegasus[else]unicorn[end if]'s taste delightful. It is sugary, saccharine, almost tooth-rottingly sweet, but it seems wonderful to you and you lick for more and more[if rfponytype is 3 and cunts of player > 0]. She uses glowing magic from her horn to tease your pussy before forming a phallic force to thrust and pound into you while you eat her out[else if rfponytype is 3]. She uses glowing magic from her horn to tease your tight pucker before forming a phallic force to thrust and pound into you while you eat her out[end if]. With your excitement and lust growing, your confused mind is happy to have met such a pretty, lovely and oh so friendly pony. Giggling merrily along with her as she climaxes, your face is covered in her sweet, sticky juices and you lap up as much of it as you can get. After a few more climaxes like that, she's finally satisfied and stands back up.";
+		say "     Grabbing onto her ass right on those designs of [rfponybm] on each flank, you squeeze tightly and pull her delicious pussy to your face. You lap away eagerly, finding the [if rfponytype is 1]pony[else if rfponytype is 2]pegasus[else]unicorn[end if]'s taste delightful. It is sugary, saccharine, almost tooth-rottingly sweet, but it seems wonderful to you and you lick for more and more[if rfponytype is 3 and player is female]. She uses glowing magic from her horn to tease your pussy before forming a phallic force to thrust and pound into you while you eat her out[else if rfponytype is 3]. She uses glowing magic from her horn to tease your tight pucker before forming a phallic force to thrust and pound into you while you eat her out[end if]. With your excitement and lust growing, your confused mind is happy to have met such a pretty, lovely and oh so friendly pony. Giggling merrily along with her as she climaxes, your face is covered in her sweet, sticky juices and you lap up as much of it as you can get. After a few more climaxes like that, she's finally satisfied and stands back up.";
 	say "     'I hope to see you again, my new friend. It's been magic.' That said, she [if rfponytype is 2]flies[else]trots[end if] off, probably in search of another new friends. It's some time before your head clears enough for you to get up and head on your way.";
 
 
@@ -296,13 +296,13 @@ to say beatthefpony:
 	say "     After your last blow, you slam yourself against the staggering pony's side, knocking her over. The [rfponycolor1] [if rfponytype is 1]equine[else if rfponytype is 2]pegasus[else if rfponytype is 3]unicorn[end if] lands in the dirt with a groan. '[one of]Why are you being such a meany?' [or]That's not how friends should act!' [or]I think you need to learn a lesson about friendship,' [at random]she whines. ";
 	if nofponysex > 2:
 		say "As with the others of your kind, you [if rfponytype is 2]send her flying away[else]drive her off[end if] with a hard swat to her flank, right on her mark of [rfponybm].";
-	else if cocks of player > 0:
+	else if player is male:
 		say "As you look over her, your eyes wander back to that rear of her and the juicy pussy under her [rfponycolor2] tail. You find yourself tempted to get [']friendly['] with the pony, but on your own terms.";
 		say "     [bold type]Shall you grab those flanks and mount her?[roman type][line break]";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
-		if the player consents:
+		if player consents:
 			now nofponysex is 0;
 			LineBreak;
 			say "     Moving around behind the [rfponycolor1] pony, you grab her by the ass and knead her flanks right over her booty mark of [rfponybm]. This makes her moan and raise her [rfponycolor2] tail reflexively, putting that juicy mare's pussy of hers on display. As you grope her ass, drops of her cum trickle across those smooth lips and down her thighs. The sight of this gets you hard and, not wanting to wait any longer, you plow your pulsing rod into her. The pretty pony moans and pushes back, her body urging you to thrust fully into her[if cock length of player > 20] despite your considerable size, her plasticky booty stretching wider as your cock plows into it[end if].";
@@ -311,13 +311,13 @@ to say beatthefpony:
 			LineBreak;
 			say "     Resisting the impulse, you decide to instead [if rfponytype is 2]send her flying away[else]drive her off[end if] with a hard swat to her flank, right on her mark of [rfponybm].";
 			increase nofponysex by 1;
-	else if cunts of player > 0:
+	else if player is female:
 		say "As you look over her, your eyes wander back to that cute face of her. You find yourself tempted to get [']friendly['] with the pony, but on your own terms.";
 		say "     [bold type] Shall you grab that pretty [rfponycolor2] hair of hers and make her eat you out?[roman type][line break]";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
-		if the player consents:
+		if player consents:
 			now nofponysex is 0;
 			LineBreak;
 			say "     Moving around to the front of the [rfponycolor1] pony, you grab her by the rounded head by her [rfponycolor2] hair, pulling her petite muzzle to your crotch. This makes her give a little whimper, but her also sets herself to task without reservation. Her soft, smooth muzzle rubs against your wet folds before her tongue slides out and gets to licking your pussy. As she continues eating you out, you find yourself stroking and brushing her long, plastic hair with your hand. But you don't let up though, keeping her at it until you've had several orgasms from her licking before you're satisfied. When you push her back, her face and muzzle is soaked in your juices, which she eagerly tries to lick away. Finished with her, you give her a swat her on her [rfponybm] booty mark and send her [if rfponytype is 2]flying[else]trotting[end if] off with a giggling whinny.";
@@ -332,8 +332,8 @@ to say beatthefpony:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of random critters;
@@ -341,21 +341,24 @@ When Play begins:
 	sort rfpclist2 in random order;]
 	sort pfpclist in random order;
 [	sort rfpbmlist in random order;]
-	now name entry is "Friendship Pony"; [The creature's name as displayed and used in naming descriptions]
+	now name entry is "Friendship Pony"; [ Infection/Creature name. Capitalized. ]
+	now enemy title entry is "";
+	now enemy name entry is "";
+	now enemy type entry is 0; [non-unique enemy]
 	now attack entry is "[fpattack]";
 	now defeated entry is "[beatthefpony]"; [ Text when monster loses. Change 'fpony' as above. ]
 	now victory entry is "[losetofpony]"; [ Text when monster wins. Change 'fpony' as above. ]
 	now desc entry is "[fponydesc]"; [ Description of the creature when you encounter it. ]
-	now face entry is "vaguely equine in shape with large, [pfpcock] eyes and a friendly smile. You have a [if cunts of player > 0]pretty little muzzle[else]blocky, square-jawed muzzle[end if] at the end of your pony face. Atop your head you have [if cunts of player > 0]long, flowing hair of [pfphair] in color and made of long, glossy, plastic strands. It always seems to be properly styled[else]a crop of short, [pfphair] made of glossy, plastic strands[end if][if pfptype is 3]. Poking out from your hair is a short, magical horn - though the best you can manage with it is a couple of sparks[end if]";
-	now body entry is "that of a [if cunts of player > 0]slender female[else]stocky male[end if] pony creature with a smooth body and tubular limbs ending in flat and featureless hooves. And while you are still able to stand upright when you try, your normal posture is to be on all fours. Your front hooves strangely seem to be able to still pick up or hold things as if they were hands, though only if you don't think about it too much[if pfptype is 3]. Resting against your back are a small pair of feathered wings that seem far too small to lift you. Your attempts to use them only raise your back up a little[end if]";
+	now face entry is "vaguely equine in shape with large, [pfpcock] eyes and a friendly smile. You have a [if player is female]pretty little muzzle[else]blocky, square-jawed muzzle[end if] at the end of your pony face. Atop your head you have [if player is female]long, flowing hair of [pfphair] in color and made of long, glossy, plastic strands. It always seems to be properly styled[else]a crop of short, [pfphair] made of glossy, plastic strands[end if][if pfptype is 3]. Poking out from your hair is a short, magical horn - though the best you can manage with it is a couple of sparks[end if]";
+	now body entry is "that of a [if player is female]slender female[else]stocky male[end if] pony creature with a smooth body and tubular limbs ending in flat and featureless hooves. And while you are still able to stand upright when you try, your normal posture is to be on all fours. Your front hooves strangely seem to be able to still pick up or hold things as if they were hands, though only if you don't think about it too much[if pfptype is 3]. Resting against your back are a small pair of feathered wings that seem far too small to lift you. Your attempts to use them only raise your back up a little[end if]";
 	now skin entry is "[fpskindesc]";
-	now tail entry is "You have a long and lush tail of [pfphair] hair emerging from a round hole at the base of your spine. Despite being nothing but long strands of glossy plastic, it swishes and moves on its own, drawing attention to your [if player is fponyskinned][one of]equine bottom[or]sexy ass[or]hot flanks[or]booty mark[at random][else][one of]equine bottom[or]sexy ass[or]hot flanks[at random]";
+	now tail entry is "You have a long and lush tail of [pfphair] hair emerging from a round hole at the base of your spine. Despite being nothing but long strands of glossy plastic, it swishes and moves on its own, drawing attention to your [if player is fponyskinned][one of]equine bottom[or]sexy ass[or]hot flanks[or]booty mark[at random][else][one of]equine bottom[or]sexy ass[or]hot flanks[at random].";
 	now cock entry is "[one of]equine[or]pony[or]horsey[or][pfpcock][at random]";
-	now face change entry is "[fponyfacechange]"; [ Face TF text, format as "Your face feels funny as (your text)." ]
-	now body change entry is "[fponybodychange]"; [ Body TF text, format as "Your body feels funny as (your text)." ]
-	now skin change entry is "[fpskinchange]"; [ Skin TF text, format as "Your skin feels funny as (your text)." ]
-	now ass change entry is "[fptailchange]"; [ Ass/Tail TF text, format as "Your ass feels funny as (your text)." ]
-	now cock change entry is "it becomes equine in shape with a medial ring and a flared glans. But despite its somewhat plasticky look, it seems quite functional with fresh precum dribbling from it in anticipation of being used"; [ Cock TF text, format as "Your cock feels funny as (your text)." ]
+	now face change entry is "[fponyfacechange]"; [ Face TF text. Format as "Your face tingles as [face change entry]." ]
+	now body change entry is "[fponybodychange]"; [ Body TF text, format as "Your body tingles as [body change entry]. ]
+	now skin change entry is "[fpskinchange]"; [ Skin TF text, format as "Your skin tingles as [skin change entry]. ]
+	now ass change entry is "[fptailchange]"; [ Ass/Tail TF text, format as "Your ass tingles as [tail change entry]." ]
+	now cock change entry is "it becomes equine in shape with a medial ring and a flared glans. But despite its somewhat plasticky look, it seems quite functional with fresh precum dribbling from it in anticipation of being used"; [ Cock TF text, format as "Your groin tingles as [cock change entry]." ]
 	now str entry is 12; [ These are now the creature's stats... ]
 	now dex entry is 15; [ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
 	now sta entry is 12; [ These values may be used as part of alternate combat.]
@@ -370,7 +373,7 @@ When Play begins:
 	now cocks entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now cock length entry is 8; [ Length in inches infection will make cock grow to if cocks. ]
 	now cock width entry is 6; [ Cock width, more commonly used for ball size. ]
-	now breasts entry is 2; [ Number of breasts the infection will give a player. ]
+	now breasts entry is 2; [ Number of nipples the infection will give a player. ]
 	now breast size entry is 0; [ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
 	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
@@ -380,7 +383,7 @@ When Play begins:
 	now loot entry is "pony cider"; [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 22; [ Percentage chance of dropping loot, from 0-100. ]
 	now scale entry is 2; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
-	now body descriptor entry is "[one of]smooth[or][if cocks of player > 0 and cunts of player is 0]stocky[else]slender[end if][or]toyetic[at random]";
+	now body descriptor entry is "[one of]smooth[or][if player is puremale]stocky[else]slender[end if][or]toyetic[at random]";
 	now type entry is "[one of]equine[or]pony[at random]";
 	now magic entry is false;
 	now resbypass entry is false;
@@ -420,7 +423,7 @@ to say fponybodychange:
 
 to say fponyfacechange:
 	ponystatuscheck;
-	say "a rush of giddy happiness overtakes you. Your vision goes blurry and - with a pop and pop - your eyes grows much larger than normal. As you're adjusting to this, your head changes as well, becoming vaguely equine in shape, in a very simplistic and stylized sort of way[if cunts of player > 0]. A mane of long, [pfphair] hair grows in atop your transformed head[else]. A crop of short, [pfphair] hair grows in atop your transformed head[end if][if pfptype is 3]. There is a final pop as a short horn suddenly pushes out of your forehead with a few sparkles of color[end if]";
+	say "a rush of giddy happiness overtakes you. Your vision goes blurry and - with a pop and pop - your eyes grows much larger than normal. As you're adjusting to this, your head changes as well, becoming vaguely equine in shape, in a very simplistic and stylized sort of way[if player is female]. A mane of long, [pfphair] hair grows in atop your transformed head[else]. A crop of short, [pfphair] hair grows in atop your transformed head[end if][if pfptype is 3]. There is a final pop as a short horn suddenly pushes out of your forehead with a few sparkles of color[end if]";
 
 to say fpskinchange:
 	ponystatuscheck;
@@ -671,31 +674,31 @@ the scent of pony cider is "The cider smells strongly of apples and equines.".
 Section 6 - Definitions
 
 Definition: a person is unpony:
-	if the bodyname of the player is "Friendship Pony", no;
-	if the facename of the player is "Friendship Pony", no;
-	if the skinname of the player is "Friendship Pony", no;
-	if the tailname of the player is "Friendship Pony", no;
-	if the cockname of the player is "Friendship Pony", no;
+	if bodyname of player is "Friendship Pony", no;
+	if facename of player is "Friendship Pony", no;
+	if skinname of player is "Friendship Pony", no;
+	if tailname of player is "Friendship Pony", no;
+	if cockname of player is "Friendship Pony", no;
 	yes;
 
 Definition: a person is fponyfaced:
-	if the facename of the player is "Friendship Pony", yes;
+	if facename of player is "Friendship Pony", yes;
 	no;
 
 Definition: a person is fponyskinned:
-	if the skinname of the player is "Friendship Pony", yes;
+	if skinname of player is "Friendship Pony", yes;
 	no;
 
 Definition: a person is fponybodied:
-	if the bodyname of the player is "Friendship Pony", yes;
+	if bodyname of player is "Friendship Pony", yes;
 	no;
 
 Definition: a person is fponycocked:
-	if the cockname of the player is "Friendship Pony", yes;
+	if cockname of player is "Friendship Pony", yes;
 	no;
 
 Definition: a person is fponytailed:
-	if the tailname of the player is "Friendship Pony", yes;
+	if tailname of player is "Friendship Pony", yes;
 	no;
 
 
@@ -708,7 +711,7 @@ when play ends:
 			say "     Over the course of your wandering, you inexorably make your way to the fairgrounds. There you meet up with five other pretty ponies, representing a diverse set of character archetypes who all want to be your friend. Life with your new friends is wonderful, magical even, because there's nothing better than friends, especially when it's friends with benefits.";
 		else:
 			say "     When the military comes to pick you up, a few of the tough soldiers can't help but chuckle and crack jokes between themselves at your strange, pony-like body[if player is fponyskinned]. Your booty mark of [pfpbootymark] is a particular source of amusement for them[end if]. You bear with it though, feeling friendly and good-natured about it, probably due to your imminent departure from the infected city. It's a small price to pay for getting out of there safely even if not unchanged for your experience.";
-			say "     Your unusual form draws a different kind of attention from the military's scientists. They are rather perplexed by some of your body's unusual abilities, such as how you can bend your forelimbs like arms at some times but also use them to trot at others as well as your ability to manipulate objects despite having a flat, featureless hooves instead of hands at the end of your forelimbs[if pfptype is 4 and the player is fponyfaced]. You also start to get the hang of using your horn's magic during this time, but you take care not to show that off, lest you be subject to another battery of tests. You instead save it for some discrete fun when you're alone and in need of a little telekinetic [']relief['][else if pfptype is 3]. You also start to get the hang of using your tiny wings to fly. You're not really sure how you're doing it, since they're clearly too small to support you, but as long as you don't think about it too hard, you manage to stay aloft[end if]. You get little in the way of answers to satisfy you, but you remain as pleasant as can be expected until some new surprise from the city distracts them and you're released.";
+			say "     Your unusual form draws a different kind of attention from the military's scientists. They are rather perplexed by some of your body's unusual abilities, such as how you can bend your forelimbs like arms at some times but also use them to trot at others as well as your ability to manipulate objects despite having a flat, featureless hooves instead of hands at the end of your forelimbs[if pfptype is 4 and the player is fponyfaced]. You also start to get the hang of using your horn's magic during this time, but you take care not to show that off, lest you be subject to another battery of tests. You instead save it for some discreet fun when you're alone and in need of a little telekinetic [']relief['][else if pfptype is 3]. You also start to get the hang of using your tiny wings to fly. You're not really sure how you're doing it, since they're clearly too small to support you, but as long as you don't think about it too hard, you manage to stay aloft[end if]. You get little in the way of answers to satisfy you, but you remain as pleasant as can be expected until some new surprise from the city distracts them and you're released.";
 			if pfptype is 4 and the player is fponyfaced:
 				say "     After your release, you put more work into perfecting your talent at using your horn to levitate and manipulate objects, eventually becoming quite talented at it. As part of your practice, you try manipulating and carving clay, which you find an enjoyable pastime. As your skill improves, so does your sculpted creations and they start to draw the attention of others. While there's little demand for art in this new, chaotic world, you do well enough to make a living. Sexual pieces and renditions of transformed models are certainly the most popular items, with the latter being particularly enjoyable for you as you do so enjoy making friends with your clients. This keeps them coming back for more in more ways than one.";
 			else if pfptype is 3:

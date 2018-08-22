@@ -23,22 +23,22 @@ to say birdofparadisedesc:
 
 to say losetobirdofparadise:
 	say "     The rather rambunctious mating dance over with, the bird woman takes a deep breath and starts to sing. The very notion sounds silly at first, but as the music begins to flow and ebb around you, you suddenly find your will to fight on rapidly draining. Surrounded by song, you're content to stand motionless with your mouth agape as the bird of paradise steps forward, her talons clicking against the ground in time with her music. Those eyes, that glassy stare, they seem to grow to fill the entire world as your surroundings melt away, leaving nothing but the clear light blue of the avian's gaze and the music - oh god, the music, you're sure that the bird of paradise hasn't so much as touched you and yet against all logic, you feel warm and good all over and there's a dull heat pulsing down below and the song, its everywhere, EVERYWHERE!";
-	say "     You can't take it anymore; throbbing in time to bird of paradise's mesmerizing singing, you barely feel your [if cocks of player > 0]balls empty themselves as she sinks her cunt down over your pulsing shaft and your [end if][if cunts of player > 1]cunts explode in oozing wetness and[else if cunts of player is 1]cunt explode in oozing wetness and your [end if]spine tingles as shivers run down its length. Unable and unwilling to fight back, you can only lie exhausted on the ground, squirming with the last of your strength as the unearthly beauty of bird of paradise's music completely overwhelms you, and darkness slowly falls.";
+	say "     You can't take it anymore; throbbing in time to bird of paradise's mesmerizing singing, you barely feel your [if player is male]balls empty themselves as she sinks her cunt down over your pulsing shaft and your [end if][if cunts of player > 1]cunts explode in oozing wetness and[else if cunts of player is 1]cunt explode in oozing wetness and your [end if]spine tingles as shivers run down its length. Unable and unwilling to fight back, you can only lie exhausted on the ground, squirming with the last of your strength as the unearthly beauty of bird of paradise's music completely overwhelms you, and darkness slowly falls.";
 	now libido of player is libido of player / 2;
 
 
 to say beatthebirdofparadise:
-	if bopdefeated is 3 and cocks of player > 0:
+	if bopdefeated is 3 and player is male:
 		increase bopdefeated by 1;
 		say "     As your blows stagger the beautiful bird, you leap forward and tackle her to the ground before she can make her escape like the others. She squawks and flaps her wings wildly, trying to break free, but is too weakened by the fight to get away. Having been worked up by her lustful dancing and alluring song, you're reluctant to let her go now that you've got her. Shall you have your way with the vibrant bird (Y) or shall you let her go (N)?";
-		if the player consents:
+		if player consents:
 			say "[bopvictorysex1]";
 		else:
 			say "     You pin the bird firmly to the ground, hand around her beak to keep her silent. You growl at the bird and grind a knee into her ribs, threatening to do worse if she bothers you again. Feeling you've made your point, you release her with a final swat on her feathered rear, sending her flying away with a pained chirp.";
-	else if bopdefeated > 3 and cocks of player > 0 and a random chance of bopdefeated in ( bopdefeated + 3 ) succeeds:
+	else if bopdefeated > 3 and player is male and a random chance of bopdefeated in ( bopdefeated + 3 ) succeeds:
 		increase bopdefeated by 1;
 		say "     Getting yourself into position, you move in close and knock the beautiful bird to the ground with your final blow only to tackle her down moments later. She squawks and tries to get free, but you've gotten quite worked up from her tempting show and consider getting yourself some release. Shall you have your way with the vibrant bird (Y) or shall you let her go (N)?";
-		if the player consents:
+		if player consents:
 			say "[bopvictorysex1]";
 		else:
 			say "     You pin the bird firmly to the ground, hand around her beak to keep her silent. You growl at the bird and grind a knee into her ribs, threatening to do worse if she bothers you again. Feeling you've made your point, you release her with a final swat on her feathered rear, sending her flying away with a pained chirp.";
@@ -57,18 +57,21 @@ to say bopvictorysex1:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance
-	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Bird of Paradise"; [Name of your new Monster]
+	now enemy title entry is "";
+	now enemy name entry is "";
+	now enemy type entry is 0; [non-unique enemy]
 	now attack entry is "The lovely bird continues to sing and dance, draining your will to fight, tempting you with her vibrant body.";
 	now defeated entry is "[beatthebirdofparadise]";
 	now victory entry is "[losetobirdofparadise]";
 	now desc entry is "[birdofparadisedesc]";
 	now face entry is "[if player is bopskinned]crowned with a large, almost unwieldy crest of fluffy feathers that curve forward in a range of autumn colors, vaguely resembling a feathery mohawk[else]smooth and rounded all around, looking rather bare and like it's missing something[end if]. Two glassy, translucent eyes peer out from above a thick, curved beak - they're so wide and empty that one could easily lose themselves in their hypnotic gaze";
-	now body entry is "warm and inviting, [if player is bopskinned] with feathers forming a well-groomed layer over[else]showing off[end if] [if cunts of player > 0]your generous, feminine curves[else if cocks of player > 0]your strong, powerful chest[else]your avian torso[end if][if player is bopskinned]. As you continue to look over yourself, you feel a strong impulse to run your fingers through your soft, colorful plumage and its rainbow mix of warm and cool colors[end if]. A lovely pair of wings sprouts from your back, bands upon bands of soft, melding colors forming a living rainbow across them. Your arms are long, slender and firm beneath the [if player is bopskinned]coat of soft and fluffy feathers[else]sheen of golden scales[end if] that cover much of your shoulders and forearms. Your hands end in long, dexterous fingers, each one tipped with small, pointy talons that look as if they were designed for getting a good grip on various small objects. Your legs are solid and look as if they've some muscle definition to them, which is quite reasonable considering the heavy-looking claws on your scaled feet";
+	now body entry is "warm and inviting, [if player is bopskinned] with feathers forming a well-groomed layer over[else]showing off[end if] [if player is female]your generous, feminine curves[else if player is male]your strong, powerful chest[else]your avian torso[end if][if player is bopskinned]. As you continue to look over yourself, you feel a strong impulse to run your fingers through your soft, colorful plumage and its rainbow mix of warm and cool colors[end if]. A lovely pair of wings sprouts from your back, bands upon bands of soft, melding colors forming a living rainbow across them. Your arms are long, slender and firm beneath the [if player is bopskinned]coat of soft and fluffy feathers[else]sheen of golden scales[end if] that cover much of your shoulders and forearms. Your hands end in long, dexterous fingers, each one tipped with small, pointy talons that look as if they were designed for getting a good grip on various small objects. Your legs are solid and look as if they've some muscle definition to them, which is quite reasonable considering the heavy-looking claws on your scaled feet";
 	now skin entry is "multicolored, feathered";
 	now tail entry is "[if player is bopskinned]Your tailfeathers are so long that they sweep the ground as you walk, yet somehow still manage to remain spotless despite that. The feathers themselves are large and broad, starting from a deep violet from within their shafts and gradually warming through all the colors of the rainbow up to the edges[else]Your ass is firm and muscular, the sort of thing you only find on magazine covers, but there seems to be something missing about it despite its perfection[end if].";
 	now cock entry is "[one of]warm[or]enticing[or]inviting[at random]";
@@ -87,7 +90,7 @@ When Play begins:
 	now HP entry is 45; [ How many HP has the monster got? She's not too hard- she doesn't want to win so much as not lose]
 	now lev entry is 9; [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
 	now wdam entry is 8; [Amount of Damage monster Does when attacking. Claws and massive strength]
-	now area entry is "Zoo"; [ Current options are 'Outside' and 'Mall' Case sensitive. If you go down to the woods today, you're in for a big surprise]
+	now area entry is "Zoo"; [ Current options are 'Outside' and 'Mall'. Case sensitive. If you go down to the woods today, you're in for a big surprise]
 	now cocks entry is 0; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
 	now cock length entry is 0; [ Length infection will make cock grow to if cocks]
 	now cock width entry is 0; [ Size of balls apparently ;) sneaky Nuku (big balls are underrated.)]
@@ -100,7 +103,7 @@ When Play begins:
 	now libido entry is 45; [ Amount player Libido will go up if defeated ]
 	now loot entry is "";
 	now lootchance entry is 0; [ Chance of loot dropping 0-100 ]
- 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]slender[or]sexy[or]alluring[or]winged[at random]"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender". Use [one of] to vary ]
 	now type entry is "avian"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
 	now magic entry is false;
@@ -169,23 +172,23 @@ this is the bopsong rule:
 Section 4 - Definitions
 
 Definition: a person is bopfaced:
-	if the facename of the player is "Bird of Paradise", yes;
+	if facename of player is "Bird of Paradise", yes;
 	no;
 
 Definition: a person is bopskinned:
-	if the skinname of the player is "Bird of Paradise", yes;
+	if skinname of player is "Bird of Paradise", yes;
 	no;
 
 Definition: a person is bopbodied:
-	if the bodyname of the player is "Bird of Paradise", yes;
+	if bodyname of player is "Bird of Paradise", yes;
 	no;
 
 Definition: a person is bopcocked:
-	if the cockname of the player is "Bird of Paradise", yes;
+	if cockname of player is "Bird of Paradise", yes;
 	no;
 
 Definition: a person is boptailed:
-	if the tailname of the player is "Bird of Paradise", yes;
+	if tailname of player is "Bird of Paradise", yes;
 	no;
 
 Section 5 - Endings
@@ -197,7 +200,7 @@ when play ends:
 			say "     You succumb to your template infection.";
 		else:
 			say "     You survive, but were infected by the template.";
-			if cocks of player > 0:							[MALE/HERM]
+			if player is male:							[MALE/HERM]
 				say "     Additional text for a male/herm survivor.";
 			else if "Sterile" is not listed in feats of player:	[F-BREEDABLE]
 				say "     Additional text for a female survivor who can become preggers.";

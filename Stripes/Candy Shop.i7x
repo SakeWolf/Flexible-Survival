@@ -22,12 +22,12 @@ Instead of resolving a CandyShop:
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
-	if the player consents:
+	if player consents:
 		setmonster "Sugar Ferret";
 		if bodyname of player is "Sugar Glider" or facename of player is "Sugar Glider":
 			say "     Tempted by the candy, you decide they don't look very threatening and poke your head inside. The business of ferrets inside quickly snatch their piles of candy and look at you. The first to spot you, a teal ferret, yells 'Candy thief!' and the group poings on top of you, trying to mob you. Unsure what you've done, you yell that you're just here to visit and are eventually released, if viewed with some suspicion. The ferrets keep a close eye on you and are tight-fisted with their candy around you. Teasing insults of 'candy ass' and 'sugar snatcher' are bandied about by them when they talk to you.";
 			say "     When you don't do anything untowards and keep your paws to yourself for a while, they start to relax a little, though the playful name calling continues. The ferrets bound around happily as they play with one another or swap candy between their piles, though none give you any treats from their collections. Watching their antics, you can't help but be amused. The ferrets are a mix of males and females, but seem more focused on playing around than sex, at least for the moment. They're short, ranging from about four and five feet tall, and come in a variety of soft, pastel colors, much like those of many dry, crunchy candies you've had as a kid.";
-			say "     Between their play, you manage to talk to a few of them, learning that they're largely left alone here. 'Except for you cotton-brained thieves,' a pale yellow hob tells you. 'We just want to play around and enjoy our delicious, sweet treats. Ours,' he adds with extra emphasis, keeping his paws protectively around the pile of candy in front of him. 'Speaking of,' the little guy asks as he leans in close, [if cunts of player > 0]running his fingers along the edge of your pouch[else]reaching for your backpack[end if], 'you wouldn't happen to have any filched soda in there? I'm all out.'";
+			say "     Between their play, you manage to talk to a few of them, learning that they're largely left alone here. 'Except for you cotton-brained thieves,' a pale yellow hob tells you. 'We just want to play around and enjoy our delicious, sweet treats. Ours,' he adds with extra emphasis, keeping his paws protectively around the pile of candy in front of him. 'Speaking of,' the little guy asks as he leans in close, [if player is female]running his fingers along the edge of your pouch[else]reaching for your backpack[end if], 'you wouldn't happen to have any filched soda in there? I'm all out.'";
 		else:
 			say "     Tempted by the candy, you decide they don't look very threatening and poke your head inside. The business of ferrets inside smile and greet you in a friendly manner, happily bounding around as they play with one another or swap candy between their piles. Several of them give you treats from their collection, which you politely enjoy. Watching their antics, you can't help but be amused. The ferrets are a mix of males and females, but seem more focused on playing around than sex, at least for the moment. They're short, ranging from about four and five feet tall, and come in a variety of soft, pastel colors, much like those of many dry, crunchy candies you've had as a kid.";
 			say "     Between their play, you manage to talk to a few of them, learning that they're largely left alone here. 'Oh, we just want to play around and enjoy our delicious, sweet treats. Speaking of,' the pale yellow one you're talking to asks as he leans in close, 'you wouldn't happen to have any soda in there? I'm all out.'";
@@ -48,7 +48,7 @@ Instead of resolving a CandyShop:
 			increase carried of chips by 2;
 			increase score by 10;
 		else:
-			say "     Pinned down by a swarm of pointy-toothed ferrets overcome by a rush of manic energy, you find yourself being groped and fondled by numerous little paws. As your lust builds, a pair of blue paws grab your head, guiding it to the crimson cock of another ferret. The taste of his pre is very sweet, exciting you further. You can feel hard cocks and wet pussies grinding against you[if cocks of player > 0]. Paws grab your erect penis and balls, stroking and fondling them[end if][if cunts of player > 0]. Furry fingers are stuffed into your pussy, thankfully careful with those sharp claws of theirs[end if]. You are teased and fondled until you the ferret cock stuffed in your mouth throbs and pulses its sticky load down your throat. You are then pushed over and another of the males mounts you, driving his cock into your [if cunts of player > 0]pussy[else]ass[end if], fucking you wildly. After a quick, but frantic romp, his load is sprayed deep inside you as well. After that, things get hazy, being made to lick pussies, suck cocks and have sex with the ferrets, who seem to have unending energy. Eventually, they tire of you and you're tossed out to make room for another big romp on a pile of candy.[impregchance]";
+			say "     Pinned down by a swarm of pointy-toothed ferrets overcome by a rush of manic energy, you find yourself being groped and fondled by numerous little paws. As your lust builds, a pair of blue paws grab your head, guiding it to the crimson cock of another ferret. The taste of his pre is very sweet, exciting you further. You can feel hard cocks and wet pussies grinding against you[if player is male]. Paws grab your erect penis and balls, stroking and fondling them[end if][if player is female]. Furry fingers are stuffed into your pussy, thankfully careful with those sharp claws of theirs[end if]. You are teased and fondled until you the ferret cock stuffed in your mouth throbs and pulses its sticky load down your throat. You are then pushed over and another of the males mounts you, driving his cock into your [if player is female]pussy[else]ass[end if], fucking you wildly. After a quick, but frantic romp, his load is sprayed deep inside you as well. After that, things get hazy, being made to lick pussies, suck cocks and have sex with the ferrets, who seem to have unending energy. Eventually, they tire of you and you're tossed out to make room for another big romp on a pile of candy.[impregchance]";
 			let x be a random number between 1 and 3;
 			choose row monster from table of random critters;
 			if x is 1:
@@ -113,7 +113,7 @@ to say Sweet Tooth scene:
 			if hunger of player < 0, now hunger of player is 0;
 			say "     As you munch on the candies you were given, the yellow ferret and a few others snuggle up to you. They chirr happily at having their new friend back and run their paws over your body. 'Let us make it up to you,' one of the hobs says, which is followed by a chorus of yeah's from the others. When a paw slips between your legs to fondle you, you open your mouth to say something, but a pink jill pushes her muzzle to your lips, kissing you. The sweet taste of her kiss makes you moan and momentarily forget what you were going to say. The soft paws roaming your body help you slip your clothes off. As you're fondled, several of the pastel ferrets take turns kissing you while the others nuzzle and kiss you all over.";
 		say "     You grow increasingly excited as the ferrets play with you, soon eagerly sliding your tongue into each fresh muzzle that's presented to you for a kiss[if cocks of player is 1]. During one deep kiss, you feel another muzzle slide down over your cock, licking and sucking at it eagerly[else if cocks of player > 1]. During one deep kiss, you feel warm muzzles slide down over your cocks, licking and sucking at them[else if cunts of player is 1]. You feel a soft muzzle nuzzle at your pussy and a tongue start licking your folds[else if cunts of player > 1]. You feel a soft muzzle nuzzle at your pussies and a tongue start licking your folds[else]. You feel a soft muzzle nuzzle at your bare crotch, licking it with soft, tender motions. 'Oh, you poor sprite!' the ferret down there says[end if]. Reaching down, you rub a hands over the ferret's head and chirr happily.";
-		say "     As all this attention continues, you can feel a pleasant giddiness spreading through you. The ferret head you're stroking starts to feel different. At first you think it's changing, but you soon realize that it is your hand changing shape, becoming a cute little paw like those of your friends. This change spreads up your arm and to your body. Your proportions change, becoming under five feet tall, but with an elongated, tubular body on short limbs. The pleasant sensations spread down to your groin.";
+		say "     As all this attention continues, you can feel a pleasant giddiness spreading through you. The ferret head you're stroking starts to feel different. At first you think it's changing, but you soon realize that it is your hand changing shape, becoming a cute little pawlike those of your friends. This change spreads up your arm and to your body. Your proportions change, becoming under five feet tall, but with an elongated, tubular body on short limbs. The pleasant sensations spread down to your groin.";
 		now bodyname of player is "Sugar Ferret";
 		now body of player is body entry;
 		follow the sex change rule;
@@ -137,7 +137,7 @@ to say Sweet Tooth scene:
 			now lastcaffeine of Sweet Tooth is turns;
 			decrease thirst of player by 6;
 		sfcaffeine; [activates effects of Sugar Ferret caffeine high]
-		say "     An orgy of wild, ferrety sex breaks out as the hobs and jills get aroused in their caffeine-induced excitement. The place if filled with groups of vibrantly colorful ferrets licking, sucking and fucking one another wildly. And you're at the center of this, jills and hobs lustfully welcoming you to their group[if player is herm]. You fuck and are fucked several times over the course of the orgiastic event[else if cocks of player > 0]. You fuck several of the ferrets over the course of the orgiastic event[else]. You are fucked several times by the hobs over the course of the orgiastic event[end if], though the details all quickly become a blur of bright colors and sweet, sweet soda. Eventually it winds down somewhat when a large mob of ferrets rush outside with plans to scour the fairground for more soda. Still having a little self-control, you bound away with a surplus of energy.[impregchance]";
+		say "     An orgy of wild, ferrety sex breaks out as the hobs and jills get aroused in their caffeine-induced excitement. The place if filled with groups of vibrantly colorful ferrets licking, sucking and fucking one another wildly. And you're at the center of this, jills and hobs lustfully welcoming you to their group[if player is herm]. You fuck and are fucked several times over the course of the orgiastic event[else if player is male]. You fuck several of the ferrets over the course of the orgiastic event[else]. You are fucked several times by the hobs over the course of the orgiastic event[end if], though the details all quickly become a blur of bright colors and sweet, sweet soda. Eventually it winds down somewhat when a large mob of ferrets rush outside with plans to scour the fairground for more soda. Still having a little self-control, you bound away with a surplus of energy.[impregchance]";
 		infect "Sugar Ferret";
 		increase ferretvisit by 1;
 		if humorous is not banned, now Caught Glider is unresolved;
@@ -155,16 +155,16 @@ to say Sweet Tooth scene:
 		else:
 			now sex entry is "Male";
 		if bodyname of player is "Sugar Glider" or facename of player is "Sugar Glider":
-			say "     Back at the Sweet Tooth candy shop, you find that the ferrets have settled down and are back to their cute, playful selves. Seeing a candy-thieving sugar glider come in, several of them pounce atop you, pinning you down. You are held down and tickled by the cute, playful hobs and jills, tossing sugary insults at one another as you squirm and laugh. As their touches turn more erotic, you find a [one of]baby blue[or]pale yellow[or]soft pink[or]light green[or]pale orange[at random] [one of]hob[or]jill[at random] pawing at your groin, you happily start playing in a more intimate manner with the cute ferrets as nuzzles turn to kisses and ticklings turn to gropings.";
+			say "     Back at the Sweet Tooth candy shop, you find that the ferrets have settled down and are back to their cute, playful selves. Seeing a candy-thieving sugar glider come in, several of them pounce atop you, pinning you down. You are held down and tickled by the cute, playful hobs and jills, tossing sugary insults at one another as you squirm and laugh. As their touches turn more erotic, you find a [one of]baby blue[or]pale yellow[or]soft pink[or]light green[or]pale orange[at random] [one of]hob[or]jill[at random] pawing at your groin, and you happily start playing in a more intimate manner with the cute ferrets as nuzzles turn to kisses and ticklings turn to gropings.";
 		else:
 			say "     Back at the Sweet Tooth candy shop, you find that the ferrets have settled down and are back to their cute, playful selves. They smile and wave to you as you come in, snuggling up to you in welcome. You sit and enjoy their playful antics, happy to take a break from the stress of the infected world outside. They share some candy with you and you snuggle and scritch several of them. When their touches start to turn more erotic and you find a [one of]baby blue[or]pale yellow[or]soft pink[or]light green[or]pale orange[at random] [one of]hob[or]jill[at random] pawing at your groin, you happily start playing in a more intimate manner with the cute ferrets as nuzzles turn to kisses and pettings turn to gropings.";
 		follow the cock descr rule;
 		follow the cunt descr rule;
 		now randomferret is { 1, 2, 3 };
-		if cocks of player > 0, add 4 to randomferret; [M/F top]
-		if cocks of player > 0, add 5 to randomferret; [gay ferret (fuck/oral)]
-		if cunts of player > 0, add 6 to randomferret; [get share-fucked]
-		if cunts of player > 0, add 7 to randomferret; [69 w/male]
+		if player is male, add 4 to randomferret; [M/F top]
+		if player is male, add 5 to randomferret; [gay ferret (fuck/oral)]
+		if player is female, add 6 to randomferret; [get share-fucked]
+		if player is female, add 7 to randomferret; [69 w/male]
 		sort randomferret in random order;
 		if entry 1 of randomferret is 1:
 			say "[candyshopsex1]";
@@ -210,10 +210,10 @@ to say Sweet Tooth scene:
 		follow the cock descr rule;
 		follow the cunt descr rule;
 		now randomferret is { 1, 2, 3 };
-		if cocks of player > 0, add 4 to randomferret; [M/F top]
-		if cocks of player > 0, add 5 to randomferret; [gay ferret (fuck/oral)]
-		if cunts of player > 0, add 6 to randomferret; [get share-fucked]
-		if cunts of player > 0, add 7 to randomferret; [69 w/male]
+		if player is male, add 4 to randomferret; [M/F top]
+		if player is male, add 5 to randomferret; [gay ferret (fuck/oral)]
+		if player is female, add 6 to randomferret; [get share-fucked]
+		if player is female, add 7 to randomferret; [69 w/male]
 		remove tempnum from randomferret, if present;
 		sort randomferret in random order;
 		if entry 1 of randomferret is 1:
@@ -244,16 +244,16 @@ to say Sweet Tooth scene:
 
 
 after navigating Sweet Tooth:
-	move the player to the State Fair;
+	move player to the State Fair;
 
 
 Section 3 - Various sex scenes
 
 to say candyshopsex1:
 	if caffeinehigh of player is 0:
-		say "     As you're playfully tickling down one ferret's belly to get to [one of]his cock[or]her pussy[at random], a well-hung, [one of]sky blue[or]light yellow[or]pastel green[or]lavender[or]salmon[at random] hob moves in behind you, grinding his stiff member against your backside. You moan softly and are momentarily distracted, letting the other ferret get away to pounce on another and start making out with them. You are feeling quite aroused and playful and so decide to let the cute fellow have his fun. You moan softly as he sinks his stiff rod into you, sliding it gently into your [if cunts of player > 0]wet pussy[else]tight pucker[end if]. The eager hob runs his paws over your body, chirring happily as he pounds away at you before finally sending a nice, hot load deep inside you[if cocks of player > 0 or cunts of player > 0], bringing you to orgasm as well[end if][if cocks of player > 0]. You blast a thick spray of semen onto the floor as you enjoy the warmth of his seed flowing into your belly[end if].[impregchance]";
+		say "     As you're playfully tickling down one ferret's belly to get to [one of]his cock[or]her pussy[at random], a well-hung, [one of]sky blue[or]light yellow[or]pastel green[or]lavender[or]salmon[at random] hob moves in behind you, grinding his stiff member against your backside. You moan softly and are momentarily distracted, letting the other ferret get away to pounce on another and start making out with them. You are feeling quite aroused and playful and so decide to let the cute fellow have his fun. You moan softly as he sinks his stiff rod into you, sliding it gently into your [if player is female]wet pussy[else]tight pucker[end if]. The eager hob runs his paws over your body, chirring happily as he pounds away at you before finally sending a nice, hot load deep inside you[if player is not neuter], bringing you to orgasm as well[end if][if player is male]. You blast a thick spray of semen onto the floor as you enjoy the warmth of his seed flowing into your belly[end if].[impregchance]";
 	else:
-		say "     As you're making a grab for a squriming ferret who's trying to reach more soda while you're trying to be more amorous, a well-hung, [one of]sapphire blue[or]golden yellow[or]forest green[or]indigo[or]cardinal red[at random] hob moves in behind you, grinding his stiff member against your backside firmly. You moan and chirr and are momentarily distracted, letting the other ferret get away to grab another drink before making out with the jill they swiped the bottle from. You are quite lustful by this point and so decide to let the cute fellow have his way with you. You moan in pleasure as he sinks his stiff rod into you, sliding it eagerly into your [if cunts of player > 0]sopping pussy[else]wanton hole[end if]. The eager hob runs his clawed paws over your body, chirring loudly as he pounds away at you before finally sending a thick, heavy load deep inside you[if cocks of player > 0 or cunts of player > 0], bringing you to orgasm as well[end if][if cocks of player > 0]. You blast a thick spray of semen onto the floor as you enjoy the warmth of his seed flowing into your belly[end if].[impregchance]";
+		say "     As you're making a grab for a squirming ferret who's trying to reach more soda while you're trying to be more amorous, a well-hung, [one of]sapphire blue[or]golden yellow[or]forest green[or]indigo[or]cardinal red[at random] hob moves in behind you, grinding his stiff member against your backside firmly. You moan and chirr and are momentarily distracted, letting the other ferret get away to grab another drink before making out with the jill they swiped the bottle from. You are quite lustful by this point and so decide to let the cute fellow have his way with you. You moan in pleasure as he sinks his stiff rod into you, sliding it eagerly into your [if player is female]sopping pussy[else]wanton hole[end if]. The eager hob runs his clawed paws over your body, chirring loudly as he pounds away at you before finally sending a thick, heavy load deep inside you[if player is not neuter], bringing you to orgasm as well[end if][if player is male]. You blast a thick spray of semen onto the floor as you enjoy the warmth of his seed flowing into your belly[end if].[impregchance]";
 	now tempnum is 1;
 
 to say candyshopsex2:
@@ -280,23 +280,23 @@ to say candyshopsex4:
 to say candyshopsex5:
 	if caffeinehigh of player is 0:
 		say "     Playfully tickling down one ferret's belly, your hand drifts down to their sheath and balls, rubbing over them as his swelling cock begins to emerge. Spotting your hard erection, he moves his paws to it eagerly and starts stroking you in return. Having found yourself a cute [one of]lavender pink[or]powder blue[or]pastel yellow[or]honeydew green[or]lilac[at random] hob to play with and your own shaft quite hard, would you rather mount him (Y) or get a blow job (N)?";
-		if the player consents:
+		if player consents:
 			say "     Rolling him onto all fours, he chirrs happily and raises his tail, waving his ass eagerly for you. After moving into position atop him, your [cock size desc of player] [cock of player] cock sinks into him easily, the little guy clearly well used to having a horny male atop him. You nuzzle his ears and start thrusting into him while he chirrs and giggles happily. Reaching around, you find his rod quite hard and leaking from the good fucking he's receiving. Feeling his cock twitch in your hand and his balls tighten up, you give him a hard, final thrust to push him over the edge, letting his spasming hole send you to climax moments later.";
 		else:
 			say "     Taking his cute, fuzzy head in your hands, you press your cock to his lips and moan as his muzzle slides down over it. His tongue works you eagerly, playfully teasing you. You start to chirr in pleasure, excited by his clearly well-practiced technique. Reaching between his legs, you find his rod quite hard and leaking. As his muzzle works your cock to climax and you send your hot seed down his throat, his meat pulses in your hand and blasts his sugary sweet load, which you just have to lick off your fingers.";
 	else:
 		say "     Managing to grab one of the ferrets as he tries to reach more soda, you pull him in close and grind your stiff cock against the [one of]turquoise[or]sunglow[or]lime green[or]magenta[or]amethyst[at random] hob's soft fur. Distracted by your maleness, he takes it in his paws and starts stroking it eagerly. He lets the tips of his claws slide across your sensitive flesh lightly enough to excite you while not hurting that [cock size desc of player] [cock of player] maleness he clearly wants so badly. Would you prefer to mount him (Y) or get a blow job (N)?";
-		if the player consents:
+		if player consents:
 			say "     Rolling him onto all fours, he chirrs excitedly and raises his tail, waving his ass eagerly for you. After moving into position atop him, your [cock size desc of player] [cock of player] cock sinks into him easily, the lustful guy clearly well used to having a horny male atop him. You nip at his ears and start thrusting into him while he chirrs and sinks his claws into the floor to push forcefully back into your thrusts. Reaching around, you find his rod quite hard and leaking from the good fucking he's receiving. Feeling his cock twitch in your hand and his balls tighten up, you pound him mercilessly to push him over the edge, letting his spasming hole send you to climax moments later while he screams in delight.";
 		else:
-			say "     Taking the over-excited hob's head in your paws, you press your cock to his lips and chirr as his muzzle slides down over it. His tongue works you eagerly, slathering over you lustfully for your sweet seed. His sharp teeth graze across your sensitive flesh in a clearly practiced manner, as their touch is enough to excite you, but not hurt you. You rub his ears and keep his head pressed to your groin, pounding into his muzzle, much to his obvious delight. You slip a paw down between his legs to fondle his throbbing shaft, finding it dribbling sweet smelling precum down over his sheath and balls. As his muzzle works your cock to climax and you send your hot seed down his throat, his meat pulses in your hand and blasts his sugary sweet load, which you then eagerly lick from your fingers.";
+			say "     Taking the over-excited hob's head in your paws, you press your cock to his lips and chirr as his muzzle slides down over it. His tongue works you eagerly, slathering over you lustfully for your sweet seed. His sharp teeth graze across your sensitive flesh in a clearly practiced manner, as their touch is enough to excite you, but not hurt you. You rub his ears and keep his head pressed to your groin, pounding into his muzzle, much to his obvious delight. You slip a paw down between his legs to fondle his throbbing shaft, finding it dribbling sweet-smelling precum down over his sheath and balls. As his muzzle works your cock to climax and you send your hot seed down his throat, his meat pulses in your hand and blasts his sugary sweet load, which you then eagerly lick from your fingers.";
 	now tempnum is 5;
 
 to say candyshopsex6:
 	if caffeinehigh of player is 0:
 		say "     As you're looking for someone to play with, you find yourself tackled by a pair of cute hobs. The first has [one of]light red[or]pastel blue[or]pale yellow[or]pear colored[cycling] fur and the other is a [one of]pale green[or]light orange[or]powder purple[or]light rose[cycling] coloration. You can't help but laugh as the playful pair nuzzle and kiss you as they move you onto all fours. They then start taking turns, each making a few thrusts into your pussy before letting the other have a turn. You moan in pleasure at this, quickly growing excited as the two friends share you. You get a wonderfully fulfilling fucking from the pair of complementary hobs and eventually have your cunt stuffed with one sweet load that is soon followed by another, making you feel delightfully hot and creamy inside.[impregchance][impregchance]";
 	else:
-		say "     Moaning lustfully, you finger your wet slit and raise your tail, clearly seeking a male to fill you. A pair of horny hobs advance upon you together, pushing you to the ground and running their paws over your body. You moan lustfully and let them move you into position. You end up with the [one of]electric lime[or]bright yellow[or]navy blue[or]flame red[or]cerise[or]royal purple[or]orange[or]neon green[cycling] one beneath you and the [one of]cerise[or]royal purple[or]orange[or]neon green[or]electric lime[or]bright yellow[or]navy blue[or]candy apple red[cycling] one moving overtop of you. As your hips are pushed down, you find your pussy stretched open to take the complementary pair at once. Their two cocks stuff you nicely as buck their hips in unison, giving you a much more thorough fucking than even the most endowed male here could give you. You are reduced to moaning and chirring as your cunt is pounded into until you receive the dual blast of their hot and heavy loads to stuff your wanton womb.[impregchance][impregchance]";
+		say "     Moaning lustfully, you finger your wet slit and raise your tail, clearly seeking a male to fill you. A pair of horny hobs advance upon you together, pushing you to the ground and running their paws over your body. You moan lustfully and let them move you into position. You end up with the [one of]electric lime[or]bright yellow[or]navy blue[or]flame red[or]cerise[or]royal purple[or]orange[or]neon green[cycling] one beneath you and the [one of]cerise[or]royal purple[or]orange[or]neon green[or]electric lime[or]bright yellow[or]navy blue[or]candy apple red[cycling] one moving overtop of you. As your hips are pushed down, you find your pussy stretched open to take the complementary pair at once. Their two cocks stuff you nicely as they buck their hips in unison, giving you a much more thorough fucking than even the most endowed male here could give you. You are reduced to moaning and chirring as your cunt is pounded into until you receive the dual blast of their hot and heavy loads to stuff your wanton womb.[impregchance][impregchance]";
 	now tempnum is 6;
 
 to say candyshopsex7:
@@ -332,7 +332,7 @@ to sfcaffeine:
 	if "Strong Psyche" is listed in feats of player, increase humanity of player by a random number between 1 and 5;
 	if "Weak Psyche" is listed in feats of player, decrease humanity of player by a random number between 0 and 3;
 	increase morale of player by 5;
-	say "     As the soda rushes through your system, the sugar and caffeine gets your body all worked up. Your body seems to have increased endurance and boundless energy to keep you going from the rush. Even your mind seems sharper and more alert. But this comes at a cost as well, as you can't seem to keep still or focused and the excess twitchiness is affecting your dexterity as well. The rush of arousal that comes with this [if player is herm]gets you hard and wet[else if cocks of player > 0]gets you hard[else if cunts of player > 0]gets you wet[else]excites you greatly[end if] and further erodes your grip on your mind.";
+	say "     As the soda rushes through your system, the sugar and caffeine gets your body all worked up. Your body seems to have increased endurance and boundless energy to keep you going from the rush. Even your mind seems sharper and more alert. But this comes at a cost as well, as you can't seem to keep still or focused and the excess twitchiness is affecting your dexterity as well. The rush of arousal that comes with this [if player is herm]gets you hard and wet[else if player is male]gets you hard[else if player is female]gets you wet[else]excites you greatly[end if] and further erodes your grip on your mind.";
 	say "     (You have received a significant stamina and HP boost (+ [special-style-1][2 + ( 2 * level of player)][roman type] max HP), an intelligence boost and a dexterity drop, all of which will last as long as your caffeine high remains in effect. But be careful, you're filled with manic energy now and will have trouble sitting still.)[line break]";
 
 to sfcaffeineboost:
@@ -375,23 +375,23 @@ an everyturn rule:
 Section 9 - Definitions
 
 Definition: a person is sugarfaced:
-	if the facename of the player is "Sugar Ferret", yes;
+	if facename of player is "Sugar Ferret", yes;
 	no;
 
 Definition: a person is sugarskinned:
-	if the skinname of the player is "Sugar Ferret", yes;
+	if skinname of player is "Sugar Ferret", yes;
 	no;
 
 Definition: a person is sugarbodied:
-	if the bodyname of the player is "Sugar Ferret", yes;
+	if bodyname of player is "Sugar Ferret", yes;
 	no;
 
 Definition: a person is sugarcocked:
-	if the cockname of the player is "Sugar Ferret", yes;
+	if cockname of player is "Sugar Ferret", yes;
 	no;
 
 Definition: a person is sugartailed:
-	if the tailname of the player is "Sugar Ferret", yes;
+	if tailname of player is "Sugar Ferret", yes;
 	no;
 
 

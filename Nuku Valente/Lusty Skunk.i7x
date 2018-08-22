@@ -49,7 +49,7 @@ Instead of Resolving a Lusty Skunk:
 	if skrp is -1:
 		say "You notice a crudely drawn sign, posted in the grass. 'Beware Double Skunks. If you cherish your privacy, turn away now.'";
 		say "Do you want to proceed?";
-		if the player consents:
+		if player consents:
 			now skrp is 0;
 		else:
 			now lusty skunk is resolved;
@@ -57,7 +57,7 @@ Instead of Resolving a Lusty Skunk:
 	if skrp is 1:
 		say "You happen across another skunk hybrid. A shapely female human form perched on a skunk lower frame, two faces both smiling at you. Without a word, they prance up and embrace you. Any desire you had to avoid them fades like mist before the morning sun as their hands eagerly explore your form. Your body grows warm and tingly as it remembers the form they want, reaffirming your strange, new, nature with gentle coos of affection and familial bond.";
 		skunkform;
-		if cocks of player > 0:
+		if player is male:
 			if cock length of player < 9:
 				say "Her hands roam you as she circles around you, reaching behind your hind legs to caress your [cock size desc of player] manhood gently, 'Too small for me,' she chides, 'I want to feel it, but bigger.' She leans in behind you, kissing your [short ball size] balls and nuzzling into your sensitive loins a moment before she comes back around you, her shapely ass waving temptingly, denied though it is.";
 			else if cock length of player > 19:
@@ -93,12 +93,12 @@ Instead of Resolving a Lusty Skunk:
 
 to say doubleskunk:		[separated to edit and remove 'stop the action']
 	if 0 is 0:		[yes]
-		if cocks of player > 0:
+		if player is male:
 			say "Her soft paws stray down between your thighs to grasp at your [cock size desc of player] [cock of player] shaft and gently stroke it to its full length as she slowly pivots beneath you. Her huge tail drapes up over her back, exposing her ass and pouting nethers to you. Thin streams of honey leak from those thick pouting lips, running down her thighs as she slowly shakes her rump back and forth invitingly. The smell is overpowering in her heat, repulsing and attracting at once in a powerful, if confusing, clash of instincts.";
 			WaitLineBreak;
 			if cocks of player > 1:
 				say "Your cocks know what they want. You line them up against her and push forward, sinking one achingly hard member into the tight pucker of her ass while another slips deeply into her welcoming cunt, lubricant squirting out as you shove in, running down your [skin of player] thighs. [if cocks of player > 2]Your other [cock of player] cocks slip up along her front, rubbing against fur as they go, caressed by her warm pelt and one of her hands, straying down to tease and pull at them. [end if]You draw back, her entire body shivering in tune to your movements like a violin's strings. You can feel her body clenching, desperate for your cocks, which you give, plunging deep into her willing, wailing, form. As you start to develop a steady thumping pattern, her tail raises, brushing against your chest with every thrust. [if cocks of player > 2]Her hand teases and pulls incessantly at your exposed meat, making you tremble with extra pleasure as she works you higher and higher with skilled strokes. [end if]You can feel your [short ball size] balls tensing, ready to release, and you redouble your efforts to please this creature under you.";
- 			else:
+			else:
 				say "Following your increasingly strong instincts, you plunge your [cock of player] dick into her waiting passage. With a wet squelch, her honey pot overflows with her expectant fluids, gushing back against you even as you thrust as deep as you can into her tight warmth. Your hands grip into her fleshy hips, pressing against her in sharp, deep, motions, making her body quake and jiggle with every forceful meeting. She looks you in the eyes, filled with an expression between utter lust and some deep affection. Her furry legs wrap around your hips as best she can, drawing you in against her as you rut with her so eagerly, filling her with your desperate virility. Suddenly, she pushes at you, and twists. Athletically, she spins about, drawing free from your now glistening member just long enough to get into a bestial position and raise her tail.[line break] [line break]You are quick to slam home into that welcoming tunnel, reaching around to grab at her luscious breasts as your [short ball size] balls sway under you with each powerful union of your pleasured bodies, your voices rising together as climax rushes close.";
 			WaitLineBreak;
 			say "Just as your muscles contract in climax, a wet warmth splatters across your front. She sprayed you! Revulsion barely registers as your body locks in climactic pleasure, filling her greedy womb with your seed even as the warmth spreads. She presses back firmly, and abruptly sharp tingles run through everywhere that your bodies meet. With a sudden spasm, you feel her try to pull away, but get drawn back. She moans whorishly as she writhes back against you. Your man meat throbs powerfully as where you end and she begins starts to become blurred, flowing into one another, cock flesh leaving nothing but bulged flesh against her. In a fit of panic, you push against her, trying to get away, but she doesn't budge, your hands coming off of her sticky. Fearing of losing them, you wrench them away even as a second climax ripples through your tingling lower body. You can feel your [short ball size] orbs clenching, filling her with seed as your forms twine and flow together. Her rump pushes back into yours, through it. Instead of pain, only an increasing, dizzying, euphoria, breath short as you change.";

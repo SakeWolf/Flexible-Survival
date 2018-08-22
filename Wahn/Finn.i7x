@@ -1,7 +1,6 @@
 Version 1 of Finn by Wahn begins here.
 [Version 1 - Put into its own file]
 
-
 Missing Farm Hand is a situation. The level of Missing Farm Hand is 5. Missing Farm Hand is resolved.
 The sarea of Missing Farm Hand is "Plains".
 
@@ -16,6 +15,8 @@ FinnTrackingProgress is a number that varies. FinnTrackingProgress is usually 0.
 [   5: Finn rescued, centaur fucked him                  ]
 [  99: Finn's dead                                       ]
 [ 100: Finn joined the stables                           ]
+
+[ Note: The quest log for this is in Wahn/Anthony.i7x    ]
 
 Section 1 - Events
 
@@ -48,11 +49,11 @@ to say FinnTracked:
 	say "     Turning to follow the newer trail, it doesn't take all that long before you hear shouts and cursing coming from somewhere ahead of you. There are fragments of partially collapsed buildings sticking out of the grassland a short distance that way, the largest one rising not quite two stories. With the ruins breaking up the sounds a bit, you hear snippets of laughter, as well as angry and amused shouting from somewhere behind.";
 	WaitLineBreak;
 	say "     Cautiously moving closer, you do your best to stay hidden and peek around a crumbling wall and see a camp between the ruins, filled with multiple creatures. Two are centaurs, a male and female, and both of them have their front legs tied together, negating the usual speed and agility of the mythical beings. Clearly, these are captives of the other inhabitants of the camp - a trio of horsemen, bearing a brand of overlapping horseshoes on their shoulders. Two of them are restraining the male centaur while number three is standing at the female's rear end, one arm around a completely naked Finn's shoulder and his hand tightly gripping the farmhand's hard equine cock.";
-	say "     'Have a taste how good it feels to follow our master!' the guy next to Finn barks out in a rough voice, smacking his manhood against the centauress's bare pussy lips, then shoving the cockhead in between her folds. There is a frightened whimper from the young woman and the male centaur tries to rear up, shouting at the height of his voice, 'Get your stinking hands off my sister, you bastards!' Meanwhile, Finn gives a deep grunt and starts pumping his hips back and forth all on his own, clearly enjoying the feel of being inside the centauress.";
+	say "     'Have a taste how good it feels to follow our master!' the guy next to Finn barks out in a rough voice, smacking the missing farmhand's manhood against the centauress's bare pussy lips, then shoving its cockhead in between her folds. There is a frightened whimper from the young woman and the male centaur tries to rear up, shouting at the height of his voice, 'Get your stinking hands off my sister, you bastards!' Meanwhile, Finn gives a deep grunt and starts pumping his hips back and forth all on his own, clearly enjoying the feel of being inside the centauress.";
 	WaitLineBreak;
 	say "     'That's it - have fun boy! Just let your instincts take over, no sense resisting anymore,' the horseman with Finn says as he gives the farmhand an encouraging slap on his bare buttocks, then turns and stares right at you. 'And who do we have here - an uninvited visitor!' There's not much point in staying hidden any longer, now that all the horsemen (except Finn, who's busy fucking) turn to look at you, so you step out into the open.";
 	if Nightmaremastery is 1:
-		say "     The reaction of the horsemen is priceless as they recognize you as the master of the stables. Hostile stares turn into wide-eyed shock and a startled jeer from one of them stops quite suddenly as he chokes it down. 'Welcome master. I - er - we were sent out from the stables to 'encourage' centaurs to join us. So far they've seemed quite reluctant and even violent about the prospect, so we're trying other ways.' Squirming under your gaze as you start questioning them, they report that they also picked up another horseman who doesn't yet have the stable's brand. 'He'll be a proper addition to the herd soon, as you can see,' the leader of the little raiding party says proudly with a nod at Finn.";
+		say "     The reaction of the horsemen is priceless as they recognize you as the master of the stables. Hostile stares turn into wide-eyed shock and a startled jeer from one of them stops quite suddenly as he chokes it down. 'Welcome master. I - er - we were sent out from the stables to 'encourage' centaurs to join us. So far they've seemed quite reluctant and even violent about the prospect, so we're trying other ways.' Squirming under your gaze as you start questioning them, they report that they also picked up another horseman who doesn't yet have the stable's brand. 'He'll be a proper addition to the herd soon, as you can see. Was a bit resistant at first, but he'll fall in line soon enough,' the leader of the little raiding party says proudly with a nod at Finn.";
 		say "     [bold type]What do you want to do with these guys now? Leave Finn to be properly 'initiated' into the stables ([link]Y[as]y[end link]) or do you put a stop to it ([link]N[as]n[end link])?[roman type][line break]";
 		if player consents:
 			LineBreak;
@@ -89,7 +90,7 @@ to say FinnTracked:
 				LineBreak;
 				say "     With some diplomatic finesse, you manage to explain to the horny centaur that there's no need to kill anyone right now. After all, if his sister was a virgin, then the debt should be payable with another virginity. Surely, such a strapping hunk of a horseman like Finn hasn't taken a dick before (and hopefully he'll forgive you for brokering this deal and saving his life). The red-faced young male is torn between his anger and libido as he looks at the prone horseman, then concern is added to the mix as he glances over to his sister. The centauress seems to be pretty entranced by her first heat flaring up strongly and is wandering off a little bit.";
 				LineBreak;
-				if cocks of player > 0: [male + herm]
+				if player is male: [male + herm]
 					say "     [bold type]Do you suggest to the centaur to go care for his sister ([link]Y[as]y[end link]), or will you offer to watch out for her while he is 'busy' ([link]N[as]n[end link])?[roman type][line break]";
 					if player consents: [fuck Finn?]
 						LineBreak;
@@ -150,7 +151,7 @@ to say FinnCentauressCaring:
 	say "     [bold type]Do you want to take care of her sexual needs ([link]Y[as]y[end link]), or will you just keep the young woman company and try to calm her down ([link]N[as]n[end link])? The first option holds a bit of a risk, even if her brother is currently otherwise occupied...[roman type][line break]";
 	if player consents:
 		LineBreak;
-		if cocks of player > 0:
+		if player is male:
 			say "     [bold type]Fuck her ([link]Y[as]y[end link]), or do you just want to lick and stroke her pussy ([link]N[as]n[end link])?[roman type][line break]";
 			if player consents:
 				LineBreak;
@@ -229,7 +230,7 @@ to say FinnSexMenu:
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
-	if cocks of player > 0: [only males and herms can get a blowjob]
+	if player is male: [only males and herms can get a blowjob]
 		choose a blank row in table of fucking options;
 		now title entry is "Get a blowjob";
 		now sortorder entry is 1;
@@ -240,19 +241,19 @@ to say FinnSexMenu:
 	now sortorder entry is 2;
 	now description entry is "Wrap your lips around the horseman's equine shaft";
 	[]
-	if cocks of player > 0 and FinnTrackingProgress is 3: [only males and herms can fuck him, virgin Finn]
+	if player is male and FinnTrackingProgress is 3: [only males and herms can fuck him, virgin Finn]
 		choose a blank row in table of fucking options;
 		now title entry is "Talk the handsome farmhand into giving up his virginity";
 		now sortorder entry is 3;
 		now description entry is "Take the horseman's ass for a ride";
 	[]
-	if cocks of player > 0 and FinnTrackingProgress > 3: [only males and herms can fuck him, also just for Finn who isn't a virgin]
+	if player is male and FinnTrackingProgress > 3: [only males and herms can fuck him, also just for Finn who isn't a virgin]
 		choose a blank row in table of fucking options;
 		now title entry is "Fuck the handsome farmhand's ass";
 		now sortorder entry is 4;
 		now description entry is "Take the horseman's ass for a ride";
 	[]
-	if cunts of player > 0: [only females and herms can take him in the pussy]
+	if player is female: [only females and herms can take him in the pussy]
 		choose a blank row in table of fucking options;
 		now title entry is "Take Finn's shaft in your pussy";
 		now sortorder entry is 5;
@@ -267,7 +268,7 @@ to say FinnSexMenu:
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]100 - Nevermind[as]100[end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
 	while sextablerun is 0:
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
@@ -291,16 +292,16 @@ to say FinnSexMenu:
 				if (nam is "Take Finn's shaft in your ass"):
 					say "[FinnSex6]";
 				wait for any key;
-		else if calcnumber is 100:
+		else if calcnumber is 0:
 			say "Break off the conversation?";
-			if the player consents:
+			if player consents:
 				now sextablerun is 1;
 				say "     You step back from the horseman farmhand, shaking your head slightly as he gives a questioning look.";
 				wait for any key;
 			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
 
 to say FinnSex1: [oral on the player]

@@ -32,10 +32,10 @@ Instead of resolving a Informant:
 Section 2 - Agency
 
 Agency is a room. It is fasttravel. It is private.
-The description of Agency is "Back behind some of the less prominent buildings of the high rise there stands and old fashion deli that seems to be in good shape, despite the rough times the city is having. At the side of the deli a stone flight of stairs leads down to where a nondescript black door stands in wait for certain... irregular... customers. Pushing the door open you find a cool office with a fan swirling up on the ceiling filling out the strangely expansive room hidden from the rest of the world. A plush red carpet covers the floor of the room while a single desk and chair stands in front of three large bookcases filled to the brim with old tomes. A comfy looking couch sits to the left of the doorway while a gargantuan fish tank filled with multicolored fish and turtles has been positioned onto the right side of the entryway. All in all the room both looks and feels like something pulled out of an old fashion detective novel, especially with the uninteresting door in the back that looks as though it hasn't seen much use in quite a while. Homaru sitting down at his desk looking over something.".
+The description of Agency is "Back behind some of the less prominent buildings of the high rise there stands and old fashion deli that seems to be in good shape, despite the rough times the city is having. At the side of the deli a stone flight of stairs leads down to where a nondescript black door stands in wait for certain... irregular... customers. Pushing the door open you find a cool office with a fan swirling up on the ceiling filling out the strangely expansive room hidden from the rest of the world. A plush red carpet covers the floor of the room while a single desk and chair stands in front of three large bookcases filled to the brim with old tomes. A comfy looking couch sits to the left of the doorway while a gargantuan fish tank filled with multicolored fish and turtles has been positioned onto the right side of the entryway. All in all the room both looks and feels like something pulled out of an old fashion detective novel, especially with the uninteresting door in the back that looks as though it hasn't seen much use in quite a while. Homaru is sitting down at his desk and looking over something.".
 Homaru is in Agency.
 
-The invent of Agency is { "chips" , "water bottle" , "soda" }.
+The invent of Agency is { "chips", "water bottle", "soda" }.
 
 Instead of sniffing the Agency:
 	say "The room smells of gathered information, deductive reasoning, unspoken secrets and... ham on rye?";
@@ -63,7 +63,7 @@ Instead of sniffing Homaru:
 say "The information dealer smells like unsolved puzzles and mysterious best left kept in the dark... as well a turkey and ham on whole wheat.";
 
 Instead of fucking Homaru:
-	say "'Whoa! Whoa, there friend!' The brown haired man quickly throws out his hand as you advance on him. 'You're [if cunts of player > 0]cute in all[else]a nice guy[end if] but I don't want or need to have this infection getting any worse on me. So please, for me and all of the people out there who still need information only a reputable informant like myself can gather, keep your [if cocks of player > 0]cock[else]sexy self[end if] at least five feet away from me!";
+	say "'Whoa! Whoa, there friend!' The brown haired man quickly throws out his hand as you advance on him. 'You're [if player is female]cute in all[else]a nice guy[end if] but I don't want or need to have this infection getting any worse on me. So please, for me and all of the people out there who still need information only a reputable informant like myself can gather, keep your [if player is male]cock[else]sexy self[end if] at least five feet away from me!";
 
 instead of linkactioning Homaru when Homarutalk > 0:
 	say "Possible Actions: [link]talk[as]talk Homaru[end link], [link]smell[as]smell Homaru[end link], [link]fuck[as]fuck Homaru[end link], [link]delay[as]delay military[end link], [link]find firefighters[as]find[end link][line break]";
@@ -77,8 +77,8 @@ instead of conversing the Homaru:
 			Now Homarusearch is 70;
 			Now Homarutalk is 1;
 		else:
-			say "Rapidly typing on his keyboard Homaru begins to talk to you without looking up into your [facename of player] face. 'Hey, I was looking through some information that I have on hand and I think I found one of the firefighters you spoke about earlier.' Homaru's words make you stare in awe as you try and think up how the other man could have had this kind of info when you only asked him about it, like ten minutes ago. Unless the other was some kind of fortune teller or prophet that should have been impossible... right? Or maybe he was spying on you?[line break]";
-			say "Pulling out a manila folder Homaru leafs through the information and then goes about giving you some of the highlights. 'It seems that when things started to get out of hand around this city some of the people here panicked and started moving into shelters, bunkers, barracks, or what have you. However, from the intel I have on hand here, it seems as though some small groups of like-minded mutants began popping up when the outbreak became almost impossible to contain in any one place. After that these said groups worked to grab up as many uninfected people as they can to use them for... well, let's just say no good purposes.'[line break]";
+			say "Rapidly typing on his keyboard, Homaru begins to talk to you without looking up into your [facename of player] face. 'Hey, I was looking through some information that I have on hand and I think I found one of the firefighters you spoke about earlier.' Homaru's words make you stare in awe as you try and think up how the other man could have had this kind of info when you only asked him about it, like ten minutes ago. Unless the other was some kind of fortune teller or prophet that should have been impossible... right? Or maybe he was spying on you?[line break]";
+			say "Pulling out a manila folder Homaru, leafs through the information and then goes about giving you some of the highlights. 'It seems that when things started to get out of hand around this city some of the people here panicked and started moving into shelters, bunkers, barracks, or what have you. However, from the intel I have on hand here, it seems as though some small groups of like-minded mutants began popping up when the outbreak became almost impossible to contain in any one place. After that these said groups worked to grab up as many uninfected people as they can to use them for... well, let's just say no good purposes.'[line break]";
 			say "You ask Homaru to elaborate. The other man lowers the folder in front of him and then sweeps a hand through his spiky hair as he tries to find the right words to say. 'You know how kinky everything is outside right now?' You nod at this. 'Well, it seems as though there are some people more immune to what's going on than others, or at least partially appear to be so.' You get a feeling for what Homaru is saying as the man starts to flush deep red and bite at his lower lip.";
 			WaitLineBreak;
 			say "'Well, uhm, let's just say that there is a place down at the Warehouse district where some of the, shall we say, less [']upstanding['] members of society have gather to host full on sex shows with [']regular['] people and some of the [']furries['] there are outside.' At this you can actually hear part of your brain explode. 'Trust me on this - there are strange people out there who would pay to see such a thing. And if you are going to ask why... even I don't have enough information to understand that, I can say that your missing firefighter is probably there.'[line break]";
@@ -193,26 +193,26 @@ Check Homarusearching:
 	If Homaru is not visible, say "If you're going to look for Kenaz's companions then you're going to need to ask Homaru for help." instead;
 
 Carry out Homarusearching:
-	If Homarusearch is 0:
-		Say "It might be best to wait to speak to Homaru first before trying this action.";
+	if Homarusearch is 0:
+		say "It might be best to wait to speak to Homaru first before trying this action.";
 	else if Homarusearch is 1:
-		Say "[findfirefighter1]";
+		say "[findfirefighter1]";
 	else if Homarusearch is 2:
-		Say "[findfirefighter2]";
+		say "[findfirefighter2]";
 	else if Homarusearch is 3:
-		Say "[findfirefighter3]";
+		say "[findfirefighter3]";
 	else if Homarusearch is 4:
-		Say "[findfirefighter4]";
+		say "[findfirefighter4]";
 	else if Homarusearch is 5:
-		Say "[findfirefighter5]";
+		say "[findfirefighter5]";
 	else if Homarusearch is 6:
-		Say "[findfirefighter6]";
+		say "[findfirefighter6]";
 	else if Homarusearch is 70:
-		Say "Sorry, but this quest-line is impossible for you to finish as of now.";
+		say "Sorry, but this quest-line is impossible for you to finish as of now.";
 
 
-To say findfirefighter1:
-	Say "'Remember, Birch is going to be within the Gloomy Warehouse down at the [bold type]Warehouse[roman type] District. He should be a part of the [bold type]DogHouse[roman type], if what my information tells me is correct. Make sure you find him before the military rolls in or else you'll never be able to,' Homaru says somewhat direly.";
+to say findfirefighter1:
+	say "'Remember, Birch is going to be within the Gloomy Warehouse down at the [bold type]Warehouse[roman type] District. He should be a part of the [bold type]DogHouse[roman type], if what my information tells me is correct. Make sure you find him before the military rolls in or else you'll never be able to,' Homaru says somewhat direly.";
 
 to say findfirefighter2:
 	say "'Welcome back!' Homaru chirps from where he is busy eating something that both looks and smells like lettuce and ham on rye. 'Glad to know that everything worked out okay for you.' Putting down his [if daytimer is day]after meal snack[else]midnight snack[end if] and then wiping his lips off with a napkin Homaru shakes his head before smiling at you. 'So how did it work out with Birch?'[line break]";

@@ -23,26 +23,29 @@ to say beatSlimeCube:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Slime Cube";
+	now enemy title entry is "";
+	now enemy name entry is "";
+	now enemy type entry is 0; [non-unique enemy]
 	now attack entry is "[one of]The slime charges ahead and rams into you. You reel back under the impact.[or]The cube fires a slime ball which lands right into your chest.[or].[at random]";
 	now defeated entry is "[beatSlimeCube]";
 	now victory entry is "[slimeCubeVoreScene]";
 	now desc entry is "[slimeCubeDesc]";
-	now face entry is "that of a pretty human's, yet with a curiously disquieting smile"; [ Face Description, format as the text "Your face is (your text)." ]
-	now body entry is "human-like, but melded together just at your thighs, flowing together into a large and bulbous base of [skin of player] flesh"; [ Body Description, format as the text "Your body is (your text)." ]
-	now skin entry is "[one of]jellied[or]gelatin-like[or]translucent[at random] [if goocolor is 1]blue[else if goocolor is 2]purple[else]green[end if]"; [ Skin desc., format as the text "Your body is covered in (your text) skin."  Note: the word 'skin' is automatically included at the end. ]
-	now tail entry is ""; [ Tail desc., written as a full sentence or left blank for none. ]
-	now cock entry is "[one of]partially fluid[or]flexibly semi-solid[or]jellied[at random]"; [ Cock desc., format as "You have a 'size' (your text) cock." ]
-	now face change entry is "you can feel your face reshaping into rather pretty, human proportions. An urge overtakes you and you smile, and never stop"; [ Face TF text, format as "Your face feels funny as (your text)." ]
-	now body change entry is "[googirlbodychange]"; [ Body TF text, format as "Your body feels funny as (your text)." ]
-	now skin change entry is "[googirlskinchange]"; [ Skin TF text, format as "Your skin feels funny as (your text)." ]
-	now ass change entry is "you get an odd feeling, but see no change"; [ Ass/Tail TF text, format as "Your ass feels funny as (your text)." ]
-	now cock change entry is "your [cock size desc of player] dick gives a powerful lurch as strange fluid rushes up into it, making it swell a moment before the former color drains, leaving the new, somewhat flexible, gelatin behind. A squeeze confirms that it is still quite solid enough to get the job done"; [ Cock TF text, format as "Your cock feels funny as (your text)." ]
+	now face entry is "that of a pretty human's, yet with a curiously disquieting smile"; [ Face. Format as Your face is [face of player]. ]
+	now body entry is "human-like, but melded together just at your thighs, flowing together into a large and bulbous base of [skin of player] flesh"; [ Body. Format as "Your body is [body of player]." ]
+	now skin entry is "[one of]jellied[or]gelatin-like[or]translucent[at random] [if goocolor is 1]blue[else if goocolor is 2]purple[else]green[end if]"; [ Skin. Format as "Looking at yourself, your body is covered in [skin of player] skin." ]
+	now tail entry is ""; [ Ass/Tail. Write as a full sentence (with period) or leave blank for none. ]
+	now cock entry is "[one of]partially fluid[or]flexibly semi-solid[or]jellied[at random]"; [ Cock. Format as "You have a 'size' [cock of player] cock." ]
+	now face change entry is "you can feel your face reshaping into rather pretty, human proportions. An urge overtakes you and you smile, and never stop"; [ Face TF text. Format as "Your face tingles as [face change entry]." ]
+	now body change entry is "[googirlbodychange]"; [ Body TF text, format as "Your body tingles as [body change entry]. ]
+	now skin change entry is "[googirlskinchange]"; [ Skin TF text, format as "Your skin tingles as [skin change entry]. ]
+	now ass change entry is "you get an odd feeling, but see no change"; [ Ass/Tail TF text, format as "Your ass tingles as [tail change entry]." ]
+	now cock change entry is "your [cock size desc of player] dick gives a powerful lurch as strange fluid rushes up into it, making it swell a moment before the former color drains, leaving the new, somewhat flexible, gelatin behind. A squeeze confirms that it is still quite solid enough to get the job done"; [ Cock TF text, format as "Your groin tingles as [cock change entry]." ]
 	now str entry is 8;
 	now dex entry is 10; [ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
 	now sta entry is 10; [ These values may be used as part of alternate combat.]
@@ -57,7 +60,7 @@ When Play begins:
 	now cocks entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now cock length entry is 6; [ Length in inches infection will make cock grow to if cocks. ]
 	now cock width entry is 4; [ Cock width, more commonly used for ball size. ]
-	now breasts entry is 2; [ Number of breasts the infection will give a player. ]
+	now breasts entry is 2; [ Number of nipples the infection will give a player. ]
 	now breast size entry is 3; [ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
 	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
@@ -86,10 +89,10 @@ to say slimeCubeVoreScene:
 		say "     You welcome the slime as he rolls in a die-like fashion upon you, and slams down on your waiting body. Your body pops into the gelatinous body, and slowly floats towards its center. The inside of the slime feels hot on your skin, and you understand that the creature aims to digest you slowly, after making sure that you oppose no more resistance.";
 	say "     The slime washes around your body, as he attempts to keep you stimulated and placated.[if player is female and cunts of player > 1] It slowly pushes past each of your pussy lips, then suddenly stretches inside, forming thick slimy limbs relentlessly pounding each of your wombs.[else if player is female] It slowly pushes past your pussy lips, then suddenly stretches inside, forming a thick slimy limb relentlessly pounding your womb.[end if][if the player is male and cocks of player > 1] An ever-changing flow wraps around each of your [cockname of player] shafts, keeping them hard and massaged, experimently focusing their efforts on your [cocks of player] glans.[else if player is male] An ever-changing flow wraps around your [cockname of player] shaft, keeping it hard and massaged, experimently focusing their efforts on your glans.[end if]. The slime does not forget to relentlessly tease every part of your body, including your nipples and your [breasts of player] [bodyname of player] breasts[if anallevel is not 1], and flowing into your ass[end if].";
 	say "     Time is on the essence. If you do not struggle out in time, these intense sensations may be the last you will ever experience.";
-	if waiterhater is 0, wait for any key;
-	manEatingPlantVore;
+	WaitLineBreak;
+	slimeCubeVore;
 
-to manEatingPlantVore:
+to slimeCubeVore:
 	now lustatt is libido of player;
 	now calcnumber is -1;
 	let trixieexit be 0;

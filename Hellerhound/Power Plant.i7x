@@ -115,7 +115,7 @@ West of Catwalk Door is Cat Walk.
 to say catwalkstuff:
 	if fixedgens is 1:
 		say "The parts you found match this generator perfectly. You fix the generator, and the malfunction light on the generator turns green to show the generator could work. You wait with bated breath for it to work.";
-		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+		WaitLineBreak;
 		now fixedgens is 2;
 		if findwires is 2:
 			say "The generator begins to hum, and the green lights indicating that power is flowing begin to flash. Hooray!";
@@ -188,7 +188,7 @@ carry out towerfixing:
 Section X - Library Computer
 
 library computer is a thing.
-library computer is in Grey Abbey Library. "[if library computer is off]A computer rests nearby, powerless. You can try to [bold type]turn on the computer[roman type][else]One of the nearby computers is on, but unused. It's screen shows a somewhat garbled screen saver[end if].";
+library computer is in Grey Abbey Library. "[if library computer is off]A computer rests nearby, powerless. You can try to [bold type]turn on the computer[roman type][else]One of the nearby computers is on, but unused. Its screen shows a somewhat garbled screen saver[end if].";
 
 the library computer can be on or off. the library computer is off.
 the library computer can be powered or unpowered. the library computer is unpowered.
@@ -219,7 +219,7 @@ check computerpowering:
 	if library computer is on, say "It's already on." instead;
 
 carry out computerpowering:
-	say "     The computer screen flashes a few times before the computer manages to initiate a start-up. The letters keeps jostling about and therea are several flickering pixels on the screen. It seems the poor thing is rather ailing. As the boot-up nears completion, an error message appears: ERROR_NO_NET_ACCESS. Doesn't look like you'll be getting internet access here. Oh well, at least there are some simple games on the computer. What better to do during the nanite apocalypse than to play some Solitaire[if the number of bunkered people + the number of booked people > 2]? At least it'll provide something for the others to do aside from sex while you're out.[else]?[end if]";
+	say "     The computer screen flashes a few times before the computer manages to initiate a start-up. The letters keeps jostling about and there are several flickering pixels on the screen. It seems the poor thing is rather ailing. As the boot-up nears completion, an error message appears: ERROR_NO_NET_ACCESS. Doesn't look like you'll be getting internet access here. Oh well, at least there are some simple games on the computer. What better to do during the nanite apocalypse than to play some Solitaire[if the number of bunkered people + the number of booked people > 2]? At least it'll provide something for the others to do aside from sex while you're out.[else]?[end if]";
 	now library computer is on;
 	increase score by 25;
 

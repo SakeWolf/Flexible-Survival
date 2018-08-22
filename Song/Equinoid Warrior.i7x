@@ -2,6 +2,7 @@ Version 2 of Equinoid Warrior by Song begins here.
 [ Version 1.0 - Initial sex and transformation scenes - Stripes                 ]
 [ Version 2.0 - Refactoring and additional sex scenes - Song                    ]
 [ Version 2.1 - Liliana has become an NPC - Luneth                              ]
+[ Version 2.2 - Extra sex scene and bugfix - Song                               ]
 
 Section 1 - Establishing NPC, pet object, Conversation, and Combat
 
@@ -90,7 +91,7 @@ to say LilianaTalkMenu:
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]100 - Nevermind[as]100[end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
 	while sextablerun is 0:
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
@@ -103,15 +104,15 @@ to say LilianaTalkMenu:
 				now sextablerun is 1;
 				if (nam is "Talk with her"):
 					say "[LilianaTalk1]";
-		else if calcnumber is 100:
+		else if calcnumber is 0:
 			say "Break off the conversation?";
-			if the player consents:
+			if player consents:
 				now sextablerun is 1;
 				say "     You step back from the equinoid warrior, shaking your head slightly as she gives a questioning look.";
 			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	wait for any key;
 	clear the screen and hyperlink list;
 
@@ -130,20 +131,24 @@ Section 2 - Sex scene mechanics
 
 to say LilianaSexRandomizer:
 	setmonster "Black Equinoid";
-	[ Meeting the subsequent conditionals appends values to the end of the qq list. Afterwards, the list shuffled and a random number is selected. Values and meanings:
+	[ Meeting the subsequent conditionals appends values to the end of the qq list. Afterwards, the list is shuffled and a random number is selected. Values and meanings:
 		1 = player giving oral
 		2 = player receiving oral
 		3 = player fucking vaginally
 		4 = player being fucked vaginally
-		5 = player being fucked anally
-		6 = player is led to the bath to have intimate sex
+		5 = player fucking anally
+		6 = player being fucked anally
+		7 = player is led to the bath to have intimate sex
 	]
 	say "     During a free moment, Liliana sidles up to you and runs her hoofed hands over your body. She gives a sexy sigh as she looks over your impressive, equinoid form before kissing you, inflaming your passions further.";
-	let qq be { 1, 2 };
-	if cunts of player > 0, add 3 to qq;
-	if cocks of player > 0, add 4 to qq;
-	if (cunts of player is 0 and anallevel > 1 and player is submissive) or (anallevel is 3 and player is submissive), add 5 to qq;
-	if location of player is Equinoid Camp, add 6 to qq;
+	let qq be { 1 };
+	if player is male:
+		add 2 to qq;
+		add 3 to qq;
+	if player is female, add 4 to qq;
+	if player is male and anallevel is 3, add 5 to qq;
+	if (player is neuter and anallevel > 1) or (player is female and anallevel is 3 and (player is not male or player is submissive)) or (player is not female and anallevel > 1 and (player is mpreg_ok or player is submissive)), add 6 to qq;
+	if location of player is Equinoid Camp, add 7 to qq;
 	sort qq in random order;
 	if entry 1 of qq is 1, say "[eqwarsex1]";
 	if entry 1 of qq is 2, say "[eqwarsex2]";
@@ -151,6 +156,7 @@ to say LilianaSexRandomizer:
 	if entry 1 of qq is 4, say "[eqwarsex4]";
 	if entry 1 of qq is 5, say "[eqwarsex5]";
 	if entry 1 of qq is 6, say "[eqwarsex6]";
+	if entry 1 of qq is 7, say "[eqwarsex7]";
 	now libido of equinoid warrior is 0;
 	if libido of player < 30, now libido of player is 30;
 	infect "Black Equinoid";
@@ -167,9 +173,9 @@ to say LilianaInfectiousFuck: [Runs whenever Liliana is the active pet and the p
 			say ". Her hands drift down to your cocks, taking one in each and stroking them";
 		else if cocks of player is 1:
 			say ". A hand drifts down to your cock and strokes it";
-			if cunts of player > 0:
+			if player is female:
 				say ". Her free hand moves a little lower before slipping [if cunts of player > 1]her fingers into your pussies[else]a finger into your pussy[end if], causing you to moan in response";
-		else if cunts of player > 0:
+		else if player is female:
 			say ". She rubs a hand between your legs and over your wet folds before slipping [if cunts of player > 1]her fingers into your pussies[else]a finger into your pussy[end if], causing you to moan in response";
 		say ". You continue stroking her as you enjoy this attention from her until she cums, blasting her seed across your body. As the semen soaks into you, you feel more equinoid.";
 	else:
@@ -214,25 +220,28 @@ to say eqwarsex4: [Liliana fucks player vaginally]
 	say "     Her hoofed hands slide over your body and soon guide you to lie down. She moves atop you, sliding her equine shaft into your juicy cunt so she may fuck you. You kiss and caress one another as she youthful equinoid pounds into you with energetic zeal, cumming hard and sending her hot seed flowing into your womb. After some snuggling, you both get back up and prepare to continue your journey together.[impregchance]";
 	now libido of player is libido of player / 2;
 
-to say eqwarsex5: [Liliana fucks player anally]
+to say eqwarsex5: [Player fucks Liliana anally]
+	say "     Her hoofed hands slide over your body and downwards. As they wrap around your cock, you know what she wants and you have her lie down. Moving atop her, you tease her equine sex for a moment before aligning your flare with her puckered hole. Liliana whickers as you push inside of her, thick length spearing open the warm, tight channel of her ass. You kiss and nip at the youthful equinoid as you thrust into her, and it's not long until you both cum hard, her spurting length marring her fur as you paint her bowels with your seed. After some snuggling, you both get back up and prepare to continue your journey together.";
+
+to say eqwarsex6: [Liliana fucks player anally]
 	[puts black equinoid as lead monster in case of impregnation]
 	setmonster "Black Equinoid";
-	say "     Her hoofed hands slide over your body and grab your rear, giving it a firm squeeze. Knowing what she needs of you, you move onto all fours and raise your tail. She presses her cock to your tight pucker and pushes it into you with a soft nicker. The youthful equinoid pounds into you with energetic zeal, cumming hard and sending her hot seed flowing into your bowels[if cocks of player > 0]. You cannot help but cum in response, spraying your submissive seed onto the ground[end if]. After some snuggling, you both get back up and prepare to continue your journey together.[mimpregchance]";
+	say "     Her hoofed hands slide over your body and grab your rear, giving it a firm squeeze. Knowing what she needs of you, you move onto all fours and raise your tail. She presses her cock to your tight pucker and pushes it into you with a soft nicker. The youthful equinoid pounds into you with energetic zeal, cumming hard and sending her hot seed flowing into your bowels[if player is male]. You cannot help but cum in response, spraying your submissive seed onto the ground[end if]. After some snuggling, you both get back up and prepare to continue your journey together.[mimpregchance]";
 	now libido of player is libido of player / 2;
 
-to say eqwarsex6: [Bath sex scene when standing in Equinoid Camp]
+to say eqwarsex7: [Bath sex scene when standing in Equinoid Camp]
 	[puts black equinoid as lead monster in case of impregnation]
 	setmonster "Black Equinoid";
 	say "     Your companion takes your hand and leads you back to the large hall where you were initiated into the tribe. The bath near the center has been cleaned since [if lilianabathsex is 1]your last romp together[else]the ceremony[end if], now as clear as a pristine mountain lake. With a pleased little sigh, the herm lowers herself into the warm, soothing water, sinking to her shoulders beneath its subtly rippling surface. 'Come, don't be shy. The water's perfect,' Liliana teases, the sultry look in her eyes inviting you closer. [if player is herm]Your stiffening length[smn] and a trickle of wetness between your thighs urge[else if player is male]Your stiffening length[smn] urge[smv][else if player is female]A trickle of wetness between your thighs urges[else]A tingle in your rear urges[end if] you to abide the horse's offer, and you follow after her unthinkingly.";
 	say "     Sinking into the pool, your thoughts are numbed by the rich, heady scents that fill your every breath, an arousing yet disarming aroma that you can't quite place. Smiling placidly, you sink against your mate's curvaceous figure, wrapping your arms around her waist as she casts you a soft and loving look. 'Mmh. Allow me,' she all but whispers in your ear, and the commanding kiss that follows makes you shiver and moan into her maw. Her long, flat tongue curls around your own, leading a dance of spit-slick palates while her breath fills your lungs in intoxicating waves. Her softly furred hands roam over your back, exploring every subtle contour with shiver-inducing deliberation. Her stiffening cock grinds against your belly, mottled flesh sliding back and forth across your soft, thin coat.";
 	WaitLineBreak;
-	if player is neuter or (player is female and player is not male and anallevel is 3 and a random number from 1 to 2 is 1) or (player is male and player is submissive and anallevel is 3 and a random number from 1 to 2 is 1): [Receiving anal: 100% chance for neuters - 50% chance for pure females with anallevel 3 - 50% chance for bedicked submissives with anallevel 3]
+	if player is neuter or (player is purefemale and anallevel is 3 and a random number from 1 to 2 is 1) or (player is male and player is submissive and anallevel is 3 and a random number from 1 to 2 is 1): [Receiving anal: 100% chance for neuters - 50% chance for pure females with anallevel 3 - 50% chance for bedicked submissives with anallevel 3]
 		say "     Distracted as you are, you're in no position to complain when your lover grinds the smooth of her shaft between the buns of your rear. Her fingers dig into your ass as she lifts you up to tease the flare against your passage, the pulsing crown smearing precum across your ring. Eager to [if player is mpreg_ok]breed[else]fuck[end if] you, Liliana begins to lower you down on her equine length, her soft hands caressing your body to help you relax and loosen your reflexively clenching anus. After a moment, your puffy band yields to allow her entrance of your snugly gripping pucker. This is followed by the gentle pluck of her medial ring, then the relief of her lap letting you know that she's fully hilted inside you. Your lover nickers and pulls you tight against her body, letting her breath beat hotly against your neck as she savors the feeling of your asshole wrapped around her maleness. The immense fullness makes you moan in hazy delight, idly caressing the impression of her horsecock in your furry, well-filled belly.";
 		say "     Liliana suddenly shifts beneath you, turning around and pressing your back against the wall. Her strong arms thread under your legs, keeping you spread and presented for use as her hands find purchase on the edge of the pool. This new position leaves you completely at her mercy, and she's soon sawing back and forth in your sordid depths, her bestial noises of pleasure resonating through the chamber. The equinoid increases the pace of her thrusting until she's bucking roughly and rapidly into your squeezing colon. The infectious enthusiasm with which Liliana fucks you is met soon with your own exultations of bliss, swept up in the lustful fun of being split apart by that imposing ramrod of flesh.";
 		WaitLineBreak;
 		say "     Eventually, your lover can't hold back any longer and pushes firm to your form. Her flare engorges to seal the coming tide, and she releases a triumphant whinny as a maelstrom of equine seed pours into your rear, spurting into your bowels in powerful, pressurized blasts. [if player is male]Her length's rhythmic pulsing pushes you right over the edge, spraying thick ropes of seed into the bathwater. The fluids of your lovemaking quickly diffuse through the water, tainting it with mixed cum[else]Whatever seed leaks out quickly diffuse through the water[end if], which tingles as it clings to your own fully infected form. The feeling is invigorating and slightly arousing, making you spasm around your lover's length before her flow begins to taper.";
 		say "     Sated, Liliana pulls out of your hungry rear, a cloud of spent seed dispersing from your quickly sealing ring. 'Mmh. We should do that again sometime,' Liliana offers with a rapacious smile. She then leans in to kiss you again, far more tender this time, while her soft hands play over your body in adoration. After soaking in the cloudy water for a while, you and Liliana climb out of the pool and towel each other off. You feel like the experience has strengthened your bond as you step back out into the center of the camp, relaxed and rejuvenated.[mimpregchance]";
-	else if (player is male and player is not female) or (player is male and player is dominant) or (player is herm and a random number from 1 to 2 is 1): [Giving vaginal: 100% chance for pure males - 100% chance for dominant bedicked players - 50% chance for herms]
+	else if (player is puremale) or (player is male and player is dominant) or (player is herm and a random number from 1 to 2 is 1): [Giving vaginal: 100% chance for pure males - 100% chance for dominant bedicked players - 50% chance for herms]
 		say "     Distracted as you are, you're in no position to complain when your lover guides your length to her folds, urging you to claim her. You tease the flare of against her passage, her nectar smearing over your cockflesh while you fondle her heavy breasts. Wasting little time with teasing, you align yourself with her entrance and drive deep into Liliana's thick-lipped cunt, pushing all the way to the hilt within that smooth, gripping passage. Your lover moans and digs her hoof-like fingers into your rear, pulling you tight against her body. Nickering softly, you ease your hips back, savoring the feeling of her slick inner walls squeezing around your cock, then push deep into her welcoming folds again, drawing a bestial whinny and a thick spurt of pre from your pleasure-addled partner. You gradually increase the pace of your thrusts until you're bucking roughly and rapidly into the herm's squeezing sex, the clap of joining hips muted beneath the water. Her blissful exultations resonate through the chamber, and the cavalcade of equine noises only excites you further.";
 		say "     Soon, you can't hold back any longer and push firm to your faithful companion's form. Your flare engorges to seal the coming tide, and you release a triumphant whinny as a maelstrom of equine seed pours into your partner's sweltering sex, spurting into her womb in powerful, pressurized blasts. Your length's rhythmic pulsing pushes Liliana right over the edge, the equinoid spraying thick ropes of seed into the bathwater, its surface bubbling from the force of her milky white jets. Her output quickly diffuses trough the water, tainting it with her cum, which tingles as it clings to your own fully infected form. The feeling is invigorating and slightly arousing, making you twitch in your lover's depths with a final strained spurt before the flow begins to taper.";
 		WaitLineBreak;

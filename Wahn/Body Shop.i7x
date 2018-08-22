@@ -90,7 +90,7 @@ to say MoreauTalkMenu:
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]100 - Nevermind[as]100[end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
 	while sextablerun is 0:
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
@@ -104,23 +104,28 @@ to say MoreauTalkMenu:
 				if nam is:
 				-- "Ask about the mannequins":
 					say "[MoreauTalk1]";
+					WaitLineBreak;
+					say "[MoreauTalkMenu]";
 				-- "Ask for the truth about the mannequins":
 					say "[MoreauTalk2]";
+					WaitLineBreak;
+					say "[MoreauTalkMenu]";
 				-- "Ask if buying body parts is really worth it":
 					say "[MoreauTalk3]";
+					WaitLineBreak;
+					say "[MoreauTalkMenu]";
 				-- "Sell something":
 					say "[MoreauPartSale]";
 				-- "Buy something":
 					say "[MoreauPartBuy]";
-				WaitLineBreak;
-		else if calcnumber is 100:
+		else if calcnumber is 0:
 			say "Break off the conversation?";
-			if the player consents:
+			if player consents:
 				now sextablerun is 1;
 				say "     You step back from the colorful naga, shaking your head slightly as he gives a questioning look.";
 				WaitLineBreak;
 			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
@@ -173,7 +178,7 @@ to say MoreauPartSale:
 	now sortorder entry is 4;
 	now description entry is "Sell him your back end. You barely look at it anyways, right";
 	[]
-	if cocks of player > 0 or cunts of player > 0:
+	if player is not neuter:
 		choose a blank row in table of fucking options;
 		now title entry is "Your Genitals";
 		now sortorder entry is 5;
@@ -183,7 +188,7 @@ to say MoreauPartSale:
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]100 - Nevermind[as]100[end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
 	while sextablerun is 0:
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
@@ -205,14 +210,14 @@ to say MoreauPartSale:
 				-- "Your Genitals":
 					say "[MoreauDickSale]";
 				WaitLineBreak;
-		else if calcnumber is 100:
+		else if calcnumber is 0:
 			say "Break off the conversation?";
-			if the player consents:
+			if player consents:
 				now sextablerun is 1;
 				say "     You step back from the colorful naga, shaking your head slightly as he gives a questioning look.";
 				WaitLineBreak;
 			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
@@ -256,7 +261,7 @@ to say MoreauBodySale:
 				say "     Your [one of][bodytype of player] [or][bodydesc of player] [or][bodydesc of player] [or][bodytype of player] [or][at random]body [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [body change entry].";
 				now bodyname of player is name entry;
 				now body of player is body entry;
-				attributeinfect;			[sets the new attributes]
+				attributeinfect; [sets the new attributes]
 			if "Body Shop Guarantee - Body" is listed in feats of player:
 				remove "Body Shop Guarantee - Body" from feats of player;
 			say "[line break][MoreauSaleSuccessful]";
@@ -410,7 +415,7 @@ to say MoreauPartBuy:
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]100 - Nevermind[as]100[end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
 	while sextablerun is 0:
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
@@ -432,14 +437,14 @@ to say MoreauPartBuy:
 				-- "A crotch":
 					say "[MoreauCrotchBuy]";
 				WaitLineBreak;
-		else if calcnumber is 100:
+		else if calcnumber is 0:
 			say "Break off the conversation?";
-			if the player consents:
+			if player consents:
 				now sextablerun is 1;
 				say "     You step back from the colorful naga, shaking your head slightly as he gives a questioning look.";
 				WaitLineBreak;
 			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
@@ -500,7 +505,7 @@ to MoreauFaceSelection:
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]100 - Nevermind[as]100[end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
 	while sextablerun is 0:
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
@@ -526,20 +531,20 @@ to MoreauFaceSelection:
 				choose row monster from the Table of random critters;
 				say "[MoreauFaceBuyPayment]";
 				WaitLineBreak;
-		else if calcnumber is 100:
+		else if calcnumber is 0:
 			say "Break off the conversation?";
-			if the player consents:
+			if player consents:
 				now sextablerun is 1;
 				say "     You step back from the colorful naga, shaking your head slightly as he gives a questioning look.";
 				WaitLineBreak;
 			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
 
 to say MoreauFaceBuyPayment:
-	say "     The naga nods to you, happy that you have chosen something from his offered wares. 'Well then, that leaves only one thing to take care of - my payment. Given that I offer an unique service, with a guarantee too I want to empathize, I'm sure you will see what I ask as fair.' The naga's green eyes focus on your own as he says this, and you can't help but feel a little light-headed at the intensity of his gaze. ";
+	say "     The naga nods to you, happy that you have chosen something from his offered wares. 'Well then, that leaves only one thing to take care of - my payment. Given that I offer an unique service, with a guarantee too I want to empathize, I'm sure you will see what I ask as fair.' The naga's green eyes focus on your own as he says this, and you can't help but feel a little lightheaded at the intensity of his gaze. ";
 	if MoreauDiscount is true:
 		say "A few seconds later, Moreau adds, 'For you, since you are trading in something, it will be four bottles of water or items of food.'";
 	else:
@@ -616,7 +621,7 @@ to MoreauBodySelection:
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]100 - Nevermind[as]100[end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
 	while sextablerun is 0:
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
@@ -642,20 +647,20 @@ to MoreauBodySelection:
 				choose row monster from the Table of random critters;
 				say "[MoreauBodyBuyPayment]";
 				WaitLineBreak;
-		else if calcnumber is 100:
+		else if calcnumber is 0:
 			say "Break off the conversation?";
-			if the player consents:
+			if player consents:
 				now sextablerun is 1;
 				say "     You step back from the colorful naga, shaking your head slightly as he gives a questioning look.";
 				WaitLineBreak;
 			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
 
 to say MoreauBodyBuyPayment:
-	say "     The naga nods to you, happy that you have chosen something from his offered wares. 'Well then, that leaves only one thing to take care of - my payment. Given that I offer an unique service, with a guarantee too I want to empathize, I'm sure you will see what I ask as fair.' The naga's green eyes focus on your own as he says this, and you can't help but feel a little light-headed at the intensity of his gaze. ";
+	say "     The naga nods to you, happy that you have chosen something from his offered wares. 'Well then, that leaves only one thing to take care of - my payment. Given that I offer an unique service, with a guarantee too I want to empathize, I'm sure you will see what I ask as fair.' The naga's green eyes focus on your own as he says this, and you can't help but feel a little lightheaded at the intensity of his gaze. ";
 	if MoreauDiscount is true:
 		say "A few seconds later, Moreau adds, 'For you, since you are trading in something, it will be four bottles of water or items of food.'";
 	else:
@@ -671,7 +676,7 @@ to say MoreauBodyBuyPayment:
 			now bodyname of player is name entry;
 			now body of player is body entry;
 			now BodyShopGuaranteedBody is name entry;
-			attributeinfect;			[sets the new attributes]
+			attributeinfect; [sets the new attributes]
 			if "Body Shop Guarantee - Body" is not listed in feats of player:
 				add "Body Shop Guarantee - Body" to feats of player;
 		say "[line break][MoreauBuySuccessful]";
@@ -733,7 +738,7 @@ to MoreauSkinSelection:
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]100 - Nevermind[as]100[end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
 	while sextablerun is 0:
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
@@ -759,20 +764,20 @@ to MoreauSkinSelection:
 				choose row monster from the Table of random critters;
 				say "[MoreauSkinBuyPayment]";
 				WaitLineBreak;
-		else if calcnumber is 100:
+		else if calcnumber is 0:
 			say "Break off the conversation?";
-			if the player consents:
+			if player consents:
 				now sextablerun is 1;
 				say "     You step back from the colorful naga, shaking your head slightly as he gives a questioning look.";
 				WaitLineBreak;
 			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
 
 to say MoreauSkinBuyPayment:
-	say "     The naga nods to you, happy that you have chosen something from his offered wares. 'Well then, that leaves only one thing to take care of - my payment. Given that I offer an unique service, with a guarantee too I want to empathize, I'm sure you will see what I ask as fair.' The naga's green eyes focus on your own as he says this, and you can't help but feel a little light-headed at the intensity of his gaze. ";
+	say "     The naga nods to you, happy that you have chosen something from his offered wares. 'Well then, that leaves only one thing to take care of - my payment. Given that I offer an unique service, with a guarantee too I want to empathize, I'm sure you will see what I ask as fair.' The naga's green eyes focus on your own as he says this, and you can't help but feel a little lightheaded at the intensity of his gaze. ";
 	if MoreauDiscount is true:
 		say "A few seconds later, Moreau adds, 'For you, since you are trading in something, it will be four bottles of water or items of food.'";
 	else:
@@ -849,7 +854,7 @@ to MoreauTailSelection:
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]100 - Nevermind[as]100[end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
 	while sextablerun is 0:
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
@@ -875,20 +880,20 @@ to MoreauTailSelection:
 				choose row monster from the Table of random critters;
 				say "[MoreauTailBuyPayment]";
 				WaitLineBreak;
-		else if calcnumber is 100:
+		else if calcnumber is 0:
 			say "Break off the conversation?";
-			if the player consents:
+			if player consents:
 				now sextablerun is 1;
 				say "     You step back from the colorful naga, shaking your head slightly as he gives a questioning look.";
 				WaitLineBreak;
 			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
 
 to say MoreauTailBuyPayment:
-	say "     The naga nods to you, happy that you have chosen something from his offered wares. 'Well then, that leaves only one thing to take care of - my payment. Given that I offer an unique service, with a guarantee too I want to empathize, I'm sure you will see what I ask as fair.' The naga's green eyes focus on your own as he says this, and you can't help but feel a little light-headed at the intensity of his gaze. ";
+	say "     The naga nods to you, happy that you have chosen something from his offered wares. 'Well then, that leaves only one thing to take care of - my payment. Given that I offer an unique service, with a guarantee too I want to empathize, I'm sure you will see what I ask as fair.' The naga's green eyes focus on your own as he says this, and you can't help but feel a little lightheaded at the intensity of his gaze. ";
 	if MoreauDiscount is true:
 		say "A few seconds later, Moreau adds, 'For you, since you are trading in something, it will be four bottles of water or items of food.'";
 	else:
@@ -965,7 +970,7 @@ to MoreauCockSelection:
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]100 - Nevermind[as]100[end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
 	while sextablerun is 0:
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
@@ -991,20 +996,20 @@ to MoreauCockSelection:
 				choose row monster from the Table of random critters;
 				say "[MoreauCrotchBuyPayment]";
 				WaitLineBreak;
-		else if calcnumber is 100:
+		else if calcnumber is 0:
 			say "Break off the conversation?";
-			if the player consents:
+			if player consents:
 				now sextablerun is 1;
 				say "     You step back from the colorful naga, shaking your head slightly as he gives a questioning look.";
 				WaitLineBreak;
 			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
 
 to say MoreauCrotchBuyPayment:
-	say "     The naga nods to you, happy that you have chosen something from his offered wares. 'Well then, that leaves only one thing to take care of - my payment. Given that I offer an unique service, with a guarantee too I want to empathize, I'm sure you will see what I ask as fair.' The naga's green eyes focus on your own as he says this, and you can't help but feel a little light-headed at the intensity of his gaze. ";
+	say "     The naga nods to you, happy that you have chosen something from his offered wares. 'Well then, that leaves only one thing to take care of - my payment. Given that I offer an unique service, with a guarantee too I want to empathize, I'm sure you will see what I ask as fair.' The naga's green eyes focus on your own as he says this, and you can't help but feel a little lightheaded at the intensity of his gaze. ";
 	if MoreauDiscount is true:
 		say "A few seconds later, Moreau adds, 'For you, since you are trading in something, it will be four bottles of water or items of food.'";
 	else:
@@ -1016,7 +1021,7 @@ to say MoreauCrotchBuyPayment:
 		if debugactive is 1:
 			say "DEBUG -> Target Infection Name Entry: [name entry] <- DEBUG[line break]";
 		follow the sex change rule;
-		if cockname of player is not name entry and cocks of player > 0:
+		if cockname of player is not name entry and player is male:
 			say "     Your groin [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [cock change entry].";
 			now cockname of player is name entry;
 			now cock of player is cock entry;
@@ -1133,7 +1138,7 @@ An everyturn rule:
 			say "     Your body [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [body change entry].";
 			now bodyname of player is name entry;
 			now body of player is body entry;
-			attributeinfect;			[sets the new attributes]
+			attributeinfect; [sets the new attributes]
 	if "Body Shop Guarantee - Skin" is listed in feats of player:
 		if (skinname of player is "Jackalman" or skinname of player is "Jackalboy" or skinname of player is "Nightmare" or skinname of player is "Hellhound"):
 			say "     You can feel the magic that Moreau used to guarantee the new skin you bought struggle against the magic of your other transformation. A stinging ache builds up in your head as the mystic powers build up higher and higher, pushing in opposing directions - then with an audible crackle, something gives way. Seems like the naga's spell couldn't hold out against what made you as you are.";
@@ -1286,7 +1291,7 @@ after going to Body Shop while (Body Poke Poke is not resolved and lastBodyShopE
 	BodyPokePokeEvent;
 
 to BodyPokePokeEvent:
-	say "     When you enter the Body Shop, you see Moreau, having not noticed you, giving small pokes to one of his mannequins' face. 'Goddamit Margaret, what's wrong with you? You can barely keep up your pose since yesterday. Could you be sick? Can you guys even [italic type]get[roman type] sick?' When he notices you, the naga lets out a forced laugh, clearly to keep up appearances more than anything, before crossing his arms with a pouty face and giving you a vexed snort. 'What? I can give them names if I want. They're MY mannequins.'";
+	say "     When you enter the Body Shop, you see Moreau, having not noticed you, giving small pokes to one of his mannequins['] faces. 'Goddamit Margaret, what's wrong with you? You can barely keep up your pose since yesterday. Could you be sick? Can you guys even [italic type]get[roman type] sick?' When he notices you, the naga lets out a forced laugh, clearly to keep up appearances more than anything, before crossing his arms with a pouty face and giving you a vexed snort. 'What? I can give them names if I want. They're MY mannequins.'";
 	now lastBodyShopEvent is turns;
 	now Body Poke Poke is resolved;
 

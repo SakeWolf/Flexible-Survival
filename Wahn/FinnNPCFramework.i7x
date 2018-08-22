@@ -52,7 +52,7 @@ to say FinnSexMenu:
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
-	if cocks of player > 0: [only males and herms can get a blowjob]
+	if player is male: [only males and herms can get a blowjob]
 		choose a blank row in table of fucking options;
 		now title entry is "Get a blowjob";
 		now sortorder entry is 1;
@@ -63,19 +63,19 @@ to say FinnSexMenu:
 	now sortorder entry is 2;
 	now description entry is "Wrap your lips around the horseman's equine shaft";
 	[]
-	if cocks of player > 0 and FinnTrackingProgress is 3: [only males and herms can fuck him, virgin Finn]
+	if player is male and FinnTrackingProgress is 3: [only males and herms can fuck him, virgin Finn]
 		choose a blank row in table of fucking options;
 		now title entry is "Talk the handsome farmhand into giving up his virginity";
 		now sortorder entry is 3;
 		now description entry is "Take the horseman's ass for a ride";
 	[]
-	if cocks of player > 0 and FinnTrackingProgress > 3: [only males and herms can fuck him, also just for Finn who isn't a virgin]
+	if player is male and FinnTrackingProgress > 3: [only males and herms can fuck him, also just for Finn who isn't a virgin]
 		choose a blank row in table of fucking options;
 		now title entry is "Fuck the handsome farmhand's ass";
 		now sortorder entry is 4;
 		now description entry is "Take the horseman's ass for a ride";
 	[]
-	if cunts of player > 0: [only females and herms can take him in the pussy]
+	if player is female: [only females and herms can take him in the pussy]
 		choose a blank row in table of fucking options;
 		now title entry is "Take Finn's shaft in your pussy";
 		now sortorder entry is 5;
@@ -90,7 +90,7 @@ to say FinnSexMenu:
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]100 - Nevermind[as]100[end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
 	while sextablerun is 0:
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
@@ -114,16 +114,16 @@ to say FinnSexMenu:
 				if (nam is "Take Finn's shaft in your ass"):
 					say "[FinnSex6]";
 				wait for any key;
-		else if calcnumber is 100:
+		else if calcnumber is 0:
 			say "Break off the conversation?";
-			if the player consents:
+			if player consents:
 				now sextablerun is 1;
 				say "     You step back from the horseman farmhand, shaking your head slightly as he gives a questioning look.";
 				wait for any key;
 			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
 
 to say FinnSex1: [oral on the player]

@@ -14,7 +14,7 @@ Instead of resolving a Mushroom cave:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - You grab some of the mushrooms. They might prove useful in the future.";
 		say "     ([link]N[as]n[end link]) - Nah, eating stuff growing next to glowing sludge might be a bad idea, and besides, you won't need them anyway.";
-		if the player consents:
+		if player consents:
 			say "     You carefully pick some of the mushrooms and put them into your backpack, sighing happily that you didn't shrink while doing so.";
 			increase carried of glowing mushroom by 3;
 			now MushroomCaveVisited is 1;
@@ -70,7 +70,7 @@ Instead of resolving a Hungry dog:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Face the beast.";
 		say "     ([link]N[as]n[end link]) - RUN!";
-		if the player consents:
+		if player consents:
 			if glowing mushroom is owned:
 				say "     Coming from inside the dark alley, the German Shepherd finally steps into the light, giving you a better view. He is monstrously large, quite a bit bigger than the ones you found to this day. He has some darker stains in his fur from what appear to be dried blood. A complete lack of clothing gives him an almost fully feral feel. Between the dog's legs, there is a huge sheath, and from the looks of it, an even bigger knotted penis. Even without it leaving the sheath, you can see it pressing against the skin, making it bulge, especially where the knot should be. Right below there are two orbs the size of tennis balls that appear to be full of the monster's seed.";
 				say "     The bloodthirsty dog jumps in your direction, putting his arms to the ground and running like a feral monster with a dark smile. He rams into you, making you lose your breath from the strength of the impact. You are knocked over onto the floor, falling on your butt, making you clench your teeth with the impact with the deserted road. You are left without breath as the hunter stands tall beside you, never letting you out of his sight. Licking his lips, he holds you by the neck and says, 'Looks like I found my next meal.'";
@@ -82,11 +82,11 @@ Instead of resolving a Hungry dog:
 				LineBreak;
 				say "     ([link]Y[as]y[end link]) - Let the huge beast eat you without trying to fight.";
 				say "     ([link]N[as]n[end link]) - It isn't supposed to end like this. You will fight to the end.";
-				if the player consents:
+				if player consents:
 					say "     Not willing to fight back, you accept your fate. Even if you wanted to escape, the beast's grip is too strong on your body. He is pushing your muscles, limbs, and organs to a state of almost being crushed, making the world turn black for a moment. Your mouth is agape as you teeter at the brink of losing consciousness for good. But that smile, even wider than before and showing full well those pearly-white teeth, snags your mind back together with the horror of what is about to come. The shepherd opens his mouth fully, showing you the void that is about to be your future. You can't escape, and you can't even think about what will happen in a moment. There is only terror in your mind, knowing all too well that this is the end.";
-					say "     Before entering his mouth, the beast holds you with its long tongue. The slick texture of the monster's saliva and tongue are a weird yet strangely pleasurable sensation, and you can't help but feel some arousal despite the situation. [if cocks of player > 0]It makes your member hard against that texture, making you leak pre[else if cunts of player > 0]Your pussy gets wet as it is rubbed against that texture[end if]. Your oxygen-deprived mind can't tell the difference between the liquid created by your own arousal or the beast's saliva that lubricate your descent. Your arousal isn't unnoticed by your captor. The giant dog takes this opportunity to play with your body inside his mouth, licking you and throwing you around inside his mouth.";
+					say "     Before entering his mouth, the beast holds you with its long tongue. The slick texture of the monster's saliva and tongue are a weird yet strangely pleasurable sensation, and you can't help but feel some arousal despite the situation. [if player is male]It makes your member hard against that texture, making you leak pre[else if player is female]Your pussy gets wet as it is rubbed against that texture[end if]. Your oxygen-deprived mind can't tell the difference between the liquid created by your own arousal or the beast's saliva that lubricate your descent. Your arousal isn't unnoticed by your captor. The giant dog takes this opportunity to play with your body inside his mouth, licking you and throwing you around inside his mouth.";
 					WaitLineBreak;
-					say "     You are always being pressed against some place of his mouth, sliding with the help of his saliva. Whenever you open your mouth to scream or get air, you swallow more of his saliva, making it even harder to breathe. The deprivation of oxygen makes you lightheaded, and your arousal mixed with the dog's saliva has an almost euphoric taste. Bracing yourself, you cum hard, [if cocks of player > 0]spilling your seed, [end if]which the monster happily takes. Starting to feel some tremors, as though the beast is laughing at your own weakness, he finally moves to swallow you.";
+					say "     You are always being pressed against some place of his mouth, sliding with the help of his saliva. Whenever you open your mouth to scream or get air, you swallow more of his saliva, making it even harder to breathe. The deprivation of oxygen makes you lightheaded, and your arousal mixed with the dog's saliva has an almost euphoric taste. Bracing yourself, you cum hard, [if player is male]spilling your seed, [end if]which the monster happily takes. Starting to feel some tremors, as though the beast is laughing at your own weakness, he finally moves to swallow you.";
 					say "     The horny dog's tongue pushes you to the back of his muzzle, brushing you against his teeth, before forcing you into a dark descent. You are crushed by the walls of flesh that surrounds you. It was difficult to breathe inside his mouth, but now, it's pretty much impossible. You lungs burn with the lack of oxygen. Your head spins, and your vision is turning darker and darker by the moment. Your muscles scream in pain with the pressure, and your bones almost snap. The travel is almost hellish in nature until you finally drop into the beast's stomach. Now, the hell is fully realized.";
 					say "     The foul odors of the monster's last meal assault your nose, and you almost puke. Holding yourself, you take a look at your surroundings. It is almost pitch-black, but somehow, you can see some of what is happening in here. You somehow landed on a safe place, everywhere else being filled with acid. There are some bones and even flesh still intact floating in the caustic sea. But your luck is only finite. With rising dread, you hear the gurgle noises of the digestion starting. Your safe place shifts, making you lose your footing and land in the acid. That is how you die. As someone's meal.";
 					WaitLineBreak;
@@ -103,7 +103,7 @@ Instead of resolving a Hungry dog:
 						now bodyname of player is "dead";
 						end the story saying "You were eaten alive!";
 					else:
- 						say "     You can see his uvula while he is trying to swallow you, giving you a final idea to escape. You hold on to the dog's uvula, making him choke and gag. Soon enough, you feel yourself being pushed up and out his mouth. You run as much as you can while the beast is dizzy with your method of escape. You eventually lose sight of the monster, and it isn't much longer before you return to your normal size. Cleaning yourself as much as you can, you guess that you still probably will need a bath.";
+						say "     You can see his uvula while he is trying to swallow you, giving you a final idea to escape. You hold on to the dog's uvula, making him choke and gag. Soon enough, you feel yourself being pushed up and out his mouth. You run as much as you can while the beast is dizzy with your method of escape. You eventually lose sight of the monster, and it isn't much longer before you return to your normal size. Cleaning yourself as much as you can, you guess that you still probably will need a bath.";
 			else:
 				say "     Coming from inside the dark alley, the German Shepherd finally steps into the light, giving you a better view. He is monstrously large, quite a bit bigger than the ones you found to this day. He has some darker stains in his fur from what appear to be dried blood. A complete lack of clothing gives him an almost fully feral feel. Between the dog's legs, there is a huge sheath, and from the looks of it, an even bigger knotted penis. Even without it leaving the sheath, you can see it pressing against the skin, making it bulge, especially where the knot should be. Right below there are two orbs the size of tennis balls that appear to be full of the monster's seed.";
 				say "     The bloodthirsty dog jumps in your direction, putting his arms to the ground and running like a feral monster with a dark smile. He rams into you, making you lose your breath from the strength of the impact. You are knocked over onto the floor, falling on your butt, making you clench your teeth with the impact with the deserted road. You are left without breath as the hunter stands tall beside you, never letting you out of his sight. Licking his lips, he holds you by the neck and says, 'Looks like I found my next meal.'";
@@ -111,7 +111,7 @@ Instead of resolving a Hungry dog:
 				LineBreak;
 				say "     ([link]Y[as]y[end link]) - Let the beast do what he wants with you.";
 				say "     ([link]N[as]n[end link]) - You can't possibly win against him. Your only hope is to flee.";
-				if the player consents:
+				if player consents:
 					now battleground is "void";
 					say "     Laughing at you now, his grip tightens. As you vainly try to gasp for air, you flail around as your mind melts into a stupor. Your lungs start to burn and wheeze, and drool drips from your gaping mouth, showing the state of your consciousness. When you are close to fainting, the shepherd tosses you inside the alley, making you crash against the wall with bone-shattering force. This brings your mind back to its alerted state, but it almost makes you throw up with the whiplash. Trying to get up on your feet, you're hit again with amazing force. Without enough time to react to his animalistic movements, you are stripped of your clothes, showing your [bodyname of player] body in all of its almost broken glory.";
 					say "     The dog is quick with his movements, holding your shoulders in place so that you can have a better view of what is about to come. Opening his mouth, with almost sexual joy, you see it. Dripping with his saliva, the mouth almost looked like a wet pussy, with a nice, pink shade and a dark abyss at the end. If it wasn't for the pearly-white teeth adorning it, reminding you of what is really about to happen with you, you would almost find the sight strangely erotic. You are pulled inside, feeling the slickness of his touch.";
@@ -161,7 +161,7 @@ Instead of resolving Little trouble:
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]100 - Give up on the idea and go back[as]100[end link][line break]";
+	say "[link]0 - Give up on the idea and go back[as]0[end link][line break]";
 	while sextablerun is 0:
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
@@ -177,14 +177,14 @@ Instead of resolving Little trouble:
 				if (nam is "Eat one of the mushrooms and enter through the hole"):
 					say "[LittleShroom]";
 				wait for any key;
-		else if calcnumber is 100:
+		else if calcnumber is 0:
 			say "Just give up on that";
-			if the player consents:
+			if player consents:
 				now sextablerun is 1;
 				say "     Giving up on the idea of exploring this weird place, you go on your merry way";
 				wait for any key;
 			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
@@ -247,7 +247,7 @@ to say LittleShroom:
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]100 - Just go back and give up on the idea[as]100[end link][line break]";
+	say "[link]0 - Just go back and give up on the idea[as]0[end link][line break]";
 	while sextablerun is 0:
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
@@ -265,14 +265,14 @@ to say LittleShroom:
 				if (nam is "Go find where the sound is coming from"):
 					say "[ChineseTrouble]";
 				wait for any key;
-		else if calcnumber is 100:
+		else if calcnumber is 0:
 			say "You give up on your curiosity and go back home";
-			if the player consents:
+			if player consents:
 				now sextablerun is 1;
 				say "     You give up and go back the way you came. It's not worth it";
 				wait for any key;
 			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
@@ -301,10 +301,10 @@ to say ChineseUB:
 	say "     Locked in her paw now and with the size and strength of a mouse, you probably won't escape her easily. 'So cute,' your husky captor says as she keeps looking at you. 'Aren't you a pleasant surprise to find?' She giggles as she touches, prods, and squeezes you in every way possible. Then eventually, a meaningful smile spreads over her muzzle. 'You should finish what you started.' Opening her legs again and spreading her feminine folds apart with two fingers, she pushes you against them with some urgency. 'Go on. Make me cum, or else you will be my snack!'";
 	say "     Looks like you will be used as a dildo, and if you don't do a proper job, you will be eaten. The sweet smell coming from her lust fills your lungs easily, given your diminutive size. Without even one second more to think, you are pushed in between her soft folds, your body brushing against the engorged flesh lubed with her arousal. Once more penetrating the anthro girl, just not on your own accord this time, you are pushed and pulled in and out, rubbing up against her inner walls. Your mouth and lungs are filled with her sweet scent every time you try to breathe. After a few moments, it feels like the whole world is just her and the scent of her heat.";
 	WaitLineBreak;
-	say "     The bitch trembles and squirms as you are turned into her personal dildo. And not to overlook the effects on your own lust, [if cocks of player > 0]your hard member slides pleasantly over her supple flesh[else if cunts of player > 0]your clit rubs inside the bitch, making you wet yourself and mixing both of your juices[else]your excitement builds up, but without a sex organ to release, you are stuck in a cycle of perpetual denying and teasing[end if]. In her eagerness to get off, the bitch actually pushes you into herself all the way, then continues to shove you further up until only her fingertips touch your feet.";
+	say "     The bitch trembles and squirms as you are turned into her personal dildo. And not to overlook the effects on your own lust, [if player is male]your hard member slides pleasantly over her supple flesh[else if player is female]your clit rubs inside the bitch, making you wet yourself and mixing both of your juices[else]your excitement builds up, but without a sex organ to release, you are stuck in a cycle of perpetual denying and teasing[end if]. In her eagerness to get off, the bitch actually pushes you into herself all the way, then continues to shove you further up until only her fingertips touch your feet.";
 	say "     She has pushed you right to the spot where you had planned to go earlier. Well, not quite, as your face is squished somewhat uncomfortably against the ring of her cervix, but the position definitely has its advantages. It isn't hard to snake your absolutely soaked and slippery arm in at the center of the large ring of muscle. The second arm is a bit harder, but still doable, allowing you to really get a grip and pull yourself up. Your heart races as you get a first glimpse of the inside of her womb, then stick your head through the opening, wiggling and pulling to slide in. Such efforts don't go unnoticed - the husky bitch's insides tremble and leak even more fluids in reaction.";
 	WaitLineBreak;
-	say "     With a final push, your shoulders penetrate her cervix, allowing the rest of your body into the snug cave of her womb as her muscles quake in orgasm, squishing you with its flexible walls. Bouncing and sliding around in her innermost sanctuary, this also pushes you to, and past, the limit of your endurance, [if cocks of player > 0]making your cock shoot heavy blasts of seed right into her womb and over yourself[else if cunts of player > 0]your love juices slicking the inside of her womb[else]trembling and twitching in orgasm[end if]. Afterwards, you stay in the fetal position for a time, just resting after your breathtaking climax. After all, this is such a nice place. Warm and welcoming, you could live here forever.";
+	say "     With a final push, your shoulders penetrate her cervix, allowing the rest of your body into the snug cave of her womb as her muscles quake in orgasm, squishing you with its flexible walls. Bouncing and sliding around in her innermost sanctuary, this also pushes you to, and past, the limit of your endurance, [if player is male]making your cock shoot heavy blasts of seed right into her womb and over yourself[else if player is female]your love juices slicking the inside of her womb[else]trembling and twitching in orgasm[end if]. Afterwards, you stay in the fetal position for a time, just resting after your breathtaking climax. After all, this is such a nice place. Warm and welcoming, you could live here forever.";
 	infect "Female Husky";
 	infect "Female Husky";
 	infect "Female Husky";
@@ -319,9 +319,9 @@ to say ChineseTrouble:
 	say "     His horny bed-mate reaches out for his prick to guide him back into her, but the anthro dog pushes her aside, much to her dismay. 'Come, little pig,' he scoffs at you as he stands up. 'Let's play!' Both of them jump from the bed and start coming for you. Without proper time to react, your best idea is to hide under a table, but sniffing the air with their excellent noses, the huskies are quick in finding and capturing you. Being snatched up by the male, you are turned and twisted in his grasp as the anthro dog examines your naked form from all sides. By the time he's finally done, you end up feeling more than a little dizzy.";
 	WaitLineBreak;
 	say "     A worrying smile and cruel expression on his face, the husky hands you over to his bitch with the words, 'Hang on to that for a moment, slut!' Then he leaves the room, kicking the door shut behind him. Now at the mercy of the female husky's whims, you are touched and prodded once more, if a little more gently than with her top dog. Soon, the crafty beast comes back holding a pair of shoelaces. Looks like he has some naughty ideas about how to deal with their miniature intruder. 'Hold [if player is female]her[else]him[end if] out for me,' he growls dominantly at his bitch. It doesn't take long before your hands and feet have been tied together, tighter than you could ever hope to wind your way out of.";
-	say "     Your captor then grabs you and proceeds to push his red spear between your legs, sliding you down over its length like an improvised fleshlight. Your [if cocks of player > 0]penis[else if cunts of player > 0]vagina[else]bare crotch[end if] brushes against the pulsating red prick, eliciting helpless moans from you, your stomach now slippery with his pre. Pushing your whole body towards his crotch, the husky's dick soon presses against your chest, [if breast size of player > 2]giving him a really small boob-job[else]rubbing your nipples and making them hard[end if].";
+	say "     Your captor then grabs you and proceeds to push his red spear between your legs, sliding you down over its length like an improvised fleshlight. Your [if player is male]penis[else if player is female]vagina[else]bare crotch[end if] brushes against the pulsating red prick, eliciting helpless moans from you, your stomach now slippery with his pre. Pushing your whole body towards his crotch, the husky's dick soon presses against your chest, [if breast size of player > 2]giving him a really small boob-job[else]rubbing your nipples and making them hard[end if].";
 	WaitLineBreak;
-	say "     Finally, his giant penis reaches your arms, as you are forced to hug it. You are finally up against his crotch all the way now, your[if cocks of player > 0] penis and[else if cunts of player > 0] vagina and[end if] ass pressing against his knot. Face pressed directly against his shaft, the husky's strong, manly scent fills your lungs. You can't help but feel intoxicated by the aroma, despite the dire situation you're in right now. Then the horny dog starts using you to masturbate. Pulling and pushing you along, his cock slides hotly against your body, pulsating against your skin with his heartbeat.";
+	say "     Finally, his giant penis reaches your arms, as you are forced to hug it. You are finally up against his crotch all the way now, your[if player is male] penis and[else if player is female] vagina and[end if] ass pressing against his knot. Face pressed directly against his shaft, the husky's strong, manly scent fills your lungs. You can't help but feel intoxicated by the aroma, despite the dire situation you're in right now. Then the horny dog starts using you to masturbate. Pulling and pushing you along, his cock slides hotly against your body, pulsating against your skin with his heartbeat.";
 	say "     Your whole body soon is properly lubed with his pre, the degradation of being used as a sex toy increasing second by second. Your mind doesn't even recognize the danger at first as the commanding dog orders his girl to suck his cock until her breath brushes hotly against you. Wait a minute... Is she going to blow him with you still tied to his cock? Now with your mind in an alerted state, you try once more to wiggle off of his cock, but that only helps as far as taking your attention from the open mouth starting to envelop your head.";
 	WaitLineBreak;
 	say "     The horny bitch doesn't even question the guy about something like that. She must be totally submissive and ready to follow anything he commands. Her teeth brush against your hair, her tongue licking the back of your head and pressing it against the cock you are tied to against your will. Now, you're stuck between a tongue and a hard dick, as the bitch keeps sucking her alpha, and by extension, you. Most of the time you are safe enough, with her only going halfway down his cock, but soon, the alpha husky grabs the back of her head and shoves his whole dick inside of her mouth, forcing her to deep-throat him and your body.";
@@ -355,7 +355,7 @@ to say ChineseTrouble:
 		repeat with y running from 1 to number of filled rows in table of fucking options:
 			choose row y from the table of fucking options;
 			say "[link][y] - [title entry][as][y][end link][line break]";
-		say "[link]100 - Wait for your timely demise[as]100[end link][line break]";
+		say "[link]0 - Wait for your timely demise[as]0[end link][line break]";
 		while sextablerun is 0:
 			say "Pick the corresponding number> [run paragraph on]";
 			get a number;
@@ -373,9 +373,9 @@ to say ChineseTrouble:
 					if (nam is "Dive down and seek the other exit"):
 						say "[AlphaDive]";
 					wait for any key;
-			else if calcnumber is 100:
+			else if calcnumber is 0:
 				say "Wait for your timely demise.";
-				if the player consents:
+				if player consents:
 					now sextablerun is 1;
 					say "     Giving up on the idea of leaving this, you wait for your death, which comes in due time.";
 					now battleground is "void";
@@ -387,7 +387,7 @@ to say ChineseTrouble:
 					end the story saying "You were eaten alive!";
 					wait for any key;
 				else:
-					say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+					say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 			else:
 				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 		clear the screen and hyperlink list;
@@ -413,7 +413,7 @@ to say ChineseTrouble:
 		repeat with y running from 1 to number of filled rows in table of fucking options:
 			choose row y from the table of fucking options;
 			say "[link][y] - [title entry][as][y][end link][line break]";
-		say "[link]100 - It's hopeless anyway, just wait for your end.[as]100[end link][line break]";
+		say "[link]0 - It's hopeless anyway, just wait for your end.[as]0[end link][line break]";
 		while sextablerun is 0:
 			say "Pick the corresponding number> [run paragraph on]";
 			get a number;
@@ -429,9 +429,9 @@ to say ChineseTrouble:
 					if (nam is "Dive down and seek the other exit"):
 						say "[BitchDive]";
 					wait for any key;
-			else if calcnumber is 100:
+			else if calcnumber is 0:
 				say "It's hopeless anyway, just wait for your end.";
-				if the player consents:
+				if player consents:
 					now sextablerun is 1;
 					say "     Giving up on any hope of survival, you sit down, breathing the polluted air and being squished by her muscles from the inside of her stomach. The end will take just a few more moments...";
 					now battleground is "void";
@@ -443,7 +443,7 @@ to say ChineseTrouble:
 					end the story saying "You were eaten alive!";
 					wait for any key;
 				else:
-					say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+					say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 			else:
 				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 		clear the screen and hyperlink list;

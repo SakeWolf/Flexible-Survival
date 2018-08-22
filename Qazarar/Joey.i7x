@@ -58,7 +58,7 @@ to say JoeyTalkMenu:
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]100 - Nevermind[as]100[end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
 	while sextablerun is 0:
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
@@ -74,16 +74,16 @@ to say JoeyTalkMenu:
 				if (nam is "Training"):
 					say "[JoeyTalk2]";
 				WaitLineBreak;
-		else if calcnumber is 100:
+		else if calcnumber is 0:
 			say "Break off the conversation?";
-			if the player consents:
+			if player consents:
 				now sextablerun is 1;
 				say "     You step back from the Joey, shaking your head slightly as he gives a questioning look.";
 				WaitLineBreak;
 			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
 
 to say JoeyTalk1: [talk about him]
@@ -116,7 +116,7 @@ to say JoeySexMenu:
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
-	if cocks of player > 0: [only males and herms can get a blowjob]
+	if player is male: [only males and herms can get a blowjob]
 		choose a blank row in table of fucking options;
 		now title entry is "Get a blowjob";
 		now sortorder entry is 1;
@@ -127,7 +127,7 @@ to say JoeySexMenu:
 	now sortorder entry is 2;
 	now description entry is "Taste his feline shaft";
 	[]
-	if cocks of player > 0: [only males and herms can fuck him]
+	if player is male: [only males and herms can fuck him]
 		choose a blank row in table of fucking options;
 		now title entry is "Fuck the catboy";
 		now sortorder entry is 3;
@@ -137,7 +137,7 @@ to say JoeySexMenu:
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]100 - Nevermind[as]100[end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
 	while sextablerun is 0:
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
@@ -155,16 +155,16 @@ to say JoeySexMenu:
 				if (nam is "Fuck the catboy"):
 					say "[JoeySex3]";
 				WaitLineBreak;
-		else if calcnumber is 100:
+		else if calcnumber is 0:
 			say "Break off the conversation?";
-			if the player consents:
+			if player consents:
 				now sextablerun is 1;
 				say "     You step back from the catboy, shaking your head slightly as he gives a questioning look.";
 				WaitLineBreak;
 			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
 
 to say JoeySex1: [oral on the player]
@@ -248,7 +248,7 @@ to say JoeyTraining: [Training Joey] [{]
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]100 - Nevermind[as]100[end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
 	while sextablerun is 0:
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
@@ -268,16 +268,16 @@ to say JoeyTraining: [Training Joey] [{]
 				if (nam is "A Minotaur"):
 					say "[MinotaurTraining]";
 				wait for any key;
-		else if calcnumber is 100:
+		else if calcnumber is 0:
 			say "Break off the conversation?";
-			if the player consents:
+			if player consents:
 				now sextablerun is 1;
 				say "     You tell Joey that you aren't going to be able to train him right now. He looks disappointed, but says he understands.";
 				wait for any key;
 			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
 
 to say FoxTraining:
@@ -298,7 +298,7 @@ to say CentaurTraining:
 	say "     For this bout of training, you decide to take Joey to the edge of the city, nearer the plains, to challenge a different creature from what is in the heart of the city. It doesn't take long before you spot a lone equine shape galloping across the plains, and you know you've found your target. You give Joey a few last minute words of advice for the fight before moving to stand in a more shaded spot, leaving Joey to his own devices. After that, it's almost no time at all before the shape gets close enough that you can tell it is a centaur that stands before the catboy.";
 	WaitLineBreak;
 	if hp of Joey < 4:
-		say "     The catboy hesitates at the sight of the creature, but the centaur has no such issue.	He lets loose an arrow at Joey, leaving causing him to scramble out of the way. Now that Joey is on the defensive, the battle quickly falls out of his favor. The catboy is able to use his quick reflexes to dodge the arrows for several minutes, with the centaur laughing all the while. However, he soon succumbs to exhaustion, and falls to his knees. When he does so, the centaur stops firing, putting the bow away. The creature then trots forward, toward the kneeling catboy, until he looms over the feline. Joey looks slightly out of sorts, but seems to become fully aware of his surroundings once again when the centaur's overly large endowment is left directly in front of his face, with the tip just barely touching his cheek.";
+		say "     The catboy hesitates at the sight of the creature, but the centaur has no such issue. He lets loose an arrow at Joey, leaving causing him to scramble out of the way. Now that Joey is on the defensive, the battle quickly falls out of his favor. The catboy is able to use his quick reflexes to dodge the arrows for several minutes, with the centaur laughing all the while. However, he soon succumbs to exhaustion, and falls to his knees. When he does so, the centaur stops firing, putting the bow away. The creature then trots forward, toward the kneeling catboy, until he looms over the feline. Joey looks slightly out of sorts, but seems to become fully aware of his surroundings once again when the centaur's overly large endowment is left directly in front of his face, with the tip just barely touching his cheek.";
 		say "     Joey is unable to take his eyes off of the cock dangling in front of him, his eyes following the motions each time it bobs. Eventually Joey gives in to the temptation he seems to feel, and reaches up both of his hands, gently grasping the equine member. Slowly he starts stroking it, running his hands up and down the length, never taking his eyes away from the flared head. The feline starts to mix up his technique, alternating hands, adding more than simple stroking, and it soon pays off. The centaur lets out a bestial noise, and the throbbing length beneath him unloads, streaks of seed arcing out onto the face of the shocked catboy, the load large enough that it coats his face and still has enough to drip downward, leaving streaks of cum all over his body.";
 		WaitLineBreak;
 		say "     For several moments, the catboy is still, drenched in lust. His eyes are closed, and he seems almost intoxicated by the scent. Then he licks his lips, perhaps partially out of nerves, and ends up with the taste of the centaur cum to accompany the scent. You can tell he likes it when his tongue darts out again, collecting more and more of the sticky coating. He soon remembers that the source is there for the taking, and he eagerly leans back towards the dangling equine dick, only partially flaccid from its release. Using his hands once again, Joey starts to urge the centaur back to full hardness, teasing up and down the length with his hands, and occasionally licking the head, growing used to the strong musky taste of it. Finally the shaft is fully erect once more, and the cum-splattered feline seems to be working up the courage to take it into his mouth.";

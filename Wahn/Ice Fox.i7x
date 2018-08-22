@@ -37,12 +37,15 @@ Section 2 - Monster Responses
 Section 3 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Ice Fox";
+	now enemy title entry is "";
+	now enemy name entry is "";
+	now enemy type entry is 0; [non-unique enemy]
 	now attack entry is "[NonCombatError]";
 	now defeated entry is "[NonCombatError]";
 	now victory entry is "[NonCombatError]";
@@ -71,7 +74,7 @@ When Play begins:
 	now cocks entry is 1;
 	now cock length entry is 9;        [ Length in inches infection will make cock grow to if cocks. ]
 	now cock width entry is 6;         [ Cock width, more commonly used for ball size. ]
-	now breasts entry is 2;            [ Number of breasts the infection will give a player. ]
+	now breasts entry is 2;            [ Number of nipples the infection will give a player. ]
 	now breast size entry is 4;        [ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
 	now male breast size entry is 4;   [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1;
@@ -146,7 +149,7 @@ Snow Fox Enclosure is a room.
 The description of Snow Fox Enclosure is "[SnowFoxEnclosureDesc]";
 
 to say SnowFoxEnclosureDesc:
-	say "     You're in a mid-sized cave that is split into two parts by a not quite hip-high wall of ice. The far side of it has what seems to be a miniature cliff molded out of its back wall, with a comfy fox-sized cave dug into it and a sloping path to the top up one side. All of this is covered in a liberal scattering of snow. Numerous snow-white foxes are moving around in this enclosure, yipping and with some chasing each other up to the lookout spot and down again. Aubrey the foxtaur is in their midst, playing with the little vulpines by throwing several rubber balls for her charges to run after and bring back. She seems totally focused on playtime with the foxes, barely registering you other than a friendly smile and wave as you come in. On your side of the ice wall, there is a big nest of warm blankets in one corner of the irregular shaped room. Looks like Aubrey and Barbara share it.";
+	say "     You're in a mid-sized cave that is split into two parts by a not quite hip-high wall of ice. The far side of it has what seems to be a miniature cliff molded out of its back wall, with a comfy fox-sized cave dug into it and a sloping path to the top up one side. All of this is covered in a liberal scattering of snow. Numerous snow-white foxes are moving around in this enclosure, yipping and with some chasing each other up to the lookout spot and down again. Aubrey the foxtaur is in their midst, playing with the little vulpines by throwing several rubber balls for her charges to run after and bring back. She seems totally focused on playtime with the foxes, barely registering you other than a friendly smile and wave as you come in. On your side of the ice wall, there is a big nest of warm blankets in one corner of the irregularly shaped room. Looks like Aubrey and Barbara share it.";
 	say "     The anthro fox Barbara doesn't seem to be in right now, most likely gathering supplies to feed the gang of refugees.";
 
 Section 5 - Events
@@ -213,7 +216,7 @@ instead of going to Ice Fox's Den while (Miyuki is in Ice Fox's Den and MiyukiRe
 		say "     DEBUG: Miyuki Blessing Event Introduction - lust of Miyuki: [lust of Miyuki] [line break]";
 	move player to Ice Fox's Den;
 	say "     Walking into the den of Miyuki the ice fox, you see her standing next to an anthro corgi, caressing the young woman's large, bulging belly. 'I can't wait to see our cubs. You'll be an amazing mother, Leandra,' the dragon-fox tells her noticeably smaller partner, leaning down a little to plant a kiss on her muzzle. 'Me too,' the canine replies dreamily, her tail wagging as she leans in against Miyuki and licks her muzzle in turn. 'I do worry a bit though - I mean, you told me that all of this,' the corgi says and indicates her stomach, 'is only two of them. Two eggs that you've put into me in a [italic type]very[roman type] memorable night. They're clearly not that... um, small. That means I'll have a hell of a time to push the little ones out. Can I - can we - have them here? I read it helps with the pain if you are able to hold the father's hand during the birthing, you know?'";
-	say "     'Of course love,' Miyuki says in a very caring tone, caressing the corgi as she leads the young woman to the entrance and then making some introductions between yourself and the canine house-guest. After a little bit of casual discussion, Leandra says that she needs to go and get home, at which point the ice fox hands her a basket overstuffed with fish and other foodstuffs. That's one way to keep em fresh, you guess. Looks like the corgi and her growing offspring will be taken care of for some days with that load. Happy and quite heavily loaded with the basket, Leandra exchanges another kiss with Miyuki and leaves. After she vanishes, the ice fox sorceress waits for about a minute to make sure she is gone, then whirls around to face you, a quizzical expression on her face.";
+	say "     'Of course love,' Miyuki says in a very caring tone, caressing the corgi as she leads the young woman to the entrance and then making some introductions between yourself and the canine house-guest. After a little bit of casual discussion, Leandra says that she needs to go and get home, at which point the ice fox hands her a basket overstuffed with fish and other foodstuffs. That's one way to keep [']em fresh, you guess. Looks like the corgi and her growing offspring will be taken care of for some days with that load. Happy and quite heavily loaded with the basket, Leandra exchanges another kiss with Miyuki and leaves. After she vanishes, the ice fox sorceress waits for about a minute to make sure she is gone, then whirls around to face you, a quizzical expression on her face.";
 	WaitLineBreak;
 	say "     'Now what in the world did she mean about being afraid of pain and all of that?! I didn't want to frighten her so I kept quiet when Leandra mentioned it. It's good that you happened in at just the right time. Can you shed light on this for me?' the sorceress asks in a quite determined manner. Somewhat puzzled that she doesn't know about this basic fact of life, you begin laying out the details, as far as you remember them. How a woman's water breaks, contractions set in, hours upon hours of those sometimes, then finally a new life being pushed out into the world. From her shocked reaction, you have to assume that Miyuki must be white as a sheet under her fur right now, gaping at you speechlessly. 'But, but - I... I barely have any words. This is so primitive. Like animals out in the wilderness. I can't believe that anyone would be made to suffer like that. The priestesses of the All-Mother would never let it happen!'";
 	say "     Bidding her to slow down, you ask what exactly Miyuki means, so she tells you of the central nature goddess of her homeland, worshiped almost universally by all species and granting blessings to expectant mothers. You wisely postpone the question of why a goddess like that isn't revered on earth to another day (not wanting to get Miyuki started on tales of religious persecution), and instead ask her about the nature of those blessings. Apparently children, eggs, and the like are supposed to be delivered painlessly, and fairly instantly, in her experience. Still shaking her head about the fact that you never heard about her goddess, Miyuki adds, 'The prayer to beseech the goddess is common knowledge. Anyone in the faithful can recite it and be heard. I guess I know what I'll be doing with Leandra next time she comes by.'";
@@ -382,7 +385,7 @@ instead of conversing the Miyuki:
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]100 - Nevermind[as]100[end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
 	while sextablerun is 0:
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
@@ -404,14 +407,14 @@ instead of conversing the Miyuki:
 					-- "Offer to help her with other things":
 						say "[MiyukiTalk5]";
 				wait for any key;
-		else if calcnumber is 100:
+		else if calcnumber is 0:
 			say "Break off the conversation?";
-			if the player consents:
+			if player consents:
 				now sextablerun is 1;
 				say "     You step back from the ice fox, shaking your head slightly as she gives a questioning look.";
 				wait for any key;
 			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
@@ -446,7 +449,7 @@ to say MiyukiTalk4: [be blessed]
 	increase stamina of player by 2;
 	LineBreak;
 	say "[bold type]'All-Mother's Blessing' has been added to your feats![roman type][line break]";
-	add "All-Mother's Blessing" to feats of the player;
+	add "All-Mother's Blessing" to feats of player;
 	now lust of Miyuki is 4; [player blessed]
 
 to say MiyukiTalk5: [helper quest]
@@ -483,7 +486,7 @@ to say MiyukiSexMenu:
 	now sortorder entry is 1;
 	now description entry is "Wrap your lips around that dragon-fox cock";
 	[]
-	if cunts of player > 0:
+	if player is female:
 		choose a blank row in table of fucking options;
 		now title entry is "Take her canine shaft in your pussy";
 		now sortorder entry is 2;
@@ -498,7 +501,7 @@ to say MiyukiSexMenu:
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]100 - Nevermind[as]100[end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
 	while sextablerun is 0:
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
@@ -518,14 +521,14 @@ to say MiyukiSexMenu:
 					-- otherwise: say "Sex menu failed!";
 				wait for any key;
 				now lastfuck of Miyuki is turns;
-		else if calcnumber is 100:
+		else if calcnumber is 0:
 			say "Break off the conversation?";
-			if the player consents:
+			if player consents:
 				now sextablerun is 1;
 				say "     You step back from the ice fox sorceress, shrugging your shoulders as she gives you a questioning look.";
 				wait for any key;
 			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
@@ -558,7 +561,7 @@ to say MiyukiSex2: [Miyuki fucks player pussy]
 	say "     Miyuki's slow, gentle start at having sex with you builds quickly to a quite vigorous pounding, as the ice fox humps your eager pussy with seemingly boundless stamina, really pushing all of your buttons as she does so. She doesn't have balls to slap against your crotch, but the bulge at the base of her cock almost serves the same way - as she thrusts up till the little thud of it against your nethers, then follows up by another sharp hump to pop it inside. Quite a sensation to take that thing into your body, making you thankful for her prolonged oral service that relaxed and stretched your hole. Especially now that Miyuki seems to be getting closer and closer to an orgasm and her knot starts to swell up noticeably with every further thrust.";
 	WaitLineBreak;
 	say "     Then suddenly, Miyuki hammers her hips forward forcefully, making you wince a little at the girth of her knot pushing past your nether lips. You can feel why she did it right away, as a hard throb goes through her shaft a second later, making the knot swell even further - past any hope to pass in or out of you and tying you securely to your foxy lover's body. She lets out a satisfied moan - almost a growl - and grinds against you hard, and a heartbeat later, the first heavy spurt of cum paints your insides white. Throb after throb, Miyuki unloads her load of cum deep into your body, soaking you with her seed and making it cascade into your womb as the opening of it can't resist the raising pressure of more and more cum having nowhere else to go.";
-	say "     For a little while, Miyuki is totally occupied with her own orgasm, unable to concentrate on anything but the height of male arousal at the time of climax, but she quickly catches herself again. Her canine shaft is still spurting more into you, but the fox now is focusing on your pleasure too, sliding her hand down to [if cocks of player > 0]jerk your own cock[else]rub your clit[end if] with eager attention, pushing your already sky-high arousal even further. It doesn't take long at all before she manages to push you over the edge to join her in bliss, [if cocks of player > 0]your shaft spurting long strings of cum to make a mess of your whole front[else]your pussy leaking copious amounts of femcum, soaking your pressed-together crotches.";
+	say "     For a little while, Miyuki is totally occupied with her own orgasm, unable to concentrate on anything but the height of male arousal at the time of climax, but she quickly catches herself again. Her canine shaft is still spurting more into you, but the fox now is focusing on your pleasure too, sliding her hand down to [if player is male]jerk your own cock[else]rub your clit[end if] with eager attention, pushing your already sky-high arousal even further. It doesn't take long at all before she manages to push you over the edge to join her in bliss, [if player is male]your shaft spurting long strings of cum to make a mess of your whole front[else]your pussy leaking copious amounts of femcum, soaking your pressed-together crotches.";
 	WaitLineBreak;
 	say "     Lying under your sexy fox partner, you shiver and pant as you ride out your orgasm, thoroughly enjoying the feelings she gives you - of a very full pussy, with the large knotted cock inside, and an even fuller womb, simply sloshing with Miyuki's potent load. 'I hope it takes,' she tells you, putting her paw-hand on your belly, 'You'd surely give me some very cute little fox kits. Mmmm, I love breeding people. It is so sexy to know someone is carrying your kits!' With that said, the ice fox gets back to playfully making out with you, stroking and caressing your body while she waits for her knot to go down. The cuddling with your soft-furred partner goes on another quite comfortable forty minutes or so before that eventually happens, more than enough time for your womb to thoroughly soak in the load that has been put inside it...";
 	fimpregchance;
@@ -569,24 +572,24 @@ to say MiyukiSex3: [Miyuki fucks player pussy - doggy style and ovi]
 	setmonster "Ice Fox";
 	choose row monster from the table of random critters;
 	say "     Sliding your fingers down over the band of scales on Miyuki's belly, you rub the narrow slit between the flexible little plates down at her crotch. Then you plant a kiss on the white fox's muzzle and tell her that you want her to take you as she pleases. With a broad smile, the sorceress gives you an affectionate lick in return and says, 'Stroke me.' Eager to follow her order, you to slip a finger between the ridges of her slit, feeling the warm flesh inside as it starts to push out. A blunt-headed tube of flesh slides right into your waiting palm, with the shaft to go with it hardening rapidly start to fondle and stroke her appendage. It looks fairly interesting - with a relatively rigid shaft, but a flexible opening instead of a dickhead at the end. Your curiosity pushes you to experiment a little with it and as you push the tip of your index finger into the fleshy tube, you realize that it is hollow and quite stretchy.";
-	say "     'Do you like playing with my ovipositor? Wait till you feel it inside you! Mmmm, I can't wait to lay some eggs in that sexy [if cunts of player > 0]pussy[else]ass[end if] of yours!' the ice sorceress adds playfully in almost a purr. Seeing the deep need to be fucked in your gaze, she gives an amused yip and licks her muzzle in anticipation. 'About time I sank myself into a sweet [if cunts of player > 0]pussy[else]ass[end if] again,' she says with a chuckle, then strokes your cheek and beckons to follow you with one of her nine tails as she walks over towards her warm nest. Arriving at the large ring of blankets and pillows just a step behind the fox, you are helped out of your clothes by her eager hands, then climb into the her soft camp, getting onto all fours in its very comfortable expanse.";
+	say "     'Do you like playing with my ovipositor? Wait till you feel it inside you! Mmmm, I can't wait to lay some eggs in that sexy [if player is female]pussy[else]ass[end if] of yours!' the ice sorceress adds playfully in almost a purr. Seeing the deep need to be fucked in your gaze, she gives an amused yip and licks her muzzle in anticipation. 'About time I sank myself into a sweet [if player is female]pussy[else]ass[end if] again,' she says with a chuckle, then strokes your cheek and beckons to follow you with one of her nine tails as she walks over towards her warm nest. Arriving at the large ring of blankets and pillows just a step behind the fox, you are helped out of your clothes by her eager hands, then climb into the her soft camp, getting onto all fours in its very comfortable expanse.";
 	WaitLineBreak;
-	say "     Miyuki joins you immediately, kneeling behind you and placing her paw-hands on the raised buttocks of your behind. She squeezes and gropes your ass playfully, then [if cunts of player > 0]moves on further down, brushing over your nether lips with a finger[else]brushes a finger up and down your crack[end if], dipping in just the tip to wiggle it inside you a little. 'Oh yeah, I'll enjoy egging you,' the white fox says in an eager tone, then leans forward to stick her muzzle between your thighs. Breathing in deeply, she takes in your scent and lets out a satisfied sound, followed by the words, 'Let's see if you taste as good as you smell.' And with that, she sticks out her tongue to lap over your [if cunts of player > 0]sex[else]pucker[end if]. The stroke of her warm, wet tongue over your nether lips and clit sends pleasant shivers up your spine, making you tremble in lust and bury your fingers in the softness of the bedding. 'Mmhmm...' Miyuki hums in satisfaction as she slips her tongue into your hole after a little bit of teasing, wiggling it around playfully.";
-	say "     For you don't know how long, you just give yourself to her oral service, closing your eyes to concentrate on nothing but the brush of that eager tongue, passing over your sensitive parts again and again. Then eventually, something else - something new - nudges your [if cunts of player > 0]nethers[else] pucker. It is a little hotter than Miyuki's tongue, and... firmer, it seems. Opening your eyes once more and glancing over your shoulder, you see your white-furred partner beaming down at you from where she is kneeling right behind you. She raises what is in her hand - the long fleshy tube of her ovipositor, slick and prepared to plunge into your depths. 'Ready for the time of your life, sweetie?' she asks in impish amusement and wiggles her eyebrows at you.";
+	say "     Miyuki joins you immediately, kneeling behind you and placing her paw-hands on the raised buttocks of your behind. She squeezes and gropes your ass playfully, then [if player is female]moves on further down, brushing over your nether lips with a finger[else]brushes a finger up and down your crack[end if], dipping in just the tip to wiggle it inside you a little. 'Oh yeah, I'll enjoy egging you,' the white fox says in an eager tone, then leans forward to stick her muzzle between your thighs. Breathing in deeply, she takes in your scent and lets out a satisfied sound, followed by the words, 'Let's see if you taste as good as you smell.' And with that, she sticks out her tongue to lap over your [if player is female]sex[else]pucker[end if]. The stroke of her warm, wet tongue over your nether lips and clit sends pleasant shivers up your spine, making you tremble in lust and bury your fingers in the softness of the bedding. 'Mmhmm...' Miyuki hums in satisfaction as she slips her tongue into your hole after a little bit of teasing, wiggling it around playfully.";
+	say "     For you don't know how long, you just give yourself to her oral service, closing your eyes to concentrate on nothing but the brush of that eager tongue, passing over your sensitive parts again and again. Then eventually, something else - something new - nudges your [if player is female]nethers[else] pucker. It is a little hotter than Miyuki's tongue, and... firmer, it seems. Opening your eyes once more and glancing over your shoulder, you see your white-furred partner beaming down at you from where she is kneeling right behind you. She raises what is in her hand - the long fleshy tube of her ovipositor, slick and prepared to plunge into your depths. 'Ready for the time of your life, sweetie?' she asks in impish amusement and wiggles her eyebrows at you.";
 	WaitLineBreak;
-	say "     Your happy nod is the last thing Miyuki was waiting for, moving her hips to sink herself into you right away. Your wet [if cunts of player > 0]and already aroused nethers part[else]and relaxed pucker stretches[end if] easily around the pointy tip, allowing her to slide the gray shaft deep into the waiting cave and filling you out very well. Miyuki keeps going until you can feel the slight ridges of her scaly crotch against your buttocks, having buried herself all the way inside you. 'You feel amazing baby,' she purrs, then bends her muzzle down to make out with you, sharing kiss after kiss before she eventually starts to rock her hips back and forth, fucking you in a slow but steady rhythm. You can't help but moan out loud at having her fourteen-inch ovipositor sawing in and out of your body, especially when she changes the angle of thrust every so often, rubbing spots that you never knew you had. Seems like she wants to make this as good as possible for both of you.";
-	say "     Miyuki's slow, gentle start at having sex with you builds quickly to a quite vigorous pounding, as the ice fox humps your [if cunts of player > 0]eager pussy[else]raised ass[end if] with seemingly boundless stamina, really pushing all of your buttons as she does so. Her scaly crotch hits your buttocks again and again, creating slapping noises that echo throughout the underground home around you. Quite a sensation to take that long ovipositor of hers into your body, making you thankful for her prolonged oral service that relaxed and stretched your hole. Especially now that Miyuki seems to be getting closer and closer to an orgasm and you can feel something large and bulgy at the base of her appendage.";
+	say "     Your happy nod is the last thing Miyuki was waiting for, moving her hips to sink herself into you right away. Your wet [if player is female]and already aroused nethers part[else]and relaxed pucker stretches[end if] easily around the pointy tip, allowing her to slide the gray shaft deep into the waiting cave and filling you out very well. Miyuki keeps going until you can feel the slight ridges of her scaly crotch against your buttocks, having buried herself all the way inside you. 'You feel amazing baby,' she purrs, then bends her muzzle down to make out with you, sharing kiss after kiss before she eventually starts to rock her hips back and forth, fucking you in a slow but steady rhythm. You can't help but moan out loud at having her fourteen-inch ovipositor sawing in and out of your body, especially when she changes the angle of thrust every so often, rubbing spots that you never knew you had. Seems like she wants to make this as good as possible for both of you.";
+	say "     Miyuki's slow, gentle start at having sex with you builds quickly to a quite vigorous pounding, as the ice fox humps your [if player is female]eager pussy[else]raised ass[end if] with seemingly boundless stamina, really pushing all of your buttons as she does so. Her scaly crotch hits your buttocks again and again, creating slapping noises that echo throughout the underground home around you. Quite a sensation to take that long ovipositor of hers into your body, making you thankful for her prolonged oral service that relaxed and stretched your hole. Especially now that Miyuki seems to be getting closer and closer to an orgasm and you can feel something large and bulgy at the base of her appendage.";
 	WaitLineBreak;
-	say "     Then suddenly, Miyuki hammers her hips forward forcefully, making you groan at the depth of her sudden penetration - but then, another sensation starts to occupy your senses - pressure against your stretched [if cunts of player > 0]pussy[else]asshole[end if]. In what seems like an unstoppable expansion, her shaft grows in diameter, stretched out by an oval shape pushed along inside it. An egg! Miyuki breathes hard and you can hear her strain a bit as she pushes again and again with inner muscles, making the bulge wander down her ovipositor until it is a little more than halfway past your stretched opening. At that point your strained muscles pull tight around her hollow appendage, squeezing the egg along to almost squirt into your depths. 'Fuck yeah, it feels great to egg you. I've been missing this feeling,' Miyuki groans in lust, leaning forward to kiss the side of your neck.";
+	say "     Then suddenly, Miyuki hammers her hips forward forcefully, making you groan at the depth of her sudden penetration - but then, another sensation starts to occupy your senses - pressure against your stretched [if player is female]pussy[else]asshole[end if]. In what seems like an unstoppable expansion, her shaft grows in diameter, stretched out by an oval shape pushed along inside it. An egg! Miyuki breathes hard and you can hear her strain a bit as she pushes again and again with inner muscles, making the bulge wander down her ovipositor until it is a little more than halfway past your stretched opening. At that point your strained muscles pull tight around her hollow appendage, squeezing the egg along to almost squirt into your depths. 'Fuck yeah, it feels great to egg you. I've been missing this feeling,' Miyuki groans in lust, leaning forward to kiss the side of your neck.";
 	say "     The ice fox's ovipositor keeps up its rhythmic contractions, working the egg ever further into your body until it eventually starts to peek out of the tube at the end. 'Time to give this little thing another good push,' your sexy partner says with a smile on her muzzle, then pulls back a little bit before giving you another hard and deep thrust. ";
-	if cunts of player > 0:
+	if player is female:
 		if cunt length of player > 13: [longer than her cock]
 			say "As Miyuki reaches her deepest penetration yet, her ovipositor pushes out the slick egg in almost a squirt, sending it sliding deeper into your large pussy. ";
 		else: [shorter than her cock]
 			say "Forcing its way past the opening of your womb, Miyuki's ovipositor pushes out the slick egg in almost a squirt, sending it to lodge securely in your innermost self. ";
 	else: [ass-fuck]
 		say "As Miyuki reaches her deepest penetration yet, her ovipositor pushes out the slick egg in almost a squirt, sending it sliding ever deeper into the twisting tunnel of your asshole. You don't think you've ever had anything that far up there before. ";
-	say "'Damn - putting an egg in such a nice and tight hole feels great. Too bad I can't tie with you like this though... I like having my knot stuck in someone too. Oh well, maybe next time...' Miyuki says in a well-satisfied tone, then wraps her arms around you from behind, seeking out your crotch. Wound up as getting eaten, fucked and egged has made you, it doesn't take her long in stroking your [if cunts of player > 0]clit[else if cocks of player > 0]cock[else]crotch[end if] till you reach your own orgasm, trembling hard in her grasp as a breathtaking climax rocks your body.";
+	say "'Damn - putting an egg in such a nice and tight hole feels great. Too bad I can't tie with you like this though... I like having my knot stuck in someone too. Oh well, maybe next time...' Miyuki says in a well-satisfied tone, then wraps her arms around you from behind, seeking out your crotch. Wound up as getting eaten, fucked and egged has made you, it doesn't take her long in stroking your [if player is female]clit[else if player is male]cock[else]crotch[end if] till you reach your own orgasm, trembling hard in her grasp as a breathtaking climax rocks your body.";
 	WaitLineBreak;
 	say "     'That - was very, very good,' Miyuki tells you in a pleased tone, licking behind your ear playfully. Then she slowly pulls her ovipositor out of you, allowing it to retract fully into her scaled slit. The snow-white fox follows up by laying down next to you, her arms holding and caressing your body and especially your slightly swollen belly. Exhausted from the sex, you stay cuddled up with her for quite a while before eventually getting back up and collecting your clothes and gear from where it lies strewn about on the ground.";
 	ovichance;

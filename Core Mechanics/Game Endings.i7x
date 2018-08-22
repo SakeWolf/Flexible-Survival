@@ -25,7 +25,7 @@ carry out vetcheat:
 			level up;
 	decrease score by 400;
 
-understand "junetastic" as supersponsor.
+understand "Study" as supersponsor.
 
 When play ends:
 	clear the screen;
@@ -95,9 +95,18 @@ when play ends:
 		say "     You have perished from [if hunger of player >= 100 and thirst of player >= 100]starvation and thirst[else if hunger of player >= 100]starvation[else]thirst[end if] and are no more. Your body becomes a meal for another of the more predatory creatures roaming the city.";
 	else if bodyname of player is "Tigertaur Sex Toy":
 		say "     Even though you try a few times, you never manage to escape the clutches of your tigertuar masters, and servicing them eventually becomes the only reason for your existence, supplanting all other thoughts you might once have had.";
-		stop the action;		
+		stop the action;
 	else if bodyname of player is "DBrute Slave":
 		say "     Your new reality in hell focuses on satisfying the relentless lusts of your demon brute masters, as well as being shared around for any other hellspawn he feels like allowing a ride...";
+		stop the action;
+	else if bodyname of player is "Hunter's Bitch":
+		if player is female:
+			say "     Having succumbed to the alpha husky's indoctrination, your next few days are spent being fucked again and again, until you are nothing but another husky bitch in Hunter's pack. Still, you only ever play second fiddle to Garnet, whom he is absolutely obsessed by, having gone so far as to search out the movie starlet to take for himself and make her a bitch. Therefore, most of your alpha's time is spent having sex with her. You're drawn into his play with the transformed movie star too, often being ordered to lick cum from her pussy or make out with the woman, with Hunter watching or fucking you as you do so.";
+		else: [male & neuter]
+			if "Male Preferred" is not listed in feats of player: [can transform to female]
+				say "     Having succumbed to the alpha husky's indoctrination, your next few days are spent being fucked again and again, with the dominant canine gleefully commenting about[if player is male] your cock shrinking more and more, until [end if]the moment when the flesh of your crotch forms the first folds of a new and virgin pussy. Not that you keep your cherry more than a few minutes, as he takes great pleasure to [']claim['] you fully by humping a heavy load into the virginal womb of yours. Still, you only ever play second fiddle to Garnet, whom he is absolutely obsessed by, spending most of the day having sex with her. You're drawn into his play with the transformed movie star too, often being ordered to lick cum from her pussy or make out with the woman, with Hunter watching or fucking you as you do so.";
+			else: [player can't become female]
+				say "     Having succumbed to the alpha husky's indoctrination, your next few days are spent being fucked again and again, with the dominant canine growling a little about the fact that your gender doesn't seem to want to change at all. Still, he breaks you in good as his bitch-boy, used to taking that thick shaft all the time and serving as his guard for when the dominant male goes all out fucking Garnet. Having gone so far as to search out the movie starlet in the middle of the nanite apocalypse, just to take her for himself and make her a bitch, the man is absolutely obsessed with her. You're drawn into his play with the transformed movie star too, often being ordered to lick his cum from her pussy, with Hunter watching or fucking your ass as you do so.";
 		stop the action;
 	else if bodyname of player is "Demon Slave":
 		say "     Your new reality in hell focuses on satisfying Skarnoth's every desire - of which there are many, mostly carnal ones. As the overlord of his own little demonic realm, your master has the power to play with your body shape too, transforming you as he wishes to better enjoy breaking you to his will...";
@@ -107,14 +116,14 @@ when play ends:
 		stop the action;
 	else if bodyname of player is "dead":
 		stop the action;
-	else if humanity of the player < 10 and HP of the player > 0:
+	else if humanity of player < 10 and HP of the player > 0:
 		if bodyname of player is "Dragoness" and HP of doctor matt <= 100:
 			say "Following some unknown instinct, you seek out another of your own, and home in on Orthas, the dragon that was guarding the lab. She pets you gently along your neck and makes soothing sounds that has you almost purring. She proves to be a loving and kind mistress and you protect her fiercely for the remainder of your long life.";
 	else:
 		say "You emerge from your harrowing experience with your mind intact, with your [bodyname of player] form and [facename of player] face.";
 		if bodyname is "Human":
 			say "Despite the traumas set on you, you do your best to fit back in with humanity after the rescue arrives.";
-		if cock length of player > 10 or cock width of player > 6 and cocks of player > 0:
+		if cock length of player > 10 or cock width of player > 6 and player is male:
 			say "Your extreme masculine attributes prove to be more than a little awkward. As society puts itself back together, you do find a niche. Others, changed as you, require the services of such studs, and you never lack for something to do on the weekends.";
 			if cocks of player > 1:
 				say "Your multiple endowments become quite popular amongst some infected, whom come from some great distance to be serviced by you. Though it is illegal to charge for such services, many leave you a 'gift' regardless, even a marriage proposal or two.";
@@ -123,7 +132,7 @@ when play ends:
 		else:
 			say "Your unnatural [skin of player] flesh makes you stand out in a crowd. You find it difficult to keep friends outside of other infected, even after you're declared safe for contact.";
 		if "Fertile" is listed in feats of player and ( number of entries in childrenfaces + FeralBirths) > 5:
-			if cunts of player > 0:
+			if player is female:
 				say "You've been pregnant so many times and given birth to so many children that the nanites make a very strange change to your reproductive organs. Your body automatically stored a large amount of cum from the last creature that screwed you. Each time you give birth, a small amount of the cum is used to re-impregnate you automatically. You spend the rest of your life in a constant state of pregnancy. At first, you're alarmed by this, but your ever-growing brood of children cares for your every whim so you quickly begin to enjoy your new life.";
 			else if player is mpreg_ok and mpregcount >= 6:
 				if "Breeding True" is not listed in feats of player and "They Have Your Eyes" is not listed in feats of player:

@@ -191,7 +191,7 @@ to say TylerBodyTalkMenu:
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]100 - Nevermind[as]100[end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
 	while sextablerun is 0:
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
@@ -207,16 +207,16 @@ to say TylerBodyTalkMenu:
 				if (nam is "Search the body"):
 					say "[TylerBody2]";
 				wait for any key;
-		else if calcnumber is 100:
+		else if calcnumber is 0:
 			say "Break off the conversation?";
-			if the player consents:
+			if player consents:
 				now sextablerun is 1;
 				say "     You step back from the dead body, shaking your head slightly as it gives no response.";
 				wait for any key;
 			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
 
 
@@ -271,7 +271,7 @@ to say TawnyaTalkMenu:
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]100 - Nevermind[as]100[end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
 	while sextablerun is 0:
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
@@ -287,16 +287,16 @@ to say TawnyaTalkMenu:
 				if (nam is "Motive Suspicion"):
 					say "[TawnyaMotive]";
 				wait for any key;
-		else if calcnumber is 100:
+		else if calcnumber is 0:
 			say "Break off the conversation?";
-			if the player consents:
+			if player consents:
 				now sextablerun is 1;
 				say "     You shake your head and tell the guard at the door that you don't have anything to say to her. He takes both of you back to lockup.";
 				wait for any key;
 			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
 
 
@@ -304,17 +304,17 @@ to say TawnyaFurEvidence:
 	if TawnyaFurSuspicion is 0: [never talked about it]
 		say "     Moving your hand into your pocket, you pull out the patch of brown fur and show it to her. 'The hell you showing it to me, are you stupid?' she asks you, her tone belaying that she does believe you are dumb. You tell her that you found it on the body and thought that it might be hers. The look on her face now says that Tawnya thinks you're beyond idiocy right now. 'I'm a fucking lizard-morph. I ain't got no fur on any part of my body. Are you blind?' She snarks. You shake your head mentally at her insults as you do believe you should check every possibility.";
 		say "     [bold type]Believe her? She might not be pure lizard...[roman type][line break]";
-		say "     [line break]";
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Sure, she seems trustworthy.";
 		say "     ([link]N[as]n[end link]) - Nope, it's time to strip!";
 		if player consents:
-			say "     [line break]";
+			LineBreak;
 			say "     She seems like a pretty trustworthy person, so you nod at her comment that she has no fur. Seeing the time, you realize you've been here a tiny bit and it appears the guard knows this too. The guard walks up and grabs Tawnya by the hand. He tells you that if you want to talk to her again, just approach her, otherwise she needs to go back to her cell. You nod and follow the guard and the irritated lizard woman back to lockup where you're once more face to face with the other suspects.";
 			now TawnyaFurSuspicion is 1; [she said she has none]
 		else:
-			say "     [line break]";
+			LineBreak;
 			say "     [bold type]How do you want to get to her fur?[roman type][line break]";
-			say "     [line break]";
+			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Sex her up";
 			say "     ([link]N[as]n[end link]) - Talk her into showing you everything";
 			if player consents:
@@ -334,17 +334,17 @@ to say TawnyaFurEvidence:
 	else if TawnyaFurSuspicion is 1: [she said before she has no fur]
 		say "     'You're totally a fucking dumbass, I told you I DON'T HAVE FUR!' she says, yelling the last part into your face. Though she does back down when the wolverine gets into a pose that basically says that if she doesn't then he'll attack her. Instead, she just grumbles about idiots who don't know when to give up. However, while she's having her quiet monologue you realize you asked her again because you couldn't truly accept her earlier response at face value. Although.... then again she does seem trustworthy.";
 		say "     [bold type]Believe her? She might not be a pure lizard...[roman type][line break]";
-		say "     [line break]";
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Sure, she seems trustworthy.";
 		say "     ([link]N[as]n[end link]) - Nope, it's time to strip!";
 		if player consents:
-			say "     [line break]";
+			LineBreak;
 			say "     You shake your head and decide to accept her statement once again. For one, the female lizard appears to be getting rather pissed at you and for two, while that anger is there, she does seem to be trustworthy. So, with a sigh you tell the Wolverine that you're done for now. He moves to Tawnya and grabs her arm, a little tightly if the wince on the lizard woman's face said anything. But then again she should have known better than to get angry in the presence of a wolverine when she's a suspect. They don't take no shit from potential law breakers, especially severe ones like murder. The two of you are then directed back to the lockup where you see the other suspects.";
 			now TawnyaFurSuspicion is 1; [she said she has none]
 		else:
-			say "     [line break]";
+			LineBreak;
 			say "     [bold type]How do you want to get to her fur?[roman type][line break]";
-			say "     [line break]";
+			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Sex her up";
 			say "     ([link]N[as]n[end link]) - Talk her into showing you everything";
 			if player consents:
@@ -364,7 +364,7 @@ to say TawnyaFurEvidence:
 	else if TawnyaFurSuspicion is 2: [she showed before she has no fur]
 		say "     'You've already seen that I have no fur so what the hell are you asking about that for?' the lizard-morph asks you. ";
 		say "     [bold type]Get it on with her?[roman type][line break]";
-		say "     [line break]";
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Sex with murder suspects is exciting!";
 		say "     ([link]N[as]n[end link]) - Err, no - better not...";
 		if player consents:
@@ -426,7 +426,7 @@ to say CaneTalkMenu:
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]100 - Nevermind[as]100[end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
 	while sextablerun is 0:
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
@@ -442,16 +442,16 @@ to say CaneTalkMenu:
 				if (nam is "Motive Suspicion"):
 					say "[CaneMotive]";
 				wait for any key;
-		else if calcnumber is 100:
+		else if calcnumber is 0:
 			say "Break off the conversation?";
-			if the player consents:
+			if player consents:
 				now sextablerun is 1;
 				say "     You shake your head and tell the guard at the door that you don't have anything to say to him. He takes both of you back to lockup.";
 				wait for any key;
 			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
 
 
@@ -508,7 +508,7 @@ to say BarryTalkMenu:
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]100 - Nevermind[as]100[end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
 	while sextablerun is 0:
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
@@ -524,16 +524,16 @@ to say BarryTalkMenu:
 				if (nam is "Motive Suspicion"):
 					say "[BarryMotive]";
 				wait for any key;
-		else if calcnumber is 100:
+		else if calcnumber is 0:
 			say "Break off the conversation?";
-			if the player consents:
+			if player consents:
 				now sextablerun is 1;
 				say "     You shake your head and tell the guard at the door that you don't have anything to say to him. He takes both of you back to lockup.";
 				wait for any key;
 			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
 
 to say BarryFurEvidence:
@@ -541,7 +541,7 @@ to say BarryFurEvidence:
 		say "     Once the two of you are situated in the interrogation room you pull out your only piece of physical evidence, the fur. Barry gives it a curious look, wondering why you brought that out. You mention that this was found in Tyler's dead hands and that since it doesn't match his, it was probably the killer's. The bear nods, following the conversation so far. 'So... what you want to know is if it's mine?' he asks you. You nod, saying that he got it right on the mark. 'Good, let me see it for a second,' Barry requests of you. It's odd but you shrug and hand it to him. The bear appears to feel it for a bit before laughing and setting it on the table.";
 		say "     'It's not mine, it's far too soft to be. Here, feel my fur,' the guy says, pulling your hand to his fur. As soon as you touch the big male's fur you immediately can tell that it's not him. Compared to the evidence, the bear's is slightly rough, but not enough to cause discomfort. The evidence on the other hand is extremely soft, as if it was silk. However, you notice that your hand is groping Barry's body a bit, and said man is grinning widely at you. 'Ohoho, do you want a closer look?' He grins lewdly at you, causing a warmth to pool down below.";
 		say "     [bold type]Do you want to have sex with the big ol['] bear?[roman type][line break]";
-		say "     [line break]";
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Sure! He doesn't seem too bad for a murder suspect.";
 		say "     ([link]N[as]n[end link]) - Err, no - better not...";
 		if player consents:
@@ -551,7 +551,7 @@ to say BarryFurEvidence:
 			say "     With a mental gulp you slowly walk over to the bear and get onto his lap, positioning yourself so that his cock is poking at your pucker. The big guy wraps his arms around you and nuzzles your face with his muzzle, littering kisses on you, as he slowly pushes his dick into you. It appears that Barry's preparation did some good as the big prick doesn't cause as much pain as you thought it would. Inch by inch, his manhood buries itself into you. Once he's balls deep into you, he maneuvers your face so that it's facing his, with his muzzle no less, before kissing you softly. When he sees the confusion on your face the guy chuckles at you. 'You're probably wondering why I'm so soft with you. I'm like that with all my lovers. I am a big teddy bear, after all,' he says. Shortly after he finishes speaking he begins to pull out, quickly thrusting back in once only his cockhead is left in.";
 			say "     Just as Barry said, the fucking is nice and loving with him kissing you softly, his tongue practically caressing yours the entire time. It's during this intimate time that you get rather familiar with his fur and once more confirm that your evidence couldn't point to him. Where the fur you found was extremely soft, the bear's fur was neither soft nor rough... it was just right. You slowly lose yourself in the love-making, for that was the only thing that the two of you were doing could be. You surrender yourself to the loving kisses, the hugs, and the nuzzles, all of it making you feel happy and peaceful. Sadly though, all things must come to an end and the bear soon climaxes, releasing his load into your ass, the warmth of it filling you up.";
 			WaitLineBreak;
-			say "     The two of you lay there just cuddling and sharing chaste kisses, enjoying the post-coitus bliss. During this time, you wonder if possibly the bear is single before shaking your head, you have a murder you need to solve. Perhaps after the mystery is solved? The two of you then get up and slowly get dressed. Once you two are fully clothed, the bear pulls you into one last kiss before speaking. 'I loved our time together, perhaps you could find me after all this clears up?' he asks you. You tell him with a smile that you'll think about it before asking the guard to come in. The wolverine tells you that it was a good thing you called him when you did, as it was time for the suspects' lunch. You nod and follow the guard and Barry back to lockup where you wonder what to do next.";
+			say "     The two of you lay there just cuddling and sharing chaste kisses, enjoying the post-coitus bliss. During this time, you wonder if possibly the bear is single before shaking your head, you have a murder you need to solve. Perhaps after the mystery is solved? The two of you then get up and slowly get dressed. Once you two are fully clothed, the bear pulls you into one last kiss before speaking. 'I loved our time together, perhaps you could find me after all this clears up?' he asks you. You tell him with a smile that you'll think about it before asking the guard to come in. The wolverine tells you that it was a good thing you called him when you did, as it was time for the suspects['] lunch. You nod and follow the guard and Barry back to lockup where you wonder what to do next.";
 			now BarryFurSuspicion is 2;
 		else:
 			say "     You shake your head which causes the bear to give you a disappointed look. 'Well, if you change your mind, you know where to find me,' he says to you. You nod and then turn to the wolverine guard. Said male asks you what you want, so you tell him that you're done with Barry for now. The guy makes a humming noise before taking you two back to lockup where you wonder what you'll do next.";
@@ -559,7 +559,7 @@ to say BarryFurEvidence:
 	if BarryFurSuspicion is 1:
 		say "     'Oh? You're back? Are you up for a ride on the big bad bear?' Barry asks you, wiggling his eyebrows and grinning lewdly at you.";
 		say "     [bold type]Do you want to have sex with the big ol['] bear?[roman type][line break]";
-		say "     [line break]";
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Sure! He doesn't seem too bad for a murder suspect.";
 		say "     ([link]N[as]n[end link]) - Err, no - better not...";
 		if player consents:
@@ -569,7 +569,7 @@ to say BarryFurEvidence:
 			say "     With a mental gulp you slowly walk over to the bear and get onto his lap, positioning yourself so that his cock is poking at your pucker. The big guy wraps his arms around you and nuzzles your face with his muzzle, littering kisses on you, as he slowly pushes his dick into you. It appears that Barry's preparation did some good as the big prick doesn't cause as much pain as you thought it would. Inch by inch, his manhood buries itself into you. Once he's balls deep into you, he maneuvers your face so that it's facing his, with his muzzle no less, before kissing you softly. When he sees the confusion on your face the guy chuckles at you. 'You're probably wondering why I'm so soft with you, I'm like that with all my lovers. After all, I'm a big teddy bear after all,' he says. Shortly after he finishes speaking he begins to pull out, quickly thrusting back in once only his cockhead is left in.";
 			say "     Just as Barry said, the fucking is nice and loving with him kissing you softly, his tongue practically caressing yours the entire time. It's during this intimate time that you get rather familiar with his fur and once more confirm that your evidence couldn't point to him. Where the fur you found was extremely soft, the bear's fur was neither soft nor rough... it was just right. You slowly lose yourself in the love-making, for that was the only thing that the two of you were doing could be. You surrender yourself to the loving kisses, the hugs, and the nuzzles, all of it making you feel happy and peaceful. Sadly though, all things must come to an end and the bear soon climaxes, releasing his load into your ass, the warmth of it filling you up.";
 			WaitLineBreak;
-			say "     The two of you lay there just cuddling and sharing chaste kisses, enjoying the post-coitus bliss. During this time, you wonder if possibly the bear is single before shaking your head, you have a murder you need to solve. Perhaps after the mystery is solved? The two of you then get up and slowly get dressed. Once you two are fully clothed, the bear pulls you into one last kiss before speaking. 'I loved our time together, perhaps you could find me after all this clears up?' he asks you. You tell him with a smile that you'll think about it before asking the guard to come in. The wolverine tells you that it was a good thing you called him when you did, as it was time for the suspects' lunch. You nod and follow the guard and Barry back to lockup where you wonder what to do next.";
+			say "     The two of you lay there just cuddling and sharing chaste kisses, enjoying the post-coitus bliss. During this time, you wonder if possibly the bear is single before shaking your head, you have a murder you need to solve. Perhaps after the mystery is solved? The two of you then get up and slowly get dressed. Once you two are fully clothed, the bear pulls you into one last kiss before speaking. 'I loved our time together, perhaps you could find me after all this clears up?' he asks you. You tell him with a smile that you'll think about it before asking the guard to come in. The wolverine tells you that it was a good thing you called him when you did, as it was time for the suspects['] lunch. You nod and follow the guard and Barry back to lockup where you wonder what to do next.";
 			now BarryFurSuspicion is 2;
 		else:
 			say "     You shake your head which causes the bear to give you a disappointed look. 'Well, if you change your mind, you know where to find me,' he says to you. You nod and then turn to the wolverine guard. Said male asks you what you want, so you tell him that you're done with Barry for now. The guy makes a humming noise before taking you two back to lockup where you wonder what you'll do next.";

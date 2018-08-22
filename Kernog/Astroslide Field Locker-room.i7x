@@ -65,7 +65,7 @@ to say RomanHumiliation:
 	say "     Minutes pass. The gorillas all take their turn into their former captain, and as the others arrive, see the scene, and learn of the captain's dirty secret, Roman's torment is prolonged for the whole part of an hour, then two. At first, Roman was struggling, but at his third penetration, and fourth forced blowjob, a powerful, forced orgasm shook his body, under the cheers of the crowd. After some time, the gorillas all decide to [']get some rest['], not before defacing Roman's body with a red marker. Now that the gorillas are not around him anymore, Roman's cum-covered body appears in all his glory. His belly is inflated with all the gorilla semen he was forced to intake, and some dripped out from his pussy and mouth. Roman pants, tears drying on his face. Your eyes and his meet. But there is nothing but broken lust in his expression. He's broken.";
 	say "     As you start to make your way out, you notice that the door to Roman's room is ajar. You take a look inside, and see a blue football helmet lying on a small bench. With a shrug, you opportunistically snag the helmet, and add it to your possessions.";
 	say "[bold type]You gain a football helmet![roman type][line break]";
-  increase carried of football helmet by 1;
+	increase carried of football helmet by 1;
 
 [General Sex menu]
 instead of fucking the Gorilla Team-Members:
@@ -76,7 +76,7 @@ instead of fucking the Gorilla Team-Members:
 		now sextablerun is 0;
 		blank out the whole of table of fucking options;
 		[]
-		if cocks of player > 0:
+		if player is male:
 			choose a blank row in table of fucking options;
 			now title entry is "Join in for a cum-bath (giving)";
 			now sortorder entry is 1;
@@ -87,7 +87,7 @@ instead of fucking the Gorilla Team-Members:
 		now sortorder entry is 2;
 		now description entry is "Take position in a circle of masturbating males and let them bathe you in their cum";
 		[]
-		if (cocks of player > 0 and Guy is not banned):
+		if (player is male and Guy is not banned):
 			choose a blank row in table of fucking options;
 			now title entry is "Join a chain fuck";
 			now sortorder entry is 3;
@@ -97,7 +97,7 @@ instead of fucking the Gorilla Team-Members:
 		repeat with y running from 1 to number of filled rows in table of fucking options:
 			choose row y from the table of fucking options;
 			say "[link][y] - [title entry][as][y][end link][line break]";
-		say "[link]100 - Nevermind[as]100[end link][line break]";
+		say "[link]0 - Nevermind[as]0[end link][line break]";
 		while sextablerun is 0:
 			say "Pick the corresponding number> [run paragraph on]";
 			get a number;
@@ -116,14 +116,14 @@ instead of fucking the Gorilla Team-Members:
 					if nam is "Join a chain fuck":
 						say "[GorillaTeamSex3]";
 					wait for any key;
-			else if calcnumber is 100:
+			else if calcnumber is 0:
 				say "Break off?";
-				if the player consents:
+				if player consents:
 					now sextablerun is 1;
 					say "     You step back from the gorilla you almost asked to have sex with, shaking your head slightly as he gives a questioning look.";
 					wait for any key;
 				else:
-					say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+					say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 			else:
 				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 		clear the screen and hyperlink list;
@@ -205,7 +205,7 @@ to say GorillaTeamSex1: [bukkake (giving)]
 		say "     You can't help but take hold of the gorilla's head and pump in and out of [if tempGorillaGender is 0]his[else]her[end if] throat a few times, but eventually let go again and allow the kneeling athlete to move on to your jerking buddy. Your neighbor gives a lusty groan of, 'Oh yeah! [if tempGorillaGender is 0]He[else]She[end if]'s a real pro with that sweet mouth of [if tempGorillaGender is 0]his[else]hers[end if]! No wonder you took your time,' while at the same time putting a hand on your shoulder to steady himself. Eventually, the kneeling gorilla moves on to take care of the next guy and you move back to a mutual jerk-off with your buddy, continuing until the cocksucker has done a whole round pleasing everyone waiting for his attention. Then suddenly, the gorilla jerking you off grunts loudly, 'Let's paint him white boys,' and his hand starts to really pump your cock.";
 	else:
 		LineBreak;
-		say "	 You politely whispers to the gorilla that you'd prefer not. 'Hmpf. Suits yourself,' he says, and turns towards his other neighbor. Eventually, the newbie turns towards you, and closes [if tempGorillaGender is 0]his[else]her[end if] lips around your cock. It's clear that this [if tempGorillaGender is 0]guy[else]girl[end if] has had quite a bit of experience in taking care of male members, as [if tempGorillaGender is 0]he[else]she[end if] expertly deep-throats you and plays [if tempGorillaGender is 0]his[else]her[end if] tongue over just the right spots of the shaft and cock-head.";
+		say "     You politely whispers to the gorilla that you'd prefer not. 'Hmpf. Suit yourself,' he says, and turns towards his other neighbor. Eventually, the newbie turns towards you, and closes [if tempGorillaGender is 0]his[else]her[end if] lips around your cock. It's clear that this [if tempGorillaGender is 0]guy[else]girl[end if] has had quite a bit of experience in taking care of male members, as [if tempGorillaGender is 0]he[else]she[end if] expertly deep-throats you and plays [if tempGorillaGender is 0]his[else]her[end if] tongue over just the right spots of the shaft and cock-head.";
 		say "     You can't help but take hold of the gorilla's head and pump in and out of [if tempGorillaGender is 0]his[else]her[end if] throat a few times, but eventually let go again and allow the kneeling athlete to move on to your jerking buddy. Your neighbor gives a lusty groan of, 'Oh yeah! [if tempGorillaGender is 0]He[else]She[end if]'s a real pro with that sweet mouth of [if tempGorillaGender is 0]his[else]hers[end if]! No wonder you took your time,' while at the same time putting a hand on your shoulder to steady himself. Eventually, the kneeling gorilla moves on to take care of the next guy and you resume your own jerk-off, continuing until the cocksucker has done a whole round pleasing everyone waiting for his attention. Suddenly, the gorilla who proposed you to jerk off each other earlier grunts loudly: 'Let's paint him white boys,' and his hand starts to really pump his cock.";
 	WaitLineBreak;
 	say "     Joining the frantic fapping all around, you have a little bit of a competition with the ape next to you, to see who can get the other off first... and you win. It's a pretty close thing, with just seconds between the grunted bellow signifying his first splash of cum spraying out over the kneeling gorilla's arm and your own orgasm, pumping out a long streak of your creamy load to hit the newbie on the shoulder. The gathered simian wankers don't let their target wait long either, and within moments, [if tempGorillaGender is 0]he[else]she[end if] is soaked to the bone in warm and sticky cum. After the short while they need to finish coming and catching their breaths, the freshly cum-bathed gorilla is lifted by many hands, gripping [if tempGorillaGender is 0]him[else]her[end if] securely despite [if tempGorillaGender is 0]his[else]her[end if] slipperiness, then carried off to the showers with a chant of, 'One of us! One of us!'";
@@ -219,7 +219,7 @@ to say GorillaTeamSex2: [bukkake (receiving)]
 	say "     Eagerly agreeing to the proposition because he's the next in line, the right-hand guy from your original gorilla stud puts his hand on your head and pulls you towards his crotch, sliding his rock-hard prick between your welcoming lips with an aroused grunt. What follows is a very hot time in which you service countless men, with your whole reality pulling in to the small cock-filled circle all around you - long and short, thick and thin, cut or uncut, even flared and with a sheath in the case of the horseman - you take them all one by one, suckling hard and eagerly to taste their sweet pre-cum. The fapping sound of many hands stroking erect cocks fill the air around you as the horny studs jerk off in anticipation of their turn, with many also taking their teammates['] cocks in hand and giving them some attention too.";
 	WaitLineBreak;
 	say "     You can't say how long it takes, with all of your attention focused on the current shaft of man-meat in your mouth, but eventually something seems familiar about the hard cock being held out before you. Looking up, you realize that it's the original primate hunk with whom you started. As his strong hands grasp your head and he starts to face-fuck you with eager grunts, the gorilla soon roars, 'Unnngh - getting really close! Brothers, let's paint this bitch white, inside and out!' After another handful of frenzied thrusts that make his heavy balls smack your chin, the young man suddenly bellows out loud and you can feel his cock pulse inside your throat as spurt after spurt of his seed is pumped directly into your stomach.";
-	say "     Just moment later, the first of all the other guys jerking off on you joins him in orgasm, blasting your body with his white, creamy cum. Another follows before that guy's third shot, then another three at the same time, then more or less all the rest. From the corner of your eye, you see the horseman stud clasp his neighboring gorilla's shoulder tightly as a breathtaking climax rocks his body - turning his proudly flared shaft into almost a garden-hose of cum, drenching your whole front in his mighty load. You don't think there is any part of you that is not drenched in someone's seed - an amazing feeling that sends your own libido into overdrive. Now that they're no longer busy handling one cock after another, your hands fly to your own crotch, [if player is male]grasping your own manhood and wanking it in a frenzied pace. As wound up as you are, it's only a matter of moments before you reach the point of no return, adding some splashes of your own cum to the large puddle all around you[else if cunts of player > 0]sinking your fingers into your pussy and rubbing the little nub of your clit in a frenzy. As wound up as you are, it's only a matter of moments before you reach the point of no return, adding some splashes of your own femcum to the large puddle all around you[else]rubbing your genderless, but quite sensitive crotch in a frenzied pace. As wound up as you are, it's only a matter of moments before you reach the point of no return, trembling all over as an orgasm rocks through your body[end if].";
+	say "     Just moment later, the first of all the other guys jerking off on you joins him in orgasm, blasting your body with his white, creamy cum. Another follows before that guy's third shot, then another three at the same time, then more or less all the rest. From the corner of your eye, you see the horseman stud clasp his neighboring gorilla's shoulder tightly as a breathtaking climax rocks his body - turning his proudly flared shaft into almost a garden-hose of cum, drenching your whole front in his mighty load. You don't think there is any part of you that is not drenched in someone's seed - an amazing feeling that sends your own libido into overdrive. Now that they're no longer busy handling one cock after another, your hands fly to your own crotch, [if player is male]grasping your own manhood and wanking it in a frenzied pace. As wound up as you are, it's only a matter of moments before you reach the point of no return, adding some splashes of your own cum to the large puddle all around you[else if player is female]sinking your fingers into your pussy and rubbing the little nub of your clit in a frenzy. As wound up as you are, it's only a matter of moments before you reach the point of no return, adding some splashes of your own femcum to the large puddle all around you[else]rubbing your genderless, but quite sensitive crotch in a frenzied pace. As wound up as you are, it's only a matter of moments before you reach the point of no return, trembling all over as an orgasm rocks through your body[end if].";
 	WaitLineBreak;
 	say "     'Nice job,' a familiar voice tells you, then you feel the soft touch of a towel wiping at your face. Your original gorilla stud uses it to clean you up - but soon the towel is totally drenched and he gives a resigned chuckle before dropping it. 'Let's get you clean in the showers,' he says a moment later, giving you a hand to help you stand up in the slippery state you are in. You are guided into the shower room next and soon find yourself under a warm spray of water, with your gorilla and two others washing you down, all the while giving you some lusty gropes. The warm and wet fun in the shower continues for a while, without going any further than just touching and rubbing, until you eventually leave the gorillas behind, walking out to dry yourself off and put your clothes back on.";
 	infect "Football Gorilla";

@@ -20,7 +20,7 @@ Instead of resolving a Quiet Apartment Building:
 		say "[mouseapts]";
 	else:
 		say "     The place seems safe and inviting. You don't see any cum stains or piles of discarded clothes around and there's no noise of creatures rustling about inside. The place isn't that big, it shouldn't take you that long to check it out. Perhaps you'll find something of use or even some survivors. Shall you follow your hunch and go in to search the place?";
-		if the player consents:
+		if player consents:
 			say "[mouseapts]";
 		else:
 			say "     Deciding against it and suddenly wary of this impulse to enter the building, you back away quickly. You catch sight of some small mice looking from the windows as you back away. Again, you feel that call to go inside and quickly turn and run, wanting to get some distance between you and the strange mice who tried to lure you in.";
@@ -33,18 +33,18 @@ to say mouseapts:
 	say "     'We called and you have come. You will join us in mousedom. Join us in being of one mind. Accept us and be part of the mouse collective,' they say, speaking in unison. With so many of them around you, your mind throbs under the assault of thoughts that are not your own, hearing those words spoken both in your ears and in your brain. These mice, somehow all of one united mind, are trying to overpower your will. They drew you in here and now these beautiful, busty mice have you. These sexy herms pull you over to the couch, kissing and fondling you as they do. You find yourself growing increasingly aroused by their short, mouse-like bodies and faces. They have such lovely, feminine bodies, large breasts and sizeable cocks as well. Why were you even resisting them, you find yourself wondering.";
 	WaitLineBreak;
 	say "     Sensing your increasing willingness, they release you and help you up onto the couch where you are snuggled by a bunch of them. Others set up in groups around the room, playing with one another. The mice run their paws over your [skinname of player] flesh while kissing and fondling you. One of them, somehow particularly beautiful despite looking pretty much the same as the rest, snuggles herself against you and starts kissing you passionately. She is meant to be with you, to be your mate. Your mind is so full of happiness, having found so many beautiful lovers and a perfect mate.";
-	if cocks of player > 0:
+	if player is male:
 		increase rachelfuck by 1;
 		say "     After breaking the kiss, the lovely mouse, whom you somehow know is called Rachel, slides down over your body, moving her hips to your groin. Your throbbing cock, already hard thanks to the helpful ministrations of another mouse, is held into position by that mouse so Rachel can lower herself down onto it[if cock length of player > 18]. The sexy mouse moans and squeaks as she tries to take your throbbing cock in, slowly stretching her wet cunny open to accept your huge cock. Her belly bulges considerably, stretching her small tummy to accept it, but accept it she does. Her paws rub over her filled belly and she starts riding you as best she can[else if cock length of player > 12]. The sexy mouse moans and squeaks as she tries to take your throbbing cock in, slowly lowering her wet cunny down over your large cock. Her belly bulges somewhat, stretching her small tummy as it fills her. Her paws rub over her filled belly and she starts riding you eagerly[else]. The sexy mouse moans and squeaks as she slides herself onto your throbbing cock. Loving the feel of having you inside her, she starts riding you eagerly[end if].";
 		WaitLineBreak;
 		say "     The other mice around you run their paws over your bodies, seeking to share in welcoming you into their group. With so many of the psychic mice around you, you can feel their pleasure as they have sex all around you. You are surrounded in it, faintly sharing in all of it: sucked cocks, licked nipples, fingered pussies, fucked cunts, throbbing cocks and so much more. And most of all, the joy of fucking your beautiful mate, Rachel. Her small, cute form. Her lovely breasts, which you can't help but fondle. Her hot cunt, which you eagerly thrust into again and again.";
 		say "     Soon enough, it all overwhelms you and you cum hard into her, spurting your rich, hot semen into her. Feeling your orgasm, she cums as well, soaking your crotch in her feminine juices. Her hard cock twitches against your tummy and you can sense her holding back, wanting to share that with you as well. As soon as your orgasm passes, you help her slide off your spent shaft, eager to help your murine mate. ";
-		if cunts of player > 0:
+		if player is female:
 			WaitLineBreak;
 			say "     Shifting onto your side, you rest one leg against the back of the couch and drape the other down, offering up your dripping pussy to her. She smiles as another mouse, sensing your intent, spreads your wet folds for you and third guides Rachel's cock into you. You both squeak in delight as she pumps into you hard and fast, already very close. You pull the other two into your welcoming arms, bringing their cocks to your mouth so you can alternate between sucking each of them off while that mousecock fucks you to another orgasm that all four of you share. You suck down their delicious semen while enjoying the feel of your mate's hot seed flowing into your womb.[impregchance]";
 		else:
 			say "     Eyeing her eight inch, throbbing manmeat, you can sense her mind, the collective mind, seeking how you'd prefer to enjoy it. Shall you suck her off (Y) or stretch out and let her fill your ass (N)?";
-			if the player consents:
+			if player consents:
 				say "     Sensing your desires, the mouse slides herself back up your body, bringing her throbbing cock to your mouth. You wrap your lips around it and start sucking. She rocks her hips, thrusting into your mouth, already very close. You can feel another mouse at your cock, licking and sucking it clean while a third moves in behind Rachel to lap at the cum leaking from her cunt. Sharing in all this soon gets to be too much and you cum again as Rachel blasts her seed down your throat while you feed another load to that helpful mouse sucking you off.";
 			else:
 				say "     Sensing your desires, the mouse slides back and helps you roll onto your front. Another helpful mouse spreads your ass cheeks for her, Giving her a good view of your tight pucker as another guides her cock into position for a nice, smooth entry into you. You groan softly, but are filled with pleasure at having her cock slowly stuffing your backside. She runs her paws over your back as starts pounding away at you hard and fast, already very close. You pull the other two into your welcoming arms, bringing their cocks to your mouth so you can alternate between sucking each of them off while that mousecock fucks you to another orgasm that all four of you share. You suck down their delicious semen while enjoying the feel of your mate's hot seed flowing into your bowels.[mimpregchance]";
@@ -209,7 +209,7 @@ to say RachelTalkMenu:
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]100 - Nevermind[as]100[end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
 	while sextablerun is 0:
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
@@ -223,16 +223,16 @@ to say RachelTalkMenu:
 				if (nam is "Chit Chat"):
 					say "[RachelTalk1]";
 				wait for any key;
-		else if calcnumber is 100:
+		else if calcnumber is 0:
 			say "Break off the conversation?";
-			if the player consents:
+			if player consents:
 				now sextablerun is 1;
 				say "     You step back from the mouse girl, shaking your head slightly as she gives a questioning look.";
 				wait for any key;
 			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
 
 to say RachelTalk1:
@@ -268,7 +268,7 @@ to say sexwithmousegirl:
 				say "[rachelsexfemale1]";
 			if T is 8 or T is 9:
 				say "[rachelsexfemale2]";
-		if cocks of player > 0:
+		if player is male:
 			let T be a random number between 1 and 5;
 			if T is 1 or T is 2:
 				say "[rachelsexmale1]";

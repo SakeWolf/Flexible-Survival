@@ -7,7 +7,7 @@ Section 1- Electric shockers
 
 [Moved to E-shocker file in Stripes folder.]
 
-Section 2-  Hyena cages
+Section 2 - Hyena cages
 
 Hyena cages is a situation.
 The sarea of Hyena cages is "Zoo".
@@ -17,7 +17,7 @@ Instead of Resolving a Hyena cages:
 	Now Hyena cages is resolved;
 
 
-Section 3-  Pachyderm predicament
+Section 3 - Pachyderm predicament
 
 Pachyderm predicament is a situation.
 The sarea of Pachyderm predicament is "Zoo".
@@ -31,7 +31,7 @@ Instead of Resolving a Pachyderm predicament:
 	say "     Sadly, you really don't see any way you can reach the employee to help with anything short of a helicopter, and you certainly aren't up to taking on two large foes of that size. Shaking your head, you move off into the zoo, trying not to shudder at the soon-to-be-elephantine employee's cries.";
 	Now Pachyderm predicament is resolved;
 
-Section 4-  Snake knot
+Section 4 - Snake knot
 
 Snake knot is a situation.
 The sarea of Snake knot is "Zoo".
@@ -41,7 +41,7 @@ Instead of Resolving a Snake knot:
 	Now Snake knot is resolved;
 
 
-Section 5-  Useful pamphlet
+Section 5 - Useful pamphlet
 
 Useful pamphlet is a situation.
 The sarea of Useful pamphlet is "Zoo".
@@ -49,12 +49,12 @@ The sarea of Useful pamphlet is "Zoo".
 Instead of Resolving a Useful pamphlet:
 	say "     Wandering around the zoo, you come across an area dedicated to visitor information. You browse through the few remaining pamphlets and find a couple that seem to be very pertinent on how to defend yourself from wild animals. Useful information indeed under the current circumstances!";
 	increase XP of player by 5;
-	Say "Your XP increases slightly due to the helpful pamphlet!";
+	say "Your XP increases slightly due to the helpful pamphlet!";
 	if a random chance of 1 in 6 succeeds:
 		now Useful pamphlet is resolved;
 
 
-Section 6-  Unidentified sex scene
+Section 6 - Unidentified sex scene
 
 Unidentified sex scene is a situation.
 The sarea of Unidentified sex scene is "Zoo".
@@ -66,7 +66,7 @@ Instead of Resolving a Unidentified sex scene:
 	Now Unidentified sex scene is resolved;
 
 
-Section 7-  Grizzly gone
+Section 7 - Grizzly gone
 
 Grizzly gone is a situation.
 The sarea of Grizzly gone is "Zoo".
@@ -75,12 +75,12 @@ Instead of Resolving a Grizzly gone:
 	say "     Traveling through the zoo in search of anything of use, you come across a zookeeper's hut that seems like something broke into it. Taking a chance, you look inside and see that most of the area seems to be empty and smelling of sex. About to leave, you notice several hurried notes someone left. Picking them up, you begin to leaf through them.";
 	say "     'The grizzly is gone from the enclosure this morning! No sign of it at all, and the door was left wide open! What the hell happened last night? I need to ask the night watch...'";
 	say "     'Holy shit! If anyone is reading this, I found the grizzly, and watch out, he seems to be a size larger than he was yesterday! And god if he doesn't seem to be smarter now, too! I locked him out of the shed, and I should be safe in here.'";
-	say "     'I don't know what the bear is up to out there, but there was a lot of grunting just a minute ago, and there is a strange smell in here now.. It smells kinda... good. For some reason the shack seems to be a size too small now, though...'";
+	say "     'I don't know what the bear is up to out there, but there was a lot of grunting just a minute ago, and there is a strange smell in here now. It smells kinda... good. For some reason the shack seems to be a size too small now, though...'";
 	say "     'Grizzly so good, grizzly cock sized juuust right.' The last note ends there, trailing off into an unrecognizable scrawl.";
 	Now Grizzly gone is resolved;
 
 
-Section 8-  Tasty Treats
+Section 8 - Tasty Treats
 
 Tasty Treats is a situation.
 The sarea of Tasty Treats is "Zoo".
@@ -91,11 +91,11 @@ Instead of Resolving a Tasty Treats:
 	Now Tasty Treats is resolved;
 
 
-Section 9-  AngieTrapped
+Section 9- - AngieTrapped
 
 [Moved to Angie file]
 
-Section 10-  Panda parade
+Section 10 - Panda parade
 
 Panda parade is a situation.
 The sarea of Panda parade is "Zoo".
@@ -106,7 +106,7 @@ Instead of Resolving a Panda parade:
 	Now Panda parade is resolved;
 
 
-Section 11-  Petting zoo
+Section 11 - Petting zoo
 
 Petting zoo is a situation.
 The sarea of Petting zoo is "Zoo".
@@ -118,7 +118,7 @@ Instead of Resolving a Petting zoo:
 	Now Petting zoo is resolved;
 
 
-Section 12-  Instructional video
+Section 12 - Instructional video
 
 Instructional video is a situation.
 The sarea of Instructional video is "Zoo".
@@ -129,7 +129,7 @@ Instead of Resolving a Instructional video:
 	Now Instructional video is resolved;
 
 
-Section 13- Vet supplies
+Section 13 - Vet supplies
 
 Vet supplies is a situation.
 The sarea of Vet supplies is "Zoo".
@@ -160,70 +160,70 @@ Instead of Resolving a Vet supplies:
 			say "     Looking over all the needles and foreign hormones, you decide it might just be best not to mess with your already messed up biochemistry any further than the infection already has.";
 	else:
 		say "     Deciding not to take your chances with any of the medicine designed for animals, you leave the veterinary bag where it lies, and continue along your way through the zoo.";
-[		Now Vet supplies is resolved;	]
+[		Now Vet supplies is resolved; ]
 
 
 to say vetsup_fshots:
 	say "     Examining the female shots you have laid out before you, you decide to discard the male shots, and slowly begin the process of injecting yourself with the female chemicals, your skin seeming to twitch as each animal based injection enters your body, and your head seeming to swim as a surge of estrogen rushes through your body, altering your perspective on things...";
-	if "Female Preferred" is listed in feats of the player:
+	if "Female Preferred" is listed in feats of player:
 		say "     While the chemicals running through your body rushes to your head, you groan as your instincts surge and makes you feel even more bestial than ever, you seem to feel as if your body could not truly be even more female oriented, and all the shots seem to do is make you feel more animalistic and feral than ever.";
 		decrease humanity of player by 40;
-	else if "Male Preferred" is listed in feats of the player:
+	else if "Male Preferred" is listed in feats of player:
 		say "     You can feel the female hormones running through your body as they counter your strong male orientation, your body at war with itself painfully as the hormones bringing your body back into proper equilibrium. Now you are afraid the beasts can change you into females to suit their pleasure and bear their offspring again...";
-		remove "Male Preferred" from feats of the player;
+		remove "Male Preferred" from feats of player;
 		decrease HP of player by 30;
-	else if "Herm Preferred" is listed in feats of the player:
+	else if "Herm Preferred" is listed in feats of player:
 		say "     You can feel the female hormones running through your body as they seek to over-balance your dual-natured bias. Your body is at war with itself painfully as the hormones shift your body towards a female-biased direction. Your body surges with the primal need to be bred and formerly divided instincts are focused towards this urge. You feel downright slutty as the chemicals react with and alter your body, and you feel very sure that you won't have to worry about becoming anything but purely female anymore!";
-		remove "Herm Preferred" from feats of the player;
-		add "Female Preferred" to feats of the player;
+		remove "Herm Preferred" from feats of player;
+		add "Female Preferred" to feats of player;
 		decrease HP of player by 20;
 	else:
 		say "     You can feel the female hormones rushing through your body, and they surprisingly feel amazing as they rush through your body, your body surges with the primal need to breed and formerly neglected maternal instincts are enhanced and strengthened. You feel downright slutty as the chemicals react with and alter your body, and you feel very sure that you won't have to worry about becoming a male anymore!";
 		decrease humanity of player by 20;
-		add "Female Preferred" to feats of the player;
+		add "Female Preferred" to feats of player;
 
 to say vetsup_mshots:
 	say "     Discarding the female shots, you focus your attention on the male treatments you have laid out, and slowly begin the process of injecting yourself with the chemicals, your skin seeming to twitch with each animal based injection, and your head seeming to swirl with a roar of bestial testosterone rushing through your body.";
-	if "Male Preferred" is listed in feats of the player:
+	if "Male Preferred" is listed in feats of player:
 		say "     While the testosterone running through your body rushes to your head, and makes you feel even more bestial than ever, you seem to feel as if your body could not truly be even more male oriented, and all the shots seem to do is make you feel more animalistic than ever.";
 		decrease humanity of player by 40;
-	else if "Female Preferred" is listed in feats of the player:
+	else if "Female Preferred" is listed in feats of player:
 		say "     You can feel the Male hormones running through your body as they counter your strong female orientation, your body at war with itself painfully as the hormones bringing your body back into proper equilibrium. Now you are afraid the beasts can change you into males to suit their pleasure again...";
-		Remove "Female Preferred" from feats of the player;
+		Remove "Female Preferred" from feats of player;
 		decrease HP of player by 30;
-	else if "Herm Preferred" is listed in feats of the player:
+	else if "Herm Preferred" is listed in feats of player:
 		say "     You can feel the male hormones running through your body as they seek to over-balance your dual-natured bias. Your body is at war with itself painfully as the hormones shift your body towards a male-biased direction. Your body surges with the primal need to breed and formerly divided instincts are focused towards this urge. You feel a rush of aggressive, male urges as the chemicals react with and alter your body, and you feel very sure that you won't have to worry about becoming anything but purely male anymore!";
-		remove "Herm Preferred" from feats of the player;
-		add "Male Preferred" to feats of the player;
+		remove "Herm Preferred" from feats of player;
+		add "Male Preferred" to feats of player;
 		decrease HP of player by 20;
 	else:
 		say "     You can feel the male hormones rushing through your body, and they surprisingly feel damn good as your more aggressive male tendencies are enhanced and strengthened. You feel downright predatory as the chemicals react with and alter your body, and you feel very sure that you won't have to worry about becoming a female anymore!";
 		decrease humanity of player by 20;
-		add "Male Preferred" to feats of the player;
+		add "Male Preferred" to feats of player;
 
 to say vetsup_hshots:
 	say "     Taking an assortment from both sets of treatments you have laid out, you slowly begin the process of injecting yourself with the chemicals. Your skin seeming to twitch with each animal based injection, and your head seeming to swirl with a roar of bestial testosterone and estrogen rushing through your body.";
-	if "Male Preferred" is listed in feats of the player:
+	if "Male Preferred" is listed in feats of player:
 		say "     While the medley of bestial hormones running through your body rushes to your head, it seems as if your body is infused with wild, lustful urges. You can feel the hormones running through your body as they seek to push your body out of male focus to some strange union of both. Your body is at war with itself painfully as the hormones shift your body towards this dual-biased direction. You have the urge to breed and be bred, both to sire and bear young. Your male-focused body alters and changes, becoming capable of achieving both of these lustful goals.";
-		Remove "Male Preferred" from feats of the player;
-		add "Herm Preferred" to feats of the player;
+		Remove "Male Preferred" from feats of player;
+		add "Herm Preferred" to feats of player;
 		decrease HP of player by 20;
-	else if "Female Preferred" is listed in feats of the player:
+	else if "Female Preferred" is listed in feats of player:
 		say "     While the medley of bestial hormones running through your body rushes to your head, it seems as if your body is infused with wild, lustful urges. You can feel the hormones running through your body as they seek to push your body out of female focus to some strange union of both. Your body is at war with itself painfully as the hormones shift your body towards this dual-biased direction. You have the urge to breed and be bred, both to sire and bear young. Your female-focused body alters and changes, becoming capable of achieving both of these lustful goals.";
-		Remove "Female Preferred" from feats of the player;
-		add "Herm Preferred" to feats of the player;
+		Remove "Female Preferred" from feats of player;
+		add "Herm Preferred" to feats of player;
 		decrease HP of player by 20;
-	else if "Herm Preferred" is listed in feats of the player:
+	else if "Herm Preferred" is listed in feats of player:
 		say "     While the medley of hormones running through your body rushes to your head, and makes you feel even more bestial and lustful than ever, it seems as if your body is already as focused on having a dual-gendered nature as it can be. All the shots seem to do is make you feel more animalistic than ever.";
 		decrease humanity of player by 40;
 	else:
 		say "     You can feel the medley of hormones rushing through your body, and they surprisingly feel damn good as your lustful tendencies are enhanced and strengthened. You feel both eager to breed and be bred as the chemicals react with and alter your body. These changes shift you towards a dual-biased direction. You feel very sure that you will be able to maintain a state of both male and female at once!";
 		decrease humanity of player by 20;
-		add "Herm Preferred" to feats of the player;
+		add "Herm Preferred" to feats of player;
 
 
 
-Section 14- Feeding time
+Section 14 - Feeding time
 
 Feeding time is a situation. The level of feeding time is 9.
 The sarea of Feeding time is "Zoo".
@@ -250,7 +250,7 @@ Instead of Resolving a Feeding time:
 		now Feeding time is resolved;
 
 
-Section 15- Security Station
+Section 15 - Security Station
 
 Security Station is a situation.
 The sarea of Security Station is "Zoo".
@@ -266,7 +266,7 @@ Instead of Resolving a Security Station:
 	Now Security Station is resolved;
 
 
-Section 16- Broken fences
+Section 16 - Broken fences
 
 Broken fences is a situation.
 The sarea of Broken fences is "Zoo".
@@ -276,7 +276,7 @@ Instead of Resolving a Broken fences:
 	Now Broken fences is resolved;
 
 
-Section 17- Wandering beasts
+Section 17 - Wandering beasts
 
 Wandering beasts is a situation.
 The sarea of Wandering beasts is "Zoo".
@@ -287,7 +287,7 @@ Instead of Resolving a Wandering beasts:
 	Now Wandering beasts is resolved;
 
 
-Section 18- Roaming spots
+Section 18 - Roaming spots
 
 Roaming spots is a situation.
 The sarea of Roaming spots is "Zoo".
@@ -298,7 +298,7 @@ Instead of Resolving a Roaming spots:
 	now Roaming spots is resolved;
 
 
-Section 19- Picture striping
+Section 19 - Picture striping
 
 Picture striping is a situation.
 The sarea of Picture striping is "Zoo".
@@ -314,7 +314,7 @@ Instead of Resolving a Picture striping:
 	now Picture striping is resolved;
 
 
-Section 20- Lazy River		[Event by Shadowwolf94]
+Section 20 - Lazy River (Event by Shadowwolf94)
 
 Lazy River is a situation.
 The sarea of Lazy River is "Zoo".

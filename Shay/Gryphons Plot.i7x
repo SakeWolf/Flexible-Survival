@@ -1,4 +1,4 @@
-﻿Version 2 of Gryphons Plot by Shay begins here.
+Version 2 of Gryphons Plot by Shay begins here.
 [ Original Event idea by Hellerhound ]
 [ Version 1 - Ideas for expansion by Wahn]
 [ Version 2 - Complete rewrite by Shay ]
@@ -223,7 +223,7 @@ instead of resolving a Gryphon's Plot:
 		else:
 			say "     With a shrug you turn you turn your back on the group of gryphons and walk off down the street.";
 	else if GryphPlotTracking is 50: [player helped the gryphons, soldiers are transformed]
-		say "     Wandering through the ruins of the city, you see an unusual sight: There is a group of gryphons, still wearing the tattered remains of army uniforms upon their bodies as they sit huddled around a fire. Inching closer to the unlikely scene, you accidentally step on an empty aluminum can, causing the gryphon soldiers to jerk up in alarm as they are alerted to your presence. Spotting you, one of the gryphons exclaim, 'Hey, I know you. You are the one who helped those other gryphons make me like this! Let's see how strong you are without your friends along. Come on, guys, let's get em!' Seeing no other option than to fight, you ready your weapon.";
+		say "     Wandering through the ruins of the city, you see an unusual sight: There is a group of gryphons, still wearing the tattered remains of army uniforms upon their bodies as they sit huddled around a fire. Inching closer to the unlikely scene, you accidentally step on an empty aluminum can, causing the gryphon soldiers to jerk up in alarm as they are alerted to your presence. Spotting you, one of the gryphons exclaim, 'Hey, I know you. You are the one who helped those other gryphons make me like this! Let's see how strong you are without your friends along. Come on, guys, let's get [']em!' Seeing no other option than to fight, you ready your weapon.";
 		let GroupFightCounter be 0;
 		now fightoutcome is 0; [reset]
 		while fightoutcome < 20 and GroupFightCounter < 2: [runs for 2 times or until the player loses or flees]
@@ -281,7 +281,7 @@ to say PlayerWinsVsGryphonPlot1: [player beat up the 3 gryphons]
 
 to say PlayerLosesVsGryphonPlot1: [player lost to the 3 gryphons]
 	setmonster "Hermaphrodite Gryphon";
-	say "     Breathing heavily, you fall to the ground, too exhausted to continue the fight. As you do so, the gryphons no longer see you as a threat and renew the aerial assault on the soldiers. While your own intervention was enough to allow the soldiers to somewhat regain their bearings, you watch helplessly as the gryphons show it to not be enough. As they corner the desperate men, their shafts harden in anticipation. You struggle to get back on your feet as you watch the gryphons fuck the soldiers, the formerly uninfected men becoming increasingly less human. Smiling in satisfaction as their goal is accomplished, they turn to you, smirking. 'Your turn,' one gryphon screeches out just as you finally get back onto your feet. You attempt to escape their grasp, but between the three of them, it isn't long before they have you held down, taking turns at shoving their cocks inside of your [if cunts of player > 0]pussy[else]ass[end if]. The by now fully transformed soldiers join in, and you soon lose consciousness in the midst of a gang-bang by horny gryphons. You wake a couple hours later, cum covering every surface of your body.";
+	say "     Breathing heavily, you fall to the ground, too exhausted to continue the fight. As you do so, the gryphons no longer see you as a threat and renew the aerial assault on the soldiers. While your own intervention was enough to allow the soldiers to somewhat regain their bearings, you watch helplessly as the gryphons show it to not be enough. As they corner the desperate men, their shafts harden in anticipation. You struggle to get back on your feet as you watch the gryphons fuck the soldiers, the formerly uninfected men becoming increasingly less human. Smiling in satisfaction as their goal is accomplished, they turn to you, smirking. 'Your turn,' one gryphon screeches out just as you finally get back onto your feet. You attempt to escape their grasp, but between the three of them, it isn't long before they have you held down, taking turns at shoving their cocks inside of your [if player is female]pussy[else]ass[end if]. The by now fully transformed soldiers join in, and you soon lose consciousness in the midst of a gang-bang by horny gryphons. You wake a couple hours later, cum covering every surface of your body.";
 	if carried of food > 1:
 		say "     Picking up your pack, you notice that you are two cans of food short, but that's not the only thing on your mind. Having lost the brave soldiers to their fate, despite everything you could do, makes you feel a bit less sure of yourself, thinking that maybe the situation in the city is hopeless after all.";
 		LineBreak;
@@ -307,7 +307,7 @@ to say PlayerFleesVsGryphonPlot1: [player fled the 3 gryphons]
 
 
 to say PlayerHelpsGryphonPlot1: [player helped the gryphons]
-	if the bodyname of the player is not "Hermaphrodite Gryphon":
+	if bodyname of player is not "Hermaphrodite Gryphon":
 		say "     Stepping up and making it clear with just who you stand with, you watch as the soldiers become increasingly desperate, the odds now stacked even higher against them. Although the gryphons are wary that you aren't one of their own, they gladly accept your help. Soon, with the combined efforts of you and your unlikely allies, the uninfected men are converged upon. They climb into the stuck car in a last ditch attempt to save themselves from the fate that will befall them. Rushing forward in aggressive maneuvers, you and the gryphons make quick work of the soldiers['] final effort to protect themselves. Ripping the metal doors off of the jeep as they reach in and pull the soldiers out, they roughly strip them of their clothes with an obvious lustful intent, their cocks dripping pre-cum as they bend the still struggling soldiers over and thrust in balls-deep. Ignoring you, they fuck the men ravenously as they begin to change, their once fully human forms gaining a feral look, as their feet shift into sharp talons, and their tanned skin turns into the gryphon's blue. The soldiers are fully transformed by the time the gryphons turn back to you, looking your way with contemplating looks on their face. Then they gesture to the newly transformed soldiers, all with cum leaking from their every hole. Seems like that you're being offered their sloppy seconds. With that, the gryphons fly away, satisfied looks upon their blue, furred faces. Now the only thing that is left to do, is to decide whether or not you want to take them up on the offer...";
 		LineBreak;
 		say "     [bold type]What do you want to do?[roman type][line break]";
@@ -315,21 +315,21 @@ to say PlayerHelpsGryphonPlot1: [player helped the gryphons]
 		now sextablerun is 0;
 		blank out the whole of table of fucking options;
 		[]
-		if cocks of player > 0: [Option only visible for males and herms]
+		if player is male: [Option only visible for males and herms]
 			choose a blank row in table of fucking options;
 			now title entry is "Fuck a soldier-gryphon's pussy";
 			now sortorder entry is 1;
 			now description entry is "Fuck the pussy of a newly transformed herm to your heart's content";
 		[]
-		if cocks of player > 0: [Option only visible for males and herms]
+		if player is male: [Option only visible for males and herms]
 			choose a blank row in table of fucking options;
-			now title entry is "Pound a soldier-gryphon's ass.";
+			now title entry is "Pound a soldier-gryphon's ass";
 			now sortorder entry is 2;
 			now description entry is "Fuck a soldier's tight and most likely virgin pucker";
 		[]
-		if cunts of player > 0: [Option only visible for females and herms]
+		if player is female: [Option only visible for females and herms]
 			choose a blank row in table of fucking options;
-			now title entry is "Ride a soldier-gryphon's cock.";
+			now title entry is "Ride a soldier-gryphon's cock";
 			now sortorder entry is 3;
 			now description entry is "Take charge and get a taste of a hard, gryphon shaft";
 		[]
@@ -337,7 +337,7 @@ to say PlayerHelpsGryphonPlot1: [player helped the gryphons]
 		repeat with y running from 1 to number of filled rows in table of fucking options:
 			choose row y from the table of fucking options;
 			say "[link][y] - [title entry][as][y][end link][line break]";
-		say "[link]100 - Just Leave[as]100[end link][line break]";
+		say "[link]0 - Just Leave[as]0[end link][line break]";
 		while sextablerun is 0:
 			say "Pick the corresponding number> [run paragraph on]";
 			get a number;
@@ -354,17 +354,17 @@ to say PlayerHelpsGryphonPlot1: [player helped the gryphons]
 						say "[GryphonAss]";
 					if (nam is "Ride a soldier-gryphon's cock"):
 						say "[GryphonRide]";
-			else if calcnumber is 100:
+			else if calcnumber is 0:
 				say "Are you sure you wish to leave?";
 				LineBreak;
 				say "     ([link]Y[as]y[end link]) - Yes.";
 				say "     ([link]N[as]n[end link]) - No.";
-				if the player consents:
+				if player consents:
 					now sextablerun is 1;
 					say "     Deciding that despite being a part of what led to the soldiers being transformed into their new gryphon state, you don't wish to take advantage of the already thoroughly broken men. Distancing yourself from the scene, you leave the gryphons to clean themselves up and potentially explore their new shapes as you continue along on your merry way.";
 					wait for any key;
 				else:
-					say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+					say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 			else:
 				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 				clear the screen and hyperlink list;
@@ -376,21 +376,21 @@ to say PlayerHelpsGryphonPlot1: [player helped the gryphons]
 		now sextablerun is 0;
 		blank out the whole of table of fucking options;
 		[]
-		if cocks of player > 0: [Option only visible for males and herms]
+		if player is male: [Option only visible for males and herms]
 			choose a blank row in table of fucking options;
 			now title entry is "Fuck a soldier-gryphon's pussy";
 			now sortorder entry is 1;
 			now description entry is "Fuck the pussy of a newly transformed herm to your heart's content";
 		[]
-		if cocks of player > 0: [Option only visible for males and herms]
+		if player is male: [Option only visible for males and herms]
 			choose a blank row in table of fucking options;
-			now title entry is "Pound a soldier-gryphon's ass.";
+			now title entry is "Pound a soldier-gryphon's ass";
 			now sortorder entry is 2;
 			now description entry is "Fuck a soldier's tight and most likely virgin pucker";
 		[]
-		if cunts of player > 0: [Option only visible for females and herms]
+		if player is female: [Option only visible for females and herms]
 			choose a blank row in table of fucking options;
-			now title entry is "Ride a soldier-gryphon's cock.";
+			now title entry is "Ride a soldier-gryphon's cock";
 			now sortorder entry is 3;
 			now description entry is "Take charge and get a taste of a hard, gryphon shaft";
 		[]
@@ -398,7 +398,7 @@ to say PlayerHelpsGryphonPlot1: [player helped the gryphons]
 		repeat with y running from 1 to number of filled rows in table of fucking options:
 			choose row y from the table of fucking options;
 			say "[link][y] - [title entry][as][y][end link][line break]";
-		say "[link]100 - Just Leave[as]100[end link][line break]";
+		say "[link]0 - Just Leave[as]0[end link][line break]";
 		while sextablerun is 0:
 			say "Pick the corresponding number> [run paragraph on]";
 			get a number;
@@ -415,12 +415,12 @@ to say PlayerHelpsGryphonPlot1: [player helped the gryphons]
 						say "[GryphonAss]";
 					if (nam is "Ride a soldier-gryphon's cock"):
 						say "[GryphonRide]";
-			else if calcnumber is 100:
+			else if calcnumber is 0:
 				say "Are you sure you wish to leave?";
 				LineBreak;
 				say "     ([link]Y[as]y[end link]) - Yes.";
 				say "     ([link]N[as]n[end link]) - No.";
-				if the player consents:
+				if player consents:
 					now sextablerun is 1;
 					say "     Deciding that despite being a part of what led to the soldiers being transformed into their new gryphon state, you don't wish to take advantage of the already thoroughly broken men you distance yourself from the scene, leaving the gryphons to clean themselves up and potentially explore their new shapes as you continue along on your merry way.";
 					wait for any key;

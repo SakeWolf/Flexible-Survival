@@ -68,8 +68,8 @@ for /d %%D in (*) do (
   IF "%%D"=="Inform" (
     echo [INFO]   * Skipping Inform folder
   ) ELSE (
-    IF "%%D"=="Figures" (
-      echo [INFO]   * Skipping Figures folder
+    IF "%%D"=="Flexible Infection" (
+      echo [INFO]   * Skipping Flexible Infection folder
     ) ELSE (
       echo [INFO]   Making symlink for %%D
       rmdir /S /Q "C:\Users\noctu\Documents\Inform\Extensions\%%D"

@@ -20,7 +20,7 @@ lgnumber is a number that varies.
 
 instead of resolving lost gear:
 	say "You happen across an old army surplus store. Your heart swells at the possibilities, only to sink as you notice that the door's been forced open. The place has already been looted, likely by other, desperate, but faster, survivors. It might be worth a look anyway?";
-	if the player consents:
+	if player consents:
 		say "You enter the store and begin to forage around. There has to be something worth having in here. A sudden noise comes from behind a rack of rotting clothes. A mutant!";
 		now lgnumber is 0;
 		while lgnumber is 0:
@@ -33,7 +33,7 @@ instead of resolving lost gear:
 				say "With the way clear, you begin your search in earnest...";
 				let dice be a random number from 1 to 20;
 				let the bonus be (( the perception of the player minus 10 ) divided by 2);
-				if "Scavenger" is listed in feats of the player:
+				if "Scavenger" is listed in feats of player:
 					increase bonus by 4;
 				say "You roll 1d20([dice])+[bonus] = [dice + bonus]: ";
 				if dice + bonus > 20:
@@ -44,7 +44,7 @@ instead of resolving lost gear:
 					now lgnumber is 1;
 				else:
 					say "You come up empty for your efforts. There has to be something here! Do you want to look further?";
-					if the player consents:
+					if player consents:
 						say "You restart your search, time passes as you dig around the store...";
 						follow the turnpass rule;
 						wait for any key;

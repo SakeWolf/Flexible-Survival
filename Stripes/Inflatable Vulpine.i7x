@@ -17,7 +17,7 @@ when play begins:
 
 to say losetoinfvulp:
 	say "     You were beaten by the creature.";
-	if cocks of player > 0:
+	if player is male:
 		say "     Additional paragraph for a male/herm player.";
 	else:
 		say "     Additional paragraph for a female player.";
@@ -26,9 +26,9 @@ to say beattheinfvulp:
 	say "     You were victorious over the creature.";
 	if libido of player > 40:
 		say "     Additional paragraph for a player with a libido greater than 40. Do they want sex?";
-		if the player consents:
+		if player consents:
 			say "     The player agreed to sex. Fun times begin.";
-			if cunts of player > 0:
+			if player is female:
 				say "     The player is female/herm, so sex goes like this for her.";
 			else:
 				say "     The player must be male, so sex goes like this for him.";
@@ -44,13 +44,16 @@ to say infvulpdesc:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Inflatable Vulpine"; [The creature's name as displayed and used in naming descriptions]
-	now attack entry is "[one of]The template attacks you in some abstract manner![or]The template leaves you greater understanding, thereby lowering your resistance to it![or]The template batters you with examples![or]The template firmly makes its point![at random]"; [Text used when the monster succeeds on an attack]
+	now name entry is "Inflatable Vulpine"; [ Infection/Creature name. Capitalized. ]
+	now enemy title entry is "";
+	now enemy name entry is "";
+	now enemy type entry is 0; [non-unique enemy]
+	now attack entry is "[one of]The template attacks you in some abstract manner![or]The template leaves you greater understanding, thereby lowering your resistance to it![or]The template batters you with examples![or]The template firmly makes its point![at random]"; [ Successful attack message ]
 	now defeated entry is "[beattheinfvulp]";
 	now victory entry is "[losetoinfvulp]";
 	now desc entry is "[infvulpdesc]";
@@ -60,10 +63,10 @@ When Play begins:
 	now tail entry is "Your fox tail is like a living balloon of orange latex with a white tip. It has a small air nozzle at the end, like you've seen on inflatable toys.";
 	now cock entry is "[one of]inflatable[or]latex[or]orange latex[or]knotted[or]balloony[at random]";
 	now face change entry is "it quickly becomes hard to concentrate. Your head feels increasingly lighter and your worries drift away as air causes your changing head to inflate. A vulpine muzzle and cartoonishly foxish ears pop from your face as it turns into a balloon-like head[infvulp_reset]";
-	now body change entry is "[infvulpbodychange][infvulp_reset]"; [ Body TF text, format as "Your body feels funny as (your text)." ]
+	now body change entry is "[infvulpbodychange][infvulp_reset]"; [ Body TF text, format as "Your body tingles as [body change entry]. ]
 	now skin change entry is "it becomes glossy and shifts like liquid plastic. You turn a bright orange in color, though areas of black and white start to distinguish themselves as well. These sections divide off into patches joined together by melted seams as your skin becomes a thin layer of colorful latex";
 	now ass change entry is "a sense of pressure grows there. This feeling builds up until finally, with a cartoonish 'Pop!' you suddenly gain a balloon-like fox tail";
-	now cock change entry is "it feels like its swelling up, though no change in size is occurring. While pleasurable, this mysterious feeling continues until finally the pressure releases in a blast of spooge. Your [cock size desc of player] penis becomes a balloon version of a cock, vulpine in shape with an inflatable knot at the base. It even comes with a sheath of white latex skin to house it when deflated";
+	now cock change entry is "it feels like it's swelling up, though no change in size is occurring. While pleasurable, this mysterious feeling continues until finally the pressure releases in a blast of spooge. Your [cock size desc of player] penis becomes a balloon version of a cock, vulpine in shape with an inflatable knot at the base. It even comes with a sheath of white latex skin to house it when deflated";
 	now str entry is 8; [ These are now the creature's stats... ]
 	now dex entry is 8; [ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
 	now sta entry is 8; [ These values may be used as part of alternate combat.]
@@ -78,7 +81,7 @@ When Play begins:
 	now cocks entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now cock length entry is 12; [ Length in inches infection will make cock grow to if cocks. ]
 	now cock width entry is 5; [ Cock width, more commonly used for ball size. ]
-	now breasts entry is 2; [ Number of breasts the infection will give a player. ]
+	now breasts entry is 2; [ Number of nipples the infection will give a player. ]
 	now breast size entry is 3; [ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
 	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
@@ -145,7 +148,7 @@ when play ends:
 			say "     You succumb to your template infection.";
 		else:
 			say "     You survive, but were infected by the template.";
-			if cocks of player > 0:							[MALE/HERM]
+			if player is male:							[MALE/HERM]
 				say "     Additional text for a male/herm survivor.";
 			else if "Sterile" is not listed in feats of player:	[F-BREEDABLE]
 				say "     Additional text for a female survivor who can become preggers.";

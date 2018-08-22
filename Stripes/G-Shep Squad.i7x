@@ -24,11 +24,11 @@ Instead of resolving a Canine Patrol:
 		say "     While trying to move unnoticed through the city, you come across a sight not uncommon these days. Not far from you, a woman well on her way to becoming one of those vapid husky girls is being accosted by another mutant, a large feline in this case. She is manhandled against the side of a car, the wind knocked out of her and her remaining scraps of clothes torn away. Before you can decide what if anything to do about this, you hear some loud barking rapidly approaching. The noise comes from a pair of German Shepherds in partial police uniforms.";
 		say "     'Halt! Police! Unhand that woman!' they cry, switching to all fours and charging faster. The feline, startled by this, takes a couple of steps back. His would-be victim, seeing a chance for rescue, makes a break towards the police dogs. The cat takes a few steps towards her in an attempt to grab her, but then backs down as the barking dogs draw nearer. The pair motion for the dog-woman to wait and continue on, giving brief chase to ensure he's well and truly run off before going back to talk to the victim.";
 		say "     ";
-		say "     [bold type]Shall you go talk to these K9 officers or make a discrete exit while you can?[roman type][line break]";
+		say "     [bold type]Shall you go talk to these K9 officers or make a discreet exit while you can?[roman type][line break]";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Go and talk to them.";
 		say "     ([link]N[as]n[end link]) - Exit.";
-		if the player consents:
+		if player consents:
 			say "     As you approach the police dogs, one turns to face you while the other tends to the woman. He's wearing a policeman's cap, jacket, a pair of mirrored sunglasses and no pants. 'Are you [if gshepmood is 2]here to help?' he asks with a wag of his tail upon noticing your canine features[else if gshepmood is 1]a witness to this attempted assault?' he asks[else]an accomplice to this attempted assault?' he barks upon noticing your feline features[end if]. You explain that you'd just arrived on scene and were about to help when they appeared[if gshepmood is 2]. 'Good dog,' he says with another wag, 'but it's best to leave the police work to us.' [else if gshepmood is 1]. 'I see,' he says, looking you over. [else]. 'A likely story, cat,' he growls. [end if]He gets your statement and only has a few basic questions for you.";
 			say "     While this is going on, the other officer is talking to the distraught victim, both comforting and questioning her. He's wearing a pair of blue pants that have been opened at the back for his tail and has his badge hanging from a chain around his otherwise bare-furred chest. His fur's a lighter shade of brown and his face has more black on it than the other officer's. 'And what did he do then, ma'am?' he asks, his paw lightly rubbing her back.";
 			WaitLineBreak;
@@ -149,7 +149,7 @@ to say bustersexmenu:
 	now sextablerun is 0;
 	say "     Approaching Buster with an offer of sex gets the German shepherd's ears to perk up. '[if gshepmood is 2]Alright recruit. I could use a break. You're a good dog for offering,' he says with a doggy grin and wagging tail[else if gshepmood is 1]Sounds good, recruit. Let's have another go at training you up to be a good dog, eh?' he says with a doggy grin and a wag of his tail[else]I'd say another round of doggy training is in order. Let's see if we can't clear up this feline mess and get you looking like a good, canine citizen,' he says assertively[end if]. While the canine officer divests you of your pack and gear, he [one of]slathers your face with sloppy doggy kisses[or]French kisses you, sliding his long, slobbery tongue past your lips[or]fondles himself with one paw, coaxing his stiffening shaft to rise from his sheath[or]makes a show of groping your ass for the other German shepherds around. They've seen (and partaken in) this sort of thing plenty of times before, so it doesn't really faze them too much, though there are a few barks and whistles[or]playfully humps your leg with his stiffening cock[in random order]. As things are heating up, you try to decide what you might like to do with the sexy canine stud.";
 	blank out the whole of table of fucking options;
-	if cocks of player > 0:
+	if player is male:
 		if gshepmood is 2:
 			choose a blank row in table of fucking options;
 			now title entry is "Fuck him";
@@ -161,7 +161,7 @@ to say bustersexmenu:
 			now sortorder entry is 10;
 			now description entry is "let him suck you off";]
 	choose a blank row in table of fucking options;
-	if cunts of player > 0:
+	if player is female:
 		now title entry is "Get fucked - vaginal";
 	else:
 		now title entry is "Get fucked - anal";
@@ -202,16 +202,16 @@ to say bustersexmenu:
 					say "[bustersex05]";
 				if (nam is "69"):
 					say "[bustersex06]";
-		else if calcnumber is 100:
+		else if calcnumber is 0:
 			say "Break off the conversation?";
-			if the player consents:
+			if player consents:
 				now sextablerun is 1;
 				say "     You step back, shaking your head slightly as he gives a questioning look.";
 				wait for any key;
 			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	gsquadinfect;
 	now lastfuck of Buster is turns;
 	wait for any key;
@@ -221,7 +221,7 @@ to say bustersexmenu:
 to say bustersex00:
 	if HP of Buster is 0:		[***first time - until separate oral is created]
 		say "     '[if gshepmood is 2]I'm always up for helping out a good dog feel better,' he says with a happy grin and wagging tail[else if gshepmood is 1]Sounds good to me. I had a feeling you'd understand and agree to join up. Let's get you on the path to being a good doggy,' he says with a friendly smile and a wag of the tail[else]Alright. We can see about clearing up this feline taint you've gotten and put you on the path to being a good doggy,' he says with friendly concern[end if]. Using one paw to help you out of your gear, he rubs his fuzzy sheath with the other, coaxing his canine cock to rise from it. When you're ready so is he, his member dripping with precum.";
-	say "     With a paw at your shoulder, he get you to go down on your knees and take his doggy dong into your mouth. The taste of the K9 cop's cock fills your mouth and you lick the sticky precum from its warm flesh. This gets him to moan softly, rubbing his hand atop your head as if petting you[if gshepmood is 2 and cocks of player > 0]. 'Mmm... that's it. Lick that bone like a good dog[else if gshepmood is 2]. 'Mmm... that's it. Lick that bone like a good bitch[else if gshepmood is 1]. 'Alright, now work that tongue. Lick it like a good dog[else]. 'Yeah, lick it you naughty kitty. Lick that dog bone. We'll make a horny pup out of you yet[end if],' he moans. His encouraging has you to work your tongue all over his throbbing canine penis, getting him to pant with growing pleasure. Drool drips from his dangling tongue onto your head, but you hardly mind at this point, too into sucking on the delicious treat in your mouth.";
+	say "     With a paw at your shoulder, he get you to go down on your knees and take his doggy dong into your mouth. The taste of the K9 cop's cock fills your mouth and you lick the sticky precum from its warm flesh. This gets him to moan softly, rubbing his hand atop your head as if petting you[if gshepmood is 2 and player is male]. 'Mmm... that's it. Lick that bone like a good dog[else if gshepmood is 2]. 'Mmm... that's it. Lick that bone like a good bitch[else if gshepmood is 1]. 'Alright, now work that tongue. Lick it like a good dog[else]. 'Yeah, lick it you naughty kitty. Lick that dog bone. We'll make a horny pup out of you yet[end if],' he moans. His encouraging has you to work your tongue all over his throbbing canine penis, getting him to pant with growing pleasure. Drool drips from his dangling tongue onto your head, but you hardly mind at this point, too into sucking on the delicious treat in your mouth.";
 	WaitLineBreak;
 	say "     Noticing the knot at the base of his cock swelling up, you know he's getting close. Placing one hand on that growing bulge and the other on his ballsack, you grope and fondle the German shepherd while sucking all the harder. Pushing your mouth forward, you take his full length to the top of his knot and work your tongue and palate over it. Your hand kneads his hard knot in imitation of his having tied to a tight, twitching hole. This last effort is enough to finally set the virile dog off and he cums with a happy bark, blasting several gooey shots of canine semen into your sucking mouth, which you swallow down immediately to make room for more. The taste is sharp and strong, but also virile and exciting, so you work his balls to coax more from him. As he's finishing up, he pushes you back, letting the last few shots splatter across your face and body, marking you with his seed.";
 	say "     'Oh yeah, you're going to be a fine recruit,' he says, leaning back against his impromptu desk for support after his powerful release. You can't help but smile up at him, some part of you feeling the growing canine urges inside you, making you eager to be a good dog - or at least a naughty one - to please him. You rub the cum still clinging to you into your skin, feeling it soak into your [bodydesc of player] body, helping you to change.";

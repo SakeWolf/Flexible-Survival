@@ -18,7 +18,7 @@ to say giantdesc:
 		now sex entry is "Both";
 	else:
 		now sex entry is "Female";
-	say "     You find yourself faced with a giant of a man standing well over 40 feet tall. This makes him nearly as tall as the biggest trees decorating the area, though most only come up to his waist. The towering man has a burly, muscled body to help support his massive height, but not unhandsomely so. He still looks completely human, just grown to a dizzying height. Worn loosely over his chest is huge tan jacket indicating that he may have once been part of the zoo staff. Somehow enlarged or transformed to be a part of him, it is rather worse for wear and hangs loose over his chest, but is still wearable and is the only clothes he has on. He has a gruff expression on his face and has dirty blond hair atop his distant. He carries [one of]a broken telephone pole[or]a metal girder[or]a streetlight[or]an uprooted tree[at random] like a massive club. Between his legs he has another large club, this one of meaty flesh to more than match his enormous size. Having spotted you, he [one of]gives a rough, coarse laugh[or]grumbles about animals getting out of their cages again[or]says you look like a fun playtoy[or]speaks softly, saying he'll take care of you, inching forward by a several yards at a time -[at random] and makes a sudden grab for you with one of his meaty fists.";
+	say "     You find yourself faced with a giant of a man standing well over forty feet tall. This makes him nearly as tall as the biggest trees decorating the area, though most only come up to his waist. The towering man has a burly, muscled body to help support his massive height, but not unhandsomely so. He still looks completely human, just grown to a dizzying height. Worn loosely over his chest is huge tan jacket indicating that he may have once been part of the zoo staff. Somehow enlarged or transformed to be a part of him, it is rather worse for wear and hangs loose over his chest, but is still wearable and is the only clothes he has on. He has a gruff expression on his face and has dirty blond hair atop his distant. He carries [one of]a broken telephone pole[or]a metal girder[or]a streetlight[or]an uprooted tree[at random] like a massive club. Between his legs he has another large club, this one of meaty flesh to more than match his enormous size. Having spotted you, he [one of]gives a rough, coarse laugh[or]grumbles about animals getting out of their cages again[or]says you look like a fun playtoy[or]speaks softly, saying he'll take care of you, inching forward by a several yards at a time -[at random] and makes a sudden grab for you with one of his meaty fists.";
 
 
 to say losetogiant:
@@ -28,7 +28,7 @@ to say losetogiant:
 		say "     Knocked down and unable to get back up after his last, powerful blow, you can only lie there as he reaches for you. Laughing at his success, he grabs you with both hands and grips you painfully tight";
 	if bodyname of player is "Human Giant" and facename of player is "Human Giant":
 		say "     As if only realizing now that you're a giant like him, albeit much smaller, he lifts you up to your feet. '[one of]You must be that new recruit I was promised. It's about time you got here[or]It's about time someone else showed up to work. Things are a real mess here[or]About time someone showed up to give me a hand with rounding up all these animals[or]Look at you, small fry. They just keep hiring younger and younger here every year[at random],' he says loudly, slapping you hard on the back. 'But what're you doin['] out of uniform? Don't you know we got work to do?' Before you can recover from the hard blow to respond, he wraps his arm around you, pulling you close. 'Oh! You must be on break. How about we take a break together?' he says with a big grin, pushing you back to the ground.";
-		if cunts of player > 0 and cunt length of player > 25 and cunt width of player > 20 and a random chance of 2 in 3 succeeds:
+		if player is female and cunt length of player > 25 and cunt width of player > 20 and a random chance of 2 in 3 succeeds:
 			say "     Forced to lay on your back, the bigger giant moves over you, getting his earth-shaking cock lined up with your [cunt size desc of player] pussy. Despite the large size of your cunt, it is unquestionably a tight fit, but he makes a game effort of it. While somewhat uncomfortable at first, you soon start to moan and squirm beneath him as at first your cunt and then your body starts to stretch to accommodate his massive girth. And while he's only able to get part of it in you, even that much feels wonderful inside you, making you moan and pant beneath him. And when he cums, he unleashes a veritable torrent of cum into your womb, flooding your insides as your belly swells and bulges to accommodate it all.";
 			say "     Grinning, he pulls out of you with a wet plop, unleashing the flood gates and causing a massive flow of his seed to leak out of you and pool on the ground between your splayed legs. Your giant body does manage to keep a surprising amount of it inside as well. Too weak to get up, you ";
 			if a random chance of 1 in 3 succeeds and inasituation is false:
@@ -37,7 +37,7 @@ to say losetogiant:
 				now battleground is "void";
 			else:
 				say "can only lay there in the mess he's made as his excess semen leaks out of you. 'Thanks for sharing your break with me. We should do this again sometime,' he adds, lumbering to his feet and spotting another critter to chase after.[fimpregchance]";
-		else if cunts of player is 0 and anallevel > 1 and a random chance of anallevel in 5 succeeds:
+		else if player is not female and anallevel > 1 and a random chance of anallevel in 5 succeeds:
 			say "     Forced to move onto all fours, the bigger giant moves over you, getting his earth-shaking cock lined up with your (relatively) small ass. He smears some thick precum across it before he pushes a saliva-slick finger into your hole to get you prepared, squirming the big digit around inside you roughly. Despite the large size of your body, it is unquestionably a tight fit when he starts pushing his cock into you, but he makes a game effort of it. While somewhat uncomfortable at first, you soon start to moan and squirm beneath him as at first your anus and then your body starts to stretch to accommodate his massive girth. And while he's only able to get part of it in you, even that much feels wonderful inside you, making you moan and pant beneath him. And when he cums, he unleashes a veritable torrent of cum into your bowels, flooding your insides as your belly swells and bulges to accommodate it all.";
 			say "     Grinning, he pulls out of you with a wet plop, unleashing the flood gates and causing a massive flow of his seed to leak out of you and pool on the ground between your splayed legs. Your giant body does manage to keep a surprising amount of it inside as well. Too weak to get up, you ";
 			if a random chance of 1 in 3 succeeds and inasituation is false:
@@ -111,26 +111,29 @@ to say beatthegiant:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance
-	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Human Giant"; [Name of your new Monster]
+	now enemy title entry is "";
+	now enemy name entry is "";
+	now enemy type entry is 0; [non-unique enemy]
 	now attack entry is "The [one of]giant[or]giant man[or]lumbering brute[or]towering creature[at random] [one of]bashes you with a massive fist[or]slaps you with an enormous backhand, knocking you back[or]grabs you in his crushing grip before throwing you to the ground[or]clobbers you with his makeshift club[or]swings his massive club into you[or]stomps a giant foot down onto you[at random]!";
 	now defeated entry is "[beatthegiant]";
 	now victory entry is "[losetogiant]";
 	now desc entry is "[giantdesc]";
 	now face entry is "a human head with coarse, brown hair, just significantly larger";
 	now body entry is "a normal human body, just grown to gigantic proportions. You have a strong, muscled body to help support your great height. At around fifteen feet tall, it's quite difficult for you to get in and out, requiring you find (or make) alternate entrances or squirm your way through doorways and move on all fours while exploring. Probably best to stick to open areas";
-	now skin entry is "human";
+	now skin entry is "Human";
 	now tail entry is "Your ass is gigantic!";
 	now cock entry is "human";
 	now face change entry is "your head becomes human-like[if scalevalue of player is 4], but grown larger in size[else if scalevalue of player > 4], but grown to a significantly larger size[end if]. You look much like your old self, though with a bigger head";
 	now body change entry is "your body becomes human, but starts to grow to significantly larger size. Your body becomes muscled and strong as it changes, toughening up to support its increasing weight. You become something around fifteen feet in height";
 	now skin change entry is "it changes, reverting to your old skin tone, though with bit a rougher, thicker feel to it";
 	now ass change entry is "it pulses and throbs. I hope you like big butts, because yours is growing, and growing, and growing. That's one gigantic ass! Having gained wide, strong hips, you can feel powerful muscles beneath your impressive backside";
-	now cock change entry is "it throbs and pulses, shifting and changing shape as spurts of cum fly from it. Eventually it settles down, having returned to being a fairly typical, human shaped penis";
+	now cock change entry is "it throbs and pulses, shifting and changing shape as spurts of cum fly from it. Eventually it settles down, having returned to being a fairly typical, human-shaped penis";
 	now str entry is 36;
 	now dex entry is 9;
 	now sta entry is 20;
@@ -141,7 +144,7 @@ When Play begins:
 	now HP entry is 99; [ How many HP has the monster got? She's not too hard- she doesn't want to win so much as not lose]
 	now lev entry is 12; [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
 	now wdam entry is 22; [Amount of Damage monster Does when attacking. Claws and massive strength]
-	now area entry is "Zoo"; [ Current options are 'Outside' and 'Mall' Case sensitive. If you go down to the woods today, you're in for a big surprise]
+	now area entry is "Zoo"; [ Current options are 'Outside' and 'Mall'. Case sensitive. If you go down to the woods today, you're in for a big surprise]
 	now cocks entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
 	now cock length entry is 45; [ Length infection will make cock grow to if cocks]
 	now cock width entry is 40; [ Size of balls apparently ;) sneaky Nuku (big balls are underrated.)]
@@ -154,7 +157,7 @@ When Play begins:
 	now libido entry is 55; [ Amount player Libido will go up if defeated ]
 	now loot entry is "";
 	now lootchance entry is 0; [ Chance of loot dropping 0-100 ]
- 	now scale entry is 5; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now scale entry is 5; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]muscled[or]strong[or]towering[or]huge[at random]";
 	now type entry is "[one of]giant[or]human[at random]";
 	now magic entry is false;
@@ -173,9 +176,9 @@ when play ends:
 			say "     He's very grateful for the rescue and thanks you for finally coming to help him with the zoo. He claims to have been getting the situation under control until those little soldier people showed up, but is really glad that you're here now to help him with it. You settle down, living there with him, playing around with the animals, getting them back into their cages, giving them the occasional soldier you find as a treat";
 			if player is herm:
 				say " and dousing much of the nearby area with your hot, sticky cum as your big, strong mate fucks you silly[if player is impreg_ok]. Your many giant offspring are sent out into the world to find their own fun with all the fun little critters running around to be their toys[end if].";
-			else if cocks of player > 0:
+			else if player is male:
 				say " and dousing much of the nearby area with your hot, sticky cum as you and your big, strong mate take turns fucking one another[if player is mpreg_ok]. Your many giant offspring are sent out into the world to find their own fun with all the fun little critters running around to be their toys[end if].";
-			else if cunts of player > 0:
+			else if player is female:
 				say " when not stretching yourself out on one of the many open grazing plains while your big, strong mate fucks you silly[if player is impreg_ok]. Your many giant offspring are sent out into the world to find their own fun with all the fun little critters running around to be their toys[end if].";
 			else:
 				say " and helping your giant friend use some of the cuter critters around as sextoys when he needs some sticky, messy relief[if player is mpreg_ok]. Your many giant offspring are sent out into the world to find their own fun with all the fun little critters running around to be their toys[end if].";

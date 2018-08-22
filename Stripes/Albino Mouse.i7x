@@ -67,19 +67,22 @@ to say drmousedesc:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Albino Mouse"; [Name of your new Monster]
+	now enemy title entry is "";
+	now enemy name entry is "";
+	now enemy type entry is 0; [non-unique enemy]
 	now attack entry is "[drmouseattack]";
 	now defeated entry is "[beatdrmouse]";
 	now victory entry is "[losetodrmouse]"; [Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
 	now desc entry is "[drmousedesc]"; [ Description of the creature when you encounter it.]
-	now face entry is "mouse-like head with large ears and cute whiskers on your muzzle"; [ Face description, format as the text "Your face is (your text)."]
-	now body entry is "small and mouse-like, with pink paws for hands and feet"; [ Body Description, format as the text "Your Body is (your text)."]
-	now skin entry is "pure white fur over your"; [ skin Description, format as the text "your body is covered in (your text) skin."]
+	now face entry is "mouse-like head with large ears and cute whiskers on your muzzle"; [ Face description, format as "Your face is (your text)."]
+	now body entry is "small and mouse-like, with pink paws for hands and feet"; [ Body Description, format as "Your Body is (your text)."]
+	now skin entry is "pure white fur over your"; [ skin Description, format as "your body is covered in (your text) skin."]
 	now tail entry is "You have a long, murine tail."; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "pink"; [ Cock Description, format as you have a 'size' (your text) cock]
 	now face change entry is "it deforms and reshapes itself into something more rodent-like. You gain large ears and whiskers around your muzzle. Your eyes turn a blood-red"; [ face change text. format as "Your face feels funny as (your text)." ]

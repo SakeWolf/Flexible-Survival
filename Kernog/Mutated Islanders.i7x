@@ -40,12 +40,15 @@ Section 2 - Monster Insertion
 
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Mutated Islanded M";
+	now enemy title entry is "";
+	now enemy name entry is "";
+	now enemy type entry is 0; [non-unique enemy]
 	now attack entry is "[one of][or][or][or][at random]";
 	now defeated entry is "[beatMutatedIslander]";
 	now victory entry is "[loseMutatedIslander]";
@@ -56,10 +59,10 @@ When Play begins:
 	now tail entry is "";
 	now cock entry is "[one of]normal[or]flesh-toned[or]uninfected[or]human[at random]";
 	now face change entry is "it seems to tingle, moving slightly, with a start you realize it's human"; [ format as "Your face feels funny as (your text)." ]
-	now body change entry is "your muscles writhe about under your skin, slowly settling back into a human shape"; [  format as "Your body feels funny as (your text)." ]
-	now skin change entry is "all the hair on your body seems to fall out at once only to have what would be considered normal human hair sprout back out"; [ format as "Your skin feels funny as (your text)" ]
+	now body change entry is "your muscles writhe about under your skin, slowly settling back into a human shape"; [ format as "Your body feels funny as (your text)." ]
+	now skin change entry is "all the hair on your body seems to fall out at once only to have what would be considered normal human hair sprout back out"; [ format as "Your skin feels funny as (your text)." ]
 	now ass change entry is "your hips seem to return to a normal human's figure"; [ format as "Your ass feels funny as (your text)." ]
-	now cock change entry is "it seems to feel hot, then after a few gasps you realize it looks completely human"; [ format as "Your cock feels funny as (your text)" ]
+	now cock change entry is "it seems to feel hot, then after a few gasps you realize it looks completely human"; [ format as "Your cock feels funny as (your text)." ]
 	now str entry is 13;
 	now dex entry is 21; [ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
 	now sta entry is 14; [ These values may be used as part of alternate combat.]
@@ -74,7 +77,7 @@ When Play begins:
 	now cocks entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now cock length entry is 20; [ Length in inches infection will make cock grow to if cocks. ]
 	now cock width entry is 10; [ Cock width, more commonly used for ball size. ]
-	now breasts entry is 2; [ Number of breasts the infection will give a player. ]
+	now breasts entry is 2; [ Number of nipples the infection will give a player. ]
 	now breast size entry is 5; [ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
 	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]

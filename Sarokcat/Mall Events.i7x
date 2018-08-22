@@ -10,7 +10,7 @@ The sarea of Tight space is "Mall".
 
 Instead of resolving Tight space:
 	say "You come across a very narrow opening in the sewers underneath the city, you think you see something gleaming in the back of it, but it would be a really tight squeeze to fit in there, and might leave you vulnerable to attack. Do you try to enter the tight space anyways?";
-	If player consents:
+	if player consents:
 		let T be a random number between one and five;
 		if T is 1:
 			say "It looks like the glint was just some leftover iridescent paint someone smeared here.";
@@ -118,7 +118,7 @@ The sarea of Strange symbol is "Mall".
 
 Instead of resolving a Strange symbol:
 	say "Moving through the sewers, you notice a strange white symbol painted on the wall. Moving closer to investigate, you note that the symbol almost seems to writhe and move out of the corner of your eyes. Finally getting to where you can stand in front of the symbol, you find you still can't seem to make heads or tails of the strange pattern, though the longer you stare at it the more it seems like you are just on the edge of figuring it out. You blink as you realize your eyes have gone heavy, and your brain feels somewhat fuzzy as well, you can almost swear that you hear dark whispers in the shadows surrounding you. You quickly realize that the strange symbol is doing something to you, and manage to drag yourself away from its fascinating lines and stumble away, feeling much less human than when you started.";
-	decrease humanity of player by 30;
+	SanLoss 30;
 	Now Strange symbol is resolved;
 
 Section 8- Goo Gathering
@@ -159,7 +159,7 @@ Instead of resolving a Old rail system:
 		say "Unfortunately, the noise seems to have alerted something to your location!";
 		fight;
 		say "Recovering from the unexpected encounter, you continue through the now open door.";
-	Say "Inside the door you find a large mostly sealed off area, the remains of what appears to be an old rail station, with part of an old rail truck still sitting there on the turning section. You look around in amazement at this abandoned bit of history, and at a few of the still open rail tunnels, the partially rusted rails leading farther off into the darkness. Sadly the place is so old you don't think you will find much of use here for your current situation, but it could be fun to return and explore further sometime.";
+	say "Inside the door you find a large mostly sealed off area, the remains of what appears to be an old rail station, with part of an old rail truck still sitting there on the turning section. You look around in amazement at this abandoned bit of history, and at a few of the still open rail tunnels, the partially rusted rails leading farther off into the darkness. Sadly the place is so old you don't think you will find much of use here for your current situation, but it could be fun to return and explore further sometime.";
 	Now Old rail system is resolved;
 
 

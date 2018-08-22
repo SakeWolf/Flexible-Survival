@@ -13,23 +13,23 @@ to say redonidesc:
 	setmongender 3; [creature is male]
 	if HP of Hayato is 99:
 		now HP of Hayato is 100;
-		say "     Before you is a hulking red creature not unlike the one you'd encountered before. Its face is quite demonic, with a pair of large horns pointing up, an exaggerated brow and chin, yellow eyes and large, protruding fangs. Atop its head is a thick mane of scraggly black hair. The red oni wears only a crude [one of]tiger-skin[or]animal-skin[or]furry[or]leather[or]hide[at random] loincloth tied by a hemp rope that imperfectly covers its enlarged and stiffening manhood. Standing roughly 10 feet tall and heavily muscled, the demon ogre carries a studded iron club nearly as tall as it. It has a snarling, menacing expression on its face as it glares at you and advances.";
+		say "     Before you is a hulking red creature not unlike the one you'd encountered before. Its face is quite demonic, with a pair of large horns pointing up, an exaggerated brow and chin, yellow eyes and large, protruding fangs. Atop its head is a thick mane of scraggly black hair. The red oni wears only a crude [one of]tiger-skin[or]animal-skin[or]furry[or]leather[or]hide[at random] loincloth tied by a hemp rope that imperfectly covers its enlarged and stiffening manhood. Standing roughly ten feet tall and heavily muscled, the demon ogre carries a studded iron club nearly as tall as it. It has a snarling, menacing expression on its face as it glares at you and advances.";
 	else if HP of Hayato is 16 or HP of Hayato is 17:
 		increase HP of Hayato by 1;
-		say "     Before you is a hulking red creature not unlike Hayato - another red oni. Its face is quite demonic, with a pair of large horns pointing up, an exaggerated brow and chin, yellow eyes and large, protruding fangs. Atop its head is a thick mane of scraggly black hair. This oni wears only a crude [one of]tiger-skin[or]animal-skin[or]furry[or]leather[or]hide[at random] loincloth tied by a hemp rope that imperfectly covers its enlarged and stiffening manhood. Standing roughly 10 feet tall and heavily muscled, the demon ogre carries a studded iron club nearly as tall as it. It has a snarling, menacing expression on its face as it glares at you and advances.";
+		say "     Before you is a hulking red creature not unlike Hayato - another red oni. Its face is quite demonic, with a pair of large horns pointing up, an exaggerated brow and chin, yellow eyes and large, protruding fangs. Atop its head is a thick mane of scraggly black hair. This oni wears only a crude [one of]tiger-skin[or]animal-skin[or]furry[or]leather[or]hide[at random] loincloth tied by a hemp rope that imperfectly covers its enlarged and stiffening manhood. Standing roughly ten feet tall and heavily muscled, the demon ogre carries a studded iron club nearly as tall as it. It has a snarling, menacing expression on its face as it glares at you and advances.";
 	else:
-		say "     Before you is another red-skinned oni. Its face is quite demonic, with a pair of large horns pointing up, an exaggerated brow and chin, yellow eyes and large, protruding fangs. Atop its head is a thick mane of scraggly black hair. It wears only a crude [one of]tiger-skin[or]animal-skin[or]furry[or]leather[or]hide[at random] loincloth that imperfectly covers its enlarged and stiffening manhood. Standing roughly 10 feet tall and heavily muscled, it carries a studded iron club nearly as tall as it. The red oni has a snarling, menacing expression on its face as it glares at you and advances.";
+		say "     Before you is another red-skinned oni. Its face is quite demonic, with a pair of large horns pointing up, an exaggerated brow and chin, yellow eyes and large, protruding fangs. Atop its head is a thick mane of scraggly black hair. It wears only a crude [one of]tiger-skin[or]animal-skin[or]furry[or]leather[or]hide[at random] loincloth that imperfectly covers its enlarged and stiffening manhood. Standing roughly ten feet tall and heavily muscled, it carries a studded iron club nearly as tall as it. The red oni has a snarling, menacing expression on its face as it glares at you and advances.";
 
 
 to say losetoredoni:
 	if HP of Hayato is 97:		[doing Oni Lair challenges]
 		say "     [if HP of player > 0]You surrender to the oni, unwilling to continue fighting the powerful creature. Not simply accepting your surrender, the oni bashes you one last time with his club, knocking you to the ground hard[else]You are defeated by the powerful creature and knocked to the ground by its massive club[end if].";
 	else:
-		if cunts of player > 0 and a random chance of 2 in 3 succeeds:
+		if player is female and a random chance of 2 in 3 succeeds:
 			say "     [if HP of player > 0]You give up resisting and surrender to the oni, only to be struck by one last blow that leaves your ears ringing[else]You are grappled by the oni after its last blow leaves your ears ringing[end if]. Pushed to the ground beneath it, the creature spreads your legs wide and presses the dark glans of its crimson cock to your [cunt size desc of player] pussy. With a growl, that pulsing pillar of meat is jammed into your cunt[if cunt length of player < 9], stuffing you painfully full with one harsh thrust[else if cunt length of player < 12], stretching your cunny a little to take the last few inches[else], jamming its full length into you with one harsh thrust[end if]. You cry out at the sudden intrusion, but [if HP of player > 0]it is far too late to try to stop the monstrous ogre now, unable to do more than squirm weakly in the creature's powerful grip[else]are too weakened from the fight to do more than squirm weakly in the creature's powerful grip.";
 			say "     Fucking you roughly, the demon ogre has no desire other than its own release. Responding to that thrusting pole within it, your vagina squeezes and tugs at the thrusting rod, trying to get the red giant to set up a better rhythm and to increase your own pleasure, but with minimal success. fueled by cruelty and lust, it callously disregards your needs in favor of its own. By the time the monster blasts its tainted seed inside you, you've gotten quite aroused, but aren't quite close enough for release, leaving you aching for more when it pulls out as soon as it's done. Your cunt [if cunt length of player < 12]aches and your cervix feels bruised[else]is aching and is messy with the creature's semen[end if], but your arousal leaves you frustrated and wanting to find some poor weak creature you can vent your lusts upon in a similar fashion.";
 		else if a random chance of ( anallevel - 1 ) in 3 succeeds:
-			say "     [if HP of player > 0]You give up resisting and surrender to the oni, only to be struck by one last blow that leaves leaves you daze to the point that you almost pass out[else]Dazed by the oni's last blow, your head spins and you nearly pass out[end if]. As you start to regain your senses, you find yourself pinned beneath the large, red monster with the large, red monster between its legs pressed against your ass. Before you've recovered enough to do anything about this, you feel that pulsing pillar of meat jamming its way into your bowels, making your cry out at the sudden intrusion.";
+			say "     [if HP of player > 0]You give up resisting and surrender to the oni, only to be struck by one last blow that leaves you dazed to the point that you almost pass out[else]Dazed by the oni's last blow, your head spins and you nearly pass out[end if]. As you start to regain your senses, you find yourself pinned beneath the large, red monster with the large, red monster between its legs pressed against your ass. Before you've recovered enough to do anything about this, you feel that pulsing pillar of meat jamming its way into your bowels, making your cry out at the sudden intrusion.";
 			say "     Fucking you roughly, the demon ogre has no desire other than its own release. Trying to make the best of it, your bowels squeeze and tug at the thrusting rod, trying to get the red giant to set up a better rhythm and to increase your own pleasure, but with minimal success. fueled by cruelty and lust, it callously disregards your needs in favor of its own. By the time the monster blasts its tainted seed inside you, you've gotten quite aroused, but aren't quite close enough for release, leaving you aching for more when it pulls out as soon as it's done. Your ass aches and your prostate feels bruised from the rough treatment you've received, but your arousal leaves you frustrated and wanting to find some poor weak creature you can vent your lusts upon in a similar fashion.";
 		else:
 			say "     Sent tumbling by [if HP of player > 0]a final blow from the oni[else]the oni's last blow[end if], your vision is blurry and you have trouble getting back up again. Getting onto your hands and knees has you inadvertently pressing your face against the oni's loincloth as it moves in to grab you. Your face is ground against that musky smelling fur, making you all the dizzier and aroused. When that cloth is pushed up by the demon ogre's red erection, you're forced to take it into your mouth.";
@@ -51,18 +51,21 @@ to say beattheredoni:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Red Oni"; [The creature's name as displayed and used in naming descriptions]
+	now name entry is "Red Oni"; [ Infection/Creature name. Capitalized. ]
+	now enemy title entry is "";
+	now enemy name entry is "";
+	now enemy type entry is 0; [non-unique enemy]
 	now attack entry is "The [one of]red oni[or]demon ogre[or]red brute[or]muscular oni[at random] [one of]bashes you with its enormous club[or]strikes you with its spiked club[or]pounds you with a big fist[or]kicks you hard enough to knock you back a few feet[or]grabs you with one of its clawed hands and headbutts you[at random]!";
 	now defeated entry is "[beattheredoni]";
 	now victory entry is "[losetoredoni]";
 	now desc entry is "[redonidesc]";
 	now face entry is "quite frightening in appearance, having gained an exaggerated brow, yellow eyes and protruding fangs. Sticking straight up from your scraggly dark hair is a pair of horns, giving you the appearance of an oni from Japanese folklore";
-	now body entry is "overall human-like, but grown to 10 feet tall and heavily muscled. Your proportions are slightly off and your feet and hands have large, claw-like nails[if player is redonicocked]. Around your waist, a dirty loincloth of tigerskin loosely covers your crotch[end if]";
+	now body entry is "overall human-like, but grown to ten feet tall and heavily muscled. Your proportions are slightly off and your feet and hands have large, claw-like nails[if player is redonicocked]. Around your waist, a dirty loincloth of tigerskin loosely covers your crotch[end if]";
 	now skin entry is "[one of]bright red[or]blood-red[at random]";
 	now tail entry is "";
 	now cock entry is "[one of]meaty[or]veined[or]red[or]crimson[at random]";
@@ -85,7 +88,7 @@ When Play begins:
 	now cocks entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now cock length entry is 12; [ Length in inches infection will make cock grow to if cocks. ]
 	now cock width entry is 5; [ Cock width, more commonly used for ball size. ]
-	now breasts entry is 0; [ Number of breasts the infection will give a player. ]
+	now breasts entry is 0; [ Number of nipples the infection will give a player. ]
 	now breast size entry is 0; [ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
 	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 0; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
@@ -107,11 +110,11 @@ When Play begins:
 Section 3 - Definitions
 
 Definition: a person is redonicocked:
-	if the cockname of the player is "Red Oni", yes;
+	if cockname of player is "Red Oni", yes;
 	no;
 
 Definition: a person is redonibodied:
-	if the bodyname of the player is "Red Oni", yes;
+	if bodyname of player is "Red Oni", yes;
 	no;
 
 
@@ -129,7 +132,7 @@ when play ends:
 			say "     You succumb to your template infection.";
 		else:
 			say "     You survive, but were infected by the template.";
-			if cocks of player > 0:							[MALE/HERM]
+			if player is male:							[MALE/HERM]
 				say "     Additional text for a male/herm survivor.";
 			else if "Sterile" is not listed in feats of player:	[F-BREEDABLE]
 				say "     Additional text for a female survivor who can become preggers.";

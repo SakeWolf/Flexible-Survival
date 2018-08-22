@@ -75,7 +75,7 @@ to say Imp Sex Menu:
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]100 - Nevermind[as]100[end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
 	while sextablerun is 0:
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
@@ -97,14 +97,14 @@ to say Imp Sex Menu:
 				else if (nam is "Stick him in your ass"):
 					say "[ImpSex3]";
 				wait for any key;
-		else if calcnumber is 100:
+		else if calcnumber is 0:
 			say "[bold type]Just leave instead?[roman type][line break]";
-			if the player consents:
+			if player consents:
 				now sextablerun is 1;
 				say "     Deciding you should focus on more important stuff right now, you turn away and walk off, leaving the bruised imp behind.";
 				wait for any key;
 			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
@@ -150,12 +150,15 @@ to say ImpDesc:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Imp";
+	now enemy title entry is "";
+	now enemy name entry is "";
+	now enemy type entry is 0; [non-unique enemy]
 	now attack entry is "[one of]Swinging his arm like a baseball pitcher, the imp sends a fire-ball flying your way. Thankfully it is pretty small, so you're just a little singed.[or]In a lightning-quick flying maneuver, the little demon swoops past your face and gives your nose a kick. Ouch, that smarts![or]Swooping down between your legs, the imp leaves thin bloody scratches near your ankles.[or]As he flutters straight towards your face, you deflect the imp with your hands, earning some bloody scratches in the process.[at random]";
 	now defeated entry is "[Imp loses]";
 	now victory entry is "[Imp wins]";
@@ -186,7 +189,7 @@ When Play begins:
 	now cock width entry is 2;          [ Size of balls ]
 	now breasts entry is 2;             [ Number of nipples. ]
 	now breast size entry is 0;         [ Size of breasts infection will try to attain ]
-	now male breast size entry is 0;    [ Breast size for if Sex="Male", usually zero. ]
+	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 0;               [ number of pussies if sex is 'Female' or 'Both' ]
 	now cunt length entry is 0;
 	now cunt width entry is 0;
@@ -239,13 +242,13 @@ to say ImpEncounter:
 	if randomnumber is:
 		-- 1:
 			say "     As you make your way through the mostly lifeless streets, filled with abandoned cars and trash, you hear a harrowing howl start in the distance, followed by another, and another. You freeze in your steps and a cold shiver runs down your spine as you hear them - that surely came from no normal dog, and neither a wolf. From your experience, you'd rather guess... hellhound. Thankfully the beasts seem to be a fair distance off, as you wouldn't want to be what they're running down right about now.";
-			say "     Then suddenly, you hear voices call to each other far closer to your position - just around the next corner you'd say. They are rather deep, so your guess would be that its males of some kind talking to one another. A first one says, 'Those fucking mutts! They were supposed to come wi-' Another interrupts him, 'Oh, shut up already! Neither of us is stupid enough to try dragging them away from humping their fresh mortal prey.' A third voice speaks up, 'Yeah, right - and the boss will punish us if we waste time instead of searching. So get going! You go left, you right and I'll just fly down this road.'";
+			say "     Then suddenly, you hear voices call to each other far closer to your position - just around the next corner you'd say. They are rather deep, so your guess would be that it's males of some kind talking to one another. A first one says, 'Those fucking mutts! They were supposed to come wi-' Another interrupts him, 'Oh, shut up already! Neither of us is stupid enough to try dragging them away from humping their fresh mortal prey.' A third voice speaks up, 'Yeah, right - and the boss will punish us if we waste time instead of searching. So get going! You go left, you right and I'll just fly down this road.'";
 		-- 2:
 			say "     As you make your way through the mostly lifeless streets, filled with abandoned cars and trash, you come upon a rather disconcerting sight. There are paw-prints on the asphalt, or rather... indented into it, as if the black material partially melted at the point of contact. Add to that the visible areas in which something caustic seems to have dripped onto the road, creating foul-smelling discolored spots, and you have to guess that it's hellhound tracks you've found. Even worse, it isn't just one, but rather a whole pack of them from the number of imprints. Thankfully, the trail is cold as you crouch down and touch it. They seem to have been chasing something or someone, a guess that becomes a certainty as you spot a bunch of clothing shreds and cum-stains behind a car along the route they took. With a cold shiver running down your spine at the thought of what happened over there, you hold your breath for a moment and silently listen for any sign that the pack might be coming back this way.";
-			say "     Silence stretches out around you, only interrupted by a very far-off screech of something - a bird or dinosaur-creature maybe. But just as you're starting to let out a relieved breath, you suddenly hear voices call to each other far closer to your position - just around the next corner you'd say. They are rather deep, so your guess would be that its males of some kind talking to one another. A first one says, 'Those fucking mutts! They were supposed to come wi-' Another interrupts him, 'Oh, shut up already! Neither of us is stupid enough to try dragging them away from humping their fresh mortal prey.' A third voice speaks up, 'Yeah, right - and the boss will punish us if we waste time instead of searching. So get going! You go left, you right and I'll just fly down this road.'";
+			say "     Silence stretches out around you, only interrupted by a very far-off screech of something - a bird or dinosaur-creature maybe. But just as you're starting to let out a relieved breath, you suddenly hear voices call to each other far closer to your position - just around the next corner you'd say. They are rather deep, so your guess would be that it's males of some kind talking to one another. A first one says, 'Those fucking mutts! They were supposed to come wi-' Another interrupts him, 'Oh, shut up already! Neither of us is stupid enough to try dragging them away from humping their fresh mortal prey.' A third voice speaks up, 'Yeah, right - and the boss will punish us if we waste time instead of searching. So get going! You go left, you right and I'll just fly down this road.'";
 		-- 3:
 			say "     As you make your way through the mostly lifeless streets, filled with abandoned cars and trash, you come upon a rather disconcerting sight. The street is splashed with dried, brown splotches of blood and splinters of bone crunch under your steps. Looks like something was torn to pieces, right here in the open. A few steps further, you see what - or rather who - it was... the ripped off head of a minotaur lies behind a car wreck, eyes still opened wide in horror and staring blankly at you. All around the grisly scene, there are paw-prints on the asphalt, or rather... indented into it, as if the black material partially melted at the point of contact. This does lead you to the conclusion that in all likelihood, a pack of hellhounds is responsible. Thankfully, the trails are cold as you crouch down and touch them, and the blood is dried all the way, so it didn't happen recently. With a cold shiver running down your spine, you hold your breath for a moment and silently listen for any sign that the pack might be coming back this way.";
-			say "     Silence stretches out around you, except for the wind blowing past the buildings. But just as you're starting to let out a relieved breath, you suddenly hear voices call to each other close to your position - just around the next corner you'd say. They are rather deep, so your guess would be that its males of some kind talking to one another. A first one says, 'Those fucking mutts! They were supposed to come wi-' Another interrupts him, 'Oh, shut up already! Be happy that they get fresh mortal prey and don't try to chew on us instead.' A third voice speaks up, 'Yeah, right - and the boss will punish us if we waste time instead of searching. So get going! You go left, you right and I'll just fly down this road.'";
+			say "     Silence stretches out around you, except for the wind blowing past the buildings. But just as you're starting to let out a relieved breath, you suddenly hear voices call to each other close to your position - just around the next corner you'd say. They are rather deep, so your guess would be that it's males of some kind talking to one another. A first one says, 'Those fucking mutts! They were supposed to come wi-' Another interrupts him, 'Oh, shut up already! Be happy that they get fresh mortal prey and don't try to chew on us instead.' A third voice speaks up, 'Yeah, right - and the boss will punish us if we waste time instead of searching. So get going! You go left, you right and I'll just fly down this road.'";
 	wait for any key;
 
 An everyturn rule: [hellhound bad end progress every turn]

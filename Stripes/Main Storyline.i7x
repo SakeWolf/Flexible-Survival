@@ -35,22 +35,18 @@ Instead of conversing the doctor matt:
 			say "He looks you over a moment, 'You don't look nearly as lost and confused as most.' He turns back to his computer a moment, tapping quickly, 'Are you another researcher? Excellent. I'm looking into a cure for this plague, but I haven't made much progress. But I did find something else...";
 		else:
 			say "He laughs a little, nervous and forced. 'Anyway, before you ask, no, we did not have anything to do with the nanite infestation. You didn't know it was nanites? Now you do. I have been studying them for some time since the grid went dark. I'm not much closer to a cure... but I did find something you're probably interested in,' he says, pausing for effect.";
-		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
-		if waiterhater is 0 and hypernull is 0, LineBreak; [adds a break after the 'more']
+		WaitLineBreak;
 		say "'I can manipulate existing strains, just a little, for those already infected, like you. Don't look at me like that. Anyone not in a fully sealed environment is infected by now. [if humanity of player < 80]In fact I'd say you've already been pretty badly infected, interesting... [end if]But now for the good news. As you develop resistances to the nanite infection and your system becomes stronger, I can redirect that growth to amazing, and planned, almost superhuman abilities,' he declares, sounding quite proud of himself. 'Only one catch...'";
-		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
-		if waiterhater is 0 and hypernull is 0, LineBreak; [adds a break after the 'more']
+		WaitLineBreak;
 		say "'I haven't had any test subjects. Until you. So you come in here, [bold type]volunteer[roman type], and we'll make you better than when you started. In return, you can help us save the city. A fair deal, right?' he says, but he's already turning back to his monitors, not actually listening for your reply.";
 		now HP of doctor matt is 1;
 		say "[bold type]((Every 3 levels, starting at level 3, you may gain one feat by coming here and typing volunteer))[roman type]";
 		extend game by 16;
 	if HP of doctor matt is 1:
 		say "'Alright, we have a limited amount of time. I have been doing my best to delay the military, but without something concrete to report, they will be here soon, and they will pave this thing as hard as they can, leaving all mysteries unsolved. Now that you are here, we can get to work and keep them off our backs,' explains the hazmat suited man as he pushes his chair towards another terminal and starts typing.";
-		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
-		if waiterhater is 0 and hypernull is 0, LineBreak; [adds a break after the 'more']
+		WaitLineBreak;
 		say "'The first problem is a lack of test subjects. I can't send Orthas out to collect samples, that would leave me unprotected. You, on the other hand, are not so limited. Go to the mall and get some samples from the amorphous transformatives there, and some nutritive secretions from one of those raptor slash panthera leo transformatives. I would prefer two of each, enough to be able to experiment without risking the whole of the subject matter,' he explains, turning to face you.";
-		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
-		if waiterhater is 0 and hypernull is 0, LineBreak; [adds a break after the 'more']
+		WaitLineBreak;
 		say "'Once you have them, just come back here and we will be that much closer to solving this.'";
 		say "You get the idea you've been dismissed, as he goes quiet, and eventually turns back to his work. Not much of a socialite.";
 		now HP of doctor matt is 2;
@@ -86,11 +82,9 @@ Instead of conversing the doctor matt:
 		extend game by 24;
 		increase score by 5;
 		say "'Simply amazing. There is no other word for it,' says Doctor Matt, looking excited through his hazmat faceplate, 'The adaptability of the nanites is simply... I would have said it was impossible if I hadn't laid my own eyes on it. I sent out my results and the military have grudgingly agreed to a three day extension on their plans.'";
-		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
-		if waiterhater is 0 and hypernull is 0, LineBreak; [adds a break after the 'more']
+		WaitLineBreak;
 		say "'The nanites seem to come in a few varieties that cooperate. The most important ones, the ones that allow the miracle work, are the... brain... nanites, for lack of better word. They link with neighboring brain nanites like nerve endings and seem capable of forming neural patterns of astonishing complexity! The nanites stopped receiving directives a long time ago, but they can adjust and make up their own choices independently. It is little wonder this is causing so much trouble,' he gushes with bubbling enthusiasm, like a young boy having caught a creepy looking insect.";
-		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
-		if waiterhater is 0 and hypernull is 0, LineBreak; [adds a break after the 'more']
+		WaitLineBreak;
 		now HP of doctor matt is 4;
 	if HP of doctor matt is 4:
 		say "'Oh, one thing of more immediate use. I discovered how to neutralize the nanites. A limited area of them at least. They do not like being microwaved. I have one in the corner there, feel free to [bold type]microwave[roman type] anything you want to bake the infection out.'";
@@ -157,7 +151,7 @@ Instead of conversing the doctor matt:
 				LineBreak;
 				say "     ([link]Y[as]y[end link]) - Yes.";
 				say "     ([link]N[as]n[end link]) - No.";
-				if the player consents:
+				if player consents:
 					delete Chipped tooth;
 					increase score by 10;
 					say "     'It is good to see that you appreciate the importance of my work.' He picks up the large fang in his gloves and places it in a sample dish.";
@@ -249,7 +243,7 @@ Instead of conversing the doctor matt:
 	if hospquest is 13 and "Mental Booster" is not listed in feats of player:
 		say "     As thanks for your willingness to side with me over this impudent upstart mouse, I shall provide you with something I have been working on. Trying to deal with the infected city can be mentally harrowing as well as physically harrowing. It is easy to neglect the need to be intellectually able to deal with this crisis over the more obvious need for physical prowess. As such, I have found a way to stimulate the mind, increasing one's reasoning abilities to make them better able to notice significant events, interpret that information and then relate it to others. This treatment will also strive to keep these mental faculties strong after mentally debilitating infections.'";
 		say "     The doctor injects you with the nanite adjustment. At first you feel little, but as you start to consider what may be happening, you notice that you're interpreting stimuli faster and drawing conclusions about them more readily. You don't suddenly know more information, but you can better process all that you have learned to make more out of it. You also feel a little more confident in dealing with the world because of it.";
-		add "Mental Booster" to the feats of the player;
+		add "Mental Booster" to the feats of player;
 		increase intelligence of player by 2;
 		increase perception of player by 2;
 		increase charisma of player by 2;
@@ -290,8 +284,7 @@ Instead of conversing the doctor matt:
 			wait for any key;
 			now foodwaterbonus is 1;
 			featget;
-			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
-			if waiterhater is 0 and hypernull is 0, LineBreak; [adds a break after the 'more']
+			WaitLineBreak;
 			now HP of doctor matt is 14;
 			now level of doctor matt is turns;
 		else if tempnum2 is waterneed and tempnum is foodneed:		[no change]
@@ -314,7 +307,7 @@ Instead of conversing the doctor matt:
 			increase score by (number of known fasttravel rooms) * 2;
 			say "     You have gained [special-style-1][tempnum][roman type] freecred and now have [freecred] freecred.";
 			WaitLineBreak;
-			say "     You'll notice that I was able to provide you with a sum of 'free credits.' These are a form of currency alternative that the Zephyr conglomorate has implemented. While my contacts with the military assure me that at least portions of the nation are still functioning, it is clear that the federal government is in disarray at the moment. And while Zephyr seems intent on exploiting this to position themselves as the new driving force in the nation, if not the world, there is no question that they are prepared and in possession of considerable knowledge about the infection and the nanites. So much so that I have to wonder about their role in all of this.'";
+			say "     You'll notice that I was able to provide you with a sum of 'free credits'. These are a form of currency alternative that the Zephyr conglomerate has implemented. While my contacts with the military assure me that at least portions of the nation are still functioning, it is clear that the federal government is in disarray at the moment. And while Zephyr seems intent on exploiting this to position themselves as the new driving force in the nation, if not the world, there is no question that they are prepared and in possession of considerable knowledge about the infection and the nanites. So much so that I have to wonder about their role in all of this.'";
 			say "     'I want you to make contact with their representatives in the city and give them this package,' Dr Matt says as he passes you a manila envelope. 'It contains a request for certain items and data they have in their possession which would be very useful to my research into the nanites. I'm quite certain they know a lot more than they're letting on, but they should be willing to share this information at least. Now, as they are the representatives of a company, they will most certainly not just hand over this data.'";
 			WaitLineBreak;
 			say "     The doctor shuffles a few items around on his desk. 'The military command should have contacted the corporate office as well to negotiate this exchange of information. As payment, I've included selected portions of my research on a storage device you may give them if they agree to the terms. The reason I am sending you as a courier on this is that they may make some demands of you, claiming the offer may be insufficient. Given your experience in dealing with the city, you should be able to handle such a request from them.' It seems that doing Dr. Matt's dirty work isn't enough; now he's renting you out to others to do their dirty work too. Oh well.";
@@ -341,22 +334,22 @@ Instead of conversing the doctor matt:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
-		if the player consents:
+		if player consents:
 			say "     You tell the doctor that you are of course willing to get your humanity back. The doctor smiles and nods, opening up a drawer and pulling out a rat's nest of wires and bio-sensors. 'Okay. Strip down so I can get you hooked up. This sort of thing isn't my usual area of expertise, but thankfully another of my former associates was doing bio-research, so I can use their equipment. She won't be needing it now that she's a feral mutant.'";
-			say "     While he speaks casually about what has happened to his colleagues, he does remain silent for a while, quietly attaching the sensors all over your body with tape. A lot of them get placed across your chest and upon your face, though others end up elsewhere[if breasts of player > 0]. Some are even placed directly over your nipples[end if][if cocks of player > 0]. One is placed upon your [cock of player] cock[smn], tape snugly wrapped clear around your shaft[smn][end if][if cocks of player > 0 and player is not internal]. A linked pair are attached upon your balls[end if][if cunts of player > 0]. A small ovoid ones are pushed unceremoniously (and without even dinner and a movie) into your cunt[sfn] and asshole, leaving the wires dangling out of you[else]. A small ovoid one is pushed unceremoniously (and without even dinner and a movie) into your asshole, leaving the wire dangling out of you[end if].";
+			say "     While he speaks casually about what has happened to his colleagues, he does remain silent for a while, quietly attaching the sensors all over your body with tape. A lot of them get placed across your chest and upon your face, though others end up elsewhere[if breasts of player > 0]. Some are even placed directly over your nipples[end if][if player is male]. One is placed upon your [cock of player] cock[smn], tape snugly wrapped clear around your shaft[smn][end if][if player is male and player is not internal]. A linked pair are attached upon your balls[end if][if player is female]. A small ovoid ones are pushed unceremoniously (and without even dinner and a movie) into your cunt[sfn] and asshole, leaving the wires dangling out of you[else]. A small ovoid one is pushed unceremoniously (and without even dinner and a movie) into your asshole, leaving the wire dangling out of you[end if].";
 			WaitLineBreak;
 			say "     With a final smack, the doctor adheres a large suction cup to your forehead. The thin wires from all of these separate sensors are wound together into one larger cable which is then plugged into a monitoring device. It starts up, showing blips and waveforms on its screens while outputting a constant stream of ticker tape.";
 			say "     'Alright, we're ready to go,' the doctor says with enthusiasm. The prospect of science has brightened his mood and he quickly snatches up the spray can[if susan is visible]. Susan, while clearly concerned about you, takes several large steps back to avoid getting hit[end if]. The doctor starts spraying you all over, spreading the mist of strange antiseptic-smelling liquid all over you. You can feel the strange liquid burn and tingle as it sinks into your body, surprisingly you find yourself feeling a little better and more human almost immediately.";
 			WaitLineBreak;
-			say "     Once the process is done, you look yourself over. Thankfully there is a mirror over the nearby eye-wash station, so you use that to check your face. Looking at your reflection, you find you've turning back into something more resembling your old self. Your physique is somewhat improved (possibly from all the hiking around you've been doing), but your appearance overall is a little nicer too. Perhaps it is some effect of the nanites making you [if cunts of player > 0]prettier[else]more handsome[end if]. Looking down, you can see that the spray has not changed your sexual state, though your genitals look pleasantly human once more.";
-			say "     Your self-examination is abruptly cut short as the doctor starts removing the sensors from you with the sharp stings of quickly ripped away tape. Thankfully you've got nicely human skin now. It'd probably hurt so much worse if you had fur[if cocks of player > 0]... though it is particularly uncomfortable when he unwraps the stuff wound around your cock[smn][end if]. The doctor's bedside manner could definitely use work, though you can't argue with the results, you remind yourself while looking in the mirror again, pleased to see a human face looking back.";
-			setmonster "human";
+			say "     Once the process is done, you look yourself over. Thankfully there is a mirror over the nearby eye-wash station, so you use that to check your face. Looking at your reflection, you find you've turning back into something more resembling your old self. Your physique is somewhat improved (possibly from all the hiking around you've been doing), but your appearance overall is a little nicer too. Perhaps it is some effect of the nanites making you [if player is female]prettier[else]more handsome[end if]. Looking down, you can see that the spray has not changed your sexual state, though your genitals look pleasantly human once more.";
+			say "     Your self-examination is abruptly cut short as the doctor starts removing the sensors from you with the sharp stings of quickly ripped away tape. Thankfully you've got nicely human skin now. It'd probably hurt so much worse if you had fur[if player is male]... though it is particularly uncomfortable when he unwraps the stuff wound around your cock[smn][end if]. The doctor's bedside manner could definitely use work, though you can't argue with the results, you remind yourself while looking in the mirror again, pleased to see a human face looking back.";
+			setmonster "Human";
 			choose row monster from the table of random critters;
-			now tailname of player is "human";
-			now facename of player is "human";
-			now skinname of player is "human";
-			now bodyname of player is "human";
-			now cockname of player is "human";
+			now tailname of player is "Human";
+			now facename of player is "Human";
+			now skinname of player is "Human";
+			now bodyname of player is "Human";
+			now cockname of player is "Human";
 			attributeinfect;
 			now tail of player is tail entry;
 			now face of player is face entry;
@@ -435,12 +428,12 @@ to monitor:
 	say "You hook up the infection analyzer and run the program, checking on your body's status for any changes while looking yourself over.";
 	say "Head status: [facename of player]     Body status: [bodyname of player][line break]";
 	say "Skin status: [skinname of player]     Tail status: [tailname of player][line break]";
-	if cocks of player > 0:
-		if cunts of player > 0:
+	if player is male:
+		if player is female:
 			say "Cock status: [cockname of player]     Gender: Herm[line break]";
 		else:
 			say "Cock status: [cockname of player]     Gender: Male[line break]";
-	else if cunts of player > 0:
+	else if player is female:
 		say "Groin status: [cockname of player]     Gender: Female[line break]";
 	else:
 		say "Analyzing gender... [special-style-2]ERROR![roman type][line break]";
@@ -448,11 +441,11 @@ to monitor:
 		let defaultheat be true;
 		let heatname be "Default";
 		choose row 1 in table of infection heat;
-		if the cockname of player is a infect name listed in Table of infection heat:	[check name of heat]
+		if cockname of player is a infect name listed in Table of infection heat:	[check name of heat]
 			choose a row with a infect name of (cockname of player) in Table of infection heat;
-			if cunts of player > 0 and fheat entry is false:	[no female heat for that form]
+			if player is female and fheat entry is false:	[no female heat for that form]
 				choose row 1 in table of infection heat;
-			else if cunts of player is 0 and mpregheat entry is false:		[no mpreg-heat for that form]
+			else if player is not female and mpregheat entry is false:		[no mpreg-heat for that form]
 				choose row 1 in table of infection heat;
 			else:
 				now defaultheat is false;
@@ -461,7 +454,7 @@ to monitor:
 		now heatname is infect name entry;
 		if "Sterile" is listed in feats of player:
 			say "Pregnancy Status: Sterile[line break]";
-		else if cunts of player is 0 and player is not mpreg_ok:
+		else if player is not female and player is not mpreg_ok:
 			now score is score;
 		else if player is impreg_now:
 			say "Pregnancy Status: Pregnant     ";
