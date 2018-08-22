@@ -34,17 +34,17 @@ fsutil reparsepoint query "%HOMEPATH%\.ctags" | find "Symbolic Link" >nul && (
   echo [INFO]   Backing up .ctags
   move /Y "%HOMEPATH%\.ctags" "%HOMEPATH%\.ctags_old"
 )
-mklink "%HOMEPATH%\.ctags" "%HOMEPATH%\Documents\Github\Flexible-Survival\.ctags"
+mklink "%HOMEPATH%\.ctags" "D:\Code\Flexible-Survival\.ctags"
 
 echo [INFO] Making symlink for .story.ni in Inform folder
-fsutil reparsepoint query "%HOMEPATH%\Documents\Inform\Projects\Flexible Survival.inform\Source\story.ni" | find "Symbolic Link" >nul && (
+fsutil reparsepoint query "C:\Users\noctu\Documents\Inform\Projects\Flexible Survival.inform\Source\story.ni" | find "Symbolic Link" >nul && (
   echo [INFO]   Removing existing symlink...
-  del "%HOMEPATH%\Documents\Inform\Projects\Flexible Survival.inform\Source\story.ni"
+  del "C:\Users\noctu\Documents\Inform\Projects\Flexible Survival.inform\Source\story.ni"
 ) || (
   echo [INFO]   Backing up story.ni
-  move /Y "%HOMEPATH%\Documents\Inform\Projects\Flexible Survival.inform\Source\story.ni" "%HOMEPATH%\Documents\Inform\Projects\Flexible Survival.inform\Source\story_old.ni"
+  move /Y "C:\Users\noctu\Documents\Inform\Projects\Flexible Survival.inform\Source\story.ni" "C:\Users\noctu\Documents\Inform\Projects\Flexible Survival.inform\Source\story_old.ni"
 )
-mklink "%HOMEPATH%\Documents\Inform\Projects\Flexible Survival.inform\Source\story.ni" "%HOMEPATH%\Documents\Github\Flexible-Survival\Inform\story.ni"
+mklink "C:\Users\noctu\Documents\Inform\Projects\Flexible Survival.inform\Source\story.ni" "D:\Code\Flexible-Survival\Inform\story.ni"
 
 echo [INFO] Making symlink for .gblorb in Program Files folder
 fsutil reparsepoint query "%PROGRAMFILES(X86)%\Silver Games LLC\flexible\Flexible Survival\Release\Flexible Survival.gblorb" | find "Symbolic Link" >nul && (
@@ -54,14 +54,14 @@ fsutil reparsepoint query "%PROGRAMFILES(X86)%\Silver Games LLC\flexible\Flexibl
   echo [INFO]   Backing up .gblorb
   move /Y "%PROGRAMFILES(X86)%\Silver Games LLC\flexible\Flexible Survival\Release\Flexible Survival.gblorb" "%PROGRAMFILES(X86)%\Silver Games LLC\flexible\Flexible Survival\Release\Flexible Survival_old.gblorb"
 )
-mklink "%PROGRAMFILES(X86)%\Silver Games LLC\flexible\Flexible Survival\Release\Flexible Survival.gblorb" "%HOMEPATH%\Documents\Inform\Projects\Flexible Survival.materials\Release\Flexible Survival.gblorb"
+mklink "%PROGRAMFILES(X86)%\Silver Games LLC\flexible\Flexible Survival\Release\Flexible Survival.gblorb" "C:\Users\noctu\Documents\Inform\Projects\Flexible Survival.materials\Release\Flexible Survival.gblorb"
 
 echo [INFO] Making Flexible Survival.materials folder in Inform folder
-mkdir "%HOMEPATH%\Documents\Inform\Projects\Flexible Survival.materials"
+mkdir "C:\Users\noctu\Documents\Inform\Projects\Flexible Survival.materials"
 
 echo [INFO] Making symlink for Figures folder in Inform folder
-rmdir /S /Q "%HOMEPATH%\Documents\Inform\Projects\Flexible Survival.materials\Figures"
-mklink /D "%HOMEPATH%\Documents\Inform\Projects\Flexible Survival.materials\Figures" "%HOMEPATH%\Documents\Github\Flexible-Survival\Figures"
+rmdir /S /Q "C:\Users\noctu\Documents\Inform\Projects\Flexible Survival.materials\Figures"
+mklink /D "C:\Users\noctu\Documents\Inform\Projects\Flexible Survival.materials\Figures" "D:\Code\Flexible-Survival\Figures"
 
 echo [INFO] Making symlink for all folders that are not Inform or Figures into the Inform extensions folder
 for /d %%D in (*) do (
@@ -72,8 +72,8 @@ for /d %%D in (*) do (
       echo [INFO]   * Skipping Figures folder
     ) ELSE (
       echo [INFO]   Making symlink for %%D
-      rmdir /S /Q "%HOMEPATH%\Documents\Inform\Extensions\%%D"
-      mklink /D "%HOMEPATH%\Documents\Inform\Extensions\%%D" "%HOMEPATH%\Documents\Github\Flexible-Survival\%%D"
+      rmdir /S /Q "C:\Users\noctu\Documents\Inform\Extensions\%%D"
+      mklink /D "C:\Users\noctu\Documents\Inform\Extensions\%%D" "D:\Code\Flexible-Survival\%%D"
     )
   )
 )
